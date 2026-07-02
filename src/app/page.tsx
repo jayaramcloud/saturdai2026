@@ -1,5 +1,5 @@
-// Replace REGISTRATION_FORM_URL with your Google Form link when ready
-const REGISTRATION_FORM_URL = "https://forms.google.com/your-form-id-here";
+const REGISTRATION_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSc85wV7CgYL6QUN-4xCjplm3ryfM4NOdJoZrVjjThtMO2bKKQ/viewform";
 
 export default function Home() {
   return (
