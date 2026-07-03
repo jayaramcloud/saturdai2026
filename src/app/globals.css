@@ -163,6 +163,186 @@ a {
   border-bottom: none;
 }
 
+/* Top nav */
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(15, 15, 30, 0.85);
+  backdrop-filter: blur(8px);
+}
+.top-nav-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+.top-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+.top-nav-link {
+  color: #a0a0c0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.top-nav-link:hover {
+  color: #ffffff;
+}
+
+/* Layout shell */
+.layout-shell {
+  display: flex;
+  align-items: flex-start;
+}
+.layout-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 220px;
+  flex-shrink: 0;
+  padding: 2rem 1rem;
+  position: sticky;
+  top: 65px;
+  height: fit-content;
+}
+.sidebar-link {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.sidebar-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.sidebar-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0.5rem 0;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  .top-nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .top-nav-links {
+    order: 3;
+    flex: 1 1 100%;
+    width: 100%;
+    gap: 0.5rem 1.25rem;
+  }
+}
+
+/* Event banner */
+.event-banner {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.event-banner-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-align: center;
+}
+.event-banner-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #808099;
+}
+.event-banner-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* DGX Spark card */
+.spark-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 3rem;
+  text-align: center;
+}
+.spark-intro {
+  font-size: 1.15rem;
+  color: #c0c0d0;
+  line-height: 1.7;
+  max-width: 640px;
+  margin: 0 auto 2rem;
+}
+.spark-specs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.spark-spec {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.spark-spec-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.spark-spec-label {
+  font-size: 0.85rem;
+  color: #808099;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.spark-footnote {
+  font-size: 0.95rem;
+  color: #808099;
+  line-height: 1.6;
+}
+
+.meet-dial {
+  font-size: 0.9rem;
+  color: #808099;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .title { font-size: 3rem; }

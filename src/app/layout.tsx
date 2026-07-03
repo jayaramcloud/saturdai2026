@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import TopNav from "@/components/TopNav";
+import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <TopNav />
+        <div className="layout-shell">
+          <Sidebar />
+          <div className="layout-content">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }

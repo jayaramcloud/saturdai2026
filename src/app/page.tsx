@@ -1,74 +1,164 @@
 const REGISTRATION_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc85wV7CgYL6QUN-4xCjplm3ryfM4NOdJoZrVjjThtMO2bKKQ/viewform";
 
+const MEET_URL = "https://meet.google.com/nsd-qztm-psr";
+const CONTACT_EMAIL = "jayaram.linux@gmail.com";
+
+const CURRICULUM = [
+  {
+    week: "Week 1",
+    title: "LLMs",
+    icon: "🧠",
+    description: "Understanding and working with language models",
+  },
+  {
+    week: "Week 2",
+    title: "RAG",
+    icon: "📚",
+    description: "Grounding AI with actual knowledge",
+  },
+  {
+    week: "Week 3",
+    title: "MCPs",
+    icon: "🔌",
+    description: "Connecting AI to external systems",
+  },
+  {
+    week: "Week 4",
+    title: "Tool Calling",
+    icon: "🛠️",
+    description: "Making AI agents do real work",
+  },
+];
+
 export default function Home() {
   return (
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: "2rem" }}>
-      {/* Nav */}
-      <nav style={{ display: "flex", justifyContent: "flex-end", padding: "1rem 0" }}>
-        <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-          Register Now
-        </a>
-      </nav>
-
       {/* Hero */}
-      <section style={{ textAlign: "center", padding: "6rem 2rem" }}>
+      <section style={{ textAlign: "center", padding: "5rem 2rem 2rem" }}>
         <h1 className="title">
           SaturdAI<span className="gradient-accent">.</span>
         </h1>
-        <p className="subtitle">Master AI Development Every Saturday</p>
+        <p className="subtitle">A Free AI Bootcamp — Learn, Build &amp; Grow Together</p>
         <p className="description">
-          Learn to build with Claude, GPT, and modern AI tools.
-          From prompt engineering to full-stack AI applications.
+          Starting Saturday, let&apos;s begin a journey to learn AI — building and effectively using
+          AI from scratch. Though I&apos;ll lead this, it&apos;s learning together: a community of
+          curious minds building AI skills side by side, every evening. No prerequisites. Just curiosity.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Get Started
+          <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Join Saturday&apos;s Meet
           </a>
-          <a href="#learn" className="btn btn-secondary">
-            Learn More
+          <a href="#curriculum" className="btn btn-secondary">
+            See What We&apos;re Building
           </a>
         </div>
       </section>
 
-      {/* What You'll Learn */}
-      <section id="learn" style={{ marginTop: "4rem" }}>
-        <h2 className="section-title">What You&apos;ll Learn</h2>
+      {/* Event banner */}
+      <section className="event-banner">
+        <div className="event-banner-item">
+          <span className="event-banner-label">When</span>
+          <span className="event-banner-value">20 evenings · July 2026</span>
+        </div>
+        <div className="event-banner-item">
+          <span className="event-banner-label">Kickoff</span>
+          <span className="event-banner-value">Saturday, July 4 · 8:00 AM MST</span>
+        </div>
+        <div className="event-banner-item">
+          <span className="event-banner-label">Cost</span>
+          <span className="event-banner-value">Free · Open to Everyone</span>
+        </div>
+      </section>
+
+      {/* Curriculum */}
+      <section id="curriculum" style={{ marginTop: "5rem" }}>
+        <h2 className="section-title">What We&apos;re Building Together</h2>
         <div className="features-grid">
-          <div className="feature-card">
-            <div className="icon">📚</div>
-            <h3>Week 1: Foundations</h3>
-            <p>AI basics, prompt engineering, and understanding language models</p>
-          </div>
-          <div className="feature-card">
-            <div className="icon">💻</div>
-            <h3>Week 2–4: Building</h3>
-            <p>Create AI-powered applications with modern frameworks and APIs</p>
-          </div>
-          <div className="feature-card">
-            <div className="icon">🎯</div>
-            <h3>Week 5+: Advanced</h3>
-            <p>RAG, vector databases, fine-tuning, and production deployment</p>
-          </div>
+          {CURRICULUM.map((item) => (
+            <div className="feature-card" key={item.week}>
+              <div className="icon">{item.icon}</div>
+              <h3>
+                {item.week}: {item.title}
+              </h3>
+              <p>{item.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Ready to Start */}
-      <section style={{ marginTop: "6rem", padding: "4rem 0" }}>
+      {/* DGX Spark */}
+      <section style={{ marginTop: "5rem" }}>
+        <h2 className="section-title">Learning on a Real Supercomputer</h2>
+        <div className="spark-card">
+          <p className="spark-intro">
+            Last month, following Sanjay Jayaram&apos;s vision, we purchased a{" "}
+            <strong>DGX Spark Supercomputer</strong>{" "}
+            with a Blackwell GPU and powered it on here in Calgary. I&apos;ll share remote access
+            with everyone joining, and we&apos;ll learn together on this mini supercomputer.
+          </p>
+          <div className="spark-specs">
+            <div className="spark-spec">
+              <span className="spark-spec-value">128 GB</span>
+              <span className="spark-spec-label">Memory</span>
+            </div>
+            <div className="spark-spec">
+              <span className="spark-spec-value">6,144</span>
+              <span className="spark-spec-label">CUDA Cores</span>
+            </div>
+            <div className="spark-spec">
+              <span className="spark-spec-value">1 PFLOP</span>
+              <span className="spark-spec-label">FP4 Compute</span>
+            </div>
+            <div className="spark-spec">
+              <span className="spark-spec-value">200B</span>
+              <span className="spark-spec-label">Max Params Supported</span>
+            </div>
+          </div>
+          <p className="spark-footnote">
+            Powered by the NVIDIA® GB10 Grace Superchip — capable of running a single 200-billion
+            parameter model, or multiple 30-billion parameter LLMs at once.
+          </p>
+        </div>
+      </section>
+
+      {/* Meeting details */}
+      <section style={{ marginTop: "6rem", padding: "4rem 0" }} id="join">
         <h2 className="section-title">Ready to Start?</h2>
         <div className="start-card">
-          <h3>Join Our Next Saturday Session</h3>
-          <p>Live coding sessions every Saturday at 10 AM PST</p>
+          <h3>A Fresh Start Every Saturday</h3>
+          <p>Then we learn together every evening at saturdAI.com</p>
           <ul className="benefits">
-            <li>✓ Live instructor guidance</li>
-            <li>✓ Hands-on coding exercises</li>
-            <li>✓ Community support</li>
-            <li>✓ Project-based learning</li>
+            <li>✓ 8:00 AM MST · 7:00 AM PST · 10:00 AM EST · 7:30 PM IST</li>
+            <li>✓ Live, hands-on, instructor-led — but learning together</li>
+            <li>✓ Remote access to a DGX Spark supercomputer</li>
+            <li>✓ 20 evenings, completely free, open to everyone</li>
           </ul>
-          <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Sign Up Now
-          </a>
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
+            <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+              Join Google Meet
+            </a>
+            <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+              Register Now
+            </a>
+          </div>
+          <p className="meet-dial">
+            Or dial (CA) +1 604-774-8372 · PIN 218 444 587
+          </p>
         </div>
+      </section>
+
+      {/* Contact / closing */}
+      <section style={{ marginTop: "4rem", padding: "0 0 4rem", textAlign: "center" }}>
+        <p className="description" style={{ marginBottom: "0.5rem" }}>
+          Want to join or have any other questions? Email{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} style={{ textDecoration: "underline" }}>
+            {CONTACT_EMAIL}
+          </a>
+        </p>
+        <p className="description">
+          On Canada Day 2026, let&apos;s commit to learning — and growing — together. 🍁
+        </p>
       </section>
     </main>
   );
