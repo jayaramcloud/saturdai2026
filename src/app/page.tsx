@@ -52,7 +52,7 @@ export default function Home() {
         <p className="description">
           Starting Saturday, let&apos;s begin a journey to learn AI — building and effectively using
           AI from scratch. Though I&apos;ll lead this, it&apos;s learning together: a community of
-          curious minds building AI skills side by side, every evening. No prerequisites. Just curiosity.
+          curious minds building AI skills side by side, Monday to Friday evenings. No prerequisites. Just curiosity.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
           <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
@@ -68,7 +68,7 @@ export default function Home() {
       <section className="event-banner">
         <div className="event-banner-item">
           <span className="event-banner-label">When</span>
-          <span className="event-banner-value">20 evenings · July 2026</span>
+          <span className="event-banner-value">Mon–Fri · 6:00–8:00 PM MST</span>
         </div>
         <div className="event-banner-item">
           <span className="event-banner-label">Kickoff</span>
@@ -136,12 +136,12 @@ export default function Home() {
         <h2 className="section-title">Ready to Start?</h2>
         <div className="start-card">
           <h3>A Fresh Start Every Saturday</h3>
-          <p>Then we learn together every evening at saturdAI.com</p>
+          <p>Then we learn together Monday to Friday at saturdAI.com</p>
           <ul className="benefits">
-            <li>✓ 8:00 AM MST · 7:00 AM PST · 10:00 AM EST · 7:30 PM IST</li>
+            <li>✓ 6:00–8:00 PM MST · 5:00–7:00 PM PST · 8:00–10:00 PM EST · 5:30–7:30 AM IST (next day)</li>
             <li>✓ Live, hands-on, instructor-led — but learning together</li>
             <li>✓ Remote access to a DGX Spark supercomputer</li>
-            <li>✓ 20 evenings, completely free, open to everyone</li>
+            <li>✓ 20 weekday evenings, completely free, open to everyone</li>
           </ul>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
             <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
