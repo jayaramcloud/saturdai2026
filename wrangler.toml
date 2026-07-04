@@ -7,6 +7,14 @@ compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 directory = ".open-next/assets"
 binding = "ASSETS"
 
+[[routes]]
+pattern = "saturdai.com/*"
+zone_name = "saturdai.com"
+
+[[routes]]
+pattern = "www.saturdai.com/*"
+zone_name = "saturdai.com"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "saturdai"
