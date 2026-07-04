@@ -163,6 +163,52 @@ a {
   border-bottom: none;
 }
 
+/* Register banner */
+.register-banner {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(90deg, #f5576c, #764ba2, #667eea, #f5576c);
+  background-size: 300% 100%;
+  animation: register-banner-shift 6s ease infinite;
+  text-align: center;
+}
+.register-banner-text {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+.register-banner-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #4c3a91;
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  animation: register-banner-pulse 1.8s ease-in-out infinite;
+  white-space: nowrap;
+}
+.register-banner-btn:hover {
+  transform: translateY(-1px);
+}
+@keyframes register-banner-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes register-banner-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+  50% { box-shadow: 0 0 0 8px rgba(255, 255, 255, 0); }
+}
+
 /* Top nav */
 .top-nav {
   display: flex;
@@ -171,7 +217,7 @@ a {
   padding: 1rem 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: sticky;
-  top: 0;
+  top: 3.1rem;
   z-index: 20;
   background: rgba(15, 15, 30, 0.85);
   backdrop-filter: blur(8px);
@@ -200,6 +246,12 @@ a {
 .top-nav-link:hover {
   color: #ffffff;
 }
+.top-nav-user {
+  color: #c0c0d0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
 
 /* Layout shell */
 .layout-shell {
@@ -220,7 +272,7 @@ a {
   flex-shrink: 0;
   padding: 2rem 1rem;
   position: sticky;
-  top: 65px;
+  top: 115px;
   height: fit-content;
 }
 .sidebar-link {
@@ -258,6 +310,24 @@ a {
     width: 100%;
     gap: 0.5rem 1.25rem;
   }
+}
+
+/* Calendar invite banner */
+.invite-banner {
+  text-align: center;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(118, 75, 162, 0.25));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+}
+.invite-banner-link {
+  color: #c7d2fe;
+  text-decoration: underline;
+  font-weight: 700;
 }
 
 /* Event banner */

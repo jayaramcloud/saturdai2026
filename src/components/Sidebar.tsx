@@ -4,6 +4,7 @@ const SECTIONS = [
   { href: "/about", label: "About Us" },
   { href: "/courses", label: "Instructor Led Online Training" },
   { href: "/courses", label: "Courses" },
+  { href: "/progress", label: "My Progress" },
 ];
 
 const WEEKS = [

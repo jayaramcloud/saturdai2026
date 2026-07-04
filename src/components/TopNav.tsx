@@ -1,7 +1,5 @@
 import Link from "next/link";
-
-const REGISTRATION_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc85wV7CgYL6QUN-4xCjplm3ryfM4NOdJoZrVjjThtMO2bKKQ/viewform";
+import { auth, signIn, signOut } from "@/auth";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -11,9 +9,12 @@ const LINKS = [
   { href: "/week-2", label: "Week 2" },
   { href: "/week-3", label: "Week 3" },
   { href: "/week-4", label: "Week 4" },
+  { href: "/progress", label: "My Progress" },
 ];
 
-export default function TopNav() {
+export default async function TopNav() {
+  const session = await auth();
+
   return (
     <header className="top-nav">
       <Link href="/" className="top-nav-brand">
@@ -26,9 +27,32 @@ export default function TopNav() {
           </Link>
         ))}
       </nav>
-      <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">
-        Register Now
-      </a>
+      {session?.user ? (
+        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+          <span className="top-nav-user">{session.user.name?.split(" ")[0]}</span>
+          <form
+            action={async () => {
+              "use server";
+              await signOut();
+            }}
+          >
+            <button type="submit" className="btn btn-secondary btn-sm">
+              Sign Out
+            </button>
+          </form>
+        </div>
+      ) : (
+        <form
+          action={async () => {
+            "use server";
+            await signIn("google");
+          }}
+        >
+          <button type="submit" className="btn btn-secondary btn-sm">
+            Sign In
+          </button>
+        </form>
+      )}
     </header>
   );
 }

@@ -1,4 +1,13 @@
 name = "saturdai"
-compatibility_date = "2024-01-01"
+main = ".open-next/worker.js"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 
-pages_build_output_dir = "out"
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "saturdai"
+database_id = "e704c1cb-3b3d-445b-ae88-b5bbdc2f6fe2"
