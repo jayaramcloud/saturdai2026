@@ -50,18 +50,22 @@ export default function Home() {
         </h1>
         <p className="subtitle">A Free AI Bootcamp — Learn, Build &amp; Grow Together</p>
         <p className="description">
-          Starting Saturday, let&apos;s begin a journey to learn AI — building and effectively using
-          AI from scratch. Though I&apos;ll lead this, it&apos;s learning together: a community of
-          curious minds building AI skills side by side, Monday to Friday evenings. No prerequisites. Just curiosity.
+          Let&apos;s begin a journey to learn AI — building and effectively using AI from scratch.
+          Though I&apos;ll lead this, it&apos;s learning together: a community of curious minds
+          building AI skills side by side. No prerequisites. Just curiosity.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
           <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Join Saturday&apos;s Meet
+            Join Saturday&apos;s Kickoff
           </a>
           <a href="#curriculum" className="btn btn-secondary">
             See What We&apos;re Building
           </a>
         </div>
+        <p className="hero-note">
+          Saturday is a short introductory meet-and-greet to get acquainted and set the stage —
+          the real hands-on work happens Monday–Friday evenings.
+        </p>
       </section>
 
       {/* Event banner */}
@@ -71,7 +75,7 @@ export default function Home() {
           <span className="event-banner-value">Mon–Fri · 6:00–8:00 PM MST</span>
         </div>
         <div className="event-banner-item">
-          <span className="event-banner-label">Kickoff</span>
+          <span className="event-banner-label">Intro Meetup</span>
           <span className="event-banner-value">Saturday, July 4 · 8:00 AM MST</span>
         </div>
         <div className="event-banner-item">
@@ -135,17 +139,22 @@ export default function Home() {
       <section style={{ marginTop: "6rem", padding: "4rem 0" }} id="join">
         <h2 className="section-title">Ready to Start?</h2>
         <div className="start-card">
-          <h3>A Fresh Start Every Saturday</h3>
-          <p>Then we learn together Monday to Friday at saturdAI.com</p>
+          <h3>Saturday: Let&apos;s Meet First</h3>
+          <p>
+            A short kickoff to introduce ourselves, meet the group, and set the stage — then the
+            real work begins Monday through Friday.
+          </p>
           <ul className="benefits">
-            <li>✓ 6:00–8:00 PM MST · 5:00–7:00 PM PST · 8:00–10:00 PM EST · 5:30–7:30 AM IST (next day)</li>
+            <li>✓ Intro meetup: Saturday, July 4 · 8:00 AM MST</li>
+            <li>✓ Hands-on sessions: Mon–Fri · 6:00–8:00 PM MST</li>
+            <li>✓ 5:00–7:00 PM PST · 8:00–10:00 PM EST · 5:30–7:30 AM IST (next day)</li>
             <li>✓ Live, hands-on, instructor-led — but learning together</li>
             <li>✓ Remote access to a DGX Spark supercomputer</li>
             <li>✓ 20 weekday evenings, completely free, open to everyone</li>
           </ul>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
             <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Join Google Meet
+              Join Saturday&apos;s Kickoff
             </a>
             <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               Register Now
