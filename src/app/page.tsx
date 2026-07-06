@@ -44,7 +44,7 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <section style={{ textAlign: "center", padding: "5rem 2rem 2rem" }}>
+      <section style={{ textAlign: "center", padding: "1.5rem 2rem 2rem" }}>
         <h1 className="title">
           SaturdAI<span className="gradient-accent">.</span>
         </h1>
@@ -72,7 +72,7 @@ export default function Home() {
       <section className="event-banner">
         <div className="event-banner-item">
           <span className="event-banner-label">When</span>
-          <span className="event-banner-value">Mon–Fri · 6:00–8:00 PM MST</span>
+          <span className="event-banner-value">Mon–Fri · 7:00–8:30 PM MST</span>
         </div>
         <div className="event-banner-item">
           <span className="event-banner-label">Intro Meetup</span>
@@ -146,8 +146,8 @@ export default function Home() {
           </p>
           <ul className="benefits">
             <li>✓ Intro meetup: Saturday, July 4 · 8:00 AM MST</li>
-            <li>✓ Hands-on sessions: Mon–Fri · 6:00–8:00 PM MST</li>
-            <li>✓ 5:00–7:00 PM PST · 8:00–10:00 PM EST · 5:30–7:30 AM IST (next day)</li>
+            <li>✓ Hands-on sessions: Mon–Fri · 7:00–8:30 PM MST</li>
+            <li>✓ 6:00–7:30 PM PST · 9:00–10:30 PM EST · 6:30–8:00 AM IST (next day)</li>
             <li>✓ Live, hands-on, instructor-led — but learning together</li>
             <li>✓ Remote access to a DGX Spark supercomputer</li>
             <li>✓ 20 weekday evenings, completely free, open to everyone</li>
