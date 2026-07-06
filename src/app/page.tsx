@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: "2rem" }}>
       {/* Hero */}
-      <section style={{ textAlign: "center", padding: "1.5rem 2rem 2rem" }}>
+      <section style={{ textAlign: "center", padding: "0.5rem 2rem 2rem" }}>
         <h1 className="title">
           SaturdAI<span className="gradient-accent">.</span>
         </h1>
