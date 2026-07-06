@@ -207,6 +207,10 @@ a {
 .register-banner-btn:hover {
   transform: translateY(-1px);
 }
+.register-banner-link {
+  color: #ffffff;
+  text-decoration: underline;
+}
 @keyframes register-banner-shift {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -320,23 +324,6 @@ a {
   }
 }
 
-/* Calendar invite banner */
-.invite-banner {
-  text-align: center;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #ffffff;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.25), rgba(118, 75, 162, 0.25));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
-  margin-top: 1rem;
-}
-.invite-banner-link {
-  color: #c7d2fe;
-  text-decoration: underline;
-  font-weight: 700;
-}
 
 /* Event banner */
 .event-banner {

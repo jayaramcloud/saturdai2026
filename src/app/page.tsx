@@ -34,15 +34,6 @@ const CURRICULUM = [
 export default function Home() {
   return (
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: "2rem" }}>
-      {/* Calendar invite banner */}
-      <div className="invite-banner">
-        📅 Want to join the live sessions? Email{" "}
-        <a href={`mailto:${CONTACT_EMAIL}`} className="invite-banner-link">
-          {CONTACT_EMAIL}
-        </a>{" "}
-        and I&apos;ll add you to the calendar invite.
-      </div>
-
       {/* Hero */}
       <section style={{ textAlign: "center", padding: "1.5rem 2rem 2rem" }}>
         <h1 className="title">
