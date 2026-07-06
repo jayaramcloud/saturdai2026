@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">A Day in the Life of an LLM User</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Six regions of everyday use &#8212; chances are you&#8217;ll visit more than one today.</text>
+
+  <!-- 6 region cards, 3x2 grid -->
+  <!-- Card template positions -->
+  <g font-size="16">
+    <!-- Writing & Communication -->
+    <g transform="translate(80,180)">
+      <rect width="480" height="230" rx="18" fill="#5b7cfa" fill-opacity="0.12" stroke="#5b7cfa" stroke-width="2"/>
+      <text x="28" y="44" font-size="30">&#9997;&#65039;</text>
+      <text x="76" y="42" font-size="21" font-weight="700" fill="#9db1fb">Writing &#38; Communication</text>
+      <text x="28" y="82" font-size="14" fill="#c0c0d0">&#8226; Draft an email to a difficult client</text>
+      <text x="28" y="106" font-size="14" fill="#c0c0d0">&#8226; Rewrite a paragraph to sound friendlier</text>
+      <text x="28" y="130" font-size="14" fill="#c0c0d0">&#8226; Summarize a long thread before a meeting</text>
+      <text x="28" y="154" font-size="14" fill="#c0c0d0">&#8226; Fix grammar &#38; tone in a cover letter</text>
+    </g>
+
+    <!-- Learning & Research -->
+    <g transform="translate(580,180)">
+      <rect width="480" height="230" rx="18" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2"/>
+      <text x="28" y="44" font-size="30">&#128218;</text>
+      <text x="76" y="42" font-size="21" font-weight="700" fill="#5fd4c6">Learning &#38; Research</text>
+      <text x="28" y="82" font-size="14" fill="#c0c0d0">&#8226; Explain a concept &#8220;like I&#8217;m new to it&#8221;</text>
+      <text x="28" y="106" font-size="14" fill="#c0c0d0">&#8226; Compare two options side by side</text>
+      <text x="28" y="130" font-size="14" fill="#c0c0d0">&#8226; Turn a dense article into simple notes</text>
+      <text x="28" y="154" font-size="14" fill="#c0c0d0">&#8226; Quiz yourself on what you just read</text>
+    </g>
+
+    <!-- Coding & Building -->
+    <g transform="translate(1080,180)">
+      <rect width="440" height="230" rx="18" fill="#d97706" fill-opacity="0.12" stroke="#d97706" stroke-width="2"/>
+      <text x="28" y="44" font-size="30">&#128187;</text>
+      <text x="76" y="42" font-size="21" font-weight="700" fill="#f3b978">Coding &#38; Building</text>
+      <text x="28" y="82" font-size="14" fill="#c0c0d0">&#8226; Explain an error message in plain words</text>
+      <text x="28" y="106" font-size="14" fill="#c0c0d0">&#8226; Write a first draft of a script</text>
+      <text x="28" y="130" font-size="14" fill="#c0c0d0">&#8226; Review code for bugs before you ship</text>
+      <text x="28" y="154" font-size="14" fill="#c0c0d0">&#8226; Turn a rough idea into working code</text>
+    </g>
+
+    <!-- Planning & Productivity -->
+    <g transform="translate(80,432)">
+      <rect width="480" height="230" rx="18" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="2"/>
+      <text x="28" y="44" font-size="30">&#128197;</text>
+      <text x="76" y="42" font-size="21" font-weight="700" fill="#f5a8c9">Planning &#38; Productivity</text>
+      <text x="28" y="82" font-size="14" fill="#c0c0d0">&#8226; Turn a messy brain-dump into a to-do list</text>
+      <text x="28" y="106" font-size="14" fill="#c0c0d0">&#8226; Plan a week&#8217;s meals or a trip itinerary</text>
+      <text x="28" y="130" font-size="14" fill="#c0c0d0">&#8226; Draft an agenda for tomorrow&#8217;s meeting</text>
+      <text x="28" y="154" font-size="14" fill="#c0c0d0">&#8226; Break a big goal into small next steps</text>
+    </g>
+
+    <!-- Creative Ideas -->
+    <g transform="translate(580,432)">
+      <rect width="480" height="230" rx="18" fill="#16a34a" fill-opacity="0.12" stroke="#16a34a" stroke-width="2"/>
+      <text x="28" y="44" font-size="30">&#127912;</text>
+      <text x="76" y="42" font-size="21" font-weight="700" fill="#7be0a0">Creative Ideas</text>
+      <text x="28" y="82" font-size="14" fill="#c0c0d0">&#8226; Brainstorm names for a project</text>
+      <text x="28" y="106" font-size="14" fill="#c0c0d0">&#8226; Write a birthday poem in someone&#8217;s style</text>
+      <text x="28" y="130" font-size="14" fill="#c0c0d0">&#8226; Generate ideas for a themed party</text>
+      <text x="28" y="154" font-size="14" fill="#c0c0d0">&#8226; Co-write a short story, one twist at a time</text>
+    </g>
+
+    <!-- Everyday Advice -->
+    <g transform="translate(1080,432)">
+      <rect width="440" height="230" rx="18" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-width="2"/>
+      <text x="28" y="44" font-size="30">&#128172;</text>
+      <text x="76" y="42" font-size="21" font-weight="700" fill="#c4b5fd">Everyday Advice</text>
+      <text x="28" y="82" font-size="14" fill="#c0c0d0">&#8226; Talk through a tough decision</text>
+      <text x="28" y="106" font-size="14" fill="#c0c0d0">&#8226; Get a second opinion before you send it</text>
+      <text x="28" y="130" font-size="14" fill="#c0c0d0">&#8226; Understand a confusing bill or contract</text>
+      <text x="28" y="154" font-size="14" fill="#c0c0d0">&#8226; Practice for an interview or a hard talk</text>
+    </g>
+  </g>
+
+  <!-- Footer callout -->
+  <rect x="80" y="696" width="1440" height="80" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="744" font-size="16" fill="#e0e0f0">&#128161; Notice the pattern: you&#8217;re not asking the LLM to &#8220;know the truth&#8221; &#8212; you&#8217;re asking it to read, draft, explain, or brainstorm <tspan font-weight="700" fill="#ffffff">with</tspan> you.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">3 / 10</text>
+</svg>

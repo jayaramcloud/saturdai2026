@@ -1,0 +1,76 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What Is MCP? Client/Server Architecture</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One host app, one client, many servers &#8212; all speaking the same protocol.</text>
+
+  <!-- Host outer box -->
+  <rect x="120" y="200" width="480" height="560" rx="24" fill="#5b7cfa" fill-opacity="0.10" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="152" y="248" font-size="22" font-weight="700" fill="#9db1fb">Host Application</text>
+  <text x="152" y="276" font-size="15" fill="#a0a0c0">e.g. Claude Desktop, an IDE,</text>
+  <text x="152" y="298" font-size="15" fill="#a0a0c0">or a custom AI app</text>
+
+  <!-- LLM inside host -->
+  <rect x="152" y="330" width="416" height="90" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+  <text x="360" y="368" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">The LLM</text>
+  <text x="360" y="394" font-size="14" fill="#c0c0d0" text-anchor="middle">decides when it needs a tool or resource</text>
+
+  <!-- MCP client inside host -->
+  <rect x="152" y="450" width="416" height="270" rx="18" fill="#8b5cf6" fill-opacity="0.25" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="360" y="494" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">MCP Client</text>
+  <text x="360" y="522" font-size="14" fill="#e9e4fc" text-anchor="middle">Lives inside the host. Speaks the MCP</text>
+  <text x="360" y="544" font-size="14" fill="#e9e4fc" text-anchor="middle">protocol to one or more servers, and</text>
+  <text x="360" y="566" font-size="14" fill="#e9e4fc" text-anchor="middle">relays results back to the LLM.</text>
+  <text x="360" y="610" font-size="13" fill="#c4b5fd" font-style="italic" text-anchor="middle">Maintains a 1:1 connection</text>
+  <text x="360" y="630" font-size="13" fill="#c4b5fd" font-style="italic" text-anchor="middle">per server</text>
+
+  <!-- Arrows from client to servers -->
+  <path d="M568,530 C 750,470 900,400 990,320" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M568,585 L 990,480" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M568,640 C 750,690 900,700 990,650" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="720" y="290" font-size="14" fill="#8888aa" font-style="italic">standard MCP protocol (JSON-RPC)</text>
+
+  <!-- Servers -->
+  <rect x="1000" y="240" width="440" height="140" rx="16" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="1032" y="280" font-size="17" font-weight="700" fill="#5fd4c6">MCP Server: Filesystem</text>
+  <text x="1032" y="306" font-size="14" fill="#c0c0d0">Exposes local files as resources</text>
+  <text x="1032" y="326" font-size="14" fill="#c0c0d0">and read/write tools</text>
+
+  <rect x="1000" y="410" width="440" height="140" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+  <text x="1032" y="450" font-size="17" font-weight="700" fill="#f3b978">MCP Server: GitHub</text>
+  <text x="1032" y="476" font-size="14" fill="#c0c0d0">Exposes repo data and actions</text>
+  <text x="1032" y="496" font-size="14" fill="#c0c0d0">like creating issues</text>
+
+  <rect x="1000" y="580" width="440" height="140" rx="16" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="1032" y="620" font-size="17" font-weight="700" fill="#f5a8c9">MCP Server: Database</text>
+  <text x="1032" y="646" font-size="14" fill="#c0c0d0">Exposes query tools and</text>
+  <text x="1032" y="666" font-size="14" fill="#c0c0d0">schema resources</text>
+
+  <text x="360" y="770" font-size="14" fill="#8888aa" font-style="italic" text-anchor="middle">One client can talk to many servers &#8212; each server can be reused by many clients.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

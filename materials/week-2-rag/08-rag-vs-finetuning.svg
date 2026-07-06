@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">RAG vs. Fine-Tuning</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Two different ways to customize a model &#8212; they solve different problems.</text>
+
+  <!-- Table header -->
+  <text x="700" y="200" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">RAG</text>
+  <text x="1200" y="200" font-size="16" font-weight="800" fill="#a0a0c0" text-anchor="middle">FINE-TUNING</text>
+
+  <!-- Row 1: What it changes -->
+  <text x="80" y="256" font-size="18" font-weight="700" fill="#ffffff">What it changes</text>
+  <rect x="560" y="228" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="700" y="258" font-size="15" fill="#e9e4fc" text-anchor="middle">What the model knows</text>
+  <rect x="1060" y="228" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1200" y="258" font-size="15" fill="#c0c0d0" text-anchor="middle">How the model behaves</text>
+  <line x1="80" y1="290" x2="1520" y2="290" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 2: Best for -->
+  <text x="80" y="336" font-size="18" font-weight="700" fill="#ffffff">Best for</text>
+  <rect x="560" y="308" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="700" y="338" font-size="15" fill="#e9e4fc" text-anchor="middle">Fresh or private facts</text>
+  <rect x="1060" y="308" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1200" y="338" font-size="15" fill="#c0c0d0" text-anchor="middle">Tone, style, or format habits</text>
+  <line x1="80" y1="370" x2="1520" y2="370" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 3: Update cost -->
+  <text x="80" y="416" font-size="18" font-weight="700" fill="#ffffff">Updating it</text>
+  <rect x="560" y="388" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="700" y="418" font-size="15" fill="#e9e4fc" text-anchor="middle">Cheap &#8212; just re-index docs</text>
+  <rect x="1060" y="388" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1200" y="418" font-size="15" fill="#c0c0d0" text-anchor="middle">Expensive &#8212; retrain the model</text>
+  <line x1="80" y1="450" x2="1520" y2="450" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 4: Traceability -->
+  <text x="80" y="496" font-size="18" font-weight="700" fill="#ffffff">Traceability</text>
+  <rect x="560" y="468" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="700" y="498" font-size="15" fill="#e9e4fc" text-anchor="middle">Can cite the exact source</text>
+  <rect x="1060" y="468" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1200" y="498" font-size="15" fill="#c0c0d0" text-anchor="middle">Baked in, hard to trace</text>
+  <line x1="80" y1="530" x2="1520" y2="530" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 5: Knowledge freshness -->
+  <text x="80" y="576" font-size="18" font-weight="700" fill="#ffffff">Freshness</text>
+  <rect x="560" y="548" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="700" y="578" font-size="15" fill="#e9e4fc" text-anchor="middle">As current as your index</text>
+  <rect x="1060" y="548" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1200" y="578" font-size="15" fill="#c0c0d0" text-anchor="middle">Static after training run</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="80" y="660" width="1440" height="160" rx="24" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="112" y="704" font-size="20" font-weight="800" fill="#86efac">&#128161; In practice</text>
+  <text x="112" y="736" font-size="16" fill="#e0e0f0">Most teams reach for RAG first &#8212; it&#8217;s cheaper, faster to update, and keeps answers</text>
+  <text x="112" y="762" font-size="16" fill="#e0e0f0">traceable to a source. Fine-tuning is for changing how the model talks or reasons,</text>
+  <text x="112" y="794" font-size="14" fill="#a0a0c0" font-style="italic">not for teaching it new facts. The two can also be combined.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 2: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

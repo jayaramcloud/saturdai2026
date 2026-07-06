@@ -1,0 +1,87 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#ffffff" fill-opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Security &#38; Permissions</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">MCP servers can be powerful &#8212; file access, sending email, deleting records.</text>
+
+  <!-- Flow: LLM wants tool -> client asks permission -> user approves -> server runs -->
+  <g transform="translate(220,300)">
+    <circle r="60" fill="#5b7cfa" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#129504;</text>
+    <text x="0" y="100" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">LLM wants to call</text>
+    <text x="0" y="122" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">a tool</text>
+  </g>
+  <path d="M300,300 L520,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(600,300)">
+    <circle r="60" fill="#d97706" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#9888;&#65039;</text>
+    <text x="0" y="100" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Client asks you</text>
+    <text x="0" y="122" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">for consent</text>
+  </g>
+  <path d="M680,300 L900,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(980,300)">
+    <circle r="60" fill="#16a34a" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#9989;</text>
+    <text x="0" y="100" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">You approve</text>
+    <text x="0" y="122" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">(once or always)</text>
+  </g>
+  <path d="M1060,300 L1280,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1360,300)">
+    <circle r="60" fill="#0d9488" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#9881;&#65039;</text>
+    <text x="0" y="100" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Server runs</text>
+    <text x="0" y="122" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">the tool</text>
+  </g>
+
+  <text x="80" y="470" font-size="15" fill="#8888aa" font-style="italic">Exact consent UI varies by client &#8212; some ask every time, some let you allow a tool for the rest of the session.</text>
+
+  <!-- Warning box -->
+  <rect x="80" y="520" width="1440" height="290" rx="24" fill="#f5576c" fill-opacity="0.08" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="570" font-size="22" font-weight="800" fill="#ffffff">&#9888;&#65039; Things to watch for</text>
+
+  <g transform="translate(150,600)">
+    <text font-size="16" fill="#c0c0d0">&#8226; A server asking for far more access than its stated purpose needs</text>
+  </g>
+  <g transform="translate(150,636)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Tools that can silently write, delete, or send &#8212; not just read</text>
+  </g>
+  <g transform="translate(150,672)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Untrusted or unverified servers, especially from unknown publishers</text>
+  </g>
+  <g transform="translate(150,708)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Prompt injection: malicious data returned by a tool that tries to</text>
+  </g>
+  <g transform="translate(150,732)">
+    <text font-size="16" fill="#c0c0d0">  steer the model into unintended actions</text>
+  </g>
+
+  <rect x="900" y="588" width="560" height="200" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="924" y="622" font-size="15" font-weight="700" fill="#86efac">&#9989; SAFE RULE OF THUMB</text>
+  <text x="924" y="654" font-size="15" fill="#e0e0f0">Scope servers to the minimum access</text>
+  <text x="924" y="678" font-size="15" fill="#e0e0f0">they need, review tool calls before</text>
+  <text x="924" y="702" font-size="15" fill="#e0e0f0">approving, and only install servers</text>
+  <text x="924" y="726" font-size="15" fill="#e0e0f0">from sources you trust.</text>
+  <text x="924" y="758" font-size="14" fill="#a0a0c0" font-style="italic">Least privilege applies to AI tools too.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

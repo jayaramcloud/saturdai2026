@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Building Your First MCP Server</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A conceptual roadmap &#8212; no code required to understand the shape of it.</text>
+
+  <!-- Road path -->
+  <path d="M160,480 C 400,380 500,580 760,480 S 1160,380 1440,480" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160,480 C 400,380 500,580 760,480 S 1160,380 1440,480" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="2 14" stroke-linecap="round"/>
+
+  <!-- Stop 1 -->
+  <g transform="translate(160,480)">
+    <circle r="42" fill="#5b7cfa" fill-opacity="0.9"/>
+    <text y="10" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="-135" y="70" width="270" height="150" rx="16" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="0" y="104" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Define the scope</text>
+    <text x="0" y="130" font-size="13" fill="#c0c0d0" text-anchor="middle">Decide what data or</text>
+    <text x="0" y="150" font-size="13" fill="#c0c0d0" text-anchor="middle">actions you want to</text>
+    <text x="0" y="170" font-size="13" fill="#c0c0d0" text-anchor="middle">expose to a model.</text>
+  </g>
+
+  <!-- Stop 2 -->
+  <g transform="translate(587,405)">
+    <circle r="40" fill="#0d9488" fill-opacity="0.9"/>
+    <text y="9" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="-130" y="60" width="260" height="140" rx="16" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2"/>
+    <text x="0" y="94" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Use an MCP SDK</text>
+    <text x="0" y="120" font-size="13" fill="#d3f3ee" text-anchor="middle">Start from the official</text>
+    <text x="0" y="140" font-size="13" fill="#d3f3ee" text-anchor="middle">SDK (Python, TypeScript,</text>
+    <text x="0" y="160" font-size="13" fill="#d3f3ee" text-anchor="middle">etc.) instead of raw JSON-RPC.</text>
+  </g>
+
+  <!-- Stop 3 -->
+  <g transform="translate(1013,405)">
+    <circle r="40" fill="#d97706" fill-opacity="0.9"/>
+    <text y="9" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="-130" y="60" width="260" height="140" rx="16" fill="#d97706" fill-opacity="0.12" stroke="#d97706" stroke-width="2"/>
+    <text x="0" y="94" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Declare tools &#38; resources</text>
+    <text x="0" y="120" font-size="13" fill="#fbe6cf" text-anchor="middle">Register each function</text>
+    <text x="0" y="140" font-size="13" fill="#fbe6cf" text-anchor="middle">and data source with a</text>
+    <text x="0" y="160" font-size="13" fill="#fbe6cf" text-anchor="middle">name, description, schema.</text>
+  </g>
+
+  <!-- Stop 4 -->
+  <g transform="translate(1440,480)">
+    <circle r="42" fill="#ec4899" fill-opacity="0.9"/>
+    <text y="10" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="-135" y="70" width="270" height="150" rx="16" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="2"/>
+    <text x="0" y="104" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Connect a client</text>
+    <text x="0" y="130" font-size="13" fill="#fbdcea" text-anchor="middle">Point Claude Desktop or</text>
+    <text x="0" y="150" font-size="13" fill="#fbdcea" text-anchor="middle">Claude Code at your</text>
+    <text x="0" y="170" font-size="13" fill="#fbdcea" text-anchor="middle">server&#8217;s config.</text>
+  </g>
+
+  <!-- Stop 5 - final, highlighted -->
+  <g transform="translate(1440,480) translate(0,0)"></g>
+  <g transform="translate(800,700)">
+    <circle r="46" fill="#8b5cf6" filter="url(#glow)"/>
+    <text y="12" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+    <rect x="-160" y="70" width="320" height="90" rx="16" fill="#8b5cf6" fill-opacity="0.2" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="0" y="104" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">Test it live</text>
+    <text x="0" y="130" font-size="14" fill="#e9e4fc" text-anchor="middle">Ask a question that requires your tool &#8212; watch it get called.</text>
+  </g>
+
+  <!-- connector to step 5 -->
+  <path d="M1013,445 C 950,560 880,640 830,660" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-dasharray="2 10"/>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

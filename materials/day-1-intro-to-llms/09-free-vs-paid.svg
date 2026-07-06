@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Free vs. Paid Tiers</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">What actually changes when you upgrade &#8212; so you can decide if it&#8217;s worth it.</text>
+
+  <!-- Table header -->
+  <text x="700" y="200" font-size="16" font-weight="800" fill="#a0a0c0" text-anchor="middle">FREE</text>
+  <text x="1200" y="200" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">PAID</text>
+
+  <!-- Row template -->
+  <!-- Row 1: Message limits -->
+  <text x="80" y="256" font-size="18" font-weight="700" fill="#ffffff">Message limits</text>
+  <rect x="560" y="228" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="258" font-size="15" fill="#c0c0d0" text-anchor="middle">Capped per day/hour</text>
+  <rect x="1060" y="228" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="258" font-size="15" fill="#e9e4fc" text-anchor="middle">Much higher / unlimited</text>
+  <line x1="80" y1="290" x2="1520" y2="290" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 2: Model access -->
+  <text x="80" y="336" font-size="18" font-weight="700" fill="#ffffff">Model access</text>
+  <rect x="560" y="308" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="338" font-size="15" fill="#c0c0d0" text-anchor="middle">Smaller/older models</text>
+  <rect x="1060" y="308" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="338" font-size="15" fill="#e9e4fc" text-anchor="middle">Latest, most capable models</text>
+  <line x1="80" y1="370" x2="1520" y2="370" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 3: Context window -->
+  <text x="80" y="416" font-size="18" font-weight="700" fill="#ffffff">Memory per chat</text>
+  <rect x="560" y="388" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="418" font-size="15" fill="#c0c0d0" text-anchor="middle">Shorter context window</text>
+  <rect x="1060" y="388" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="418" font-size="15" fill="#e9e4fc" text-anchor="middle">Longer, remembers more</text>
+  <line x1="80" y1="450" x2="1520" y2="450" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 4: File/image uploads -->
+  <text x="80" y="496" font-size="18" font-weight="700" fill="#ffffff">File &amp; image uploads</text>
+  <rect x="560" y="468" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="498" font-size="15" fill="#c0c0d0" text-anchor="middle">Limited or none</text>
+  <rect x="1060" y="468" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="498" font-size="15" fill="#e9e4fc" text-anchor="middle">Generous, more file types</text>
+  <line x1="80" y1="530" x2="1520" y2="530" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 5: Extra features -->
+  <text x="80" y="576" font-size="18" font-weight="700" fill="#ffffff">Extra features</text>
+  <rect x="560" y="548" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="578" font-size="15" fill="#c0c0d0" text-anchor="middle">Core chat only</text>
+  <rect x="1060" y="548" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="578" font-size="15" fill="#e9e4fc" text-anchor="middle">Voice, agents, coding tools</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="80" y="660" width="1440" height="160" rx="24" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="112" y="704" font-size="20" font-weight="800" fill="#86efac">&#128161; For this bootcamp</text>
+  <text x="112" y="736" font-size="16" fill="#e0e0f0">Free tiers are more than enough to learn and practice everything we&#8217;ll cover. Upgrade later</text>
+  <text x="112" y="762" font-size="16" fill="#e0e0f0">only if you hit real limits in your own work &#8212; not because you assume you need to.</text>
+  <text x="112" y="794" font-size="14" fill="#a0a0c0" font-style="italic">We&#8217;ll also use our shared DGX Spark supercomputer, so heavier compute needs are covered.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

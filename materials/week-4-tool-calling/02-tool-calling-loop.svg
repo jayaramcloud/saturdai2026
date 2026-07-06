@@ -1,0 +1,89 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The Tool-Calling Loop</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">The model doesn&#8217;t run code itself &#8212; your code stays in the driver&#8217;s seat.</text>
+
+  <!-- 1. User asks -->
+  <g transform="translate(80,220)">
+    <rect width="300" height="150" rx="18" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#9db1fb">STEP 1</text>
+    <text x="24" y="70" font-size="19" font-weight="700" fill="#ffffff">User asks</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">&#8220;Book me a table for</text>
+    <text x="24" y="118" font-size="14" fill="#c0c0d0">4 tonight at 7pm.&#8221;</text>
+  </g>
+
+  <!-- 2. LLM decides + picks tool + args -->
+  <g transform="translate(650,220)">
+    <rect width="300" height="150" rx="18" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#5fd4c6">STEP 2</text>
+    <text x="24" y="70" font-size="19" font-weight="700" fill="#ffffff">LLM decides</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">Picks book_table, fills in</text>
+    <text x="24" y="118" font-size="14" fill="#c0c0d0">party_size=4, time=&#8220;19:00&#8221;.</text>
+  </g>
+
+  <!-- 3. Your code executes -->
+  <g transform="translate(1220,220)">
+    <rect width="300" height="150" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#f3b978">STEP 3</text>
+    <text x="24" y="70" font-size="19" font-weight="700" fill="#ffffff">Your code runs it</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">The model never touches the</text>
+    <text x="24" y="118" font-size="14" fill="#c0c0d0">API &#8212; your code calls it.</text>
+  </g>
+
+  <!-- 4. Result returned -->
+  <g transform="translate(650,470)">
+    <rect width="300" height="150" rx="18" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#f5a8c9">STEP 4</text>
+    <text x="24" y="70" font-size="19" font-weight="700" fill="#ffffff">Result returns to LLM</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">&#8220;Reservation confirmed:</text>
+    <text x="24" y="118" font-size="14" fill="#c0c0d0">table #12, 7:00pm.&#8221;</text>
+  </g>
+
+  <!-- 5. LLM final answer -->
+  <g transform="translate(80,470)">
+    <rect width="300" height="150" rx="18" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#c4b5fd">STEP 5</text>
+    <text x="24" y="70" font-size="19" font-weight="700" fill="#ffffff">LLM answers you</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">&#8220;You&#8217;re booked for 4 at</text>
+    <text x="24" y="118" font-size="14" fill="#c0c0d0">7pm tonight.&#8221;</text>
+  </g>
+
+  <!-- Arrows: 1->2, 2->3, 3->4 (down+left), 4->5 -->
+  <path d="M380,295 L650,295" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M950,295 L1220,295" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M1370,370 C1370,430 1150,470 950,500" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M650,545 L380,545" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="1040" y="470" font-size="14" fill="#8888aa" font-style="italic">not shown to the user</text>
+
+  <!-- Dashed loop-back for multi-tool chains -->
+  <path d="M80,530 C-40,650 -40,150 260,220" fill="none" stroke="#c4b5fd" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6" marker-end="url(#arrow)"/>
+  <text x="60" y="720" font-size="14" fill="#8888aa" font-style="italic">if another tool is needed, the loop</text>
+  <text x="60" y="742" font-size="14" fill="#8888aa" font-style="italic">repeats from step 2 before answering</text>
+
+  <!-- Side note -->
+  <rect x="1180" y="680" width="340" height="130" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="1204" y="716" font-size="16" font-weight="700" fill="#f3b978">&#128273; Key idea</text>
+  <text x="1204" y="744" font-size="14" fill="#c0c0d0">The LLM only ever produces text</text>
+  <text x="1204" y="764" font-size="14" fill="#c0c0d0">describing a call &#8212; execution and</text>
+  <text x="1204" y="784" font-size="14" fill="#c0c0d0">side effects are always your code&#8217;s job.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

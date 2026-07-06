@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Real-World Example: a GitHub MCP Server</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Grounding the abstract primitives in something concrete you could use today.</text>
+
+  <!-- Server box -->
+  <rect x="500" y="180" width="600" height="120" rx="20" fill="#8b5cf6" fill-opacity="0.30" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="800" y="228" font-size="22" font-weight="800" fill="#ffffff" text-anchor="middle">GitHub MCP Server</text>
+  <text x="800" y="256" font-size="15" fill="#e9e4fc" text-anchor="middle">Wraps the GitHub API and exposes it as MCP tools &#38; resources</text>
+  <text x="800" y="278" font-size="15" fill="#e9e4fc" text-anchor="middle">so any MCP client can use it, unmodified.</text>
+
+  <!-- Tools exposed -->
+  <rect x="140" y="360" width="640" height="380" rx="22" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-width="2.5"/>
+  <text x="172" y="404" font-size="20" font-weight="800" fill="#f3b978">&#128296; Tools it exposes</text>
+
+  <rect x="172" y="430" width="576" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="196" y="460" font-size="16" font-weight="700" fill="#ffffff" font-family="monospace">create_issue(repo, title, body)</text>
+  <text x="196" y="486" font-size="14" fill="#c0c0d0">Opens a new issue in a repository.</text>
+
+  <rect x="172" y="534" width="576" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="196" y="564" font-size="16" font-weight="700" fill="#ffffff" font-family="monospace">list_pull_requests(repo, state)</text>
+  <text x="196" y="590" font-size="14" fill="#c0c0d0">Returns open, closed, or merged PRs.</text>
+
+  <rect x="172" y="638" width="576" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="196" y="668" font-size="16" font-weight="700" fill="#ffffff" font-family="monospace">merge_pull_request(repo, number)</text>
+  <text x="196" y="694" font-size="14" fill="#c0c0d0">Merges a PR the model has been asked to land.</text>
+
+  <!-- Resources exposed -->
+  <rect x="820" y="360" width="640" height="380" rx="22" fill="#0d9488" fill-opacity="0.10" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="852" y="404" font-size="20" font-weight="800" fill="#5fd4c6">&#128193; Resources it exposes</text>
+
+  <rect x="852" y="430" width="576" height="120" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="876" y="460" font-size="16" font-weight="700" fill="#ffffff" font-family="monospace">repo://readme</text>
+  <text x="876" y="486" font-size="14" fill="#c0c0d0">The repository&#8217;s README contents,</text>
+  <text x="876" y="506" font-size="14" fill="#c0c0d0">readable without any tool call.</text>
+
+  <rect x="852" y="566" width="576" height="120" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="876" y="596" font-size="16" font-weight="700" fill="#ffffff" font-family="monospace">repo://issues/42</text>
+  <text x="876" y="622" font-size="14" fill="#c0c0d0">A specific issue&#8217;s full thread, pulled</text>
+  <text x="876" y="642" font-size="14" fill="#c0c0d0">in as context for the model.</text>
+
+  <text x="800" y="800" font-size="15" fill="#8888aa" font-style="italic" text-anchor="middle">A user could ask &#8220;summarize open PRs in this repo and file a follow-up issue&#8221; &#8212; the model chains these primitives to do it.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The RAG Pipeline</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">The one map to remember &#8212; every RAG system is some version of this flow.</text>
+
+  <!-- Nodes -->
+  <!-- 1 Documents -->
+  <g transform="translate(80,300)">
+    <rect width="220" height="180" rx="18" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#9db1fb">STEP 1</text>
+    <text x="110" y="90" font-size="34" text-anchor="middle">&#128196;</text>
+    <text x="110" y="128" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Documents</text>
+    <text x="110" y="152" font-size="13" fill="#c0c0d0" text-anchor="middle">PDFs, wikis, tickets</text>
+  </g>
+
+  <!-- 2 Chunking -->
+  <g transform="translate(360,300)">
+    <rect width="220" height="180" rx="18" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#5fd4c6">STEP 2</text>
+    <text x="110" y="90" font-size="34" text-anchor="middle">&#9986;&#65039;</text>
+    <text x="110" y="128" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Chunking</text>
+    <text x="110" y="152" font-size="13" fill="#c0c0d0" text-anchor="middle">Split into small pieces</text>
+  </g>
+
+  <!-- 3 Embeddings -->
+  <g transform="translate(640,300)">
+    <rect width="220" height="180" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#f3b978">STEP 3</text>
+    <text x="110" y="90" font-size="34" text-anchor="middle">&#128290;</text>
+    <text x="110" y="128" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Embeddings</text>
+    <text x="110" y="152" font-size="13" fill="#c0c0d0" text-anchor="middle">Text &#8594; vectors</text>
+  </g>
+
+  <!-- 4 Vector DB -->
+  <g transform="translate(920,300)">
+    <rect width="220" height="180" rx="18" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#f5a8c9">STEP 4</text>
+    <text x="110" y="90" font-size="34" text-anchor="middle">&#128451;&#65039;</text>
+    <text x="110" y="128" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Vector Database</text>
+    <text x="110" y="152" font-size="13" fill="#c0c0d0" text-anchor="middle">Stores &amp; indexes vectors</text>
+  </g>
+
+  <!-- 5 Retrieval -->
+  <g transform="translate(1200,300)">
+    <rect width="180" height="180" rx="18" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="20" y="36" font-size="14" font-weight="700" fill="#86efac">STEP 5</text>
+    <text x="90" y="90" font-size="34" text-anchor="middle">&#128269;</text>
+    <text x="90" y="128" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Retrieval</text>
+    <text x="90" y="152" font-size="13" fill="#c0c0d0" text-anchor="middle">Top-k matches</text>
+  </g>
+
+  <!-- Arrows across row -->
+  <path d="M300,390 L360,390" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M580,390 L640,390" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M860,390 L920,390" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M1140,390 L1200,390" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Down arrow to LLM answer -->
+  <path d="M1290,480 C1290,560 900,590 700,616" fill="none" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 6 LLM answer, highlighted -->
+  <g transform="translate(400,616)">
+    <rect width="600" height="140" rx="20" fill="#8b5cf6" fill-opacity="0.30" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+    <text x="24" y="36" font-size="14" font-weight="800" fill="#c4b5fd">STEP 6 &#8226; FINAL STEP</text>
+    <text x="70" y="90" font-size="34" text-anchor="middle">&#129504;</text>
+    <text x="330" y="76" font-size="20" font-weight="800" fill="#ffffff">LLM Answer</text>
+    <text x="330" y="102" font-size="14" fill="#e9e4fc">Model reads your question + retrieved</text>
+    <text x="330" y="122" font-size="14" fill="#e9e4fc">chunks, then writes a grounded reply.</text>
+  </g>
+
+  <!-- Query side note -->
+  <text x="80" y="248" font-size="15" fill="#8888aa" font-style="italic">Indexing happens ahead of time (top row). Retrieval happens live, every time a user asks a question.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 2: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

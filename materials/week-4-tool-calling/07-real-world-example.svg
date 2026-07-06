@@ -1,0 +1,71 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow7" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Real-World Example</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">&#8220;If the weather looks good for my Saturday hike, book it on my calendar.&#8221;</text>
+
+  <!-- Tool 1: check weather -->
+  <rect x="80" y="200" width="360" height="200" rx="20" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="112" y="238" font-size="32" text-anchor="start">&#127780;&#65039;</text>
+  <text x="112" y="286" font-size="14" font-weight="800" fill="#5fd4c6">TOOL 1</text>
+  <text x="112" y="316" font-size="20" font-weight="800" fill="#ffffff">get_weather</text>
+  <text x="112" y="344" font-size="14" fill="#d3f3ee">(location, date)</text>
+  <text x="112" y="372" font-size="14" fill="#d3f3ee">&#8594; "Sunny, 72&#176;F, low wind"</text>
+
+  <path d="M440,300 L560,300" stroke="#a0a0c0" stroke-width="3" fill="none" marker-end="url(#arrow7)"/>
+
+  <!-- Decision diamond -->
+  <g transform="translate(700,300)">
+    <path d="M0,-100 L160,0 L0,100 L-160,0 Z" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="0" y="-14" font-size="15" font-weight="800" fill="#f3b978" text-anchor="middle">DECISION</text>
+    <text x="0" y="14" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Is the weather</text>
+    <text x="0" y="38" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">good for hiking?</text>
+  </g>
+
+  <!-- Yes branch -->
+  <path d="M860,260 C 1000,180 1080,180 1120,220" stroke="#16a34a" stroke-width="3" fill="none" marker-end="url(#arrow7)"/>
+  <text x="960" y="190" font-size="15" font-weight="700" fill="#86efac">YES</text>
+
+  <rect x="1140" y="200" width="380" height="200" rx="20" fill="#16a34a" fill-opacity="0.14" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="1172" y="238" font-size="32">&#128197;</text>
+  <text x="1172" y="286" font-size="14" font-weight="800" fill="#86efac">TOOL 2</text>
+  <text x="1172" y="316" font-size="20" font-weight="800" fill="#ffffff">create_calendar_event</text>
+  <text x="1172" y="344" font-size="14" fill="#dcf5e6">(title, date, time)</text>
+  <text x="1172" y="372" font-size="14" fill="#dcf5e6">&#8594; "Hike &#8212; Saturday 9am" booked</text>
+
+  <!-- No branch -->
+  <path d="M860,340 C 1000,420 1080,420 1120,420" stroke="#f5576c" stroke-width="3" fill="none" marker-end="url(#arrow7)"/>
+  <text x="960" y="450" font-size="15" font-weight="700" fill="#f5a3ac">NO</text>
+
+  <rect x="1140" y="440" width="380" height="140" rx="20" fill="#f5576c" fill-opacity="0.1" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="1172" y="480" font-size="16" font-weight="800" fill="#ffffff">No tool call needed</text>
+  <text x="1172" y="508" font-size="14" fill="#c0c0d0">The model just replies in text:</text>
+  <text x="1172" y="530" font-size="14" fill="#c0c0d0">"Rain expected &#8212; want me to</text>
+  <text x="1172" y="552" font-size="14" fill="#c0c0d0">check Sunday instead?"</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="650" width="1440" height="160" rx="24" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="694" font-size="20" font-weight="800" fill="#ffffff">&#128161; The decision happens in the model, not in your code</text>
+  <text x="112" y="726" font-size="16" fill="#e0e0f0">You didn&#8217;t write an if-statement for "is the weather good" &#8212; you gave the model two tools and a goal,</text>
+  <text x="112" y="752" font-size="16" fill="#e0e0f0">and it reasoned about the weather result before deciding whether the second tool call was appropriate.</text>
+  <text x="112" y="784" font-size="14" fill="#a0a0c0" font-style="italic">This is the payoff of tool calling: the model bridges everyday judgment and real actions.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

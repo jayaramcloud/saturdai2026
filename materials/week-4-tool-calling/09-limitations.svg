@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Where Tool Calling Breaks Down</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Three limitations worth planning for &#8212; each has a straightforward guard.</text>
+
+  <!-- Card 1: Hallucinated tool calls -->
+  <rect x="80" y="190" width="453" height="560" rx="22" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="240" font-size="32">&#128171;</text>
+  <text x="112" y="286" font-size="21" font-weight="800" fill="#ffffff">Hallucinated Calls</text>
+  <text x="112" y="316" font-size="15" fill="#a0a0c0">It can invent a tool that</text>
+  <text x="112" y="336" font-size="15" fill="#a0a0c0">doesn&#8217;t exist, or arguments</text>
+  <text x="112" y="356" font-size="15" fill="#a0a0c0">that were never defined.</text>
+  <rect x="112" y="392" width="389" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="422" font-size="14" font-weight="700" fill="#f5a3ac">EXAMPLE</text>
+  <text x="132" y="450" font-size="14" fill="#c0c0d0">Calling send_sms when only</text>
+  <text x="132" y="472" font-size="14" fill="#c0c0d0">send_email was ever provided.</text>
+  <text x="112" y="556" font-size="14" font-weight="700" fill="#86efac">&#9989; Guard: validate every call</text>
+  <text x="112" y="578" font-size="14" fill="#c0c0d0">against your real tool list first.</text>
+
+  <!-- Card 2: Wrong arguments -->
+  <rect x="573" y="190" width="453" height="560" rx="22" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-width="2.5"/>
+  <text x="605" y="240" font-size="32">&#127919;</text>
+  <text x="605" y="286" font-size="21" font-weight="800" fill="#ffffff">Wrong Arguments</text>
+  <text x="605" y="316" font-size="15" fill="#a0a0c0">It calls the right tool, but</text>
+  <text x="605" y="336" font-size="15" fill="#a0a0c0">with a malformed, wrong,</text>
+  <text x="605" y="356" font-size="15" fill="#a0a0c0">or nonsensical value.</text>
+  <rect x="605" y="392" width="389" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="625" y="422" font-size="14" font-weight="700" fill="#f3b978">EXAMPLE</text>
+  <text x="625" y="450" font-size="14" fill="#c0c0d0">Passing "tomorow" or a past</text>
+  <text x="625" y="472" font-size="14" fill="#c0c0d0">date to a booking tool.</text>
+  <text x="605" y="556" font-size="14" font-weight="700" fill="#86efac">&#9989; Guard: validate/sanitize inputs</text>
+  <text x="605" y="578" font-size="14" fill="#c0c0d0">in your code, don&#8217;t just trust them.</text>
+
+  <!-- Card 3: Cost and latency -->
+  <rect x="1066" y="190" width="453" height="560" rx="22" fill="#8b5cf6" fill-opacity="0.10" stroke="#8b5cf6" stroke-width="2.5"/>
+  <text x="1098" y="240" font-size="32">&#8987;</text>
+  <text x="1098" y="286" font-size="21" font-weight="800" fill="#ffffff">Cost &amp; Latency</text>
+  <text x="1098" y="316" font-size="15" fill="#a0a0c0">Every tool round-trip adds</text>
+  <text x="1098" y="336" font-size="15" fill="#a0a0c0">an extra model call &#8212; more</text>
+  <text x="1098" y="356" font-size="15" fill="#a0a0c0">time and more tokens spent.</text>
+  <rect x="1098" y="392" width="389" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1118" y="422" font-size="14" font-weight="700" fill="#c4b5fd">EXAMPLE</text>
+  <text x="1118" y="450" font-size="14" fill="#c0c0d0">A 5-tool chain can take far</text>
+  <text x="1118" y="472" font-size="14" fill="#c0c0d0">longer than a single reply.</text>
+  <text x="1098" y="556" font-size="14" font-weight="700" fill="#86efac">&#9989; Guard: cap the number of</text>
+  <text x="1098" y="578" font-size="14" fill="#c0c0d0">steps and cache repeat lookups.</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="770" width="1440" height="60" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="806" font-size="16" fill="#e0e0f0">&#128161; Treat tool calls like any external input: validate before you execute, and design so failure is cheap.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

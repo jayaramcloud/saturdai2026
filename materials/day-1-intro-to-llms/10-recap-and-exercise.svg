@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Day 1 Recap &amp; Your First Exercise</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Five ideas to keep, and one thing to try before we meet again.</text>
+
+  <!-- Recap chips (left) -->
+  <rect x="80" y="180" width="700" height="560" rx="24" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="228" font-size="20" font-weight="800" fill="#ffffff">What we covered</text>
+
+  <g transform="translate(112,260)">
+    <circle cx="14" cy="10" r="14" fill="#5b7cfa"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">1</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">LLMs are one kind of generative AI, trained on text.</text>
+  </g>
+  <g transform="translate(112,308)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">2</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Different assistants (Claude, ChatGPT, Gemini...)</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">have different strengths.</text>
+  </g>
+  <g transform="translate(112,378)">
+    <circle cx="14" cy="10" r="14" fill="#d97706"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">3</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">A good prompt is specific: context, goal, format.</text>
+  </g>
+  <g transform="translate(112,426)">
+    <circle cx="14" cy="10" r="14" fill="#f5576c"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">4</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">LLMs can sound confident and still be wrong &#8212;</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">verify facts that matter.</text>
+  </g>
+  <g transform="translate(112,496)">
+    <circle cx="14" cy="10" r="14" fill="#8b5cf6"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">5</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Never paste passwords, secrets, or private data</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">into a chat.</text>
+  </g>
+
+  <text x="112" y="600" font-size="15" fill="#8888aa" font-style="italic">Next stop on the roadmap: Week 2 &#8212; grounding</text>
+  <text x="112" y="622" font-size="15" fill="#8888aa" font-style="italic">the model in real knowledge with RAG.</text>
+
+  <!-- Exercise (right, highlighted) -->
+  <rect x="820" y="180" width="700" height="560" rx="24" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="852" y="228" font-size="20" font-weight="800" fill="#ffffff">&#128221; Try this now, live</text>
+
+  <rect x="852" y="256" width="636" height="150" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="290" font-size="16" font-weight="700" fill="#c4b5fd">STEP 1</text>
+  <text x="874" y="316" font-size="15" fill="#e9e4fc">Open any assistant and ask a vague</text>
+  <text x="874" y="338" font-size="15" fill="#e9e4fc">question about something you actually</text>
+  <text x="874" y="360" font-size="15" fill="#e9e4fc">need help with this week.</text>
+
+  <rect x="852" y="422" width="636" height="150" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="456" font-size="16" font-weight="700" fill="#c4b5fd">STEP 2</text>
+  <text x="874" y="482" font-size="15" fill="#e9e4fc">Rewrite it as a specific prompt: add</text>
+  <text x="874" y="504" font-size="15" fill="#e9e4fc">context, your goal, and the format you</text>
+  <text x="874" y="526" font-size="15" fill="#e9e4fc">want the answer in.</text>
+
+  <rect x="852" y="588" width="636" height="120" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="622" font-size="16" font-weight="700" fill="#c4b5fd">STEP 3</text>
+  <text x="874" y="648" font-size="15" fill="#e9e4fc">Compare the two answers &#8212; bring the</text>
+  <text x="874" y="670" font-size="15" fill="#e9e4fc">before/after to share with the group.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

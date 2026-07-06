@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Why MCPs?</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Before MCP, every AI app had to be wired to every tool by hand.</text>
+
+  <!-- Left: the mess (N x M) -->
+  <text x="112" y="200" font-size="18" font-weight="700" fill="#f5576c">Before: N &#215; M custom integrations</text>
+  <g>
+    <!-- 3 apps -->
+    <rect x="112" y="230" width="160" height="56" rx="12" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="192" y="264" font-size="15" fill="#ffffff" text-anchor="middle">Chat App</text>
+    <rect x="112" y="310" width="160" height="56" rx="12" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="192" y="344" font-size="15" fill="#ffffff" text-anchor="middle">IDE Assistant</text>
+    <rect x="112" y="390" width="160" height="56" rx="12" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="192" y="424" font-size="15" fill="#ffffff" text-anchor="middle">Custom Agent</text>
+
+    <!-- 3 tools -->
+    <rect x="620" y="230" width="160" height="56" rx="12" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+    <text x="700" y="264" font-size="15" fill="#ffffff" text-anchor="middle">GitHub</text>
+    <rect x="620" y="310" width="160" height="56" rx="12" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+    <text x="700" y="344" font-size="15" fill="#ffffff" text-anchor="middle">Database</text>
+    <rect x="620" y="390" width="160" height="56" rx="12" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+    <text x="700" y="424" font-size="15" fill="#ffffff" text-anchor="middle">Filesystem</text>
+
+    <!-- tangled lines: every app to every tool -->
+    <g stroke="#f5576c" stroke-opacity="0.55" stroke-width="1.5" fill="none">
+      <path d="M272,258 L620,258"/>
+      <path d="M272,258 L620,338"/>
+      <path d="M272,258 L620,418"/>
+      <path d="M272,338 L620,258"/>
+      <path d="M272,338 L620,338"/>
+      <path d="M272,338 L620,418"/>
+      <path d="M272,418 L620,258"/>
+      <path d="M272,418 L620,338"/>
+      <path d="M272,418 L620,418"/>
+    </g>
+  </g>
+  <text x="192" y="490" font-size="14" fill="#8888aa" font-style="italic">9 one-off integrations for just 3 apps &#215; 3 tools</text>
+
+  <!-- Divider arrow -->
+  <text x="480" y="600" font-size="30" fill="#a0a0c0" text-anchor="middle">&#8594;</text>
+  <text x="480" y="630" font-size="14" fill="#8888aa" text-anchor="middle">MCP replaces this</text>
+
+  <!-- Right: MCP as USB-C -->
+  <rect x="900" y="190" width="620" height="560" rx="24" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="932" y="240" font-size="22" font-weight="800" fill="#ffffff">After: one shared standard</text>
+  <text x="932" y="270" font-size="15" fill="#e9e4fc">MCP (Model Context Protocol) is often called</text>
+  <text x="932" y="292" font-size="15" fill="#e9e4fc">&#8220;a USB-C port for AI apps&#8221; &#8212; one plug,</text>
+  <text x="932" y="314" font-size="15" fill="#e9e4fc">many devices.</text>
+
+  <g transform="translate(1210,470)">
+    <circle r="70" fill="#8b5cf6" filter="url(#glow)"/>
+    <text y="8" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">MCP</text>
+    <text y="30" font-size="13" fill="#e9e4fc" text-anchor="middle">standard</text>
+  </g>
+  <!-- apps connecting in -->
+  <g stroke="#c4b5fd" stroke-width="2.5" fill="none">
+    <path d="M960,420 L1150,455"/>
+    <path d="M960,470 L1140,470"/>
+    <path d="M960,520 L1150,485"/>
+  </g>
+  <rect x="932" y="392" width="150" height="46" rx="10" fill="#5b7cfa" fill-opacity="0.25" stroke="#5b7cfa" stroke-width="1.5"/>
+  <text x="1007" y="421" font-size="13" fill="#ffffff" text-anchor="middle">Any AI app</text>
+  <rect x="932" y="447" width="150" height="46" rx="10" fill="#5b7cfa" fill-opacity="0.25" stroke="#5b7cfa" stroke-width="1.5"/>
+  <text x="1007" y="476" font-size="13" fill="#ffffff" text-anchor="middle">Any IDE</text>
+  <rect x="932" y="502" width="150" height="46" rx="10" fill="#5b7cfa" fill-opacity="0.25" stroke="#5b7cfa" stroke-width="1.5"/>
+  <text x="1007" y="531" font-size="13" fill="#ffffff" text-anchor="middle">Any agent</text>
+
+  <text x="932" y="600" font-size="14" fill="#e0e0f0">Any MCP-compatible app can talk to any</text>
+  <text x="932" y="622" font-size="14" fill="#e0e0f0">MCP server, the same way, every time.</text>
+  <text x="932" y="662" font-size="14" fill="#a0a0c0" font-style="italic">Build the integration once, per tool &#8212;</text>
+  <text x="932" y="684" font-size="14" fill="#a0a0c0" font-style="italic">not once per app.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

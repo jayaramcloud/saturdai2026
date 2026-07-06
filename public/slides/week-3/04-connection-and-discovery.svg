@@ -1,0 +1,96 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Connection &#38; Discovery Flow</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Before any real work happens, the client asks the server &#8220;what can you do?&#8221;</text>
+
+  <!-- Step chain -->
+  <g transform="translate(160,220)">
+    <circle r="30" fill="#5b7cfa"/>
+    <text y="10" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+    <rect x="-140" y="60" width="280" height="130" rx="16" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="0" y="94" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Client connects</text>
+    <text x="0" y="120" font-size="13" fill="#c0c0d0" text-anchor="middle">Host launches or connects</text>
+    <text x="0" y="140" font-size="13" fill="#c0c0d0" text-anchor="middle">to an MCP server.</text>
+  </g>
+
+  <path d="M330,220 L490,220" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(590,220)">
+    <circle r="30" fill="#0d9488"/>
+    <text y="10" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+    <rect x="-140" y="60" width="280" height="130" rx="16" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2"/>
+    <text x="0" y="94" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">&#8220;What can you do?&#8221;</text>
+    <text x="0" y="120" font-size="13" fill="#c0c0d0" text-anchor="middle">Client sends an</text>
+    <text x="0" y="140" font-size="13" fill="#c0c0d0" text-anchor="middle">initialize/list request.</text>
+  </g>
+
+  <path d="M760,220 L920,220" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1020,220)">
+    <circle r="30" fill="#d97706"/>
+    <text y="10" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+    <rect x="-140" y="60" width="280" height="130" rx="16" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2"/>
+    <text x="0" y="94" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Server responds</text>
+    <text x="0" y="120" font-size="13" fill="#c0c0d0" text-anchor="middle">Lists its tools, resources,</text>
+    <text x="0" y="140" font-size="13" fill="#c0c0d0" text-anchor="middle">and prompts, with descriptions.</text>
+  </g>
+
+  <path d="M1190,220 L1350,220" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1450,220)">
+    <circle r="30" fill="#ec4899"/>
+    <text y="10" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+    <rect x="-140" y="60" width="280" height="130" rx="16" fill="#ec4899" fill-opacity="0.14" stroke="#ec4899" stroke-width="2"/>
+    <text x="0" y="94" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">LLM sees the menu</text>
+    <text x="0" y="120" font-size="13" fill="#c0c0d0" text-anchor="middle">Client hands the list to the</text>
+    <text x="0" y="140" font-size="13" fill="#c0c0d0" text-anchor="middle">model as available capabilities.</text>
+  </g>
+
+  <!-- Example server response -->
+  <rect x="160" y="460" width="1280" height="280" rx="24" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="192" y="508" font-size="19" font-weight="800" fill="#ffffff">Example: what a server might report back</text>
+
+  <rect x="192" y="536" width="380" height="170" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="216" y="566" font-size="14" font-weight="700" fill="#9db1fb">TOOLS</text>
+  <text x="216" y="592" font-size="14" fill="#e0e0f0" font-family="monospace">create_issue</text>
+  <text x="216" y="614" font-size="14" fill="#e0e0f0" font-family="monospace">list_pull_requests</text>
+
+  <rect x="602" y="536" width="380" height="170" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="626" y="566" font-size="14" font-weight="700" fill="#5fd4c6">RESOURCES</text>
+  <text x="626" y="592" font-size="14" fill="#e0e0f0" font-family="monospace">repo://readme</text>
+  <text x="626" y="614" font-size="14" fill="#e0e0f0" font-family="monospace">repo://issues/42</text>
+
+  <rect x="1012" y="536" width="380" height="170" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="1036" y="566" font-size="14" font-weight="700" fill="#f5a8c9">PROMPTS</text>
+  <text x="1036" y="592" font-size="14" fill="#e0e0f0" font-family="monospace">summarize_pr</text>
+  <text x="1036" y="614" font-size="14" fill="#e0e0f0" font-family="monospace">write_release_notes</text>
+
+  <text x="192" y="768" font-size="14" fill="#e9e4fc" font-style="italic">This handshake happens once per connection &#8212; only then does real tool-calling begin.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

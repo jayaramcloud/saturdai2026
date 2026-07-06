@@ -1,0 +1,95 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Chunking</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Long documents get split into small pieces before they&#8217;re ever indexed.</text>
+
+  <!-- Left: original document -->
+  <rect x="80" y="190" width="360" height="480" rx="18" fill="#5b7cfa" fill-opacity="0.12" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="112" y="232" font-size="18" font-weight="700" fill="#9db1fb">One long document</text>
+  <g fill="#ffffff" fill-opacity="0.35">
+    <rect x="112" y="256" width="296" height="10" rx="4"/>
+    <rect x="112" y="280" width="296" height="10" rx="4"/>
+    <rect x="112" y="304" width="230" height="10" rx="4"/>
+    <rect x="112" y="336" width="296" height="10" rx="4"/>
+    <rect x="112" y="360" width="296" height="10" rx="4"/>
+    <rect x="112" y="384" width="180" height="10" rx="4"/>
+    <rect x="112" y="416" width="296" height="10" rx="4"/>
+    <rect x="112" y="440" width="296" height="10" rx="4"/>
+    <rect x="112" y="464" width="260" height="10" rx="4"/>
+    <rect x="112" y="496" width="296" height="10" rx="4"/>
+    <rect x="112" y="520" width="296" height="10" rx="4"/>
+    <rect x="112" y="544" width="200" height="10" rx="4"/>
+    <rect x="112" y="576" width="296" height="10" rx="4"/>
+    <rect x="112" y="600" width="296" height="10" rx="4"/>
+    <rect x="112" y="624" width="230" height="10" rx="4"/>
+  </g>
+  <text x="112" y="654" font-size="14" fill="#c0c0d0" font-style="italic">Too big to embed as one unit &#8212;</text>
+  <text x="112" y="674" font-size="14" fill="#c0c0d0" font-style="italic">and too big to hand the model whole.</text>
+
+  <!-- Arrow -->
+  <path d="M460,430 L560,430" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="470" y="400" font-size="14" fill="#8888aa">split into</text>
+
+  <!-- Right: chunks -->
+  <g transform="translate(580,190)">
+    <rect x="0" y="0" width="220" height="140" rx="14" fill="#0d9488" fill-opacity="0.18" stroke="#0d9488" stroke-width="2"/>
+    <text x="20" y="30" font-size="13" font-weight="700" fill="#5fd4c6">CHUNK 1</text>
+    <rect x="20" y="50" width="180" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="20" y="70" width="180" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="20" y="90" width="120" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+
+    <rect x="0" y="170" width="220" height="140" rx="14" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+    <text x="20" y="200" font-size="13" font-weight="700" fill="#f3b978">CHUNK 2</text>
+    <rect x="20" y="220" width="180" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="20" y="240" width="180" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="20" y="260" width="90" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+
+    <rect x="0" y="340" width="220" height="140" rx="14" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-width="2"/>
+    <text x="20" y="370" font-size="13" font-weight="700" fill="#f5a8c9">CHUNK 3</text>
+    <rect x="20" y="390" width="180" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="20" y="410" width="180" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+    <rect x="20" y="430" width="150" height="8" rx="4" fill="#ffffff" fill-opacity="0.35"/>
+  </g>
+  <text x="580" y="646" font-size="14" fill="#a0a0c0">&#8230; and so on, often with a small overlap</text>
+  <text x="580" y="666" font-size="14" fill="#a0a0c0">between chunks so context isn&#8217;t cut mid-thought.</text>
+
+  <!-- Tradeoff panel -->
+  <rect x="880" y="190" width="640" height="480" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="912" y="232" font-size="18" font-weight="700" fill="#ffffff">Chunk size is a tradeoff</text>
+
+  <rect x="912" y="260" width="576" height="170" rx="12" fill="#f5576c" fill-opacity="0.12" stroke="#f5576c" stroke-width="2"/>
+  <text x="932" y="292" font-size="15" font-weight="700" fill="#f5a3ac">TOO BIG</text>
+  <text x="932" y="320" font-size="15" fill="#e0e0f0">Retrieval gets imprecise &#8212; a chunk covers</text>
+  <text x="932" y="342" font-size="15" fill="#e0e0f0">many topics, so a lot of irrelevant text</text>
+  <text x="932" y="364" font-size="15" fill="#e0e0f0">rides along with the useful part, wasting</text>
+  <text x="932" y="386" font-size="15" fill="#e0e0f0">context window space.</text>
+
+  <rect x="912" y="450" width="576" height="170" rx="12" fill="#d97706" fill-opacity="0.12" stroke="#d97706" stroke-width="2"/>
+  <text x="932" y="482" font-size="15" font-weight="700" fill="#f3b978">TOO SMALL</text>
+  <text x="932" y="510" font-size="15" fill="#e0e0f0">Chunks lose surrounding context &#8212; a</text>
+  <text x="932" y="532" font-size="15" fill="#e0e0f0">sentence pulled out alone can be</text>
+  <text x="932" y="554" font-size="15" fill="#e0e0f0">ambiguous or missing the setup needed</text>
+  <text x="932" y="576" font-size="15" fill="#e0e0f0">to make sense of it.</text>
+
+  <text x="912" y="656" font-size="14" fill="#8888aa" font-style="italic">Typical starting point: a few hundred tokens per chunk, with ~10&#8211;20% overlap.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 2: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">3 / 10</text>
+</svg>

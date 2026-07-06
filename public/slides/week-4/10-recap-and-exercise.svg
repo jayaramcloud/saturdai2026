@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Week 4 Recap &amp; Your Exercise</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Five ideas to keep, and one thing to try before we meet again.</text>
+
+  <!-- Recap chips (left) -->
+  <rect x="80" y="180" width="700" height="560" rx="24" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="228" font-size="20" font-weight="800" fill="#ffffff">What we covered</text>
+
+  <g transform="translate(112,260)">
+    <circle cx="14" cy="10" r="14" fill="#5b7cfa"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">1</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Tool calling lets a model trigger real code,</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">not just produce text.</text>
+  </g>
+  <g transform="translate(112,330)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">2</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">The loop is: decide &#8594; call &#8594; execute &#8594;</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">return result &#8594; answer.</text>
+  </g>
+  <g transform="translate(112,400)">
+    <circle cx="14" cy="10" r="14" fill="#d97706"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">3</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">A good tool schema needs a clear name,</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">description, and typed parameters.</text>
+  </g>
+  <g transform="translate(112,470)">
+    <circle cx="14" cy="10" r="14" fill="#f5576c"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">4</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Agents just repeat that loop &#8212; chaining tools</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">and re-planning after every result.</text>
+  </g>
+  <g transform="translate(112,540)">
+    <circle cx="14" cy="10" r="14" fill="#8b5cf6"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">5</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Risky, irreversible actions deserve a human</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">confirmation step before they run.</text>
+  </g>
+
+  <text x="112" y="640" font-size="15" fill="#8888aa" font-style="italic">That wraps the bootcamp roadmap: LLMs &#8594; RAG</text>
+  <text x="112" y="662" font-size="15" fill="#8888aa" font-style="italic">&#8594; MCPs &#8594; Tool Calling.</text>
+
+  <!-- Exercise (right, highlighted) -->
+  <rect x="820" y="180" width="700" height="560" rx="24" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="852" y="228" font-size="20" font-weight="800" fill="#ffffff">&#128221; Try this now, live</text>
+
+  <rect x="852" y="256" width="636" height="150" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="290" font-size="16" font-weight="700" fill="#c4b5fd">STEP 1</text>
+  <text x="874" y="316" font-size="15" fill="#e9e4fc">Write a plain-language description of</text>
+  <text x="874" y="338" font-size="15" fill="#e9e4fc">a simple tool &#8212; e.g. get_time or</text>
+  <text x="874" y="360" font-size="15" fill="#e9e4fc">roll_dice(sides).</text>
+
+  <rect x="852" y="422" width="636" height="150" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="456" font-size="16" font-weight="700" fill="#c4b5fd">STEP 2</text>
+  <text x="874" y="482" font-size="15" fill="#e9e4fc">Ask an assistant that supports tools</text>
+  <text x="874" y="504" font-size="15" fill="#e9e4fc">(e.g. Claude) to use it, and watch it</text>
+  <text x="874" y="526" font-size="15" fill="#e9e4fc">pick the tool and fill in arguments.</text>
+
+  <rect x="852" y="588" width="636" height="120" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="622" font-size="16" font-weight="700" fill="#c4b5fd">STEP 3</text>
+  <text x="874" y="648" font-size="15" fill="#e9e4fc">Give it a bad or ambiguous request on</text>
+  <text x="874" y="670" font-size="15" fill="#e9e4fc">purpose &#8212; see how it handles the failure.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

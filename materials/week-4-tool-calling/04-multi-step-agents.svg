@@ -1,0 +1,80 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Multi-Step, Multi-Tool Agents</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One request can chain several tool calls before the model ever replies to you.</text>
+
+  <!-- Request banner -->
+  <rect x="80" y="180" width="1440" height="80" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="228" font-size="18" fill="#e0e0f0" font-style="italic">&#8220;Check my flight to Denver, see if the weather there is good, and email me a summary.&#8221;</text>
+
+  <!-- Road path -->
+  <path d="M160,500 C 400,400 500,600 760,500 S 1160,400 1440,500" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160,500 C 400,400 500,600 760,500 S 1160,400 1440,500" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="2 14" stroke-linecap="round"/>
+
+  <!-- Step 1: check flight -->
+  <g transform="translate(160,500)">
+    <circle r="44" fill="#5b7cfa" fill-opacity="0.9"/>
+    <text y="12" font-size="30" text-anchor="middle">&#9992;&#65039;</text>
+    <rect x="-140" y="70" width="280" height="140" rx="16" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="0" y="104" font-size="14" font-weight="800" fill="#9db1fb" text-anchor="middle">TOOL CALL 1</text>
+    <text x="0" y="130" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">get_flight_status</text>
+    <text x="0" y="156" font-size="13" fill="#dbe1fd" text-anchor="middle">Lands in Denver, 4:10pm,</text>
+    <text x="0" y="176" font-size="13" fill="#dbe1fd" text-anchor="middle">on time.</text>
+  </g>
+
+  <!-- Step 2: check weather -->
+  <g transform="translate(700,425)">
+    <circle r="44" fill="#0d9488" fill-opacity="0.9"/>
+    <text y="12" font-size="30" text-anchor="middle">&#127780;&#65039;</text>
+    <rect x="-140" y="60" width="280" height="140" rx="16" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2"/>
+    <text x="0" y="94" font-size="14" font-weight="800" fill="#5fd4c6" text-anchor="middle">TOOL CALL 2</text>
+    <text x="0" y="120" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">get_weather</text>
+    <text x="0" y="146" font-size="13" fill="#d3f3ee" text-anchor="middle">Uses Denver from step 1&#8217;s</text>
+    <text x="0" y="166" font-size="13" fill="#d3f3ee" text-anchor="middle">result &#8212; clear, 68&#176;F.</text>
+  </g>
+
+  <!-- Step 3: draft + send summary -->
+  <g transform="translate(1440,500)">
+    <circle r="44" fill="#d97706" fill-opacity="0.9" filter="url(#glow)"/>
+    <text y="12" font-size="30" text-anchor="middle">&#128231;</text>
+    <rect x="-150" y="70" width="300" height="140" rx="16" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2"/>
+    <text x="0" y="104" font-size="14" font-weight="800" fill="#f3b978" text-anchor="middle">TOOL CALL 3</text>
+    <text x="0" y="130" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">send_email</text>
+    <text x="0" y="156" font-size="13" fill="#fbe6cf" text-anchor="middle">Summary written using both</text>
+    <text x="0" y="176" font-size="13" fill="#fbe6cf" text-anchor="middle">earlier results, then sent.</text>
+  </g>
+
+  <!-- Connector labels -->
+  <text x="420" y="360" font-size="14" fill="#8888aa" font-style="italic">output feeds into</text>
+  <text x="420" y="382" font-size="14" fill="#8888aa" font-style="italic">the next call&#8217;s input</text>
+  <text x="1030" y="360" font-size="14" fill="#8888aa" font-style="italic">still one user turn &#8212;</text>
+  <text x="1030" y="382" font-size="14" fill="#8888aa" font-style="italic">no extra prompting needed</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="750" width="1440" height="70" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="792" font-size="16" fill="#e0e0f0">&#128260; The model re-plans after every result: it decides whether it has enough to answer, or needs one more tool call.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

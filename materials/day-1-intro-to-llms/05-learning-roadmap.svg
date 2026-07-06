@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Your SaturdAI Learning Roadmap</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Today is stop one of four &#8212; here&#8217;s where the road leads.</text>
+
+  <!-- Road path -->
+  <path d="M160,480 C 400,380 500,580 760,480 S 1160,380 1440,480" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160,480 C 400,380 500,580 760,480 S 1160,380 1440,480" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="2 14" stroke-linecap="round"/>
+
+  <!-- Stop 1: Day 1 - LLMs (current, highlighted) -->
+  <g transform="translate(160,480)">
+    <circle r="46" fill="#8b5cf6" filter="url(#glow)"/>
+    <text y="12" font-size="34" text-anchor="middle">&#129504;</text>
+    <rect x="-140" y="70" width="280" height="150" rx="16" fill="#8b5cf6" fill-opacity="0.2" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="0" y="106" font-size="14" font-weight="800" fill="#c4b5fd" text-anchor="middle">DAY 1 &#8226; TODAY</text>
+    <text x="0" y="134" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">LLMs</text>
+    <text x="0" y="160" font-size="13" fill="#e9e4fc" text-anchor="middle">Understanding &#38; using</text>
+    <text x="0" y="178" font-size="13" fill="#e9e4fc" text-anchor="middle">language models</text>
+    <text x="0" y="-64" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">YOU ARE HERE</text>
+  </g>
+
+  <!-- Stop 2: Week 2 - RAG -->
+  <g transform="translate(587,405)">
+    <circle r="40" fill="#0d9488" fill-opacity="0.9"/>
+    <text y="10" font-size="28" text-anchor="middle">&#128218;</text>
+    <rect x="-130" y="60" width="260" height="130" rx="16" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2"/>
+    <text x="0" y="94" font-size="13" font-weight="800" fill="#5fd4c6" text-anchor="middle">WEEK 2</text>
+    <text x="0" y="120" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">RAG</text>
+    <text x="0" y="144" font-size="13" fill="#d3f3ee" text-anchor="middle">Grounding AI with</text>
+    <text x="0" y="162" font-size="13" fill="#d3f3ee" text-anchor="middle">actual knowledge</text>
+  </g>
+
+  <!-- Stop 3: Week 3 - MCPs -->
+  <g transform="translate(1013,405)">
+    <circle r="40" fill="#d97706" fill-opacity="0.9"/>
+    <text y="10" font-size="28" text-anchor="middle">&#128268;</text>
+    <rect x="-130" y="60" width="260" height="130" rx="16" fill="#d97706" fill-opacity="0.12" stroke="#d97706" stroke-width="2"/>
+    <text x="0" y="94" font-size="13" font-weight="800" fill="#f3b978" text-anchor="middle">WEEK 3</text>
+    <text x="0" y="120" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">MCPs</text>
+    <text x="0" y="144" font-size="13" fill="#fbe6cf" text-anchor="middle">Connecting AI to</text>
+    <text x="0" y="162" font-size="13" fill="#fbe6cf" text-anchor="middle">external systems</text>
+  </g>
+
+  <!-- Stop 4: Week 4 - Tool Calling -->
+  <g transform="translate(1440,480)">
+    <circle r="40" fill="#ec4899" fill-opacity="0.9"/>
+    <text y="10" font-size="28" text-anchor="middle">&#128736;&#65039;</text>
+    <rect x="-135" y="70" width="270" height="130" rx="16" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="2"/>
+    <text x="0" y="104" font-size="13" font-weight="800" fill="#f5a8c9" text-anchor="middle">WEEK 4</text>
+    <text x="0" y="130" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">Tool Calling</text>
+    <text x="0" y="154" font-size="13" fill="#fbdcea" text-anchor="middle">Making AI agents</text>
+    <text x="0" y="172" font-size="13" fill="#fbdcea" text-anchor="middle">do real work</text>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="80" y="750" width="1440" height="70" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="792" font-size="16" fill="#e0e0f0">&#127775; Each stop builds on the last: you can&#8217;t ground AI in real knowledge (RAG) or have it take action (Tool Calling) until you&#8217;re fluent talking to an LLM first.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

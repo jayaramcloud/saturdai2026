@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The Three Primitives</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Everything an MCP server exposes falls into one of three categories.</text>
+
+  <!-- Card 1: Resources -->
+  <rect x="80" y="190" width="453" height="560" rx="22" fill="#5b7cfa" fill-opacity="0.10" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="112" y="240" font-size="32">&#128193;</text>
+  <text x="112" y="286" font-size="22" font-weight="800" fill="#ffffff">Resources</text>
+  <text x="112" y="316" font-size="15" fill="#a0a0c0">Data the app can read &#8212;</text>
+  <text x="112" y="336" font-size="15" fill="#a0a0c0">passive context, not actions.</text>
+  <rect x="112" y="372" width="389" height="150" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="402" font-size="14" font-weight="700" fill="#9db1fb">EXAMPLES</text>
+  <text x="132" y="430" font-size="14" fill="#c0c0d0">A file&#8217;s contents, a database</text>
+  <text x="132" y="452" font-size="14" fill="#c0c0d0">record, a URL like</text>
+  <text x="132" y="474" font-size="14" fill="#c0c0d0" font-family="monospace">repo://readme</text>
+  <text x="112" y="576" font-size="14" font-weight="700" fill="#86efac">&#9989; The model reads these</text>
+  <text x="112" y="598" font-size="14" fill="#c0c0d0">to ground its answer in real data.</text>
+
+  <!-- Card 2: Tools -->
+  <rect x="573" y="190" width="453" height="560" rx="22" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-width="2.5"/>
+  <text x="605" y="240" font-size="32">&#128296;</text>
+  <text x="605" y="286" font-size="22" font-weight="800" fill="#ffffff">Tools</text>
+  <text x="605" y="316" font-size="15" fill="#a0a0c0">Functions the model can call</text>
+  <text x="605" y="336" font-size="15" fill="#a0a0c0">to take action in the world.</text>
+  <rect x="605" y="372" width="389" height="150" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="625" y="402" font-size="14" font-weight="700" fill="#f3b978">EXAMPLES</text>
+  <text x="625" y="430" font-size="14" fill="#c0c0d0" font-family="monospace">create_issue()</text>
+  <text x="625" y="452" font-size="14" fill="#c0c0d0" font-family="monospace">send_email()</text>
+  <text x="625" y="474" font-size="14" fill="#c0c0d0" font-family="monospace">run_query()</text>
+  <text x="605" y="576" font-size="14" font-weight="700" fill="#86efac">&#9989; The model decides when</text>
+  <text x="605" y="598" font-size="14" fill="#c0c0d0">and how to call them, with arguments.</text>
+
+  <!-- Card 3: Prompts -->
+  <rect x="1066" y="190" width="453" height="560" rx="22" fill="#ec4899" fill-opacity="0.10" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="1098" y="240" font-size="32">&#128220;</text>
+  <text x="1098" y="286" font-size="22" font-weight="800" fill="#ffffff">Prompts</text>
+  <text x="1098" y="316" font-size="15" fill="#a0a0c0">Reusable prompt templates a</text>
+  <text x="1098" y="336" font-size="15" fill="#a0a0c0">server can expose to users.</text>
+  <rect x="1098" y="372" width="389" height="150" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1118" y="402" font-size="14" font-weight="700" fill="#f5a8c9">EXAMPLES</text>
+  <text x="1118" y="430" font-size="14" fill="#c0c0d0">&#8220;Summarize this PR&#8221;</text>
+  <text x="1118" y="452" font-size="14" fill="#c0c0d0">&#8220;Write a release note&#8221;</text>
+  <text x="1118" y="474" font-size="14" fill="#c0c0d0">for a given repo</text>
+  <text x="1098" y="576" font-size="14" font-weight="700" fill="#86efac">&#9989; Usually user-triggered</text>
+  <text x="1098" y="598" font-size="14" fill="#c0c0d0">as a shortcut, not model-triggered.</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="770" width="1440" height="60" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="806" font-size="16" fill="#e0e0f0">&#128161; Think: Resources = read, Tools = act, Prompts = reusable shortcuts. Every MCP server mixes these three.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">3 / 10</text>
+</svg>

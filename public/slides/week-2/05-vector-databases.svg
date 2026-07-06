@@ -1,0 +1,92 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Vector Databases</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A specialized store that holds embeddings and finds the nearest ones fast.</text>
+
+  <!-- Main visual: DB with stored vectors + query -->
+  <rect x="80" y="180" width="1180" height="640" rx="28" fill="#5b7cfa" fill-opacity="0.08" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="112" y="228" font-size="24" font-weight="700" fill="#9db1fb">Inside the vector database</text>
+
+  <!-- stored chunk vectors as dots -->
+  <g>
+    <circle cx="250" cy="340" r="10" fill="#0d9488"/>
+    <text x="270" y="345" font-size="14" fill="#c0c0d0">chunk A vector</text>
+    <circle cx="360" cy="300" r="10" fill="#0d9488"/>
+    <text x="380" y="305" font-size="14" fill="#c0c0d0">chunk B vector</text>
+    <circle cx="330" cy="400" r="10" fill="#0d9488"/>
+    <text x="350" y="405" font-size="14" fill="#c0c0d0">chunk C vector</text>
+
+    <circle cx="700" cy="600" r="10" fill="#d97706"/>
+    <text x="720" y="605" font-size="14" fill="#c0c0d0">chunk D vector</text>
+    <circle cx="780" cy="640" r="10" fill="#d97706"/>
+    <text x="800" y="645" font-size="14" fill="#c0c0d0">chunk E vector</text>
+
+    <circle cx="920" cy="330" r="10" fill="#ec4899"/>
+    <text x="940" y="335" font-size="14" fill="#c0c0d0">chunk F vector</text>
+    <circle cx="990" cy="380" r="10" fill="#ec4899"/>
+    <text x="1010" y="385" font-size="14" fill="#c0c0d0">chunk G vector</text>
+  </g>
+
+  <!-- query point highlighted -->
+  <circle cx="300" cy="360" r="16" fill="#8b5cf6" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="180" y="470" font-size="16" font-weight="700" fill="#c4b5fd">&#9733; incoming query vector</text>
+  <path d="M270,380 C260,410 240,440 220,460" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-dasharray="4 6"/>
+
+  <!-- radius circle for nearest neighbor search -->
+  <circle cx="300" cy="360" r="130" fill="none" stroke="#c4b5fd" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 8"/>
+  <text x="130" y="240" font-size="14" fill="#8888aa" font-style="italic">nearest-neighbor search radius</text>
+
+  <!-- bottom explainer -->
+  <rect x="112" y="700" width="1116" height="90" rx="14" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="732" font-size="15" font-weight="700" fill="#86efac">&#9989; How search works</text>
+  <text x="132" y="758" font-size="14" fill="#e0e0f0">The DB compares the query vector to every stored vector using a similarity metric,</text>
+  <text x="132" y="778" font-size="14" fill="#e0e0f0">then returns the closest few &#8212; using fast index structures instead of a slow linear scan.</text>
+
+  <!-- Side panel: real examples -->
+  <rect x="1300" y="180" width="220" height="640" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="1330" y="222" font-size="18" font-weight="700" fill="#ffffff">Real examples</text>
+
+  <text x="1330" y="264" font-size="15" font-weight="700" fill="#9db1fb">Pinecone</text>
+  <text x="1330" y="286" font-size="13" fill="#a0a0c0">Managed, cloud-hosted</text>
+
+  <text x="1330" y="326" font-size="15" font-weight="700" fill="#5fd4c6">Chroma</text>
+  <text x="1330" y="348" font-size="13" fill="#a0a0c0">Lightweight, local-first</text>
+
+  <text x="1330" y="388" font-size="15" font-weight="700" fill="#f3b978">pgvector</text>
+  <text x="1330" y="410" font-size="13" fill="#a0a0c0">Vector search inside Postgres</text>
+
+  <text x="1330" y="450" font-size="15" font-weight="700" fill="#f5a8c9">Weaviate</text>
+  <text x="1330" y="472" font-size="13" fill="#a0a0c0">Open-source, hybrid search</text>
+
+  <text x="1330" y="512" font-size="15" font-weight="700" fill="#c4b5fd">Qdrant</text>
+  <text x="1330" y="534" font-size="13" fill="#a0a0c0">Open-source, high-performance</text>
+
+  <line x1="1330" y1="560" x2="1490" y2="560" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="1330" y="600" font-size="14" fill="#8888aa" font-style="italic">Any of these can plug into</text>
+  <text x="1330" y="620" font-size="14" fill="#8888aa" font-style="italic">the same RAG pipeline &#8212;</text>
+  <text x="1330" y="640" font-size="14" fill="#8888aa" font-style="italic">pick based on scale &amp; stack.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Week 2: RAG</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

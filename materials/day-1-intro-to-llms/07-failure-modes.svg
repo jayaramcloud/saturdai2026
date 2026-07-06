@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">When LLMs Get It Wrong</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Three failure modes worth knowing &#8212; all share one trait: confident delivery.</text>
+
+  <!-- Card 1: Hallucination -->
+  <rect x="80" y="190" width="453" height="560" rx="22" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="240" font-size="32">&#128171;</text>
+  <text x="112" y="286" font-size="22" font-weight="800" fill="#ffffff">Hallucination</text>
+  <text x="112" y="316" font-size="15" fill="#a0a0c0">It invents facts, quotes, or</text>
+  <text x="112" y="336" font-size="15" fill="#a0a0c0">sources that sound plausible</text>
+  <text x="112" y="356" font-size="15" fill="#a0a0c0">but don&#8217;t exist.</text>
+  <rect x="112" y="392" width="389" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="422" font-size="14" font-weight="700" fill="#f5a3ac">EXAMPLE</text>
+  <text x="132" y="450" font-size="14" fill="#c0c0d0">Citing a real-looking research</text>
+  <text x="132" y="472" font-size="14" fill="#c0c0d0">paper that was never written.</text>
+  <text x="112" y="556" font-size="14" font-weight="700" fill="#86efac">&#9989; Guard: ask for sources,</text>
+  <text x="112" y="578" font-size="14" fill="#c0c0d0">then verify them yourself.</text>
+
+  <!-- Card 2: Stale knowledge -->
+  <rect x="573" y="190" width="453" height="560" rx="22" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-width="2.5"/>
+  <text x="605" y="240" font-size="32">&#128197;</text>
+  <text x="605" y="286" font-size="22" font-weight="800" fill="#ffffff">Stale Knowledge</text>
+  <text x="605" y="316" font-size="15" fill="#a0a0c0">Its training data has a cutoff</text>
+  <text x="605" y="336" font-size="15" fill="#a0a0c0">date &#8212; it may not know</text>
+  <text x="605" y="356" font-size="15" fill="#a0a0c0">about recent events.</text>
+  <rect x="605" y="392" width="389" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="625" y="422" font-size="14" font-weight="700" fill="#f3b978">EXAMPLE</text>
+  <text x="625" y="450" font-size="14" fill="#c0c0d0">Naming an outdated version as</text>
+  <text x="625" y="472" font-size="14" fill="#c0c0d0">&#8220;the latest&#8221; release.</text>
+  <text x="605" y="556" font-size="14" font-weight="700" fill="#86efac">&#9989; Guard: for anything recent,</text>
+  <text x="605" y="578" font-size="14" fill="#c0c0d0">ask it to search the web.</text>
+
+  <!-- Card 3: Confidently wrong -->
+  <rect x="1066" y="190" width="453" height="560" rx="22" fill="#8b5cf6" fill-opacity="0.10" stroke="#8b5cf6" stroke-width="2.5"/>
+  <text x="1098" y="240" font-size="32">&#9989;</text>
+  <text x="1098" y="286" font-size="22" font-weight="800" fill="#ffffff">Confidently Wrong</text>
+  <text x="1098" y="316" font-size="15" fill="#a0a0c0">Tone doesn&#8217;t signal certainty &#8212;</text>
+  <text x="1098" y="336" font-size="15" fill="#a0a0c0">it sounds just as sure when</text>
+  <text x="1098" y="356" font-size="15" fill="#a0a0c0">right as when wrong.</text>
+  <rect x="1098" y="392" width="389" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="1118" y="422" font-size="14" font-weight="700" fill="#c4b5fd">EXAMPLE</text>
+  <text x="1118" y="450" font-size="14" fill="#c0c0d0">Stating a wrong math result or</text>
+  <text x="1118" y="472" font-size="14" fill="#c0c0d0">date with total confidence.</text>
+  <text x="1098" y="556" font-size="14" font-weight="700" fill="#86efac">&#9989; Guard: double-check facts</text>
+  <text x="1098" y="578" font-size="14" fill="#c0c0d0">that matter before you rely on them.</text>
+
+  <!-- Bottom note -->
+  <rect x="80" y="770" width="1440" height="60" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="806" font-size="16" fill="#e0e0f0">&#128161; The fix isn&#8217;t distrust &#8212; it&#8217;s treating an LLM like a fast, well-read colleague: helpful, but worth double-checking.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

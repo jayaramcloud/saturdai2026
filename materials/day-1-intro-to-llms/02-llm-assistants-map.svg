@@ -1,0 +1,98 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Meet the Major LLM Assistants</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A rough map of today&#8217;s landscape &#8212; not a ranking, just an orientation.</text>
+
+  <!-- Plot area -->
+  <g transform="translate(200,180)">
+    <rect x="0" y="0" width="1080" height="620" rx="16" fill="#ffffff" fill-opacity="0.03" stroke="#ffffff" stroke-opacity="0.08"/>
+
+    <!-- Axis lines -->
+    <line x1="0" y1="310" x2="1080" y2="310" stroke="#ffffff" stroke-opacity="0.15" stroke-dasharray="6 6"/>
+    <line x1="540" y1="0" x2="540" y2="620" stroke="#ffffff" stroke-opacity="0.15" stroke-dasharray="6 6"/>
+
+    <!-- Axis labels -->
+    <text x="540" y="-24" font-size="16" fill="#8888aa" text-anchor="middle">&#8592; Search / Fact-Grounded &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Conversational / Creative &#8594;</text>
+    <text x="1105" y="313" font-size="16" fill="#8888aa" transform="rotate(90 1105 313)" text-anchor="middle">&#8592; Everyday Helper &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; Specialist / Technical &#8594;</text>
+
+    <!-- Bubbles: [cx, cy, label, sub, color] -->
+    <!-- ChatGPT: broad everyday + conversational -->
+    <g transform="translate(660,180)">
+      <circle r="62" fill="#5b7cfa" fill-opacity="0.85"/>
+      <text y="-4" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">ChatGPT</text>
+      <text y="18" font-size="12" fill="#e6e9fd" text-anchor="middle">general &#38; versatile</text>
+    </g>
+
+    <!-- Claude: everyday + technical/writing, slightly toward specialist -->
+    <g transform="translate(430,230)">
+      <circle r="58" fill="#8b5cf6" fill-opacity="0.85"/>
+      <text y="-4" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">Claude</text>
+      <text y="18" font-size="12" fill="#efe9fd" text-anchor="middle">writing &#38; coding</text>
+    </g>
+
+    <!-- Gemini: everyday + search-grounded (Google) -->
+    <g transform="translate(330,410)">
+      <circle r="56" fill="#0d9488" fill-opacity="0.85"/>
+      <text y="-4" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">Gemini</text>
+      <text y="18" font-size="12" fill="#daf5f1" text-anchor="middle">Google-connected</text>
+    </g>
+
+    <!-- Copilot: technical, everyday-ish, coding focus -->
+    <g transform="translate(820,470)">
+      <circle r="54" fill="#d97706" fill-opacity="0.85"/>
+      <text y="-4" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">Copilot</text>
+      <text y="18" font-size="12" fill="#fbe6cf" text-anchor="middle">coding &#38; MS 365</text>
+    </g>
+
+    <!-- Perplexity: strongly search/fact-grounded, everyday -->
+    <g transform="translate(180,520)">
+      <circle r="50" fill="#ec4899" fill-opacity="0.85"/>
+      <text y="-4" font-size="17" font-weight="800" fill="#ffffff" text-anchor="middle">Perplexity</text>
+      <text y="18" font-size="12" fill="#fbdcea" text-anchor="middle">research &#38; sources</text>
+    </g>
+
+    <!-- Meta AI: everyday, conversational, in social apps -->
+    <g transform="translate(880,150)">
+      <circle r="48" fill="#16a34a" fill-opacity="0.85"/>
+      <text y="-4" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Meta AI</text>
+      <text y="18" font-size="12" fill="#dcf5e6" text-anchor="middle">social apps</text>
+    </g>
+
+    <!-- Grok: conversational, more technical/edgy -->
+    <g transform="translate(920,430)">
+      <circle r="46" fill="#f5576c" fill-opacity="0.85"/>
+      <text y="-4" font-size="16" font-weight="800" fill="#ffffff" text-anchor="middle">Grok</text>
+      <text y="18" font-size="12" fill="#fcdde1" text-anchor="middle">X-integrated</text>
+    </g>
+  </g>
+
+  <!-- Side note -->
+  <rect x="1320" y="180" width="200" height="300" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="1345" y="222" font-size="17" font-weight="700" fill="#ffffff">How to read this</text>
+  <text x="1345" y="256" font-size="14" fill="#a0a0c0">Position is illustrative,</text>
+  <text x="1345" y="276" font-size="14" fill="#a0a0c0">based on each product&#8217;s</text>
+  <text x="1345" y="296" font-size="14" fill="#a0a0c0">general reputation today.</text>
+  <text x="1345" y="332" font-size="14" fill="#a0a0c0">Most assistants can do</text>
+  <text x="1345" y="352" font-size="14" fill="#a0a0c0">a bit of everything &#8212; this</text>
+  <text x="1345" y="372" font-size="14" fill="#a0a0c0">map shows their center</text>
+  <text x="1345" y="392" font-size="14" fill="#a0a0c0">of gravity, not a limit.</text>
+  <text x="1345" y="428" font-size="14" fill="#8888aa" font-style="italic">The landscape shifts</text>
+  <text x="1345" y="448" font-size="14" fill="#8888aa" font-style="italic">fast &#8212; revisit this often.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

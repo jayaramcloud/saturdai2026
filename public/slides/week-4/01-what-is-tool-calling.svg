@@ -1,0 +1,72 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What Is Tool Calling?</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Instead of only writing text, the model can ask your code to do something real.</text>
+
+  <!-- Left: Just text -->
+  <rect x="80" y="190" width="680" height="600" rx="24" fill="#5b7cfa" fill-opacity="0.08" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="112" y="238" font-size="15" font-weight="800" fill="#9db1fb">TEXT ONLY</text>
+  <rect x="112" y="260" width="616" height="90" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="134" y="296" font-size="17" fill="#ffffff" font-style="italic">&#8220;What&#8217;s the weather in Austin?&#8221;</text>
+  <text x="134" y="326" font-size="14" fill="#a0a0c0">The model only knows its training data.</text>
+
+  <text x="112" y="392" font-size="16" font-weight="700" fill="#9db1fb">What it can do:</text>
+  <text x="134" y="424" font-size="15" fill="#c0c0d0">&#8226; Guess based on patterns it has seen</text>
+  <text x="134" y="452" font-size="15" fill="#c0c0d0">&#8226; Describe what weather in Austin is usually like</text>
+  <text x="134" y="480" font-size="15" fill="#c0c0d0">&#8226; Never touch a live data source</text>
+
+  <rect x="112" y="548" width="616" height="200" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="134" y="582" font-size="14" font-weight="700" fill="#9db1fb">RESULT</text>
+  <text x="134" y="612" font-size="15" fill="#c0c0d0">A plausible-sounding but made-up answer &#8212;</text>
+  <text x="134" y="636" font-size="15" fill="#c0c0d0">it has no way to know today&#8217;s actual forecast,</text>
+  <text x="134" y="660" font-size="15" fill="#c0c0d0">because that fact simply isn&#8217;t in its training</text>
+  <text x="134" y="684" font-size="15" fill="#c0c0d0">data.</text>
+
+  <!-- Arrow -->
+  <g transform="translate(800,490)">
+    <path d="M-30,0 L30,0 M14,-16 L30,0 L14,16" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Right: Text + real actions -->
+  <rect x="840" y="190" width="680" height="600" rx="24" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="872" y="238" font-size="15" font-weight="800" fill="#86efac">TEXT + REAL ACTIONS</text>
+  <rect x="872" y="260" width="616" height="90" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="894" y="296" font-size="17" fill="#ffffff" font-style="italic">&#8220;What&#8217;s the weather in Austin?&#8221;</text>
+  <text x="894" y="326" font-size="14" fill="#a0a0c0">The model has a get_weather tool available.</text>
+
+  <text x="872" y="392" font-size="16" font-weight="700" fill="#86efac">What it can do:</text>
+  <text x="894" y="424" font-size="15" fill="#c0c0d0">&#8226; Decide a tool call is needed</text>
+  <text x="894" y="452" font-size="15" fill="#c0c0d0">&#8226; Call get_weather(location: &#8220;Austin&#8221;)</text>
+  <text x="894" y="480" font-size="15" fill="#c0c0d0">&#8226; Get a real result back and use it</text>
+
+  <rect x="872" y="548" width="616" height="200" rx="14" fill="#8b5cf6" fill-opacity="0.16" stroke="#c4b5fd" stroke-width="2" filter="url(#glow)"/>
+  <text x="894" y="582" font-size="14" font-weight="700" fill="#c4b5fd">RESULT</text>
+  <text x="894" y="612" font-size="15" fill="#e9e4fc">An answer grounded in a live lookup: &#8220;It&#8217;s</text>
+  <text x="894" y="636" font-size="15" fill="#e9e4fc">89&#176;F and sunny in Austin right now&#8221; &#8212; a fact</text>
+  <text x="894" y="660" font-size="15" fill="#e9e4fc">the model could never know on its own, because</text>
+  <text x="894" y="684" font-size="15" fill="#e9e4fc">a real system, not the model, produced it.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

@@ -1,0 +1,88 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Week 3 Recap &#38; Your Live Exercise</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Five ideas to keep, and one thing to try before we meet again.</text>
+
+  <!-- Recap chips (left) -->
+  <rect x="80" y="180" width="700" height="560" rx="24" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="228" font-size="20" font-weight="800" fill="#ffffff">What we covered</text>
+
+  <g transform="translate(112,260)">
+    <circle cx="14" cy="10" r="14" fill="#5b7cfa"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">1</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">MCP is a shared standard &#8212; &#8220;USB-C for AI apps&#8221;</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">&#8212; replacing N&#215;M custom integrations.</text>
+  </g>
+  <g transform="translate(112,330)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">2</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">A host app runs an MCP client that connects</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">to one or more MCP servers.</text>
+  </g>
+  <g transform="translate(112,400)">
+    <circle cx="14" cy="10" r="14" fill="#d97706"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">3</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Servers expose three primitives: Resources</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">(read), Tools (act), and Prompts (templates).</text>
+  </g>
+  <g transform="translate(112,470)">
+    <circle cx="14" cy="10" r="14" fill="#f5576c"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">4</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Clients discover a server&#8217;s capabilities first,</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">then route tool calls to it as the LLM needs them.</text>
+  </g>
+  <g transform="translate(112,540)">
+    <circle cx="14" cy="10" r="14" fill="#8b5cf6"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">5</text>
+    <text x="42" y="16" font-size="16" fill="#e0e0f0">Powerful tools need user consent and least-</text>
+    <text x="42" y="38" font-size="16" fill="#e0e0f0">privilege scoping &#8212; never blind trust.</text>
+  </g>
+
+  <text x="112" y="640" font-size="15" fill="#8888aa" font-style="italic">Next stop on the roadmap: Week 4 &#8212;</text>
+  <text x="112" y="662" font-size="15" fill="#8888aa" font-style="italic">Tool Calling, making agents do real work.</text>
+
+  <!-- Exercise (right, highlighted) -->
+  <rect x="820" y="180" width="700" height="560" rx="24" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="852" y="228" font-size="20" font-weight="800" fill="#ffffff">&#128221; Try this now, live</text>
+
+  <rect x="852" y="256" width="636" height="150" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="290" font-size="16" font-weight="700" fill="#c4b5fd">STEP 1</text>
+  <text x="874" y="316" font-size="15" fill="#e9e4fc">Pick an MCP server from an existing</text>
+  <text x="874" y="338" font-size="15" fill="#e9e4fc">directory &#8212; e.g. the filesystem or</text>
+  <text x="874" y="360" font-size="15" fill="#e9e4fc">GitHub server.</text>
+
+  <rect x="852" y="422" width="636" height="150" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="456" font-size="16" font-weight="700" fill="#c4b5fd">STEP 2</text>
+  <text x="874" y="482" font-size="15" fill="#e9e4fc">Connect it in Claude Desktop or</text>
+  <text x="874" y="504" font-size="15" fill="#e9e4fc">Claude Code by adding it to your</text>
+  <text x="874" y="526" font-size="15" fill="#e9e4fc">MCP config.</text>
+
+  <rect x="852" y="588" width="636" height="120" rx="14" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="874" y="622" font-size="16" font-weight="700" fill="#c4b5fd">STEP 3</text>
+  <text x="874" y="648" font-size="15" fill="#e9e4fc">Ask a question that requires it to use</text>
+  <text x="874" y="670" font-size="15" fill="#e9e4fc">a tool, and watch the tool call happen.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 3: MCPs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Privacy &amp; Your Data</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">What happens to what you type &#8212; and what&#8217;s safer left out.</text>
+
+  <!-- Flow: You type -> Provider -> (maybe) Training -->
+  <g transform="translate(220,300)">
+    <circle r="60" fill="#5b7cfa" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#128100;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">You type a message</text>
+  </g>
+  <path d="M300,300 L520,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(600,300)">
+    <circle r="60" fill="#0d9488" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#127760;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Sent to the provider&#8217;s</text>
+    <text x="0" y="122" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">servers to generate a reply</text>
+  </g>
+  <path d="M680,300 L900,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <g transform="translate(980,300)">
+    <circle r="60" fill="#d97706" fill-opacity="0.9"/>
+    <text y="10" font-size="34" text-anchor="middle">&#128193;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">May be stored &amp; reviewed,</text>
+    <text x="0" y="122" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">sometimes used for training</text>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#ffffff" fill-opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <text x="80" y="470" font-size="15" fill="#8888aa" font-style="italic">Exact policy varies by provider and account settings &#8212; check &#8220;data controls&#8221; in your settings if unsure.</text>
+
+  <!-- Don't paste box -->
+  <rect x="80" y="520" width="1440" height="290" rx="24" fill="#f5576c" fill-opacity="0.08" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="570" font-size="22" font-weight="800" fill="#ffffff">&#9888;&#65039; Think twice before pasting:</text>
+
+  <g transform="translate(150,600)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Passwords, API keys, or security codes</text>
+  </g>
+  <g transform="translate(150,636)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Other people&#8217;s private information</text>
+  </g>
+  <g transform="translate(150,672)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Confidential work documents or client data</text>
+  </g>
+  <g transform="translate(150,708)">
+    <text font-size="16" fill="#c0c0d0">&#8226; Financial account numbers or medical records</text>
+  </g>
+
+  <rect x="900" y="588" width="560" height="180" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="924" y="622" font-size="15" font-weight="700" fill="#86efac">&#9989; SAFE RULE OF THUMB</text>
+  <text x="924" y="654" font-size="15" fill="#e0e0f0">If you wouldn&#8217;t post it publicly or</text>
+  <text x="924" y="678" font-size="15" fill="#e0e0f0">hand it to a stranger, don&#8217;t paste it</text>
+  <text x="924" y="702" font-size="15" fill="#e0e0f0">into a chat window either.</text>
+  <text x="924" y="734" font-size="14" fill="#a0a0c0" font-style="italic">Many tools offer a &#8220;temporary</text>
+  <text x="924" y="754" font-size="14" fill="#a0a0c0" font-style="italic">chat&#8221; mode that skips storage.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

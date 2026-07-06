@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Embeddings</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Text becomes a list of numbers (a vector) &#8212; similar meanings land close together in that space.</text>
+
+  <!-- Scatter plot area -->
+  <rect x="80" y="190" width="980" height="560" rx="22" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="112" y="230" font-size="16" font-weight="700" fill="#ffffff">Simplified 2D view of embedding space</text>
+
+  <!-- axis hint lines -->
+  <line x1="120" y1="700" x2="1020" y2="700" stroke="#ffffff" stroke-opacity="0.08"/>
+  <line x1="120" y1="270" x2="120" y2="700" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Cluster 1: animals -->
+  <circle cx="280" cy="420" r="140" fill="#0d9488" fill-opacity="0.08" stroke="#0d9488" stroke-opacity="0.3" stroke-dasharray="6 6"/>
+  <circle cx="250" cy="400" r="9" fill="#0d9488"/>
+  <text x="270" y="404" font-size="16" font-weight="700" fill="#5fd4c6">dog</text>
+  <circle cx="300" cy="440" r="9" fill="#0d9488"/>
+  <text x="320" y="444" font-size="16" font-weight="700" fill="#5fd4c6">puppy</text>
+  <circle cx="240" cy="470" r="9" fill="#0d9488"/>
+  <text x="260" y="474" font-size="16" font-weight="700" fill="#5fd4c6">canine</text>
+  <text x="200" y="330" font-size="14" fill="#8888aa" font-style="italic">"dog-ish" region</text>
+
+  <!-- Cluster 2: vehicles, far away -->
+  <circle cx="820" cy="580" r="140" fill="#d97706" fill-opacity="0.08" stroke="#d97706" stroke-opacity="0.3" stroke-dasharray="6 6"/>
+  <circle cx="800" cy="560" r="9" fill="#d97706"/>
+  <text x="820" y="564" font-size="16" font-weight="700" fill="#f3b978">car</text>
+  <circle cx="850" cy="600" r="9" fill="#d97706"/>
+  <text x="870" y="604" font-size="16" font-weight="700" fill="#f3b978">vehicle</text>
+  <circle cx="790" cy="620" r="9" fill="#d97706"/>
+  <text x="810" y="624" font-size="16" font-weight="700" fill="#f3b978">engine</text>
+  <text x="760" y="500" font-size="14" fill="#8888aa" font-style="italic">"vehicle-ish" region</text>
+
+  <!-- outlier -->
+  <circle cx="850" cy="330" r="9" fill="#ec4899"/>
+  <text x="870" y="334" font-size="16" font-weight="700" fill="#f5a8c9">sonnet</text>
+  <text x="800" y="300" font-size="14" fill="#8888aa" font-style="italic">unrelated words end up far away</text>
+
+  <!-- distance callout -->
+  <line x1="300" y1="440" x2="800" y2="580" stroke="#f5576c" stroke-width="2" stroke-dasharray="4 6"/>
+  <text x="500" y="530" font-size="13" fill="#f5a3ac" font-style="italic">far apart = unrelated meaning</text>
+
+  <line x1="250" y1="400" x2="300" y2="440" stroke="#86efac" stroke-width="2"/>
+  <text x="150" y="410" font-size="13" fill="#86efac" font-style="italic">close = similar meaning</text>
+
+  <!-- Side panel -->
+  <rect x="1100" y="190" width="420" height="560" rx="20" fill="#8b5cf6" fill-opacity="0.10" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="1132" y="234" font-size="18" font-weight="700" fill="#c4b5fd">How it works</text>
+  <text x="1132" y="270" font-size="15" fill="#e0e0f0">An embedding model reads a chunk of</text>
+  <text x="1132" y="292" font-size="15" fill="#e0e0f0">text and outputs a vector &#8212; typically</text>
+  <text x="1132" y="314" font-size="15" fill="#e0e0f0">hundreds to thousands of numbers.</text>
+
+  <text x="1132" y="360" font-size="15" fill="#e0e0f0">Real embedding spaces have hundreds</text>
+  <text x="1132" y="382" font-size="15" fill="#e0e0f0">of dimensions &#8212; this scatter plot is a</text>
+  <text x="1132" y="404" font-size="15" fill="#e0e0f0">2D simplification of the idea.</text>
+
+  <rect x="1132" y="440" width="356" height="130" rx="12" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="1152" y="470" font-size="14" font-weight="700" fill="#c4b5fd">WHY IT MATTERS FOR RAG</text>
+  <text x="1152" y="496" font-size="14" fill="#c0c0d0">Retrieval works by comparing the</text>
+  <text x="1152" y="518" font-size="14" fill="#c0c0d0">question&#8217;s vector to chunk vectors &#8212;</text>
+  <text x="1152" y="540" font-size="14" fill="#c0c0d0">closeness stands in for relevance.</text>
+
+  <text x="1132" y="620" font-size="14" fill="#8888aa" font-style="italic">"Close together" is measured with a</text>
+  <text x="1132" y="642" font-size="14" fill="#8888aa" font-style="italic">similarity metric, most often cosine</text>
+  <text x="1132" y="664" font-size="14" fill="#8888aa" font-style="italic">similarity.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 2: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Agents vs. Simple Tool Calling</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A single tool call is one round trip; an agent is a loop that keeps going until done.</text>
+
+  <!-- Table header -->
+  <text x="700" y="200" font-size="16" font-weight="800" fill="#a0a0c0" text-anchor="middle">SINGLE TOOL CALL</text>
+  <text x="1200" y="200" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">AGENT</text>
+
+  <!-- Row 1 -->
+  <text x="80" y="256" font-size="18" font-weight="700" fill="#ffffff">Shape</text>
+  <rect x="560" y="228" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="258" font-size="15" fill="#c0c0d0" text-anchor="middle">One request, one response</text>
+  <rect x="1060" y="228" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="258" font-size="15" fill="#e9e4fc" text-anchor="middle">A loop that runs many steps</text>
+  <line x1="80" y1="290" x2="1520" y2="290" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 2 -->
+  <text x="80" y="336" font-size="18" font-weight="700" fill="#ffffff">Planning</text>
+  <rect x="560" y="308" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="338" font-size="15" fill="#c0c0d0" text-anchor="middle">None &#8212; you decide when to call it</text>
+  <rect x="1060" y="308" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="338" font-size="15" fill="#e9e4fc" text-anchor="middle">Model plans its own next steps</text>
+  <line x1="80" y1="370" x2="1520" y2="370" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 3 -->
+  <text x="80" y="416" font-size="18" font-weight="700" fill="#ffffff">Tools used</text>
+  <rect x="560" y="388" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="418" font-size="15" fill="#c0c0d0" text-anchor="middle">Exactly one, then done</text>
+  <rect x="1060" y="388" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="418" font-size="15" fill="#e9e4fc" text-anchor="middle">Any number, in any order</text>
+  <line x1="80" y1="450" x2="1520" y2="450" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 4 -->
+  <text x="80" y="496" font-size="18" font-weight="700" fill="#ffffff">Progress checks</text>
+  <rect x="560" y="468" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="498" font-size="15" fill="#c0c0d0" text-anchor="middle">Not needed</text>
+  <rect x="1060" y="468" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="498" font-size="15" fill="#e9e4fc" text-anchor="middle">Model checks its own progress</text>
+  <line x1="80" y1="530" x2="1520" y2="530" stroke="#ffffff" stroke-opacity="0.08"/>
+
+  <!-- Row 5 -->
+  <text x="80" y="576" font-size="18" font-weight="700" fill="#ffffff">Good fit for</text>
+  <rect x="560" y="548" width="280" height="46" rx="10" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="700" y="578" font-size="15" fill="#c0c0d0" text-anchor="middle">A quick, well-defined lookup</text>
+  <rect x="1060" y="548" width="280" height="46" rx="10" fill="#8b5cf6" fill-opacity="0.18" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="1200" y="578" font-size="15" fill="#e9e4fc" text-anchor="middle">Open-ended, multi-step tasks</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="80" y="660" width="1440" height="160" rx="24" fill="#8b5cf6" fill-opacity="0.12" stroke="#c4b5fd" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="112" y="704" font-size="20" font-weight="800" fill="#c4b5fd">&#128161; It&#8217;s the same building block</text>
+  <text x="112" y="736" font-size="16" fill="#e0e0f0">An "agent" isn&#8217;t a different technology &#8212; it&#8217;s the exact tool-calling loop from slide 2, just allowed to</text>
+  <text x="112" y="762" font-size="16" fill="#e0e0f0">repeat itself, chain results, and decide on its own when the task is actually finished.</text>
+  <text x="112" y="794" font-size="14" fill="#a0a0c0" font-style="italic">More autonomy also means more chances to go off track &#8212; see slide 8 on human-in-the-loop.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">6 / 10</text>
+</svg>

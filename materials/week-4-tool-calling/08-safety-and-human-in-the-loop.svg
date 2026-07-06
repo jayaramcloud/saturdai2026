@@ -1,0 +1,75 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow8" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#ffffff" fill-opacity="0.5"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Safety &amp; Human-in-the-Loop</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">For risky or irreversible actions, a pause for confirmation is a feature, not friction.</text>
+
+  <!-- Flow -->
+  <g transform="translate(220,300)">
+    <circle r="60" fill="#5b7cfa" fill-opacity="0.9"/>
+    <text y="10" font-size="30" text-anchor="middle">&#129504;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Model wants to call</text>
+    <text x="0" y="122" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">a sensitive tool</text>
+  </g>
+  <path d="M300,300 L520,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow8)"/>
+
+  <g transform="translate(600,300)">
+    <circle r="60" fill="#d97706" fill-opacity="0.9"/>
+    <text y="10" font-size="30" text-anchor="middle">&#9203;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Execution pauses,</text>
+    <text x="0" y="122" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">action is shown to you</text>
+  </g>
+  <path d="M680,300 L900,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow8)"/>
+
+  <g transform="translate(980,300)">
+    <circle r="60" fill="#8b5cf6" fill-opacity="0.9"/>
+    <text y="10" font-size="30" text-anchor="middle">&#9989;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">You approve,</text>
+    <text x="0" y="122" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">edit, or reject it</text>
+  </g>
+  <path d="M1060,300 L1280,300" stroke="#ffffff" stroke-opacity="0.3" stroke-width="4" marker-end="url(#arrow8)"/>
+
+  <g transform="translate(1360,300)">
+    <circle r="60" fill="#16a34a" fill-opacity="0.9"/>
+    <text y="10" font-size="30" text-anchor="middle">&#9889;</text>
+    <text x="0" y="100" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Only then does</text>
+    <text x="0" y="122" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">the tool run</text>
+  </g>
+
+  <text x="80" y="470" font-size="15" fill="#8888aa" font-style="italic">Reversible, low-stakes tools (a weather lookup) can auto-run &#8212; irreversible ones shouldn&#8217;t.</text>
+
+  <!-- Warning box -->
+  <rect x="80" y="520" width="1440" height="290" rx="24" fill="#f5576c" fill-opacity="0.08" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="570" font-size="22" font-weight="800" fill="#ffffff">&#9888;&#65039; Require confirmation before actions like:</text>
+
+  <text x="150" y="612" font-size="16" fill="#c0c0d0">&#8226; Sending an email or message on your behalf</text>
+  <text x="150" y="648" font-size="16" fill="#c0c0d0">&#8226; Spending money &#8212; purchases, transfers, subscriptions</text>
+  <text x="150" y="684" font-size="16" fill="#c0c0d0">&#8226; Deleting or overwriting files, records, or data</text>
+  <text x="150" y="720" font-size="16" fill="#c0c0d0">&#8226; Posting publicly, or anything hard to undo</text>
+
+  <rect x="900" y="600" width="560" height="170" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="924" y="634" font-size="15" font-weight="700" fill="#86efac">&#9989; GUARDRAIL PATTERN</text>
+  <text x="924" y="666" font-size="15" fill="#e0e0f0">Show the exact arguments the model</text>
+  <text x="924" y="690" font-size="15" fill="#e0e0f0">wants to use before running the tool &#8212;</text>
+  <text x="924" y="714" font-size="15" fill="#e0e0f0">a human reads and clicks "confirm,"</text>
+  <text x="924" y="738" font-size="15" fill="#e0e0f0">not "trust and hope."</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Week 4: Tool Calling</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>
