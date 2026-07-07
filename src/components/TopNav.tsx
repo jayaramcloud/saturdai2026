@@ -9,6 +9,7 @@ const LINKS = [
   { href: "/week-2", label: "Week 2" },
   { href: "/week-3", label: "Week 3" },
   { href: "/week-4", label: "Week 4" },
+  { href: "/feed", label: "AI Feed" },
   { href: "/progress", label: "My Progress" },
 ];
 
