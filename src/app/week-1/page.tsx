@@ -9,9 +9,9 @@ const SLIDES: Slide[] = [
   },
   {
     src: "/slides/week-1/02-llm-assistants-map.svg",
-    alt: "Quadrant map positioning ChatGPT, Claude, Gemini, Copilot, Perplexity, Meta AI, and Grok",
+    alt: "Quadrant map positioning ChatGPT, Claude, Gemini, Copilot, Perplexity, Meta AI, Grok, Qwen, DeepSeek, Mistral, and Cohere",
     paragraph:
-      "There isn't one single \"best\" AI assistant — each has a different personality and strength. Some lean toward being search-and-fact grounded, others toward open-ended conversation and creativity. Trying more than one on the same question is a quick way to get a feel for these differences rather than taking anyone's word for which is \"best.\"",
+      "There isn't one single \"best\" AI assistant — each has a different personality and strength. Some lean toward being search-and-fact grounded, others toward open-ended conversation and creativity. This is also a global landscape, not just a US one: China's Qwen (Alibaba) and DeepSeek, France's Mistral, and Canada's Cohere are all widely used, each with their own reputation — DeepSeek and Mistral in particular for efficient, open-weight models favored by developers. Trying more than one on the same question is a quick way to get a feel for these differences rather than taking anyone's word for which is \"best.\"",
   },
   {
     src: "/slides/week-1/03-day-in-the-life.svg",
