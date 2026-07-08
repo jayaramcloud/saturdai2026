@@ -2,6 +2,13 @@ import Link from "next/link";
 
 const WEEKS = [
   {
+    href: "/intro-to-ai",
+    week: "Intro to AI",
+    title: "The Big Picture",
+    icon: "🌐",
+    description: "The big picture and everyday use cases",
+  },
+  {
     href: "/week-1",
     week: "Week 1",
     title: "LLMs",

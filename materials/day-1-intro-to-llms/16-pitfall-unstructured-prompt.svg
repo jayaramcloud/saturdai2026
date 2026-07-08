@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Pitfall: One Long, Unstructured Prompt</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Dumping every detail into one paragraph buries the actual ask.</text>
+
+  <!-- Wall of text (left) -->
+  <rect x="80" y="190" width="680" height="600" rx="24" fill="#ec4899" fill-opacity="0.08" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="112" y="238" font-size="15" font-weight="800" fill="#f5a8c9">&#10060; WALL OF TEXT</text>
+  <rect x="112" y="260" width="616" height="180" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="134" y="292" font-size="15" fill="#ffffff" font-style="italic">&#8220;So we have this app and users keep</text>
+  <text x="134" y="316" font-size="15" fill="#ffffff" font-style="italic">complaining and I think it's the onboarding</text>
+  <text x="134" y="340" font-size="15" fill="#ffffff" font-style="italic">but also maybe pricing, anyway can you</text>
+  <text x="134" y="364" font-size="15" fill="#ffffff" font-style="italic">help write something for the landing page,</text>
+  <text x="134" y="388" font-size="15" fill="#ffffff" font-style="italic">it should be under 100 words I guess?&#8221;</text>
+
+  <text x="112" y="440" font-size="16" font-weight="700" fill="#f5a8c9">What gets buried:</text>
+  <text x="134" y="472" font-size="15" fill="#c0c0d0">&#8226; The actual task (landing page copy)</text>
+  <text x="134" y="500" font-size="15" fill="#c0c0d0">&#8226; The one hard constraint (100 words)</text>
+  <text x="134" y="528" font-size="15" fill="#c0c0d0">&#8226; Which problem it should even address</text>
+
+  <rect x="112" y="568" width="616" height="180" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="134" y="602" font-size="14" font-weight="700" fill="#f5a8c9">RESULT</text>
+  <text x="134" y="632" font-size="15" fill="#c0c0d0">The model picks one thread to latch onto</text>
+  <text x="134" y="656" font-size="15" fill="#c0c0d0">and may miss the word limit or write</text>
+  <text x="134" y="680" font-size="15" fill="#c0c0d0">about the wrong problem entirely.</text>
+
+  <!-- Arrow -->
+  <g transform="translate(800,490)">
+    <path d="M-30,0 L30,0 M14,-16 L30,0 L14,16" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Structured (right) -->
+  <rect x="840" y="190" width="680" height="600" rx="24" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="872" y="238" font-size="15" font-weight="800" fill="#86efac">&#9989; LABELED SECTIONS</text>
+  <rect x="872" y="260" width="616" height="220" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="894" y="290" font-size="14" font-weight="700" fill="#86efac">CONTEXT:</text>
+  <text x="894" y="310" font-size="14" fill="#e0e0f0">Users are dropping off during onboarding.</text>
+  <text x="894" y="340" font-size="14" font-weight="700" fill="#86efac">TASK:</text>
+  <text x="894" y="360" font-size="14" fill="#e0e0f0">Write landing page copy addressing this.</text>
+  <text x="894" y="390" font-size="14" font-weight="700" fill="#86efac">CONSTRAINT:</text>
+  <text x="894" y="410" font-size="14" fill="#e0e0f0">Under 100 words.</text>
+  <text x="894" y="440" font-size="14" font-weight="700" fill="#86efac">FORMAT:</text>
+  <text x="894" y="460" font-size="14" fill="#e0e0f0">Headline plus two short paragraphs.</text>
+
+  <text x="872" y="522" font-size="16" font-weight="700" fill="#86efac">Why it works:</text>
+  <text x="894" y="554" font-size="15" fill="#c0c0d0">&#8226; Every requirement is visible, not implied</text>
+  <text x="894" y="582" font-size="15" fill="#c0c0d0">&#8226; Nothing competes for attention</text>
+
+  <rect x="872" y="618" width="616" height="130" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="894" y="652" font-size="14" font-weight="700" fill="#86efac">RESULT</text>
+  <text x="894" y="682" font-size="15" fill="#c0c0d0">Copy that hits the brief on the first try.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">16 / 17</text>
+</svg>

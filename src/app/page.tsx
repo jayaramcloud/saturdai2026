@@ -6,6 +6,12 @@ const CONTACT_EMAIL = "jayaram.linux@gmail.com";
 
 const CURRICULUM = [
   {
+    week: "Intro to AI",
+    title: "The Big Picture",
+    icon: "🌐",
+    description: "Where AI comes from and where it shows up in your life",
+  },
+  {
     week: "Week 1",
     title: "LLMs",
     icon: "🧠",

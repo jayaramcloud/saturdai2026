@@ -1,0 +1,77 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="barPlain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8888aa"/>
+      <stop offset="100%" stop-color="#5a5a78"/>
+    </linearGradient>
+    <linearGradient id="bar5x" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#5b7cfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg2)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad2)">You Won&#8217;t Lose Your Job to AI</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">You&#8217;ll lose it to the teammate sitting next to you who used AI to become a 5x engineer.</text>
+
+  <!-- Left panel: Engineer without AI -->
+  <g transform="translate(150,190)">
+    <rect width="480" height="470" rx="24" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <text x="28" y="56" font-size="34">&#128104;&#8205;&#128187;</text>
+    <text x="80" y="53" font-size="22" font-weight="700" fill="#c0c0d0">Same Skills, No AI</text>
+    <text x="28" y="88" font-size="14" fill="#8888aa">Working the same way as last year</text>
+
+    <!-- output bar -->
+    <rect x="180" y="320" width="90" height="70" rx="10" fill="url(#barPlain)" opacity="0.9"/>
+    <text x="225" y="410" font-size="15" fill="#c0c0d0" text-anchor="middle">Output</text>
+    <text x="225" y="305" font-size="20" font-weight="800" fill="#dcdce6" text-anchor="middle">1&#215;</text>
+
+    <g font-size="14" fill="#c0c0d0">
+      <text x="300" y="200">&#8226; Writes every line by hand</text>
+      <text x="300" y="228">&#8226; Debugs alone, line by line</text>
+      <text x="300" y="256">&#8226; Ships at the old pace</text>
+    </g>
+  </g>
+
+  <!-- VS marker -->
+  <circle cx="800" cy="425" r="34" fill="#f65af2" opacity="0.9"/>
+  <text x="800" y="434" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">VS</text>
+
+  <!-- Right panel: Engineer with AI -->
+  <g transform="translate(970,190)">
+    <rect width="480" height="470" rx="24" fill="#8b5cf6" fill-opacity="0.10" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="28" y="56" font-size="34">&#128104;&#8205;&#128187;</text>
+    <text x="58" y="42" font-size="22">&#9889;</text>
+    <text x="86" y="53" font-size="20" font-weight="700" fill="#c4b5fd">Same Skills + AI</text>
+    <text x="28" y="88" font-size="14" fill="#a0a0c0">Same person, new leverage</text>
+
+    <!-- output bar, taller -->
+    <rect x="180" y="120" width="90" height="270" rx="10" fill="url(#bar5x)"/>
+    <text x="225" y="410" font-size="15" fill="#c4b5fd" text-anchor="middle">Output</text>
+    <text x="225" y="105" font-size="22" font-weight="800" fill="#c4b5fd" text-anchor="middle">5&#215;</text>
+
+    <g font-size="14" fill="#e9e4fc">
+      <text x="300" y="200">&#8226; Delegates the boilerplate</text>
+      <text x="300" y="228">&#8226; Reviews and directs, not just types</text>
+      <text x="300" y="256">&#8226; Ships more, faster with AI</text>
+    </g>
+  </g>
+
+  <!-- Callout -->
+  <rect x="300" y="720" width="1000" height="110" rx="16" fill="#f5576c" fill-opacity="0.12" stroke="#f5576c" stroke-width="2"/>
+  <text x="800" y="762" font-size="19" font-weight="700" fill="#ffb3bd" text-anchor="middle">The real risk isn&#8217;t the algorithm outpacing you.</text>
+  <text x="800" y="794" font-size="19" font-weight="700" fill="#ffb3bd" text-anchor="middle">It&#8217;s the colleague who uses it, outpacing you.</text>
+
+  <!-- Footer -->
+  <text x="80" y="870" font-size="14" fill="#8888aa">SaturdAI &#183; Intro to AI</text>
+</svg>

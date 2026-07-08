@@ -1,0 +1,147 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">How People Reach an LLM</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Twelve channels, one underlying model &#8212; from a browser tab to a voice assistant in your car.</text>
+
+  <!-- Card template: 4 cols x 3 rows, 342x193, gap 24/20, grid spans x:80-1520 y:180-799 -->
+
+  <!-- 1. Web Interfaces -->
+  <g transform="translate(80,180)">
+    <rect width="342" height="193" rx="14" fill="#5b7cfa" fill-opacity="0.08" stroke="#5b7cfa" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#5b7cfa"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Web Interfaces</text>
+    <text x="20" y="72" font-size="13.5" fill="#c7d0fc">Browser apps, zero install</text>
+    <text x="20" y="94" font-size="13.5" fill="#c7d0fc">ChatGPT, Claude.ai, Gemini</text>
+    <text x="20" y="116" font-size="13.5" fill="#c7d0fc">Session auth, live streaming</text>
+  </g>
+
+  <!-- 2. Mobile Apps -->
+  <g transform="translate(446,180)">
+    <rect width="342" height="193" rx="14" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#16a34a"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Mobile Apps</text>
+    <text x="20" y="72" font-size="13.5" fill="#bdeccb">Native iOS &amp; Android</text>
+    <text x="20" y="94" font-size="13.5" fill="#bdeccb">Biometric auth, push alerts</text>
+    <text x="20" y="116" font-size="13.5" fill="#bdeccb">Offline queuing, deep links</text>
+  </g>
+
+  <!-- 3. APIs & SDKs -->
+  <g transform="translate(812,180)">
+    <rect width="342" height="193" rx="14" fill="#0d9488" fill-opacity="0.08" stroke="#0d9488" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#0d9488"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">APIs &amp; SDKs</text>
+    <text x="20" y="72" font-size="13.5" fill="#b3ece4">REST + WebSocket endpoints</text>
+    <text x="20" y="94" font-size="13.5" fill="#b3ece4">Python, JS, Go, Rust SDKs</text>
+    <text x="20" y="116" font-size="13.5" fill="#b3ece4">Chatbots, RAG, fine-tuning</text>
+  </g>
+
+  <!-- 4. Voice Interfaces -->
+  <g transform="translate(1178,180)">
+    <rect width="342" height="193" rx="14" fill="#d97706" fill-opacity="0.08" stroke="#d97706" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#d97706"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Voice Interfaces</text>
+    <text x="20" y="72" font-size="13.5" fill="#fbdba8">Smart speakers, phone calls</text>
+    <text x="20" y="94" font-size="13.5" fill="#fbdba8">Alexa, Google Home</text>
+    <text x="20" y="116" font-size="13.5" fill="#fbdba8">Hands-free, accessibility</text>
+  </g>
+
+  <!-- 5. Chat Platforms -->
+  <g transform="translate(80,393)">
+    <rect width="342" height="193" rx="14" fill="#ec4899" fill-opacity="0.08" stroke="#ec4899" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#ec4899"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Chat Platforms</text>
+    <text x="20" y="72" font-size="13.5" fill="#fbc8de">Bots inside messaging apps</text>
+    <text x="20" y="94" font-size="13.5" fill="#fbc8de">Slack, Discord, WhatsApp</text>
+    <text x="20" y="116" font-size="13.5" fill="#fbc8de">Threads, uploads, /commands</text>
+  </g>
+
+  <!-- 6. Enterprise & Custom Systems -->
+  <g transform="translate(446,393)">
+    <rect width="342" height="193" rx="14" fill="#8b5cf6" fill-opacity="0.08" stroke="#8b5cf6" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#8b5cf6"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Enterprise Systems</text>
+    <text x="20" y="72" font-size="13.5" fill="#dccffb">Embedded in internal tools</text>
+    <text x="20" y="94" font-size="13.5" fill="#dccffb">CMS, CRM, private cloud</text>
+    <text x="20" y="116" font-size="13.5" fill="#dccffb">Role-based access, audit trails</text>
+  </g>
+
+  <!-- 7. Local & On-Device -->
+  <g transform="translate(812,393)">
+    <rect width="342" height="193" rx="14" fill="#f5576c" fill-opacity="0.08" stroke="#f5576c" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#f5576c"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Local &amp; On-Device</text>
+    <text x="20" y="72" font-size="13.5" fill="#fcc9d0">Ollama, LM Studio, vLLM</text>
+    <text x="20" y="94" font-size="13.5" fill="#fcc9d0">Open-weight: Llama, Qwen</text>
+    <text x="20" y="116" font-size="13.5" fill="#fcc9d0">No internet, full privacy</text>
+  </g>
+
+  <!-- 8. Search + AI -->
+  <g transform="translate(1178,393)">
+    <rect width="342" height="193" rx="14" fill="#0ea5e9" fill-opacity="0.08" stroke="#0ea5e9" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#0ea5e9"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Search + AI</text>
+    <text x="20" y="72" font-size="13.5" fill="#bce4fb">Built into search engines</text>
+    <text x="20" y="94" font-size="13.5" fill="#bce4fb">Google Overviews, Perplexity</text>
+    <text x="20" y="116" font-size="13.5" fill="#bce4fb">Live retrieval, citations</text>
+  </g>
+
+  <!-- 9. Developer Tools & IDEs -->
+  <g transform="translate(80,606)">
+    <rect width="342" height="193" rx="14" fill="#eab308" fill-opacity="0.08" stroke="#eab308" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#eab308"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Dev Tools &amp; IDEs</text>
+    <text x="20" y="72" font-size="13.5" fill="#f9e6a8">Code-aware editor plugins</text>
+    <text x="20" y="94" font-size="13.5" fill="#f9e6a8">GitHub Copilot, Cursor</text>
+    <text x="20" y="116" font-size="13.5" fill="#f9e6a8">Autocomplete, tests, commits</text>
+  </g>
+
+  <!-- 10. Productivity Suite -->
+  <g transform="translate(446,606)">
+    <rect width="342" height="193" rx="14" fill="#6366f1" fill-opacity="0.08" stroke="#6366f1" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#6366f1"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Productivity Suite</text>
+    <text x="20" y="72" font-size="13.5" fill="#c9caf9">Plugins in everyday docs</text>
+    <text x="20" y="94" font-size="13.5" fill="#c9caf9">Docs, Excel, Notion, Figma</text>
+    <text x="20" y="116" font-size="13.5" fill="#c9caf9">Writing, outlines, design</text>
+  </g>
+
+  <!-- 11. Embedded & IoT -->
+  <g transform="translate(812,606)">
+    <rect width="342" height="193" rx="14" fill="#71717a" fill-opacity="0.10" stroke="#a1a1aa" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#a1a1aa"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Embedded &amp; IoT</text>
+    <text x="20" y="72" font-size="13.5" fill="#d4d4d8">On edge hardware</text>
+    <text x="20" y="94" font-size="13.5" fill="#d4d4d8">Smart TVs, wearables, cars</text>
+    <text x="20" y="116" font-size="13.5" fill="#d4d4d8">Ultra-low latency, quantized</text>
+  </g>
+
+  <!-- 12. Specialized Tools -->
+  <g transform="translate(1178,606)">
+    <rect width="342" height="193" rx="14" fill="#c084fc" fill-opacity="0.10" stroke="#c084fc" stroke-opacity="0.45" stroke-width="2"/>
+    <rect width="342" height="6" rx="3" fill="#c084fc"/>
+    <text x="20" y="42" font-size="19" font-weight="800" fill="#ffffff">Specialized Tools</text>
+    <text x="20" y="72" font-size="13.5" fill="#e9d4fd">Domain-specific assistants</text>
+    <text x="20" y="94" font-size="13.5" fill="#e9d4fd">Grammarly, DeepL, Elicit</text>
+    <text x="20" y="116" font-size="13.5" fill="#e9d4fd">Writing, translation, research</text>
+  </g>
+
+  <!-- Scale note -->
+  <text x="800" y="826" font-size="14" fill="#8888aa" text-anchor="middle" font-style="italic">Spans 180+ countries and 100+ languages &#8212; from sub-100ms local inference to a few seconds over the cloud.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">3 / 17</text>
+</svg>

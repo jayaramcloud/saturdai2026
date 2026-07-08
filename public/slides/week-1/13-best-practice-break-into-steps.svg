@@ -1,0 +1,74 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Best Practice: Break Big Asks into Steps</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One giant request gets shallow coverage &#8212; a sequence of smaller ones gets depth.</text>
+
+  <!-- All at once (left) -->
+  <rect x="80" y="190" width="680" height="600" rx="24" fill="#ec4899" fill-opacity="0.08" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="112" y="238" font-size="15" font-weight="800" fill="#f5a8c9">&#10060; ALL AT ONCE</text>
+  <rect x="112" y="260" width="616" height="90" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="134" y="298" font-size="19" fill="#ffffff" font-style="italic">&#8220;Write me a full business plan</text>
+  <text x="134" y="322" font-size="19" fill="#ffffff" font-style="italic">for my bakery.&#8221;</text>
+
+  <text x="112" y="392" font-size="16" font-weight="700" fill="#f5a8c9">What happens:</text>
+  <text x="134" y="424" font-size="15" fill="#c0c0d0">&#8226; Model tries to cover every section</text>
+  <text x="134" y="452" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;(market, finances, marketing...) at once</text>
+  <text x="134" y="480" font-size="15" fill="#c0c0d0">&#8226; Each section gets 2&#8211;3 shallow sentences</text>
+  <text x="134" y="508" font-size="15" fill="#c0c0d0">&#8226; No room to dig into your specifics</text>
+
+  <rect x="112" y="548" width="616" height="200" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="134" y="582" font-size="14" font-weight="700" fill="#f5a8c9">RESULT</text>
+  <text x="134" y="612" font-size="15" fill="#c0c0d0">A skeleton document that looks complete</text>
+  <text x="134" y="636" font-size="15" fill="#c0c0d0">at a glance but has nothing you could</text>
+  <text x="134" y="660" font-size="15" fill="#c0c0d0">actually hand to a lender or use to make</text>
+  <text x="134" y="684" font-size="15" fill="#c0c0d0">a real decision.</text>
+
+  <!-- Arrow -->
+  <g transform="translate(800,490)">
+    <path d="M-30,0 L30,0 M14,-16 L30,0 L14,16" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Step by step (right) -->
+  <rect x="840" y="190" width="680" height="600" rx="24" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="872" y="238" font-size="15" font-weight="800" fill="#86efac">&#9989; ONE STEP AT A TIME</text>
+
+  <g transform="translate(872,268)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">1</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">&#8220;Outline the sections a bakery business</text>
+    <text x="42" y="38" font-size="15" fill="#e0e0f0">plan needs.&#8221;</text>
+  </g>
+  <g transform="translate(872,340)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">2</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">&#8220;Now draft just the financial projections</text>
+    <text x="42" y="38" font-size="15" fill="#e0e0f0">section in detail.&#8221;</text>
+  </g>
+  <g transform="translate(872,412)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">3</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">&#8220;Critique this section &#8212; what's missing?&#8221;</text>
+  </g>
+
+  <rect x="872" y="588" width="616" height="160" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="894" y="622" font-size="14" font-weight="700" fill="#86efac">RESULT</text>
+  <text x="894" y="652" font-size="15" fill="#c0c0d0">Each section gets full attention, and you</text>
+  <text x="894" y="676" font-size="15" fill="#c0c0d0">can course-correct before moving on.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">13 / 17</text>
+</svg>

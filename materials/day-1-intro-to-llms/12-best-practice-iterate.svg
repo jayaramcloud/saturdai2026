@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Best Practice: Iterate, Don't Restart</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">The first answer is a draft, not a verdict &#8212; keep refining in the same thread.</text>
+
+  <!-- One-shot (left) -->
+  <rect x="80" y="190" width="680" height="600" rx="24" fill="#ec4899" fill-opacity="0.08" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="112" y="238" font-size="15" font-weight="800" fill="#f5a8c9">&#10060; ONE SHOT, THEN GIVE UP</text>
+
+  <g transform="translate(112,268)">
+    <circle cx="14" cy="10" r="14" fill="#f5576c"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">1</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">Ask once: &#8220;Write me a workout plan.&#8221;</text>
+  </g>
+  <g transform="translate(112,316)">
+    <circle cx="14" cy="10" r="14" fill="#f5576c"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">2</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">Get something too generic to use.</text>
+  </g>
+  <g transform="translate(112,364)">
+    <circle cx="14" cy="10" r="14" fill="#f5576c"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">3</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">Conclude &#8220;it doesn&#8217;t really work for me&#8221;</text>
+    <text x="42" y="38" font-size="15" fill="#e0e0f0">and close the tab.</text>
+  </g>
+
+  <rect x="112" y="548" width="616" height="200" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="134" y="582" font-size="14" font-weight="700" fill="#f5a8c9">RESULT</text>
+  <text x="134" y="612" font-size="15" fill="#c0c0d0">You judge the model by its worst,</text>
+  <text x="134" y="636" font-size="15" fill="#c0c0d0">least-informed guess &#8212; the one it made</text>
+  <text x="134" y="660" font-size="15" fill="#c0c0d0">before knowing anything about your</text>
+  <text x="134" y="684" font-size="15" fill="#c0c0d0">fitness level, schedule, or goals.</text>
+
+  <!-- Arrow -->
+  <g transform="translate(800,490)">
+    <path d="M-30,0 L30,0 M14,-16 L30,0 L14,16" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Iterate (right) -->
+  <rect x="840" y="190" width="680" height="600" rx="24" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="872" y="238" font-size="15" font-weight="800" fill="#86efac">&#9989; REFINE IN THE SAME THREAD</text>
+
+  <g transform="translate(872,268)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">1</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">Ask once, get a generic first draft.</text>
+  </g>
+  <g transform="translate(872,316)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">2</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">Reply: &#8220;I'm a beginner, only have</text>
+    <text x="42" y="38" font-size="15" fill="#e0e0f0">3 days a week, and want to build strength.&#8221;</text>
+  </g>
+  <g transform="translate(872,388)">
+    <circle cx="14" cy="10" r="14" fill="#0d9488"/>
+    <text x="14" y="15" font-size="14" text-anchor="middle" fill="#ffffff" font-weight="800">3</text>
+    <text x="42" y="16" font-size="15" fill="#e0e0f0">Keep nudging: &#8220;swap day 2 for a</text>
+    <text x="42" y="38" font-size="15" fill="#e0e0f0">rest day&#8221;, &#8220;add warm-ups.&#8221;</text>
+  </g>
+
+  <rect x="872" y="588" width="616" height="160" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="894" y="622" font-size="14" font-weight="700" fill="#86efac">RESULT</text>
+  <text x="894" y="652" font-size="15" fill="#c0c0d0">Each reply narrows the gap between what</text>
+  <text x="894" y="676" font-size="15" fill="#c0c0d0">it produced and what you actually need.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">12 / 17</text>
+</svg>

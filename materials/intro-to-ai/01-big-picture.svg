@@ -1,0 +1,119 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8888aa"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The Big Picture: Who&#8217;s Doing What in AI</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A handful of labs build the models &#8212; everyone else lives alongside them, in very different ways.</text>
+
+  <!-- Flow arrows between columns -->
+  <line x1="718" y1="240" x2="682" y2="240" stroke="#8888aa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="700" y="220" font-size="12" fill="#8888aa" text-anchor="middle">chat / agents</text>
+  <line x1="1148" y1="360" x2="1112" y2="360" stroke="#8888aa" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="1130" y="340" font-size="12" fill="#8888aa" text-anchor="middle">APIs</text>
+
+  <!-- Block 0: Not Using AI Yet, outside the picture -->
+  <rect x="80" y="180" width="230" height="500" rx="18" fill="#f5576c" fill-opacity="0.12" stroke="#f5576c" stroke-width="2" stroke-dasharray="8,6"/>
+  <circle cx="80" cy="180" r="19" fill="#f65af2" stroke="#0f0f1e" stroke-width="2"/>
+  <text x="80" y="187" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">0</text>
+  <text x="195" y="320" font-size="36" text-anchor="middle">&#128694;</text>
+  <text x="195" y="360" font-size="17" font-weight="700" fill="#ffb3bd" text-anchor="middle">Not Using AI Yet</text>
+  <text x="120" y="392" font-size="13" fill="#c0c0d0">Individuals and</text>
+  <text x="120" y="412" font-size="13" fill="#c0c0d0">organizations still</text>
+  <text x="120" y="432" font-size="13" fill="#c0c0d0">on the sidelines</text>
+  <text x="120" y="466" font-size="13" fill="#c0c0d0">&#8212; standing outside</text>
+  <text x="120" y="486" font-size="13" fill="#c0c0d0">the whole picture,</text>
+  <text x="120" y="506" font-size="13" fill="#c0c0d0">and the gap only</text>
+  <text x="120" y="526" font-size="13" fill="#c0c0d0">grows from here.</text>
+
+  <!-- Block 1: People -->
+  <g transform="translate(350,180)">
+    <rect width="330" height="500" rx="24" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>
+    <text x="28" y="52" font-size="34">&#129489;</text>
+    <text x="76" y="50" font-size="24" font-weight="700" fill="#9db1fb">People</text>
+    <text x="28" y="86" font-size="13.5" fill="#a0a0c0">Most people just need to drive, not build</text>
+
+    <!-- Personal life -->
+    <rect x="16" y="104" width="298" height="100" rx="16" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="46" y="144" font-size="26">&#129489;</text>
+    <text x="86" y="139" font-size="14.5" font-weight="700" fill="#c4b5fd">Personal Life</text>
+    <text x="86" y="161" font-size="12.5" fill="#c0c0d0">Learning and self-improvement</text>
+    <text x="86" y="181" font-size="12.5" fill="#c0c0d0">&#8212; growing with AI day to day</text>
+    <circle cx="16" cy="104" r="19" fill="#f65af2" stroke="#0f0f1e" stroke-width="2"/>
+    <text x="16" y="111" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+  </g>
+
+  <!-- Block 2/3: Enterprises Building With AI -->
+  <g transform="translate(720,180)">
+    <rect width="390" height="500" rx="24" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-width="2.5"/>
+    <text x="28" y="52" font-size="34">&#127970;</text>
+    <text x="76" y="50" font-size="23" font-weight="700" fill="#f3b978">Enterprises Building With AI</text>
+    <text x="28" y="86" font-size="13.5" fill="#a0a0c0">Deploy open-source LLMs &#8212; skip the fine-tuning</text>
+    <g font-size="14.5" fill="#c0c0d0">
+      <text x="28" y="130">&#8226; Hardware: on-prem or cloud</text>
+      <text x="28" y="155">&#8226; Harness engineering + MCP + tools</text>
+      <text x="28" y="180">&#8226; Corporate AI over proprietary data</text>
+    </g>
+  </g>
+
+  <!-- Professional cards: fully inside Enterprises Building With AI -->
+  <rect x="736" y="390" width="358" height="120" rx="18" fill="#5b7cfa" fill-opacity="0.24" stroke="#5b7cfa" stroke-width="3"/>
+  <text x="915" y="422" font-size="26" text-anchor="middle">&#128188;</text>
+  <text x="915" y="452" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">Professional Life</text>
+  <text x="915" y="472" font-size="12" fill="#e9e4fc" text-anchor="middle">Use AI to be a 5x engineer</text>
+  <circle cx="736" cy="390" r="19" fill="#f65af2" stroke="#0f0f1e" stroke-width="2"/>
+  <text x="736" y="397" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+
+  <rect x="736" y="530" width="358" height="120" rx="18" fill="#5b7cfa" fill-opacity="0.24" stroke="#5b7cfa" stroke-width="3"/>
+  <text x="915" y="562" font-size="26" text-anchor="middle">&#128104;&#8205;&#128187;</text>
+  <text x="915" y="592" font-size="14.5" font-weight="700" fill="#ffffff" text-anchor="middle">Building AI for Companies</text>
+  <text x="915" y="612" font-size="12" fill="#e9e4fc" text-anchor="middle">Also professional &#8212; from the inside</text>
+  <circle cx="736" cy="530" r="19" fill="#f65af2" stroke="#0f0f1e" stroke-width="2"/>
+  <text x="736" y="537" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+
+  <!-- Block 4: AI Builders -->
+  <g transform="translate(1150,180)">
+    <rect width="370" height="500" rx="24" fill="#0d9488" fill-opacity="0.10" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="28" y="52" font-size="34">&#128300;</text>
+    <text x="76" y="50" font-size="24" font-weight="700" fill="#5fd4c6">AI Builders</text>
+    <text x="28" y="86" font-size="13.5" fill="#a0a0c0">OpenAI &#183; Anthropic &#183; Gemini &#183; DeepSeek</text>
+    <g font-size="14.5" fill="#c0c0d0">
+      <text x="28" y="130">&#8226; PhD-level research teams</text>
+      <text x="28" y="164">&#8226; Train foundation models from scratch</text>
+      <text x="28" y="198">&#8226; Massive hardware + software stacks</text>
+      <text x="28" y="232">&#8226; Push the frontier of what AI can do</text>
+    </g>
+
+    <!-- Person: the researcher/builder, badge 4 -->
+    <text x="185" y="400" font-size="48" text-anchor="middle">&#129489;&#8205;&#128300;</text>
+    <circle cx="140" cy="372" r="19" fill="#f65af2" stroke="#0f0f1e" stroke-width="2"/>
+    <text x="140" y="379" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+  </g>
+
+  <!-- Car analogy strip -->
+  <rect x="350" y="700" width="1170" height="90" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="382" y="726" font-size="14" fill="#c0c0d0"><tspan font-weight="700" fill="#ffffff">The car analogy:</tspan> you don&#8217;t need to build an engine to drive to work.</text>
+  <text x="515" y="770" font-size="24" text-anchor="middle">&#128664;</text>
+  <text x="515" y="782" font-size="13" fill="#9db1fb" text-anchor="middle">People just drive</text>
+  <text x="915" y="770" font-size="24" text-anchor="middle">&#128295;</text>
+  <text x="915" y="782" font-size="13" fill="#f3b978" text-anchor="middle">Enterprises assemble the car</text>
+  <text x="1335" y="770" font-size="24" text-anchor="middle">&#127959;&#65039;</text>
+  <text x="1335" y="782" font-size="13" fill="#5fd4c6" text-anchor="middle">Builders design the engine</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Intro to AI</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

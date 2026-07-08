@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Best Practice: Give It Context and a Role</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Tell the model who it's writing as and who it's writing for &#8212; not just what to write.</text>
+
+  <!-- No context (left) -->
+  <rect x="80" y="190" width="680" height="600" rx="24" fill="#ec4899" fill-opacity="0.08" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="112" y="238" font-size="15" font-weight="800" fill="#f5a8c9">&#10060; NO CONTEXT</text>
+  <rect x="112" y="260" width="616" height="90" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="134" y="298" font-size="19" fill="#ffffff" font-style="italic">&#8220;Write a product description</text>
+  <text x="134" y="322" font-size="19" fill="#ffffff" font-style="italic">for a lantern.&#8221;</text>
+
+  <text x="112" y="392" font-size="16" font-weight="700" fill="#f5a8c9">What the model has to guess:</text>
+  <text x="134" y="424" font-size="15" fill="#c0c0d0">&#8226; Who the audience is</text>
+  <text x="134" y="452" font-size="15" fill="#c0c0d0">&#8226; What tone or brand voice to use</text>
+  <text x="134" y="480" font-size="15" fill="#c0c0d0">&#8226; How long the copy should be</text>
+  <text x="134" y="508" font-size="15" fill="#c0c0d0">&#8226; What makes this product special</text>
+
+  <rect x="112" y="548" width="616" height="200" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="134" y="582" font-size="14" font-weight="700" fill="#f5a8c9">RESULT</text>
+  <text x="134" y="612" font-size="15" fill="#c0c0d0">A flat, generic blurb that could describe</text>
+  <text x="134" y="636" font-size="15" fill="#c0c0d0">almost any lantern from almost any</text>
+  <text x="134" y="660" font-size="15" fill="#c0c0d0">brand &#8212; nothing in it is wrong, but</text>
+  <text x="134" y="684" font-size="15" fill="#c0c0d0">nothing in it is yours either.</text>
+
+  <!-- Arrow -->
+  <g transform="translate(800,490)">
+    <path d="M-30,0 L30,0 M14,-16 L30,0 L14,16" fill="none" stroke="#ffffff" stroke-opacity="0.4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Context + role (right) -->
+  <rect x="840" y="190" width="680" height="600" rx="24" fill="#16a34a" fill-opacity="0.08" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="872" y="238" font-size="15" font-weight="800" fill="#86efac">&#9989; CONTEXT + ROLE</text>
+  <rect x="872" y="260" width="616" height="130" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="894" y="292" font-size="17" fill="#ffffff" font-style="italic">&#8220;You're a copywriter for a</text>
+  <text x="894" y="318" font-size="17" fill="#ffffff" font-style="italic">sustainable outdoor brand aimed at</text>
+  <text x="894" y="344" font-size="17" fill="#ffffff" font-style="italic">millennial hikers. Write a punchy</text>
+  <text x="894" y="370" font-size="17" fill="#ffffff" font-style="italic">50-word description, playful tone.&#8221;</text>
+
+  <text x="872" y="432" font-size="16" font-weight="700" fill="#86efac">What the role and context supply:</text>
+  <text x="894" y="464" font-size="15" fill="#c0c0d0">&#8226; A specific audience to write for</text>
+  <text x="894" y="492" font-size="15" fill="#c0c0d0">&#8226; A voice and tone to match</text>
+  <text x="894" y="520" font-size="15" fill="#c0c0d0">&#8226; A length constraint</text>
+  <text x="894" y="548" font-size="15" fill="#c0c0d0">&#8226; Brand values to lean on</text>
+
+  <rect x="872" y="588" width="616" height="160" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="894" y="622" font-size="14" font-weight="700" fill="#86efac">RESULT</text>
+  <text x="894" y="652" font-size="15" fill="#c0c0d0">Copy that sounds like it belongs to</text>
+  <text x="894" y="676" font-size="15" fill="#c0c0d0">this brand, for this audience &#8212; ready to ship.</text>
+
+  <!-- Footer -->
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">11 / 17</text>
+</svg>
