@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg4)"/>
+
+  <!-- Header -->
+  <text x="80" y="76" font-size="36" font-weight="800" fill="url(#titleGrad4)">Who Loses, Who Gains &#8212; The Next 5 Years</text>
+  <text x="80" y="112" font-size="19" fill="#a0a0c0">Global labour-market projections to 2030, from the World Economic Forum&#8217;s Future of Jobs Report 2025.</text>
+
+  <!-- Stat row -->
+  <g>
+    <rect x="100" y="150" width="440" height="110" rx="18" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2"/>
+    <text x="320" y="200" font-size="34" font-weight="800" fill="#5fd4c6" text-anchor="middle">170M</text>
+    <text x="320" y="228" font-size="14" fill="#c0c0d0" text-anchor="middle">new jobs created worldwide by 2030</text>
+
+    <rect x="580" y="150" width="440" height="110" rx="18" fill="#f5576c" fill-opacity="0.12" stroke="#f5576c" stroke-width="2"/>
+    <text x="800" y="200" font-size="34" font-weight="800" fill="#ffb3bd" text-anchor="middle">92M</text>
+    <text x="800" y="228" font-size="14" fill="#c0c0d0" text-anchor="middle">existing jobs displaced by 2030</text>
+
+    <rect x="1060" y="150" width="440" height="110" rx="18" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="1280" y="200" font-size="34" font-weight="800" fill="#c4b5fd" text-anchor="middle">Net +78M</text>
+    <text x="1280" y="228" font-size="14" fill="#e9e4fc" text-anchor="middle">jobs &#8212; but 22% of all roles get reshuffled</text>
+  </g>
+
+  <!-- Column: Where the losses are -->
+  <g transform="translate(100,290)">
+    <rect width="700" height="410" rx="20" fill="#f5576c" fill-opacity="0.08" stroke="#f5576c" stroke-width="2"/>
+    <text x="28" y="42" font-size="22" font-weight="700" fill="#ffb3bd">&#128315; Where the Losses Are</text>
+    <text x="28" y="68" font-size="13.5" fill="#a0a0c0">Fastest-declining roles &#8212; mostly clerical &amp; repetitive-process work</text>
+
+    <g font-size="15" fill="#e9e4fc">
+      <text x="28" y="112">Postal Service Clerks</text>
+      <text x="672" y="112" text-anchor="end" font-weight="700" fill="#ffb3bd">&#8722;34%</text>
+      <line x1="28" y1="124" x2="672" y2="124" stroke="#ffffff" stroke-opacity="0.08"/>
+
+      <text x="28" y="152">Bank Tellers &amp; Related Clerks</text>
+      <text x="672" y="152" text-anchor="end" font-weight="700" fill="#ffb3bd">&#8722;31%</text>
+      <line x1="28" y1="164" x2="672" y2="164" stroke="#ffffff" stroke-opacity="0.08"/>
+
+      <text x="28" y="192">Data Entry Clerks</text>
+      <text x="672" y="192" text-anchor="end" font-weight="700" fill="#ffb3bd">&#8722;26%</text>
+      <line x1="28" y1="204" x2="672" y2="204" stroke="#ffffff" stroke-opacity="0.08"/>
+
+      <text x="28" y="232">Cashiers &amp; Ticket Clerks</text>
+      <line x1="28" y1="244" x2="672" y2="244" stroke="#ffffff" stroke-opacity="0.08"/>
+
+      <text x="28" y="272">Administrative &amp; Executive Secretaries</text>
+    </g>
+
+    <text x="28" y="330" font-size="13.5" fill="#c0c0d0">These are the jobs built around routine data entry,</text>
+    <text x="28" y="352" font-size="13.5" fill="#c0c0d0">form-filling and manual record-keeping &#8212; exactly the</text>
+    <text x="28" y="374" font-size="13.5" fill="#c0c0d0">tasks AI and automation now do fastest and cheapest.</text>
+  </g>
+
+  <!-- Column: Where the growth is -->
+  <g transform="translate(840,290)">
+    <rect width="660" height="410" rx="20" fill="#0d9488" fill-opacity="0.08" stroke="#0d9488" stroke-width="2"/>
+    <text x="28" y="42" font-size="22" font-weight="700" fill="#5fd4c6">&#128200; Where the Growth Is</text>
+    <text x="28" y="68" font-size="13.5" fill="#a0a0c0">Two different kinds of winners</text>
+
+    <text x="28" y="102" font-size="14" font-weight="700" fill="#9db1fb">Fastest-growing, in % terms</text>
+    <g font-size="13.5" fill="#c0c0d0">
+      <text x="40" y="126">&#8226; AI &amp; Machine Learning Specialists</text>
+      <text x="40" y="148">&#8226; Big Data Specialists</text>
+      <text x="40" y="170">&#8226; FinTech Engineers</text>
+      <text x="40" y="192">&#8226; Software &amp; Application Developers</text>
+      <text x="40" y="214">&#8226; Renewable Energy Engineers</text>
+    </g>
+
+    <text x="28" y="256" font-size="14" font-weight="700" fill="#f3b978">Largest growth, in absolute numbers</text>
+    <g font-size="13.5" fill="#c0c0d0">
+      <text x="40" y="280">&#8226; Farmworkers</text>
+      <text x="40" y="302">&#8226; Delivery Drivers</text>
+      <text x="40" y="324">&#8226; Construction Workers</text>
+      <text x="40" y="346">&#8226; Salespersons</text>
+      <text x="40" y="368">&#8226; Care Roles &amp; Educators</text>
+    </g>
+  </g>
+
+  <!-- Callout -->
+  <rect x="100" y="730" width="1400" height="90" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="800" y="768" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">39% of everyone&#8217;s existing skills will be transformed or outdated by 2030.</text>
+  <text x="800" y="798" font-size="14.5" fill="#c0c0d0" text-anchor="middle">The roles that survive aren&#8217;t the ones that resist AI &#8212; they&#8217;re the ones that absorb it fastest.</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Intro to AI</text>
+  <text x="1520" y="860" font-size="13" fill="#8888aa" text-anchor="end">Source: World Economic Forum, Future of Jobs Report 2025</text>
+</svg>

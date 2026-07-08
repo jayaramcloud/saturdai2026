@@ -98,7 +98,19 @@ const SLIDES: Slide[] = [
       "Dumping every detail into one rambling paragraph buries the actual ask — the model may latch onto the wrong thread and miss a hard constraint like a word limit. Labeling the same information as Context, Task, Constraint, and Format makes every requirement visible instead of implied, so nothing competes for attention and the first draft actually hits the brief.",
   },
   {
-    src: "/slides/week-1/17-recap-and-exercise.svg",
+    src: "/slides/week-1/17-ethics-bias-and-fairness.svg",
+    alt: "Comparison of taking AI output at face value versus using it with awareness of bias in the training data",
+    paragraph:
+      "A model trained on the internet inherits the internet's blind spots — under-represented groups in the training data get under-represented or stereotyped outputs, delivered with the same confident tone as everything else. Using AI well means noticing when results skew toward one group or assumption, asking explicitly for a wider range when it matters, and not treating a single output as representative of the whole truth.",
+  },
+  {
+    src: "/slides/week-1/18-ethics-attribution-and-jobs.svg",
+    alt: "Three ethics considerations: passing off AI work as your own, whose work trained the model, and the impact on real jobs",
+    paragraph:
+      "Using AI thoughtfully means being honest about what it did and who else it affects: disclosing AI assistance where the rules or relationship expect it, checking licensing terms before using AI output commercially since models learn from creators who mostly didn't choose to be training data, and remembering that automating a task often means automating someone's paid work, not just a chore. None of this means don't use AI — it means applying the same judgment you'd use anywhere else.",
+  },
+  {
+    src: "/slides/week-1/19-recap-and-exercise.svg",
     alt: "Recap of five key takeaways from Day 1 plus a three-step live exercise",
     paragraph:
       "To recap: LLMs are generative AI trained on text; different assistants have different strengths; specific prompts beat vague ones; confident answers can still be wrong; and private data doesn't belong in a chat. Your exercise: ask a vague question about something you actually need help with, rewrite it as a specific prompt, and compare the two answers.",
