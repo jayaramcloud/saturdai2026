@@ -26,7 +26,7 @@
   <text x="112" y="392" font-size="16" font-weight="700" fill="#f5a8c9">Why it goes wrong:</text>
   <text x="134" y="424" font-size="15" fill="#c0c0d0">&#8226; The framing already picks a winner</text>
   <text x="134" y="452" font-size="15" fill="#c0c0d0">&#8226; The model tends to agree with the</text>
-  <text x="134" y="480" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;premise it was handed</text>
+  <text x="134" y="480" font-size="15" fill="#c0c0d0">&#160;&#160;premise it was handed</text>
   <text x="134" y="508" font-size="15" fill="#c0c0d0">&#8226; Real trade-offs of option B go unmentioned</text>
 
   <rect x="112" y="548" width="616" height="200" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
@@ -61,5 +61,5 @@
 
   <!-- Footer -->
   <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
-  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">14 / 19</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">15 / 20</text>
 </svg>

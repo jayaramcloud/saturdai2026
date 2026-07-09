@@ -56,61 +56,67 @@ const SLIDES: Slide[] = [
       "What you type is sent to the provider's servers to generate a reply, and depending on the product and your settings, it may be stored or used to improve the model. A simple rule of thumb: if you wouldn't post it publicly or hand it to a stranger — passwords, private data, confidential documents — don't paste it into a chat window either.",
   },
   {
-    src: "/slides/week-1/10-free-vs-paid.svg",
+    src: "/slides/week-1/10-llm-security-and-hacking.svg",
+    alt: "Three attack patterns: prompt injection, jailbreaking, and data leakage",
+    paragraph:
+      "Every LLM attack exploits the same blind spot: the model can't reliably tell its own instructions apart from the data it's reading. Prompt injection hides commands inside a webpage, email, or document the model processes; jailbreaking uses creative framing — role-play, hypotheticals, fictional scenarios — to talk a model past its own safety rules; and data leakage tricks a model into revealing a hidden system prompt or another user's data. This matters more once an LLM can browse the web, read files, or call tools on your behalf, which is exactly what Week 3 (MCPs) and Week 4 (tool calling) add.",
+  },
+  {
+    src: "/slides/week-1/11-free-vs-paid.svg",
     alt: "Comparison table of free versus paid tiers across message limits, model access, memory, uploads, and features",
     paragraph:
       "Paid tiers mainly buy you higher usage limits, access to the newest and most capable models, a longer memory per conversation, more generous file uploads, and extra features like voice or coding tools. For this bootcamp, the free tier is more than enough — and we also have our own DGX Spark supercomputer for anything heavier.",
   },
   {
-    src: "/slides/week-1/11-best-practice-context-and-role.svg",
+    src: "/slides/week-1/12-best-practice-context-and-role.svg",
     alt: "Comparison of a prompt with no context versus one that gives the model a role and audience",
     paragraph:
       "Telling the model who it's writing as and who it's writing for turns a generic request into a tailored one. Instead of \"write a product description for a lantern,\" giving it a role — \"you're a copywriter for a sustainable outdoor brand aimed at millennial hikers\" — plus a tone and length constraint gets you copy that actually sounds like it belongs to your brand, ready to use on the first try.",
   },
   {
-    src: "/slides/week-1/12-best-practice-iterate.svg",
+    src: "/slides/week-1/13-best-practice-iterate.svg",
     alt: "Comparison of asking once and giving up versus refining an answer through follow-up messages in the same thread",
     paragraph:
       "The first response you get is a draft, not a verdict. Asking once, getting something generic, and concluding \"it doesn't work for me\" judges the model on its least-informed guess. Instead, keep refining in the same thread — \"I'm a beginner, only have 3 days a week\" — and each reply narrows the gap between what it produced and what you actually need.",
   },
   {
-    src: "/slides/week-1/13-best-practice-break-into-steps.svg",
+    src: "/slides/week-1/14-best-practice-break-into-steps.svg",
     alt: "Comparison of asking for an entire business plan at once versus building it section by section",
     paragraph:
       "A single giant request forces the model to spread its attention across every part of the task at once, so each section gets only a shallow pass. Breaking the same ask into steps — outline first, then draft one section in detail, then critique it — gives each piece full attention and lets you course-correct before moving to the next.",
   },
   {
-    src: "/slides/week-1/14-pitfall-leading-questions.svg",
+    src: "/slides/week-1/15-pitfall-leading-questions.svg",
     alt: "Comparison of a leading question that assumes an answer versus a neutral question with explicit comparison criteria",
     paragraph:
       "Asking \"isn't option A clearly better than option B?\" already picks a winner, and the model tends to agree with the premise it was handed rather than evaluating it independently. A neutral version — \"compare A and B on cost, speed, and risk, then tell me which is better and why\" — forces a real comparison instead of reflecting your own opinion back at you with extra confidence.",
   },
   {
-    src: "/slides/week-1/15-pitfall-blind-copy-paste.svg",
+    src: "/slides/week-1/16-pitfall-blind-copy-paste.svg",
     alt: "Comparison of pasting AI-generated output straight into production versus reviewing and testing it first",
     paragraph:
       "Copying generated code or text straight into production without reading it skips the one step that catches mistakes before they matter. Treating the output as a first draft — reading it, running it against real inputs, checking the tone — means you still move fast, but errors get caught on your screen instead of in front of a user or client.",
   },
   {
-    src: "/slides/week-1/16-pitfall-unstructured-prompt.svg",
+    src: "/slides/week-1/17-pitfall-unstructured-prompt.svg",
     alt: "Comparison of a rambling unstructured prompt versus one broken into labeled context, task, constraint, and format sections",
     paragraph:
       "Dumping every detail into one rambling paragraph buries the actual ask — the model may latch onto the wrong thread and miss a hard constraint like a word limit. Labeling the same information as Context, Task, Constraint, and Format makes every requirement visible instead of implied, so nothing competes for attention and the first draft actually hits the brief.",
   },
   {
-    src: "/slides/week-1/17-ethics-bias-and-fairness.svg",
+    src: "/slides/week-1/18-ethics-bias-and-fairness.svg",
     alt: "Comparison of taking AI output at face value versus using it with awareness of bias in the training data",
     paragraph:
       "A model trained on the internet inherits the internet's blind spots — under-represented groups in the training data get under-represented or stereotyped outputs, delivered with the same confident tone as everything else. Using AI well means noticing when results skew toward one group or assumption, asking explicitly for a wider range when it matters, and not treating a single output as representative of the whole truth.",
   },
   {
-    src: "/slides/week-1/18-ethics-attribution-and-jobs.svg",
+    src: "/slides/week-1/19-ethics-attribution-and-jobs.svg",
     alt: "Three ethics considerations: passing off AI work as your own, whose work trained the model, and the impact on real jobs",
     paragraph:
       "Using AI thoughtfully means being honest about what it did and who else it affects: disclosing AI assistance where the rules or relationship expect it, checking licensing terms before using AI output commercially since models learn from creators who mostly didn't choose to be training data, and remembering that automating a task often means automating someone's paid work, not just a chore. None of this means don't use AI — it means applying the same judgment you'd use anywhere else.",
   },
   {
-    src: "/slides/week-1/19-recap-and-exercise.svg",
+    src: "/slides/week-1/20-recap-and-exercise.svg",
     alt: "Recap of five key takeaways from Day 1 plus a three-step live exercise",
     paragraph:
       "To recap: LLMs are generative AI trained on text; different assistants have different strengths; specific prompts beat vague ones; confident answers can still be wrong; and private data doesn't belong in a chat. Your exercise: ask a vague question about something you actually need help with, rewrite it as a specific prompt, and compare the two answers.",

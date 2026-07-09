@@ -8,6 +8,7 @@ const SECTIONS = [
 ];
 
 const WEEKS = [
+  { href: "/intro-to-ai", label: "Intro to AI" },
   { href: "/week-1", label: "Week 1: LLMs" },
   { href: "/week-2", label: "Week 2: RAG" },
   { href: "/week-3", label: "Week 3: MCPs" },

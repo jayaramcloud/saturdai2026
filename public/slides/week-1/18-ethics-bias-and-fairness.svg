@@ -25,11 +25,11 @@
 
   <text x="112" y="392" font-size="16" font-weight="700" fill="#f5a8c9">Where the bias comes from:</text>
   <text x="134" y="424" font-size="15" fill="#c0c0d0">&#8226; Training data reflects historical and</text>
-  <text x="134" y="448" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;online patterns, not an ideal world</text>
+  <text x="134" y="448" font-size="15" fill="#c0c0d0">&#160;&#160;online patterns, not an ideal world</text>
   <text x="134" y="476" font-size="15" fill="#c0c0d0">&#8226; Under-represented groups in the data</text>
-  <text x="134" y="500" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;get under-represented outputs</text>
+  <text x="134" y="500" font-size="15" fill="#c0c0d0">&#160;&#160;get under-represented outputs</text>
   <text x="134" y="528" font-size="15" fill="#c0c0d0">&#8226; The model doesn't know it's biased &#8212;</text>
-  <text x="134" y="552" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;it's just reproducing patterns</text>
+  <text x="134" y="552" font-size="15" fill="#c0c0d0">&#160;&#160;it's just reproducing patterns</text>
 
   <rect x="112" y="588" width="616" height="160" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
   <text x="134" y="622" font-size="14" font-weight="700" fill="#f5a8c9">RESULT</text>
@@ -51,11 +51,11 @@
 
   <text x="872" y="392" font-size="16" font-weight="700" fill="#86efac">What awareness looks like:</text>
   <text x="894" y="424" font-size="15" fill="#c0c0d0">&#8226; Noticing when output skews toward one</text>
-  <text x="894" y="448" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;group, style, or assumption</text>
+  <text x="894" y="448" font-size="15" fill="#c0c0d0">&#160;&#160;group, style, or assumption</text>
   <text x="894" y="476" font-size="15" fill="#c0c0d0">&#8226; Asking for a wider range explicitly when</text>
-  <text x="894" y="500" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;it matters (&#8220;show varied ages, genders&#8221;)</text>
+  <text x="894" y="500" font-size="15" fill="#c0c0d0">&#160;&#160;it matters (&#8220;show varied ages, genders&#8221;)</text>
   <text x="894" y="528" font-size="15" fill="#c0c0d0">&#8226; Not treating a single output as</text>
-  <text x="894" y="552" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;representative of &#8220;the truth&#8221;</text>
+  <text x="894" y="552" font-size="15" fill="#c0c0d0">&#160;&#160;representative of &#8220;the truth&#8221;</text>
 
   <rect x="872" y="588" width="616" height="160" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
   <text x="894" y="622" font-size="14" font-weight="700" fill="#86efac">RESULT</text>
@@ -65,5 +65,5 @@
 
   <!-- Footer -->
   <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
-  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">17 / 19</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">18 / 20</text>
 </svg>

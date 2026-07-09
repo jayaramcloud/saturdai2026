@@ -25,7 +25,7 @@
 
   <text x="112" y="392" font-size="16" font-weight="700" fill="#f5a8c9">What happens:</text>
   <text x="134" y="424" font-size="15" fill="#c0c0d0">&#8226; Model tries to cover every section</text>
-  <text x="134" y="452" font-size="15" fill="#c0c0d0">&nbsp;&nbsp;(market, finances, marketing...) at once</text>
+  <text x="134" y="452" font-size="15" fill="#c0c0d0">&#160;&#160;(market, finances, marketing...) at once</text>
   <text x="134" y="480" font-size="15" fill="#c0c0d0">&#8226; Each section gets 2&#8211;3 shallow sentences</text>
   <text x="134" y="508" font-size="15" fill="#c0c0d0">&#8226; No room to dig into your specifics</text>
 
@@ -70,5 +70,5 @@
 
   <!-- Footer -->
   <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs</text>
-  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">13 / 19</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">14 / 20</text>
 </svg>
