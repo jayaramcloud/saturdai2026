@@ -1,3 +1,5 @@
+import VideoGrid from "@/components/VideoGrid";
+
 const REGISTRATION_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc85wV7CgYL6QUN-4xCjplm3ryfM4NOdJoZrVjjThtMO2bKKQ/viewform";
 
@@ -63,6 +65,12 @@ export default function Home() {
           Saturday is a short introductory meet-and-greet to get acquainted and set the stage —
           the real hands-on work happens Monday–Friday evenings.
         </p>
+      </section>
+
+      {/* Recorded sessions */}
+      <section style={{ marginTop: "3rem" }}>
+        <h2 className="section-title">Watch the Recordings</h2>
+        <VideoGrid />
       </section>
 
       {/* Event banner */}

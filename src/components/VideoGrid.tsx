@@ -1,0 +1,51 @@
+"use client";
+
+import { useState } from "react";
+
+type Video = {
+  id: string;
+  label: string;
+};
+
+const VIDEOS: Video[] = [
+  { id: "OB6rX8zinu8", label: "Day 1" },
+  { id: "XQ83ChWB5Oc", label: "Day 2" },
+  { id: "lJVxEUi-8F0", label: "Day 3" },
+  { id: "yR4tkPFGjec", label: "Day 4" },
+  { id: "zTakJvjHlUI", label: "Day 5" },
+];
+
+export default function VideoGrid() {
+  const [playingId, setPlayingId] = useState<string | null>(null);
+
+  return (
+    <div className="video-grid">
+      {VIDEOS.map((video) => (
+        <div className="video-card" key={video.id}>
+          {playingId === video.id ? (
+            <iframe
+              className="video-frame"
+              src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+              title={`SaturdAI recording — ${video.label}`}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          ) : (
+            <button
+              type="button"
+              className="video-thumb"
+              onClick={() => setPlayingId(video.id)}
+              aria-label={`Play recording for ${video.label}`}
+              style={{
+                backgroundImage: `url(https://img.youtube.com/vi/${video.id}/hqdefault.jpg)`,
+              }}
+            >
+              <span className="video-play-icon">▶</span>
+            </button>
+          )}
+          <p className="video-label">{video.label}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
