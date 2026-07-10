@@ -5,14 +5,15 @@ import { useState } from "react";
 type Video = {
   id: string;
   label: string;
+  date: string;
 };
 
 const VIDEOS: Video[] = [
-  { id: "OB6rX8zinu8", label: "Day 1" },
-  { id: "XQ83ChWB5Oc", label: "Day 2" },
-  { id: "lJVxEUi-8F0", label: "Day 3" },
-  { id: "yR4tkPFGjec", label: "Day 4" },
-  { id: "zTakJvjHlUI", label: "Day 5" },
+  { id: "OB6rX8zinu8", label: "July 4 (Morning)", date: "Jul 4, 2026" },
+  { id: "XQ83ChWB5Oc", label: "Day 2", date: "Jul 7, 2026" },
+  { id: "lJVxEUi-8F0", label: "Day 3", date: "Jul 8, 2026" },
+  { id: "yR4tkPFGjec", label: "July 4 (Evening)", date: "Jul 4, 2026" },
+  { id: "zTakJvjHlUI", label: "Day 5", date: "Jul 9, 2026" },
 ];
 
 export default function VideoGrid() {
@@ -43,7 +44,9 @@ export default function VideoGrid() {
               <span className="video-play-icon">▶</span>
             </button>
           )}
-          <p className="video-label">{video.label}</p>
+          <p className="video-label">
+            {video.label} <span className="video-date">· {video.date}</span>
+          </p>
         </div>
       ))}
     </div>

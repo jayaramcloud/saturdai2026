@@ -188,6 +188,10 @@ a {
   color: #a0a0c0;
   font-weight: 600;
 }
+.video-date {
+  color: #8888aa;
+  font-weight: 400;
+}
 
 /* Start card */
 .start-card {
