@@ -17,7 +17,7 @@ npx opennextjs-cloudflare build
 npx opennextjs-cloudflare deploy
 ```
 
-**Never run this without the user's explicit go-ahead.** Land and verify changes locally first (`npm run dev` + a Playwright screenshot — `chromium-cli` is not installed in this environment), then wait to be told to commit/push/deploy.
+Verify changes locally first (`npm run dev` + a Playwright screenshot — `chromium-cli` is not installed in this environment). Once verified and you judge the change is ready, commit, push, and deploy straight through without waiting for a separate go-ahead each time — there's no staging, so "ready" means actually checked, not just written.
 
 ## Week slide decks
 
