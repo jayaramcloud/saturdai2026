@@ -1,0 +1,124 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8b93b8"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="80" font-size="38" font-weight="800" fill="url(#titleGrad)">How SaturdAI Deploys</text>
+  <text x="80" y="116" font-size="19" fill="#a0a0c0">Next.js 16 site, built with OpenNext and shipped as a Cloudflare Worker &#8212; no CI, every deploy is manual.</text>
+
+  <!-- Stage 1: Local dev -->
+  <rect x="80" y="170" width="330" height="330" rx="22" fill="#5b7cfa" fill-opacity="0.10" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="112" y="212" font-size="22" font-weight="700" fill="#9db1fb">1. Local Machine</text>
+  <text x="112" y="238" font-size="15" fill="#a0a0c0">Developer &#38; Claude Code</text>
+
+  <rect x="112" y="262" width="266" height="52" rx="10" fill="#5b7cfa" fill-opacity="0.20" stroke="#5b7cfa" stroke-width="1.5"/>
+  <text x="245" y="293" font-size="16" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">src/app, materials/*.svg</text>
+
+  <rect x="112" y="326" width="266" height="52" rx="10" fill="#5b7cfa" fill-opacity="0.20" stroke="#5b7cfa" stroke-width="1.5"/>
+  <text x="245" y="357" font-size="16" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">npm run dev (localhost)</text>
+
+  <rect x="112" y="390" width="266" height="52" rx="10" fill="#5b7cfa" fill-opacity="0.20" stroke="#5b7cfa" stroke-width="1.5"/>
+  <text x="245" y="421" font-size="16" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">Playwright screenshot check</text>
+
+  <text x="112" y="470" font-size="14" fill="#c0c0d0">Verify locally, then commit &#38; push to</text>
+  <text x="112" y="490" font-size="14" fill="#c0c0d0">git (main branch) &#8212; only after explicit</text>
+  <text x="112" y="510" font-size="14" fill="#c0c0d0">user go-ahead.</text>
+
+  <!-- Arrow 1 -->
+  <line x1="410" y1="335" x2="500" y2="335" stroke="#8b93b8" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="455" y="315" font-size="13" fill="#c0c0d0" text-anchor="middle">manual</text>
+
+  <!-- Stage 2: Build -->
+  <rect x="500" y="170" width="330" height="330" rx="22" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+  <text x="532" y="212" font-size="22" font-weight="700" fill="#f3b978">2. Build</text>
+  <text x="532" y="238" font-size="15" fill="#a0a0c0">@opennextjs/cloudflare</text>
+
+  <rect x="532" y="262" width="266" height="66" rx="10" fill="#d97706" fill-opacity="0.22" stroke="#d97706" stroke-width="1.5"/>
+  <text x="665" y="288" font-size="15" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">npx opennextjs-cloudflare</text>
+  <text x="665" y="308" font-size="15" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">build</text>
+
+  <text x="532" y="356" font-size="14" fill="#c0c0d0">Compiles the Next.js app into a</text>
+  <text x="532" y="376" font-size="14" fill="#c0c0d0">Worker-compatible bundle, output to</text>
+  <rect x="532" y="392" width="266" height="46" rx="10" fill="#d97706" fill-opacity="0.22" stroke="#d97706" stroke-width="1.5"/>
+  <text x="665" y="421" font-size="15" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">.open-next/</text>
+
+  <!-- Arrow 2 -->
+  <line x1="830" y1="335" x2="920" y2="335" stroke="#8b93b8" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="875" y="315" font-size="13" fill="#c0c0d0" text-anchor="middle">manual</text>
+
+  <!-- Stage 3: Deploy -->
+  <rect x="920" y="170" width="330" height="330" rx="22" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="952" y="212" font-size="22" font-weight="700" fill="#f5a8c9">3. Deploy</text>
+  <text x="952" y="238" font-size="15" fill="#a0a0c0">Wrangler, straight to prod</text>
+
+  <rect x="952" y="262" width="266" height="52" rx="10" fill="#ec4899" fill-opacity="0.22" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="1085" y="293" font-size="15" fill="#ffffff" text-anchor="middle" font-family="ui-monospace, monospace">npx opennextjs-cloudflare deploy</text>
+
+  <text x="952" y="352" font-size="14" fill="#c0c0d0">No staging environment &#8212; ships</text>
+  <text x="952" y="372" font-size="14" fill="#c0c0d0">directly. There is no CI pipeline;</text>
+  <text x="952" y="392" font-size="14" fill="#c0c0d0">this command is only run after</text>
+  <text x="952" y="412" font-size="14" fill="#c0c0d0">explicit user approval.</text>
+
+  <!-- Arrow 3 down -->
+  <line x1="1085" y1="500" x2="1085" y2="560" stroke="#8b93b8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Stage 4: Cloudflare (wide, innermost highlight style) -->
+  <rect x="80" y="560" width="1440" height="270" rx="24" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="112" y="606" font-size="24" font-weight="700" fill="#5fd4c6">4. Cloudflare (Production)</text>
+  <text x="112" y="632" font-size="15" fill="#a0a0c0">Worker name: saturdai &#8212; entry point .open-next/worker.js</text>
+
+  <!-- Worker box -->
+  <rect x="112" y="656" width="360" height="150" rx="18" fill="#8b5cf6" fill-opacity="0.30" stroke="#c4b5fd" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="292" y="694" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">Cloudflare Worker</text>
+  <text x="292" y="720" font-size="14" fill="#e9e4fc" text-anchor="middle">Runs the Next.js app (SSR + routing)</text>
+  <text x="292" y="742" font-size="14" fill="#e9e4fc" text-anchor="middle">nodejs_compat enabled</text>
+  <text x="292" y="770" font-size="13" fill="#c0c0d0" text-anchor="middle">binding: ASSETS &#8594; .open-next/assets</text>
+
+  <!-- D1 box -->
+  <rect x="522" y="656" width="300" height="150" rx="18" fill="#0d9488" fill-opacity="0.28" stroke="#5fd4c6" stroke-width="2.5"/>
+  <text x="672" y="694" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">D1 Database</text>
+  <text x="672" y="720" font-size="14" fill="#e9e4fc" text-anchor="middle">binding: DB</text>
+  <text x="672" y="742" font-size="13" fill="#c0c0d0" text-anchor="middle">database: saturdai</text>
+  <text x="672" y="764" font-size="13" fill="#c0c0d0" text-anchor="middle">stores bootcamp progress</text>
+
+  <!-- Wire worker to D1 -->
+  <line x1="472" y1="731" x2="522" y2="731" stroke="#8b93b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Routes box -->
+  <rect x="862" y="656" width="300" height="150" rx="18" fill="#5b7cfa" fill-opacity="0.20" stroke="#9db1fb" stroke-width="2.5"/>
+  <text x="1012" y="694" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">Routes</text>
+  <text x="1012" y="722" font-size="14" fill="#e9e4fc" text-anchor="middle" font-family="ui-monospace, monospace">saturdai.com/*</text>
+  <text x="1012" y="746" font-size="14" fill="#e9e4fc" text-anchor="middle" font-family="ui-monospace, monospace">www.saturdai.com/*</text>
+  <text x="1012" y="774" font-size="13" fill="#c0c0d0" text-anchor="middle">zone: saturdai.com</text>
+
+  <line x1="822" y1="731" x2="862" y2="731" stroke="#8b93b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Visitor box -->
+  <rect x="1202" y="656" width="278" height="150" rx="18" fill="#f5576c" fill-opacity="0.20" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="1341" y="694" font-size="19" font-weight="800" fill="#ffffff" text-anchor="middle">Visitors</text>
+  <text x="1341" y="722" font-size="14" fill="#e9e4fc" text-anchor="middle">Bootcamp students</text>
+  <text x="1341" y="746" font-size="14" fill="#e9e4fc" text-anchor="middle">browsing the site &#38;</text>
+  <text x="1341" y="768" font-size="14" fill="#e9e4fc" text-anchor="middle">tracking progress</text>
+
+  <line x1="1162" y1="731" x2="1202" y2="731" stroke="#8b93b8" stroke-width="2.5" marker-end="url(#arrow)"/>
+</svg>
