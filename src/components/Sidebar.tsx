@@ -5,6 +5,7 @@ const SECTIONS = [
   { href: "/courses", label: "Instructor Led Online Training" },
   { href: "/courses", label: "Courses" },
   { href: "/insights", label: "Insights" },
+  { href: "/docs", label: "Docs" },
   { href: "/progress", label: "My Progress" },
 ];
 
