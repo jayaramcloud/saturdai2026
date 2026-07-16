@@ -2,6 +2,31 @@
 
 Follow-up to [`llama-cpp-open-webui-setup.md`](./llama-cpp-open-webui-setup.md). The workstation now runs **two** `llama-server` instances side by side, plus a second, fully isolated Open WebUI pointed at both.
 
+## Architecture
+
+```
+                                    ┌─────────┐
+                                    │   You   │
+                                    │(browser)│
+                                    └────┬────┘
+                       ┌──────────────────┴──────────────────┐
+                       ▼                                       ▼
+            ┌───────────────────────┐             ┌───────────────────────┐
+            │  open-webui     :8080 │             │  open-webui-2   :8081 │
+            └───────────┬────────────┘             └───────────┬────────────┘
+                         │                                       │
+     ┌───────────────────────────────────────────────────────────────────────────┐
+     │  HP Workstation  (Quadro P4000, 8GB VRAM)                                  │
+     │                                                                            │
+     │   ┌─────────────┐  ┌──────────────────┐  ┌───────────────────┐  ┌───────────────────────┐
+     │   │ phi-2  :8000│  │ tinyllama   :8001 │  │ gemma-3-4b-it:8002│  │ qwen2.5-3b-instruct:8003│
+     │   └─────────────┘  └──────────────────┘  └───────────────────┘  └───────────────────────┘
+     │                                                                            │
+     └───────────────────────────────────────────────────────────────────────────┘
+```
+
+Both Open WebUI instances can reach all four `llama-server` backends (via `OPENAI_API_BASE_URLS`) — which model actually responds depends on which `llama-inference*.service` is running at the time, since VRAM only fits one or two of the four resident at once (see [VRAM footprint reference](#vram-footprint-reference)).
+
 ## Current state
 
 ```bash

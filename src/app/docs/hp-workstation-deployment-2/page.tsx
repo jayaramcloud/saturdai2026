@@ -43,6 +43,32 @@ export default function HpWorkstationDeployment2() {
           isolated Open WebUI pointed at both — and later, two more models added on top.
         </p>
 
+        <h2 style={h2Style}>Architecture</h2>
+        <pre style={{ ...codeStyle, fontSize: "0.72rem", lineHeight: 1.4 }}><code>{`                                    ┌─────────┐
+                                    │   You   │
+                                    │(browser)│
+                                    └────┬────┘
+                       ┌──────────────────┴──────────────────┐
+                       ▼                                       ▼
+            ┌───────────────────────┐             ┌───────────────────────┐
+            │  open-webui     :8080 │             │  open-webui-2   :8081 │
+            └───────────┬────────────┘             └───────────┬────────────┘
+                         │                                       │
+     ┌───────────────────────────────────────────────────────────────────────────┐
+     │  HP Workstation  (Quadro P4000, 8GB VRAM)                                  │
+     │                                                                            │
+     │   ┌─────────────┐  ┌──────────────────┐  ┌───────────────────┐  ┌───────────────────────┐
+     │   │ phi-2  :8000│  │ tinyllama   :8001 │  │ gemma-3-4b-it:8002│  │ qwen2.5-3b-instruct:8003│
+     │   └─────────────┘  └──────────────────┘  └───────────────────┘  └───────────────────────┘
+     │                                                                            │
+     └───────────────────────────────────────────────────────────────────────────┘`}</code></pre>
+        <p style={pStyle}>
+          Both Open WebUI instances can reach all four <code>llama-server</code> backends (via <code>OPENAI_API_BASE_URLS</code>)
+          — which model actually responds depends on which <code>llama-inference*.service</code> is running
+          at the time, since VRAM only fits one or two of the four resident at once (see the VRAM footprint
+          reference near the bottom of this page).
+        </p>
+
         <h2 style={h2Style}>Current state (before adding more models)</h2>
         <pre style={codeStyle}><code>ps -aux | grep llama</code></pre>
         <pre style={codeStyle}><code>{`jay  814  /home/jay/llama.cpp/build/bin/llama-server -m tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf --gpu-layers 15 --port 8001 --host 0.0.0.0
