@@ -17,6 +17,14 @@ const DOCS = [
     description:
       "Downloading a Ministral 3B model, rebuilding llama.cpp with CUDA, and tuning GPU layer offload to fit laptop VRAM.",
   },
+  {
+    href: "/docs/hp-workstation-deployment-2",
+    date: "2026-07-15",
+    title: "HP Workstation Deployment (Part 2)",
+    icon: "🧩",
+    description:
+      "Adding a second, isolated Open WebUI plus two more models (Gemma 3 4B, Qwen2.5 3B) — with every mistake and lesson learned along the way.",
+  },
 ];
 
 export default function DocsPage() {
