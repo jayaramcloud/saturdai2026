@@ -177,7 +177,42 @@ Save.
 
 ![External Tool Servers connection dialog with URL http://localhost:8050 filled in](/docs/mcp-and-tools-open-webui/tool-server-connection.png)
 
-### 5. Test it
+### 5. Where per-model Tools live (and why the MCP tool might not show up yet)
+
+Open WebUI also has a **Workspace → Models → Create/Edit** page for building custom model presets
+(a saved persona wrapping a base model). It has its own **Tools** checklist section, worth knowing
+about since students will find it while looking for where to enable the MCP tool:
+
+- **Model Name / ID / Base Model** — display name and which underlying model this preset wraps.
+- **Description / tags** — cosmetic, for organizing multiple presets.
+- **Model Params → System Prompt** — a persona/instruction baked into every chat using this preset.
+- **Advanced Params** — generation params: temperature, top_p, top_k, mirostat, etc.
+- **Prompts / Knowledge** — attach saved prompt templates or a RAG knowledge base to this preset.
+- **Tools** — checkboxes for which *native* Workspace Tools (Python functions, like Weather Lookup)
+  this preset auto-enables.
+- **Skills** — composable capability bundles, empty until created under Workspace → Skills.
+- **Capabilities** — which UI affordances this preset exposes (Vision, File Upload, Web Search, Code
+  Interpreter, Terminal, Citations, etc.).
+- **Default Features / Builtin Tools** — which of Open WebUI's own built-in tools (Memory, Notes,
+  Calendar, Automations, etc.) are on by default for this preset.
+
+![Workspace → Models → Create page, showing the Tools section listing only the native Weather Lookup tool](/docs/mcp-and-tools-open-webui/model-create-tools-panel.png)
+
+> **Gotcha:** External Tool Servers (OpenAPI, like the mcpo bridge) do **not** populate this
+> per-model Tools checklist — that list is only for native Workspace Tools. External tool servers
+> are meant to surface directly in the **chat's wrench-icon tools menu** once enabled globally in
+> Admin → Integrations. If it's missing there, don't assume the server is broken — verify the
+> schema is actually being served first:
+> ```bash
+> curl -s http://localhost:8050/openapi.json | head -40
+> ```
+> A healthy response lists real callable paths, e.g. `/get_current_time` and `/convert_time` with
+> full parameter schemas — proof `mcpo` and `mcp-server-time` are working correctly. If you get a
+> healthy response here but the tool still isn't listed in the chat's tools menu, the fix is
+> usually just refreshing the page or logging out/in so Open WebUI re-fetches the external tool
+> server list — it doesn't always pick up a newly-added connection live.
+
+### 6. Test it
 
 In a new chat, enable the new tool server for the model, then ask: *"What time is it in Tokyo?"*
 

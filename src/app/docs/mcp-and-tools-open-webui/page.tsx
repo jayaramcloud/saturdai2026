@@ -15,6 +15,7 @@ const codeStyle: CSSProperties = {
 const h2Style: CSSProperties = { color: "#ffffff", fontSize: "1.4rem", margin: "2rem 0 1rem" };
 const h3Style: CSSProperties = { color: "#ffffff", fontSize: "1.1rem", margin: "1.5rem 0 0.75rem" };
 const pStyle: CSSProperties = { marginBottom: "1.5rem" };
+const listStyle: CSSProperties = { marginBottom: "1.5rem", paddingLeft: "1.5rem", lineHeight: 1.8 };
 const noteStyle: CSSProperties = {
   background: "#2a2a4a",
   border: "1px solid #44447a",
@@ -260,7 +261,46 @@ sudo systemctl status mcpo-time.service`}</code></pre>
           style={{ width: "100%", borderRadius: 8, border: "1px solid #33335a", marginBottom: "1.5rem" }}
         />
 
-        <h3 style={h3Style}>5. Test it</h3>
+        <h3 style={h3Style}>5. Where per-model Tools live (and why the MCP tool might not show up yet)</h3>
+        <p style={pStyle}>
+          Open WebUI also has a <strong>Workspace → Models → Create/Edit</strong> page for building
+          custom model presets (a saved persona wrapping a base model). It has its own{" "}
+          <strong>Tools</strong> checklist section, worth knowing about since students will find it
+          while looking for where to enable the MCP tool:
+        </p>
+        <ul style={listStyle}>
+          <li><strong>Model Name / ID / Base Model</strong> — display name and which underlying model this preset wraps.</li>
+          <li><strong>Description / tags</strong> — cosmetic, for organizing multiple presets.</li>
+          <li><strong>Model Params → System Prompt</strong> — a persona/instruction baked into every chat using this preset.</li>
+          <li><strong>Advanced Params</strong> — generation params: temperature, top_p, top_k, mirostat, etc.</li>
+          <li><strong>Prompts / Knowledge</strong> — attach saved prompt templates or a RAG knowledge base to this preset.</li>
+          <li><strong>Tools</strong> — checkboxes for which <em>native</em> Workspace Tools (Python functions, like Weather Lookup) this preset auto-enables.</li>
+          <li><strong>Skills</strong> — composable capability bundles, empty until created under Workspace → Skills.</li>
+          <li><strong>Capabilities</strong> — which UI affordances this preset exposes (Vision, File Upload, Web Search, Code Interpreter, Terminal, Citations, etc.).</li>
+          <li><strong>Default Features / Builtin Tools</strong> — which of Open WebUI&apos;s own built-in tools (Memory, Notes, Calendar, Automations, etc.) are on by default for this preset.</li>
+        </ul>
+        <img
+          src="/docs/mcp-and-tools-open-webui/model-create-tools-panel.png"
+          alt="Workspace → Models → Create page, showing the Tools section listing only the native Weather Lookup tool"
+          style={{ width: "100%", borderRadius: 8, border: "1px solid #33335a", marginBottom: "1.5rem" }}
+        />
+        <div style={noteStyle}>
+          <strong>Gotcha:</strong> External Tool Servers (OpenAPI, like the mcpo bridge) do{" "}
+          <strong>not</strong> populate this per-model Tools checklist — that list is only for
+          native Workspace Tools. External tool servers are meant to surface directly in the{" "}
+          <strong>chat&apos;s wrench-icon tools menu</strong> once enabled globally in Admin →
+          Integrations. If it&apos;s missing there, don&apos;t assume the server is broken — verify
+          the schema is actually being served first:
+          <pre style={{ ...codeStyle, marginTop: "0.75rem", marginBottom: "0.75rem" }}><code>curl -s http://localhost:8050/openapi.json | head -40</code></pre>
+          A healthy response lists real callable paths, e.g. <code>/get_current_time</code> and{" "}
+          <code>/convert_time</code> with full parameter schemas — proof <code>mcpo</code> and{" "}
+          <code>mcp-server-time</code> are working correctly. If you get a healthy response here but
+          the tool still isn&apos;t listed in the chat&apos;s tools menu, the fix is usually just
+          refreshing the page or logging out/in so Open WebUI re-fetches the external tool server
+          list — it doesn&apos;t always pick up a newly-added connection live.
+        </div>
+
+        <h3 style={h3Style}>6. Test it</h3>
         <p style={pStyle}>
           In a new chat, enable the new tool server for the model, then ask:{" "}
           <em>&quot;What time is it in Tokyo?&quot;</em>
