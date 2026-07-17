@@ -39,6 +39,19 @@ const tdStyle: CSSProperties = {
   borderBottom: "1px solid #33335a",
   verticalAlign: "top",
 };
+const figureStyle: CSSProperties = { marginBottom: "1.5rem" };
+const imgStyle: CSSProperties = {
+  width: "100%",
+  borderRadius: 8,
+  border: "1px solid #33335a",
+  display: "block",
+};
+const captionStyle: CSSProperties = {
+  color: "#8888aa",
+  fontSize: "0.8rem",
+  marginTop: "0.5rem",
+  textAlign: "center",
+};
 
 type Row = { name: string; what: string; example: string };
 
@@ -95,6 +108,10 @@ export default function OpenWebUiAdminGuide() {
           that model&apos;s default) → <strong>global default</strong> (Admin Panel → Settings →
           Models). The most specific level always wins.
         </div>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/edit-model.png" alt="Editing a model in Admin Panel showing its own System Prompt and Advanced Params, one level up from per-chat Controls" style={imgStyle} />
+          <figcaption style={captionStyle}>Editing a model (Admin Panel → Settings → Models → pencil icon) — its own System Prompt and Advanced Params sit one level above per-chat Controls.</figcaption>
+        </figure>
 
         <h2 style={h2Style}>Part A: The Controls Panel (1–17) — per-chat model behavior</h2>
         <p style={pStyle}>
@@ -116,6 +133,10 @@ export default function OpenWebUiAdminGuide() {
           Everything below defaults to <strong>&quot;Default&quot;</strong>, meaning it falls through
           to the model/global setting. Toggle a row on to override it just for this chat.
         </p>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/controls-panel.png" alt="Open WebUI Controls panel showing System Prompt and the full Advanced Params list" style={imgStyle} />
+          <figcaption style={captionStyle}>The Controls panel — System Prompt at top, the full Advanced Params list below it, all defaulting to &quot;Default&quot; until overridden.</figcaption>
+        </figure>
         <ParamTable
           rows={[
             {
@@ -212,6 +233,10 @@ export default function OpenWebUiAdminGuide() {
           <strong>Settings</strong> (your personal preferences) and <strong>Admin Panel</strong>{" "}
           (visible only to admin accounts — controls the whole instance for every user).
         </p>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/user-menu.png" alt="Open WebUI profile menu showing Settings, Admin Panel, Archived Chats, Workspace, Notes, Calendar, Automations, and Playground" style={imgStyle} />
+          <figcaption style={captionStyle}>The profile menu (click your avatar) — Settings and Admin Panel at top, the sidebar-shortcut items below.</figcaption>
+        </figure>
 
         <h3 style={h3Style}>18. Settings (personal, per-account)</h3>
         <p style={pStyle}>
@@ -246,6 +271,18 @@ export default function OpenWebUiAdminGuide() {
           <li><strong>Settings → Interface</strong> — instance-wide feature toggles: web search, image generation, code execution sandbox, voice input.</li>
           <li><strong>Settings → Security</strong> — SSO/OAuth configuration, whether public sign-up is open, and session/password policies.</li>
         </ul>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/admin-settings-general.png" alt="Admin Panel Settings sidebar showing General, Authentication, Connections, Models, Evaluations, Integrations, Documents, Web Search, Code Execution, Interface, Audio, Images, Pipelines, Database, plus feature toggles" style={imgStyle} />
+          <figcaption style={captionStyle}>Admin Panel → Settings — the full left-hand section list, with instance-wide feature toggles (Memories, Notes, Calendar, Automations, etc.) on the General page.</figcaption>
+        </figure>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/admin-connections.png" alt="Admin Panel Settings Connections page showing registered OpenAI-compatible API endpoints" style={imgStyle} />
+          <figcaption style={captionStyle}>Settings → Connections — every backend endpoint (local llama.cpp servers, hosted APIs) the instance can route requests to.</figcaption>
+        </figure>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/admin-models.png" alt="Admin Panel Settings Models page listing the three local models available on this instance" style={imgStyle} />
+          <figcaption style={captionStyle}>Settings → Models — every model exposed to users on this instance, each editable via the pencil icon.</figcaption>
+        </figure>
         <p style={pStyle}>
           Example: under Settings → Connections, add{" "}
           <code>http://localhost:8080/v1</code> as an OpenAI-compatible endpoint pointing at your
