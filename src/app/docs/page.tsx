@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/open-webui-admin-guide",
+    date: "2026-07-16",
+    title: "20 Things to Administer in Open WebUI",
+    icon: "⚙️",
+    description:
+      "Controls panel Advanced Params (temperature, top_p, mirostat, and more) plus a tour of Settings, Admin Panel, and every sidebar shortcut, with a one-liner example for each.",
+  },
+  {
     href: "/docs/mcp-and-tools-open-webui",
     date: "2026-07-16",
     title: "Tool Calling & MCP in Open WebUI",
