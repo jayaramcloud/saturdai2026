@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/mcp-and-tools-open-webui",
+    date: "2026-07-16",
+    title: "Tool Calling & MCP in Open WebUI",
+    icon: "🔧",
+    description:
+      "Live-in-class walkthrough: a native Open WebUI tool, then a real MCP server bridged in via mcpo, including every gotcha hit along the way.",
+  },
+  {
     href: "/docs/llama-cpp-open-webui-setup",
     date: "2026-07-14",
     title: "llama.cpp + Open WebUI Setup",
