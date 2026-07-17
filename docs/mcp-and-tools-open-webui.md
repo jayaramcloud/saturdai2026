@@ -159,13 +159,23 @@ curl -sI http://localhost:8050/docs
 
 ### 4. Register it in Open WebUI
 
-Go to **Settings → Tools → + Add Tool Server**, enter the URL:
+Tool Servers are an **admin-only** setting, and where they live varies by version. In v0.10.2, the
+path is:
+
+Click your profile avatar (bottom-left) → **Admin Panel** → **Settings** tab → **Integrations**
+(left sub-menu) → **External Tool Servers** → **+**. Enter the URL:
 
 ```
 http://localhost:8050
 ```
 
 Save.
+
+> **Gotcha:** Tool Servers are *not* under Admin Panel → Settings → Connections (that page is only
+> for OpenAI/Ollama-style model connections) — look for the separate **Integrations** entry in the
+> same left sub-menu.
+
+![External Tool Servers connection dialog with URL http://localhost:8050 filled in](/docs/mcp-and-tools-open-webui/tool-server-connection.png)
 
 ### 5. Test it
 

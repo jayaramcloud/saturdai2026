@@ -239,11 +239,26 @@ sudo systemctl status mcpo-time.service`}</code></pre>
 
         <h3 style={h3Style}>4. Register it in Open WebUI</h3>
         <p style={pStyle}>
-          Go to <strong>Settings → Tools → + Add Tool Server</strong>, enter the URL:
+          Tool Servers are an <strong>admin-only</strong> setting, and where they live varies by
+          version. In v0.10.2, the path is:
+        </p>
+        <p style={pStyle}>
+          Click your profile avatar (bottom-left) → <strong>Admin Panel</strong> →{" "}
+          <strong>Settings</strong> tab → <strong>Integrations</strong> (left sub-menu) →{" "}
+          <strong>External Tool Servers</strong> → <strong>+</strong>. Enter the URL:
         </p>
         <pre style={codeStyle}><code>http://localhost:8050</code></pre>
         <p style={pStyle}>Save.</p>
-        <div style={screenshotStyle}>[Screenshot: Settings → Tools → Add Tool Server screen with the URL filled in]</div>
+        <div style={noteStyle}>
+          <strong>Gotcha:</strong> Tool Servers are <em>not</em> under Admin Panel → Settings →
+          Connections (that page is only for OpenAI/Ollama-style model connections) — look for the
+          separate <strong>Integrations</strong> entry in the same left sub-menu.
+        </div>
+        <img
+          src="/docs/mcp-and-tools-open-webui/tool-server-connection.png"
+          alt="Open WebUI Admin Panel → Settings → Integrations → External Tool Servers, showing the Edit Connection dialog with URL http://localhost:8050 filled in"
+          style={{ width: "100%", borderRadius: 8, border: "1px solid #33335a", marginBottom: "1.5rem" }}
+        />
 
         <h3 style={h3Style}>5. Test it</h3>
         <p style={pStyle}>
