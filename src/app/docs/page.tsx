@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/open-webui-class-workbook",
+    date: "2026-07-17",
+    title: "45-Minute Class Workbook: Open WebUI Configuration",
+    icon: "📋",
+    description:
+      "A run-of-show pulling from the admin guide and MCP/tools docs: talk for 2 minutes on a config, make the change live, show the behavior change. Six segments, timed.",
+  },
+  {
     href: "/docs/open-webui-admin-guide",
     date: "2026-07-16",
     title: "20 Things to Administer in Open WebUI",
