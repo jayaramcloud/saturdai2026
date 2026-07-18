@@ -268,7 +268,8 @@ export default function OpenWebUiAdminGuide() {
           <li><strong>Functions</strong> — install custom Python <em>tools</em> (callable functions), <em>filters</em> (pre/post-process messages), or <em>pipes</em> (custom model backends).</li>
           <li><strong>Settings → Connections</strong> — register Ollama, OpenAI-compatible, or other backend API endpoints (e.g. your llama.cpp server URL) that models pull from.</li>
           <li><strong>Settings → Models</strong> — set the global default system prompt and Advanced Params baseline that every model falls back to unless overridden.</li>
-          <li><strong>Settings → Interface</strong> — instance-wide feature toggles: web search, image generation, code execution sandbox, voice input.</li>
+          <li><strong>Settings → Code Execution</strong> — instance-wide toggle for the &quot;Run&quot; button that appears on Python code blocks in chat. By default it executes via <strong>Pyodide</strong>, a full CPython interpreter compiled to WebAssembly that runs entirely client-side in the browser tab — no local Python install, subprocess, or server involved, and it&apos;s sandboxed with no real filesystem/network access. This is independent of whichever LLM answered the message. Point &quot;Code Interpreter Engine&quot; at a real <strong>Jupyter</strong> server instead if you need pip-installed packages or actual file I/O.</li>
+          <li><strong>Settings → Interface</strong> — instance-wide feature toggles: web search, image generation, voice input.</li>
           <li><strong>Settings → Security</strong> — SSO/OAuth configuration, whether public sign-up is open, and session/password policies.</li>
         </ul>
         <figure style={figureStyle}>
