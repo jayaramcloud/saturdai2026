@@ -339,9 +339,18 @@ export default function OpenWebUiAdminGuide() {
           <figcaption style={captionStyle}>Workspace → Models — the five tabs across the top (Models, Knowledge, Prompts, Skills, Tools) are the whole shared library; each has its own &quot;+ New&quot; button top-right.</figcaption>
         </figure>
         <div style={screenshotStyle}>[Screenshot: Workspace → Models → + New Model, the create-model form]</div>
-        <div style={screenshotStyle}>[Screenshot: Workspace → Knowledge → + New Knowledge, uploading a document]</div>
-        <div style={screenshotStyle}>[Screenshot: Workspace → Prompts → + New Prompt, the template editor]</div>
-        <div style={screenshotStyle}>[Screenshot: Workspace → Skills → + New Skill, bundling Tools/Knowledge]</div>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/knowledge-new.png" alt="Open WebUI Knowledge tab showing a knowledge base named SaturdAI Bootcamp Glossary with sample-knowledge.md uploaded" style={imgStyle} />
+          <figcaption style={captionStyle}>Workspace → Knowledge — after &quot;+ New Knowledge&quot;, name/describe the collection, then drop files into it; each file gets chunked and embedded automatically.</figcaption>
+        </figure>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/prompts-new.png" alt="Open WebUI Prompts tab showing a saved prompt named Week Recap Summary with slash command /week-recap" style={imgStyle} />
+          <figcaption style={captionStyle}>Workspace → Prompts — a saved template (name, <code>/command</code>, body with <code>{"{{variable}}"}</code> placeholders) that any user can insert into the message box by typing its slash command.</figcaption>
+        </figure>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/skills-new.png" alt="Open WebUI Skills tab showing a skill named Weather Helper" style={imgStyle} />
+          <figcaption style={captionStyle}>Workspace → Skills — a named bundle of markdown instructions (here, telling the model when to call the Weather Lookup tool) that gets toggled on for a Model like a single switch.</figcaption>
+        </figure>
         <p style={pStyle}>
           Example: build a Workspace <strong>Model</strong> called &quot;Weather Bot&quot; that bundles
           the system prompt from item 1, <code>temperature: 0.3</code>, and the Weather Lookup tool

@@ -48,6 +48,19 @@ const screenshotStyle: CSSProperties = {
   fontSize: "0.85rem",
   marginBottom: "1.5rem",
 };
+const figureStyle: CSSProperties = { marginBottom: "1.5rem" };
+const imgStyle: CSSProperties = {
+  width: "100%",
+  borderRadius: 8,
+  border: "1px solid #33335a",
+  display: "block",
+};
+const captionStyle: CSSProperties = {
+  color: "#8888aa",
+  fontSize: "0.8rem",
+  marginTop: "0.5rem",
+  textAlign: "center",
+};
 
 export default function McpAndToolsOpenWebui() {
   return (
@@ -120,7 +133,10 @@ class Tools:
           , a free weather API with no signup, so the demo fetches real data rather than a mocked
           response. Save the tool.
         </p>
-        <div style={screenshotStyle}>[Screenshot: Workspace → Tools, pasted-in code before saving]</div>
+        <figure style={figureStyle}>
+          <img src="/docs/mcp-and-tools-open-webui/tool-editor.png" alt="Open WebUI Tools editor showing the Weather Lookup tool's Python code with title and description docstring before saving" style={imgStyle} />
+          <figcaption style={captionStyle}>Workspace → Tools → Weather Lookup — the <code>&quot;&quot;&quot;title / description&quot;&quot;&quot;</code> docstring at the top and each method&apos;s own docstring are what the model sees as the tool&apos;s name and usage description.</figcaption>
+        </figure>
 
         <h3 style={h3Style}>2. Enable it for a chat</h3>
         <p style={pStyle}>
