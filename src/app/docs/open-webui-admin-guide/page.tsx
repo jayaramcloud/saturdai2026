@@ -277,6 +277,10 @@ export default function OpenWebUiAdminGuide() {
           <figcaption style={captionStyle}>Admin Panel → Settings — the full left-hand section list, with instance-wide feature toggles (Memories, Notes, Calendar, Automations, etc.) on the General page.</figcaption>
         </figure>
         <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/code-execution-pyodide.png" alt="Open WebUI chat showing a Python code block with a Run button, STDOUT/STDERR output below it, and the model's own explanation referring to pasting code into the 'Pyodide editor'" style={imgStyle} />
+          <figcaption style={captionStyle}>The &quot;Run&quot; button on a Python code block — output appears inline as STDOUT/STDERR. The model&apos;s own reply even names the editor: &quot;paste the code into the Pyodide editor.&quot;</figcaption>
+        </figure>
+        <figure style={figureStyle}>
           <img src="/docs/open-webui-admin-guide/admin-connections.png" alt="Admin Panel Settings Connections page showing registered OpenAI-compatible API endpoints" style={imgStyle} />
           <figcaption style={captionStyle}>Settings → Connections — every backend endpoint (local llama.cpp servers, hosted APIs) the instance can route requests to.</figcaption>
         </figure>
