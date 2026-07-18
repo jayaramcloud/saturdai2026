@@ -52,6 +52,16 @@ const captionStyle: CSSProperties = {
   marginTop: "0.5rem",
   textAlign: "center",
 };
+const screenshotStyle: CSSProperties = {
+  background: "#1a1a2e",
+  border: "1px dashed #44447a",
+  borderRadius: 8,
+  padding: "2rem 1.25rem",
+  marginBottom: "1.5rem",
+  color: "#8888aa",
+  fontSize: "0.85rem",
+  textAlign: "center",
+};
 
 type Row = { name: string; what: string; example: string };
 
@@ -295,19 +305,43 @@ export default function OpenWebUiAdminGuide() {
           re-entering the URL.
         </p>
 
-        <h3 style={h3Style}>20. The sidebar shortcuts: Archived Chats, Workspace, Notes, Calendar, Automations, Playground</h3>
+        <h3 style={h3Style}>20. The sidebar shortcuts: Search, Archived Chats, Workspace, Notes, Calendar, Automations, Playground</h3>
         <p style={pStyle}>
-          One click below Settings/Admin Panel in the profile menu, these give quick access to
-          features that would otherwise be buried:
+          <strong>Search</strong> and <strong>Notes</strong> sit directly in the main sidebar (below
+          &quot;New Chat&quot;); <strong>Archived Chats</strong>, <strong>Calendar</strong>,{" "}
+          <strong>Automations</strong>, and <strong>Playground</strong> are one click further, under
+          the profile menu. Either way, these give quick access to features that would otherwise be
+          buried:
         </p>
         <ul style={{ marginBottom: "1.5rem", paddingLeft: "1.5rem", lineHeight: 1.9 }}>
+          <li><strong>Search</strong> — full-text search across the titles and message contents of your own chat history; does not search other users&apos; chats or admin-wide content.</li>
           <li><strong>Archived Chats</strong> — chats you&apos;ve archived out of the main sidebar list; still searchable, not deleted.</li>
-          <li><strong>Workspace</strong> — the shared library of custom Models (system prompt + params bundled into a reusable preset), Prompts (saved templates), Tools, and Knowledge (documents for RAG).</li>
-          <li><strong>Notes</strong> — a lightweight built-in notes editor, separate from chat history, for jotting things down without starting a conversation.</li>
+          <li><strong>Notes</strong> — a lightweight built-in notes editor, separate from chat history, for jotting things down without starting a conversation. Click &quot;+&quot; to create one; each note is its own Markdown document with an optional linked chat.</li>
           <li><strong>Calendar</strong> — a scheduling view for anything Open WebUI has tracked with a date (e.g. scheduled tasks), not a full calendar app.</li>
           <li><strong>Automations</strong> — scheduled or triggered tasks (e.g. run a prompt against a model on a recurring basis) without a human starting the chat.</li>
           <li><strong>Playground</strong> — a raw completion/chat testing surface for trying a model and params directly, outside of the normal saved-chat flow — handy for quickly A/B-testing an Advanced Params change before committing it to a Workspace Model preset.</li>
         </ul>
+
+        <h4 style={{ ...h3Style, fontSize: "1rem" }}>Workspace, tab by tab</h4>
+        <p style={pStyle}>
+          <strong>Workspace</strong> is the shared library other users on the instance can also see
+          and use (once an admin or the item&apos;s owner shares it). It has five tabs:
+        </p>
+        <ul style={{ marginBottom: "1.5rem", paddingLeft: "1.5rem", lineHeight: 1.9 }}>
+          <li><strong>Models</strong> — custom presets: a base model plus a bundled system prompt, Advanced Params, and enabled Tools/Skills, saved under its own name so students pick one preset instead of reconfiguring settings every chat.</li>
+          <li><strong>Knowledge</strong> — document collections (PDFs, text, markdown) that get chunked and embedded for RAG; attach a Knowledge collection to a Model so every chat with that preset can retrieve from it.</li>
+          <li><strong>Prompts</strong> — saved text templates (not full Models) inserted into the message box via a <code>/</code> slash command, for prompts you reuse across different models.</li>
+          <li><strong>Skills</strong> — composable capability bundles that group Tools, Knowledge, and instructions into one reusable unit, attachable to a Model like a single toggle instead of wiring up each Tool individually.</li>
+          <li><strong>Tools</strong> — native Python functions the model can call (see the <Link href="/docs/mcp-and-tools-open-webui" style={{ color: "#a0a0ff" }}>Tool Calling &amp; MCP doc</Link> for writing and enabling one).</li>
+        </ul>
+        <figure style={figureStyle}>
+          <img src="/docs/open-webui-admin-guide/workspace-tabs.png" alt="Open WebUI Workspace page showing the Models, Knowledge, Prompts, Skills, and Tools tabs, with the Models tab open and empty, plus an Import and + New Model button" style={imgStyle} />
+          <figcaption style={captionStyle}>Workspace → Models — the five tabs across the top (Models, Knowledge, Prompts, Skills, Tools) are the whole shared library; each has its own &quot;+ New&quot; button top-right.</figcaption>
+        </figure>
+        <div style={screenshotStyle}>[Screenshot: Workspace → Models → + New Model, the create-model form]</div>
+        <div style={screenshotStyle}>[Screenshot: Workspace → Knowledge → + New Knowledge, uploading a document]</div>
+        <div style={screenshotStyle}>[Screenshot: Workspace → Prompts → + New Prompt, the template editor]</div>
+        <div style={screenshotStyle}>[Screenshot: Workspace → Skills → + New Skill, bundling Tools/Knowledge]</div>
         <p style={pStyle}>
           Example: build a Workspace <strong>Model</strong> called &quot;Weather Bot&quot; that bundles
           the system prompt from item 1, <code>temperature: 0.3</code>, and the Weather Lookup tool
