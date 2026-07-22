@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/rag-poc-open-webui",
+    date: "2026-07-21",
+    title: "RAG Proof-of-Concept in Open WebUI",
+    icon: "📚",
+    description:
+      "A five-minute proof that Open WebUI's built-in RAG actually retrieves from an uploaded document — a knowledge collection, a deliberately absurd test claim, and a before/after chat comparison with citations.",
+  },
+  {
     href: "/docs/open-webui-class-workbook",
     date: "2026-07-17",
     title: "45-Minute Class Workbook: Open WebUI Configuration",
