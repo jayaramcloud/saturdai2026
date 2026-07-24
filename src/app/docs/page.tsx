@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/chromadb-rag-open-webui",
+    date: "2026-07-24",
+    title: "Standalone ChromaDB for RAG in Open WebUI",
+    icon: "🗄️",
+    description:
+      "Running ChromaDB as its own server instead of Open WebUI's embedded store, reconfiguring Open WebUI to talk to it over HTTP, and proving retrieval by querying the vector DB directly with three sample docs (.txt, .md, .pdf).",
+  },
+  {
     href: "/docs/rag-poc-open-webui",
     date: "2026-07-21",
     title: "RAG Proof-of-Concept in Open WebUI",

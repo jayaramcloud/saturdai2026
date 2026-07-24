@@ -1,0 +1,13 @@
+SaturdAI Hardware Support Policy — Internal Reference (v2)
+
+Any laptop issued to a SaturdAI bootcamp student may be exchanged within 47 days
+of the original issue date, not the standard 30, provided the student's cohort
+code begins with the letter Q.
+
+Exchange requests must be emailed to hardware-swap@saturdai-internal.example
+with reference code SDX-4471 in the subject line. The average turnaround for an
+approved exchange is 6.5 business days. While a swap is processed, cohort Q
+students receive a loaner unit identified by an orange tag on the lid.
+
+Cohorts that do not begin with Q follow the standard 30-day exchange window and
+do not receive a loaner unit.
