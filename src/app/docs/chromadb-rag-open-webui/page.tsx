@@ -97,6 +97,19 @@ export default function ChromaDbRagOpenWebui() {
 # sanity check — confirm 8000 is free and docker is present
 sudo ss -tlnp | grep -E ':(8000|8001|8080)'
 docker ps -a`}</code></pre>
+        <div style={noteStyle}>
+          Open WebUI is also managed by a systemd unit (<code>/etc/systemd/system/open-webui.service</code>,{" "}
+          <code>Restart=always</code>). Worth knowing going in: on our box that unit&apos;s{" "}
+          <code>ExecStart</code> has drifted from the container that&apos;s actually been running for
+          days (someone <code>docker run -d</code>&apos;d it by hand at some point), so systemd has been
+          silently crash-looping in the background trying to recreate a container named{" "}
+          <code>open-webui</code> that already exists — check with{" "}
+          <code>systemctl status open-webui.service</code> (look for a large &quot;restart counter&quot;)
+          and <code>journalctl -u open-webui.service -n 20</code>. Harmless — the real container never
+          goes down — but it means <strong>the unit file, not a manual <code>docker run</code></strong>,
+          is the safe place to change how Open WebUI starts, since anything done by hand will fight the
+          next auto-restart.
+        </div>
 
         <h2 style={h2Style}>2. Run ChromaDB as its own container</h2>
         <p style={pStyle}>
@@ -119,37 +132,61 @@ sudo docker run -d \\
 
         <h2 style={h2Style}>3. Verify the Chroma server is up</h2>
         <pre style={codeStyle}><code>{`curl -s http://localhost:8000/api/v2/heartbeat
-# {"nanosecond heartbeat": ...}
-
 sudo docker logs chromadb --tail 20`}</code></pre>
+        <p style={pStyle}>Real output from our run:</p>
+        <pre style={codeStyle}><code>{`$ curl -s http://localhost:8000/api/v2/heartbeat
+{"nanosecond heartbeat":1784936784061533814}
+
+$ sudo docker logs chromadb --tail 20
+Saving data to: /data
+Connect to Chroma at: http://localhost:8000
+Getting started guide: https://docs.trychroma.com/docs/overview/getting-started
+No telemetry is configured.`}</code></pre>
 
         <h2 style={h2Style}>4. Point Open WebUI at the external Chroma server</h2>
         <p style={pStyle}>
           Open WebUI defaults to an embedded, file-backed Chroma client when <code>VECTOR_DB</code> is
           unset. Setting <code>VECTOR_DB=chroma</code> plus the <code>CHROMA_HTTP_*</code> variables
-          switches it to talk to our standalone server over HTTP instead. Recreate the container with
-          the same volume (so chats, users, and settings are preserved) and the new env vars added:
+          switches it to talk to our standalone server over HTTP instead. Because the service is
+          systemd-managed with <code>Restart=always</code>, add the env vars to the{" "}
+          <strong>unit file&apos;s <code>ExecStart</code></strong> rather than replacing the container by
+          hand — that way systemd&apos;s own restart logic (including the pre-existing crash-loop from
+          step 1) ends up recreating the container with the right config instead of fighting it.
         </p>
-        <pre style={codeStyle}><code>{`sudo docker stop open-webui
-sudo docker rename open-webui open-webui-old   # keep as a fallback, don't delete yet
+        <pre style={codeStyle}><code>{`sudo systemctl stop open-webui.service
+sudo docker rm -f open-webui   # the currently-running container, now stopped by the line above
 
-sudo docker run -d \\
-  --name open-webui \\
-  --network host \\
+sudo vi /etc/systemd/system/open-webui.service`}</code></pre>
+        <p style={pStyle}>
+          Add the three <code>CHROMA_HTTP_*</code> flags and <code>VECTOR_DB=chroma</code> to{" "}
+          <code>ExecStart</code> (leave <code>OLLAMA_BASE_URL</code> alone — it&apos;s unrelated to this
+          change):
+        </p>
+        <pre style={codeStyle}><code>{`[Service]
+Type=simple
+User=jay
+ExecStart=/usr/bin/docker run \\
+  --network=host \\
   -v open-webui:/app/backend/data \\
-  -e OLLAMA_BASE_URL=http://127.0.0.1:8001 \\
+  -e OLLAMA_BASE_URL=http://127.0.0.1:8000 \\
   -e VECTOR_DB=chroma \\
   -e CHROMA_HTTP_HOST=localhost \\
   -e CHROMA_HTTP_PORT=8000 \\
   -e CHROMA_HTTP_SSL=false \\
+  --name open-webui \\
   ghcr.io/open-webui/open-webui:main
+ExecStop=/usr/bin/docker stop open-webui
+Restart=always
+RestartSec=10`}</code></pre>
+        <pre style={codeStyle}><code>{`sudo systemctl daemon-reload
+sudo systemctl start open-webui.service
 
-# watch it come up healthy
+# confirm it's actually healthy this time, not crash-looping
+sudo systemctl status open-webui.service --no-pager
 sudo docker logs -f open-webui`}</code></pre>
         <p style={pStyle}>
-          Once you&apos;ve confirmed the new container is healthy and RAG works against the external
-          store (steps below), you can remove the fallback with{" "}
-          <code>sudo docker rm open-webui-old</code>.
+          The <code>-v open-webui:/app/backend/data</code> volume is unchanged, so chats, users, and
+          settings are preserved — only the vector store backend changes.
         </p>
 
         <h2 style={h2Style}>5. Download the sample documents</h2>
