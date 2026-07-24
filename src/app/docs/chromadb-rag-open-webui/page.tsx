@@ -129,6 +129,55 @@ sudo docker run -d \\
           <code>--network host</code> matches how <code>open-webui</code> is already running, so both
           containers can reach each other over <code>localhost</code> without extra Docker networking.
         </p>
+        <div style={warnStyle}>
+          A plain <code>docker run -d</code> has no restart policy — it will <strong>not</strong> come
+          back after a reboot (<code>docker inspect chromadb --format &apos;{"{{"}.HostConfig.RestartPolicy.Name{"}}"}&apos;</code>{" "}
+          confirms <code>no</code>). Every other service on this box (
+          <code>llama-inference-*</code>, <code>open-webui</code>) is managed by a systemd unit for
+          exactly this reason — do the same for ChromaDB instead of relying on the ad-hoc container:
+        </div>
+        <pre style={codeStyle}><code>{`sudo docker rm -f chromadb   # remove the ad-hoc container, systemd will recreate it
+
+sudo tee /etc/systemd/system/chromadb.service > /dev/null <<'EOF'
+[Unit]
+Description=ChromaDB vector database
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+Type=simple
+User=jay
+ExecStartPre=-/usr/bin/docker rm -f chromadb
+ExecStart=/usr/bin/docker run \\
+  --network=host \\
+  -v chroma-data:/data \\
+  -e IS_PERSISTENT=TRUE \\
+  -e ANONYMIZED_TELEMETRY=FALSE \\
+  --name chromadb \\
+  chromadb/chroma
+ExecStop=/usr/bin/docker stop chromadb
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl enable --now chromadb.service
+systemctl status chromadb.service --no-pager`}</code></pre>
+        <p style={pStyle}>
+          <code>ExecStartPre=-/usr/bin/docker rm -f chromadb</code> (the leading <code>-</code> means
+          &quot;ignore failure&quot;) clears out any stale container left over from a crash before each
+          start, same defensive pattern worth carrying into <code>open-webui.service</code> too — it
+          would have prevented the name-conflict crash-loop from step 1.
+        </p>
+        <div style={noteStyle}>
+          <strong>Heads-up for later:</strong> <code>llama-inference-phi-2.service</code> is also
+          configured for port <code>8000</code>, the same port ChromaDB just claimed. It&apos;s currently{" "}
+          <code>disabled</code>, so there&apos;s no conflict today — just don&apos;t enable that
+          particular unit without first moving one of the two off port <code>8000</code>.
+        </div>
 
         <h2 style={h2Style}>3. Verify the Chroma server is up</h2>
         <pre style={codeStyle}><code>{`curl -s http://localhost:8000/api/v2/heartbeat
