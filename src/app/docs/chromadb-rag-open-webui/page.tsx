@@ -481,6 +481,152 @@ sudo ss -tlnp | grep :8000            # nothing listening`} />
           doc starting at <strong>step 2</strong> (the image is already pulled locally, so it&apos;s
           fast) through <strong>step 8</strong>.
         </p>
+
+        <h2 style={h2Style}>Case study: CPKC (real-world documents)</h2>
+        <p style={pStyle}>
+          Everything above used three small, fictional sample files — perfect for proving the pipeline
+          works, but not proof it works on the messy documents a real organization actually has lying
+          around. For this case study we swapped in two real, public PDFs from{" "}
+          <strong>CPKC (Canadian Pacific Kansas City)</strong>, the freight railroad formed by the 2023
+          CP–Kansas City Southern merger — downloaded directly from CPKC&apos;s own investor site, not
+          written for this demo:
+        </p>
+        <ul style={{ ...pStyle, paddingLeft: "1.5rem" }}>
+          <li>
+            <a href="/docs/chromadb-rag-open-webui/case-study-samples/cpkc-2024-sustainability-data-report.pdf" style={{ color: "#a0a0ff" }}>
+              cpkc-2024-sustainability-data-report.pdf
+            </a>{" "}
+            — CPKC&apos;s 2024 Sustainability Data Report, 2.3MB of dense ESG tables (safety, emissions,
+            workforce metrics).
+          </li>
+          <li>
+            <a href="/docs/chromadb-rag-open-webui/case-study-samples/cpkc-investor-presentation-jun2025.pdf" style={{ color: "#a0a0ff" }}>
+              cpkc-investor-presentation-jun2025.pdf
+            </a>{" "}
+            — CPKC&apos;s June 2025 investor presentation, a 36-page, 8.9MB slide deck with financial
+            highlights and network stats.
+          </li>
+        </ul>
+        <div style={noteStyle}>
+          CPKC&apos;s main site (<code>cpkcr.com</code>) sits behind a Cloudflare bot challenge that
+          blocks a plain <code>curl</code> — the direct PDF URLs (<code>cpkcr.com/content/dam/...</code>{" "}
+          and its investor-relations CDN at <code>q4cdn.com</code>) had to be found via search instead of
+          crawling the site itself.
+        </div>
+
+        <h3 style={h3Style}>Same knowledge-collection workflow, real files</h3>
+        <p style={pStyle}>
+          Created a second collection, <strong>CPKC Case Study</strong>, and uploaded both PDFs the same
+          way as before (Workspace → Knowledge → + Create new knowledge):
+        </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/case-study-knowledge-collection.png"
+            alt="Open WebUI Workspace showing the CPKC Case Study collection with 2 files: cpkc-investor-presentation-jun2025.pdf (8.9 MB) and cpkc-2024-sustainability-data-report.pdf (2.3 MB)"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            Both real CPKC PDFs indexed into the &quot;CPKC Case Study&quot; collection.
+          </figcaption>
+        </figure>
+        <p style={pStyle}>Confirmed directly against the standalone Chroma server, same as before:</p>
+        <CodeBlock code={`python3 -c "
+import chromadb
+client = chromadb.HttpClient(host='192.168.1.92', port=8000)
+for c in client.list_collections():
+    print(c.name, '->', c.count(), 'chunks')
+"`} />
+        <CodeBlock code={`e0c69d05-743e-4f39-85ce-c5d21489f143 -> 204 chunks   # "CPKC Case Study"
+file-0aefb7e3-7201-4cf1-bc3e-60e28fd12f39 -> 65 chunks    # sustainability report
+file-b46cb365-5788-4387-972c-8513e0a6fcef -> 139 chunks   # investor presentation`} />
+
+        <h3 style={h3Style}>Three real questions, three different outcomes</h3>
+        <p style={pStyle}>
+          Unlike the synthetic docs, these numbers are genuinely obscure — nobody has an LLM-known
+          opinion on CPKC&apos;s FRA injury rate — so instead of an &quot;implausible claim&quot; test,
+          we asked specific factual questions with the <strong>CPKC Case Study</strong> collection
+          attached via <code>#</code>, and compared each answer against the source PDF ourselves. The
+          results were not uniformly good, which is the more honest lesson:
+        </p>
+
+        <p style={pStyle}>
+          <strong>1. A clean win.</strong> &quot;What was CPKC&apos;s FRA Personal Injury Rate Frequency
+          in 2024?&quot; retrieved the right row from the right table and answered correctly:
+        </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/case-study-q1-success.png"
+            alt="Open WebUI chat: 'CPKC's FRA Personal Injury Rate Frequency in 2024 was 0.95', citing cpkc-2024-susta...report.pdf, 1 Source"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>Correct — matches the source: 0.95, down from 1.15 in 2023.</figcaption>
+        </figure>
+
+        <p style={pStyle}>
+          <strong>2. A retrieval miss.</strong> &quot;What was CPKC&apos;s operating ratio as reported
+          for Q1 2025?&quot; is answered plainly in the investor presentation (<strong>64.4%</strong>,
+          down from 65.0% a year earlier) — but the model reported it couldn&apos;t find it, despite
+          retrieving 2 sources:
+        </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/case-study-q2-miss.png"
+            alt="Open WebUI chat: 'I couldn't find the specific operating ratio for Q1 2025 in the provided context', despite Retrieved 2 sources"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            Miss — the real answer (64.4%) sits in a financial-highlights table in the slide deck; the
+            chunks retrieved didn&apos;t include it.
+          </figcaption>
+        </figure>
+        <p style={pStyle}>
+          Likely cause: PDF chunking works on extracted text, and a 36-page slide deck packs numbers into
+          dense tables and multi-column layouts that don&apos;t extract cleanly into contiguous,
+          semantically-searchable text the way prose does. The chunk containing 64.4% either got split
+          away from its &quot;operating ratio&quot; label or never scored as the closest match for this
+          phrasing of the question.
+        </p>
+
+        <p style={pStyle}>
+          <strong>3. Confidently wrong.</strong> &quot;What were CPKC&apos;s total direct and indirect
+          (Scope 1 and Scope 2) GHG emissions in 2024, in metric tonnes CO2e?&quot; is the most
+          instructive failure of the three — the model retrieved real numbers from the real document,
+          then reasoned its way to the wrong answer:
+        </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/case-study-q3-wrong.png"
+            alt="Open WebUI chat giving a confused answer estimating GHG emissions at 67.2 metric tonnes CO2e (63.7 + 3.5), citing cpkc-2024-susta...report.pdf"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            Wrong — answered ~67.2 metric tonnes CO2e; the real total is 4,705.0 <em>thousand</em> metric
+            tonnes CO2e (4,705,000 tonnes), about 70,000× larger.
+          </figcaption>
+        </figure>
+        <div style={warnStyle}>
+          <strong>What actually happened:</strong> the 63.7 and 3.5 the model added together are real
+          numbers from the report — but they&apos;re <em>Direct Biogenic CO2 Emissions from Locomotives</em>{" "}
+          for 2024 and 2023 respectively, a completely different (and much smaller) line item several
+          rows away from the actual Scope 1 &amp; 2 total. The retrieved chunk apparently included both
+          rows without enough surrounding table structure for the model to tell which label went with
+          which number, so it picked the wrong one, then did confident arithmetic on it and stated the
+          result as fact — with a citation attached, which made it look more trustworthy than a plain
+          guess would have.
+        </div>
+
+        <h3 style={h3Style}>What this case study demonstrates</h3>
+        <p style={pStyle}>
+          The synthetic-document tests earlier in this doc prove the RAG <em>plumbing</em> works end to
+          end. Real corporate PDFs prove something the synthetic tests can&apos;t: that retrieval quality
+          depends heavily on how cleanly a document&apos;s text extracts, and that a citation is not the
+          same thing as a correct answer. A wrong number pulled from the right file, with a source badge
+          attached, is more dangerous than an obvious &quot;I don&apos;t know&quot; — it looks grounded.
+          The practical takeaway for anyone building RAG on real internal documents: dense tables and
+          slide decks need either better chunking (table-aware extraction, smaller chunk sizes around
+          numeric data) or a verification step, because &quot;it cited a source&quot; is necessary but
+          not sufficient proof of a correct answer.
+        </p>
       </div>
     </main>
   );
