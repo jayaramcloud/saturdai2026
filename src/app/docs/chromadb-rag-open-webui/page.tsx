@@ -420,6 +420,41 @@ A: According to the technical specification sheet, the Falcon X200 has a max
           five-line Python script, which is exactly the kind of infrastructure literacy worth building
           before reaching for a managed vector database in production.
         </p>
+
+        <h2 style={h2Style}>Appendix: Tear down ChromaDB and reset for a fresh run</h2>
+        <p style={pStyle}>
+          To run this whole doc again from a clean slate — e.g. right before class — remove only the
+          ChromaDB service, container, and its data volume. <strong>Open WebUI itself is left
+          completely alone</strong>: its unit file, container, and volume are untouched.
+        </p>
+        <CodeBlock code={`sudo systemctl disable --now chromadb.service
+sudo docker rm -f chromadb 2>/dev/null   # in case a container lingered outside systemd
+sudo rm /etc/systemd/system/chromadb.service
+sudo systemctl daemon-reload
+sudo docker volume rm chroma-data`} />
+        <p style={pStyle}>Confirm it's actually gone:</p>
+        <CodeBlock code={`systemctl status chromadb.service    # "could not be found"
+docker ps -a | grep chromadb          # no output
+docker volume ls | grep chroma-data   # no output
+sudo ss -tlnp | grep :8000            # nothing listening`} />
+        <div style={warnStyle}>
+          <strong>Also clear the dangling knowledge collection in Open WebUI:</strong> deleting the
+          <code>chroma-data</code> volume wipes the vectors, but the <code>ChromaDB RAG POC</code>{" "}
+          collection entry still exists in Open WebUI&apos;s own database (a separate volume,{" "}
+          <code>open-webui</code>, which you&apos;re keeping) and will now point at nothing. Go to{" "}
+          <strong>Workspace → Knowledge</strong>, open <strong>ChromaDB RAG POC</strong>, and delete it
+          from the <strong>⋯</strong> menu before re-running step 6 — otherwise you&apos;ll end up with
+          a second, differently-named collection instead of a clean re-creation.
+        </div>
+        <p style={pStyle}>
+          Open WebUI&apos;s <code>open-webui.service</code> still has <code>VECTOR_DB=chroma</code> and{" "}
+          <code>CHROMA_HTTP_PORT=8000</code> pointed at the (now torn-down) standalone server — that&apos;s
+          expected and fine to leave as-is per this doc&apos;s step 4. Knowledge/RAG features just
+          won&apos;t work until step 2 is redone and <code>chromadb.service</code> is back up; regular
+          chat with the models is unaffected the whole time. To get back to a working demo, re-run this
+          doc starting at <strong>step 2</strong> (the image is already pulled locally, so it&apos;s
+          fast) through <strong>step 8</strong>.
+        </p>
       </div>
     </main>
   );
