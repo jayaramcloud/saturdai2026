@@ -262,10 +262,36 @@ sudo systemctl start open-webui.service
 # confirm it's actually healthy this time, not crash-looping
 sudo systemctl status open-webui.service --no-pager
 sudo docker logs -f open-webui`}</code></pre>
+        <p style={pStyle}>Real output from our run:</p>
+        <pre style={codeStyle}><code>{`● open-webui.service - Open WebUI
+     Loaded: loaded (/etc/systemd/system/open-webui.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2026-07-24 18:24:16 MDT; 20ms ago
+   Main PID: 507966 (docker)
+     CGroup: /system.slice/open-webui.service
+             └─507966 /usr/bin/docker run --network=host -v open-webui:/app/backend/data
+                       -e OLLAMA_BASE_URL=http://127.0.0.1:8000 -e VECTOR_DB=chroma -e CHROMA_…
+
+Jul 24 18:24:16 jay-z820 systemd[1]: Started Open WebUI.
+
+$ sudo docker logs -f open-webui
+INFO  [alembic.runtime.migration] Context impl SQLiteImpl.
+v0.10.2 - building the best AI user interface.
+INFO:     Started server process [1]
+INFO:     Waiting for application startup.
+2026-07-25 00:24:37 | INFO | sentence_transformers...: Loading SentenceTransformer model
+2026-07-25 00:24:38.786 | INFO | ... "GET /api/version HTTP/1.1" 200`}</code></pre>
         <p style={pStyle}>
           The <code>-v open-webui:/app/backend/data</code> volume is unchanged, so chats, users, and
           settings are preserved — only the vector store backend changes.
         </p>
+        <div style={noteStyle}>
+          Note that <code>OLLAMA_BASE_URL</code> still points at <code>127.0.0.1:8000</code> —
+          previously stale/unused (nothing was listening there), now the same port ChromaDB is on. In
+          practice this is harmless: Open WebUI&apos;s Ollama client only ever calls Ollama-specific
+          endpoints (<code>/api/tags</code>, etc.), which the Chroma server just 404s on, so it doesn&apos;t
+          corrupt anything — but it&apos;s worth eventually pointing at wherever your real model
+          connection actually lives and cleaning up the stale value.
+        </div>
 
         <h2 style={h2Style}>5. Download the sample documents</h2>
         <p style={pStyle}>
@@ -302,6 +328,17 @@ sudo docker logs -f open-webui`}</code></pre>
           <code>ChromaDB RAG POC</code>, then upload all three sample files and wait for indexing to
           finish on each.
         </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/knowledge-collection.png"
+            alt="Open WebUI Workspace → Knowledge showing the ChromaDB RAG POC collection with three files uploaded: saturdai-hardware-support-policy.txt, larkspur-aquifer-study.md, and falcon-x200-spec.pdf, with the upload menu open"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            All three sample documents indexed into the &quot;ChromaDB RAG POC&quot; knowledge
+            collection.
+          </figcaption>
+        </figure>
 
         <h2 style={h2Style}>7. Prove the data actually lives in the external Chroma server</h2>
         <p style={pStyle}>
@@ -315,11 +352,19 @@ client = chromadb.HttpClient(host="localhost", port=8000)
 for c in client.list_collections():
     print(c.name, "->", c.count(), "chunks")
 PY`}</code></pre>
+        <p style={pStyle}>Real output from our run:</p>
+        <pre style={codeStyle}><code>{`e154830c-b182-4c3a-befc-837659736bf7 -> 4 chunks
+knowledge-bases -> 1 chunks
+file-da68479f-41b2-4127-ba9c-ca5049f38e91 -> 1 chunks
+file-072b5c0d-956a-4e47-9ad6-b8fdb16c5728 -> 2 chunks
+file-d3de1e5c-5cfe-4fcf-b3c6-8cb7217d0714 -> 1 chunks`}</code></pre>
         <p style={pStyle}>
-          You should see a collection (Open WebUI names these by an internal knowledge-base ID rather
-          than &quot;ChromaDB RAG POC&quot; literally) with a chunk count matching the three uploaded
-          documents — proof the vectors are in the standalone server we stood up in step 2, not some
-          opaque file inside the Open WebUI container.
+          <code>e154830c-b182-4c3a-befc-837659736bf7</code> is the &quot;ChromaDB RAG POC&quot;
+          collection&apos;s internal ID (matches the URL in the screenshot above) — 4 chunks across the
+          three uploaded files. The <code>file-*</code> collections are Open WebUI&apos;s per-file
+          working stores; <code>knowledge-bases</code> is its internal bookkeeping collection. Every one
+          of these lives in the standalone Chroma server we stood up in step 2, not some opaque file
+          inside the Open WebUI container.
         </p>
 
         <h2 style={h2Style}>8. Compare answers with and without retrieval, per document</h2>
