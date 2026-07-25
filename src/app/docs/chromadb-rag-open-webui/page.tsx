@@ -166,6 +166,24 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl enable --now chromadb.service
 systemctl status chromadb.service --no-pager`}</code></pre>
+        <p style={pStyle}>Real output from our run:</p>
+        <pre style={codeStyle}><code>{`● chromadb.service - ChromaDB vector database
+     Loaded: loaded (/etc/systemd/system/chromadb.service; enabled; vendor preset: enabled)
+     Active: active (running) since Fri 2026-07-24 18:03:13 MDT; 2s ago
+    Process: 505663 ExecStartPre=/usr/bin/docker rm -f chromadb (code=exited, status=0/SUCCESS)
+   Main PID: 505673 (docker)
+             └─505673 /usr/bin/docker run --network=host -v chroma-data:/data ... chromadb/chroma
+
+Jul 24 18:03:13 jay-z820 docker[505673]: Saving data to: /data
+Jul 24 18:03:13 jay-z820 docker[505673]: Connect to Chroma at: http://localhost:8000
+Jul 24 18:03:13 jay-z820 docker[505673]: No telemetry is configured.
+
+$ curl -s http://localhost:8000/api/v2/heartbeat
+{"nanosecond heartbeat":1784937795495001733}`}</code></pre>
+        <p style={pStyle}>
+          <code>enabled</code> + <code>active (running)</code> confirms it&apos;ll now survive a reboot
+          on its own.
+        </p>
         <p style={pStyle}>
           <code>ExecStartPre=-/usr/bin/docker rm -f chromadb</code> (the leading <code>-</code> means
           &quot;ignore failure&quot;) clears out any stale container left over from a crash before each
