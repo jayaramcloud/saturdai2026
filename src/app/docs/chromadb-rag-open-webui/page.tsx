@@ -411,6 +411,32 @@ A: According to the technical specification sheet, the Falcon X200 has a max
           not just trusting what Open WebUI&apos;s citation UI claims.
         </div>
 
+        <h2 style={h2Style}>9. Make the knowledge collection attach automatically</h2>
+        <p style={pStyle}>
+          So far every question required typing <code>#</code> and picking{" "}
+          <strong>ChromaDB RAG POC</strong> by hand. For a classroom demo (or any real use), attach the
+          collection to a <strong>model</strong> instead of a chat, so retrieval happens automatically —
+          no student choice required.
+        </p>
+        <p style={pStyle}>
+          Go to <strong>Workspace → Models → + Create a new model</strong>, pick a base model (e.g.{" "}
+          <code>Qwen Model</code>), give it a name like <code>Qwen + ChromaDB RAG POC</code>, and in the{" "}
+          <strong>Knowledge</strong> section of the editor add <strong>ChromaDB RAG POC</strong>. Save.
+        </p>
+        <p style={pStyle}>
+          Start a new chat, select this custom model instead of the base one, and ask any of the three
+          questions from step 8 with <strong>no</strong> <code>#</code> attach step — it retrieves from
+          the collection automatically every time.
+        </p>
+        <div style={noteStyle}>
+          <strong>Scope, not enforcement:</strong> this makes retrieval the default for chats using{" "}
+          <em>that specific model</em> — it doesn&apos;t change the base <code>Qwen Model</code>, and a
+          student who picks the base model instead still gets no retrieval. For a class demo, just make
+          sure everyone is pointed at the custom model (e.g. set it as the default in{" "}
+          <strong>Admin Panel → Settings → Models</strong>) rather than relying on students to attach
+          knowledge manually.
+        </div>
+
         <h3 style={h3Style}>What this demonstrates</h3>
         <p style={pStyle}>
           RAG in Open WebUI is not magic tied to the app itself — it&apos;s a standard pipeline (embed →
