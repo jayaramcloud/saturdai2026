@@ -1,16 +1,6 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
-
-const codeStyle: CSSProperties = {
-  background: "#1a1a2e",
-  border: "1px solid #33335a",
-  borderRadius: 8,
-  padding: "1rem",
-  overflowX: "auto",
-  fontSize: "0.85rem",
-  lineHeight: 1.6,
-  marginBottom: "1.5rem",
-};
+import CodeBlock from "@/components/CodeBlock";
 
 const h2Style: CSSProperties = { color: "#ffffff", fontSize: "1.4rem", margin: "2rem 0 1rem" };
 const h3Style: CSSProperties = { color: "#ffffff", fontSize: "1.1rem", margin: "1.5rem 0 0.75rem" };
@@ -92,11 +82,11 @@ export default function ChromaDbRagOpenWebui() {
           inference, so port <code>:8000</code> is free — that&apos;s what we&apos;ll give the
           standalone Chroma server.
         </p>
-        <pre style={codeStyle}><code>{`ssh jay@192.168.1.92
+        <CodeBlock code={`ssh jay@192.168.1.92
 
 # sanity check — confirm 8000 is free and docker is present
 sudo ss -tlnp | grep -E ':(8000|8001|8080)'
-docker ps -a`}</code></pre>
+docker ps -a`} />
         <div style={noteStyle}>
           Open WebUI is also managed by a systemd unit (<code>/etc/systemd/system/open-webui.service</code>,{" "}
           <code>Restart=always</code>). Worth knowing going in: on our box that unit&apos;s{" "}
@@ -116,7 +106,7 @@ docker ps -a`}</code></pre>
           Pull and start the official Chroma server image, persisting its data to a named Docker
           volume so it survives restarts:
         </p>
-        <pre style={codeStyle}><code>{`sudo docker pull chromadb/chroma
+        <CodeBlock code={`sudo docker pull chromadb/chroma
 
 sudo docker run -d \\
   --name chromadb \\
@@ -124,7 +114,7 @@ sudo docker run -d \\
   -v chroma-data:/data \\
   -e IS_PERSISTENT=TRUE \\
   -e ANONYMIZED_TELEMETRY=FALSE \\
-  chromadb/chroma`}</code></pre>
+  chromadb/chroma`} />
         <p style={pStyle}>
           <code>--network host</code> matches how <code>open-webui</code> is already running, so both
           containers can reach each other over <code>localhost</code> without extra Docker networking.
@@ -136,7 +126,7 @@ sudo docker run -d \\
           <code>llama-inference-*</code>, <code>open-webui</code>) is managed by a systemd unit for
           exactly this reason — do the same for ChromaDB instead of relying on the ad-hoc container:
         </div>
-        <pre style={codeStyle}><code>{`sudo docker rm -f chromadb   # remove the ad-hoc container, systemd will recreate it
+        <CodeBlock code={`sudo docker rm -f chromadb   # remove the ad-hoc container, systemd will recreate it
 
 sudo tee /etc/systemd/system/chromadb.service > /dev/null <<'EOF'
 [Unit]
@@ -165,9 +155,9 @@ EOF
 
 sudo systemctl daemon-reload
 sudo systemctl enable --now chromadb.service
-systemctl status chromadb.service --no-pager`}</code></pre>
+systemctl status chromadb.service --no-pager`} />
         <p style={pStyle}>Real output from our run:</p>
-        <pre style={codeStyle}><code>{`● chromadb.service - ChromaDB vector database
+        <CodeBlock code={`● chromadb.service - ChromaDB vector database
      Loaded: loaded (/etc/systemd/system/chromadb.service; enabled; vendor preset: enabled)
      Active: active (running) since Fri 2026-07-24 18:03:13 MDT; 2s ago
     Process: 505663 ExecStartPre=/usr/bin/docker rm -f chromadb (code=exited, status=0/SUCCESS)
@@ -179,7 +169,7 @@ Jul 24 18:03:13 jay-z820 docker[505673]: Connect to Chroma at: http://localhost:
 Jul 24 18:03:13 jay-z820 docker[505673]: No telemetry is configured.
 
 $ curl -s http://localhost:8000/api/v2/heartbeat
-{"nanosecond heartbeat":1784937795495001733}`}</code></pre>
+{"nanosecond heartbeat":1784937795495001733}`} />
         <p style={pStyle}>
           <code>enabled</code> + <code>active (running)</code> confirms it&apos;ll now survive a reboot
           on its own.
@@ -198,17 +188,17 @@ $ curl -s http://localhost:8000/api/v2/heartbeat
         </div>
 
         <h2 style={h2Style}>3. Verify the Chroma server is up</h2>
-        <pre style={codeStyle}><code>{`curl -s http://localhost:8000/api/v2/heartbeat
-sudo docker logs chromadb --tail 20`}</code></pre>
+        <CodeBlock code={`curl -s http://localhost:8000/api/v2/heartbeat
+sudo docker logs chromadb --tail 20`} />
         <p style={pStyle}>Real output from our run:</p>
-        <pre style={codeStyle}><code>{`$ curl -s http://localhost:8000/api/v2/heartbeat
+        <CodeBlock code={`$ curl -s http://localhost:8000/api/v2/heartbeat
 {"nanosecond heartbeat":1784936784061533814}
 
 $ sudo docker logs chromadb --tail 20
 Saving data to: /data
 Connect to Chroma at: http://localhost:8000
 Getting started guide: https://docs.trychroma.com/docs/overview/getting-started
-No telemetry is configured.`}</code></pre>
+No telemetry is configured.`} />
 
         <h2 style={h2Style}>4. Point Open WebUI at the external Chroma server</h2>
         <p style={pStyle}>
@@ -220,10 +210,10 @@ No telemetry is configured.`}</code></pre>
           hand — that way systemd&apos;s own restart logic (including the pre-existing crash-loop from
           step 1) ends up recreating the container with the right config instead of fighting it.
         </p>
-        <pre style={codeStyle}><code>{`sudo systemctl stop open-webui.service
+        <CodeBlock code={`sudo systemctl stop open-webui.service
 sudo docker rm -f open-webui   # the currently-running container, now stopped by the line above
 
-sudo vi /etc/systemd/system/open-webui.service`}</code></pre>
+sudo vi /etc/systemd/system/open-webui.service`} />
         <p style={pStyle}>
           Only the <code>ExecStart</code> line inside <code>[Service]</code> needs to change — add the
           three <code>CHROMA_HTTP_*</code> flags and <code>VECTOR_DB=chroma</code>, and leave{" "}
@@ -232,7 +222,7 @@ sudo vi /etc/systemd/system/open-webui.service`}</code></pre>
           as it was — don&apos;t delete those lines, only edit inside <code>[Service]</code>. The full
           file should look like this afterward:
         </p>
-        <pre style={codeStyle}><code>{`[Unit]
+        <CodeBlock code={`[Unit]
 Description=Open WebUI
 After=network.target docker.service llama-inference.service llama-inference-2.service
 Requires=docker.service
@@ -255,15 +245,15 @@ Restart=always
 RestartSec=10
 
 [Install]
-WantedBy=multi-user.target`}</code></pre>
-        <pre style={codeStyle}><code>{`sudo systemctl daemon-reload
+WantedBy=multi-user.target`} />
+        <CodeBlock code={`sudo systemctl daemon-reload
 sudo systemctl start open-webui.service
 
 # confirm it's actually healthy this time, not crash-looping
 sudo systemctl status open-webui.service --no-pager
-sudo docker logs -f open-webui`}</code></pre>
+sudo docker logs -f open-webui`} />
         <p style={pStyle}>Real output from our run:</p>
-        <pre style={codeStyle}><code>{`● open-webui.service - Open WebUI
+        <CodeBlock code={`● open-webui.service - Open WebUI
      Loaded: loaded (/etc/systemd/system/open-webui.service; enabled; vendor preset: enabled)
      Active: active (running) since Fri 2026-07-24 18:24:16 MDT; 20ms ago
    Main PID: 507966 (docker)
@@ -279,7 +269,7 @@ v0.10.2 - building the best AI user interface.
 INFO:     Started server process [1]
 INFO:     Waiting for application startup.
 2026-07-25 00:24:37 | INFO | sentence_transformers...: Loading SentenceTransformer model
-2026-07-25 00:24:38.786 | INFO | ... "GET /api/version HTTP/1.1" 200`}</code></pre>
+2026-07-25 00:24:38.786 | INFO | ... "GET /api/version HTTP/1.1" 200`} />
         <p style={pStyle}>
           The <code>-v open-webui:/app/backend/data</code> volume is unchanged, so chats, users, and
           settings are preserved — only the vector store backend changes.
@@ -345,19 +335,19 @@ INFO:     Waiting for application startup.
           This is the step the embedded setup couldn&apos;t give us: query the vector database{" "}
           <em>directly</em>, outside of Open WebUI entirely, and see the uploaded chunks sitting in it.
         </p>
-        <pre style={codeStyle}><code>{`pip3 install chromadb --quiet
+        <CodeBlock code={`pip3 install chromadb --quiet
 python3 <<'PY'
 import chromadb
 client = chromadb.HttpClient(host="localhost", port=8000)
 for c in client.list_collections():
     print(c.name, "->", c.count(), "chunks")
-PY`}</code></pre>
+PY`} />
         <p style={pStyle}>Real output from our run:</p>
-        <pre style={codeStyle}><code>{`e154830c-b182-4c3a-befc-837659736bf7 -> 4 chunks
+        <CodeBlock code={`e154830c-b182-4c3a-befc-837659736bf7 -> 4 chunks
 knowledge-bases -> 1 chunks
 file-da68479f-41b2-4127-ba9c-ca5049f38e91 -> 1 chunks
 file-072b5c0d-956a-4e47-9ad6-b8fdb16c5728 -> 2 chunks
-file-d3de1e5c-5cfe-4fcf-b3c6-8cb7217d0714 -> 1 chunks`}</code></pre>
+file-d3de1e5c-5cfe-4fcf-b3c6-8cb7217d0714 -> 1 chunks`} />
         <p style={pStyle}>
           <code>e154830c-b182-4c3a-befc-837659736bf7</code> is the &quot;ChromaDB RAG POC&quot;
           collection&apos;s internal ID (matches the URL in the screenshot above) — 4 chunks across the
@@ -396,6 +386,34 @@ file-d3de1e5c-5cfe-4fcf-b3c6-8cb7217d0714 -> 1 chunks`}</code></pre>
           <code>.pdf</code> respectively) — showing Open WebUI&apos;s PDF loader extracted the table
           correctly, not just the plain-text files.
         </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/grounded-answers.png"
+            alt="Open WebUI chat with ChromaDB RAG POC attached, showing three grounded answers: 47 days for the laptop exchange citing saturdai-hardwa...policy.txt with 2 Sources, 3.2 cm/year recharge rate citing larkspur-aquifer-study.md with 2 Sources, and 63 minutes max flight time citing falcon-x200-spec.pdf with 3 Sources"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            All three questions answered correctly with the collection attached, each citing the
+            right source file.
+          </figcaption>
+        </figure>
+        <p style={pStyle}>
+          Real answers from our run — note the model doesn&apos;t always surface every specific detail
+          (it skipped the <code>SDX-4471</code> reference code and Dr. Voskresenskaya&apos;s name), which
+          is normal: the retrieval and citation are what prove groundedness, not word-for-word recall of
+          every fact in the chunk.
+        </p>
+        <CodeBlock code={`Q: How many days does a SaturdAI cohort-Q student have to exchange their laptop?
+A: A SaturdAI cohort-Q student has to exchange their laptop within 47 days.
+   [Retrieved 2 sources — saturdai-hardwa...policy.txt]
+
+Q: What was the recharge rate in the Larkspur Aquifer study?
+A: According to the study, the recharge rate in the Larkspur Aquifer was measured
+   at 3.2 cm/year. [Retrieved 2 sources — larkspur-aquifer-study.md]
+
+Q: What's the max flight time of the Falcon X200?
+A: According to the technical specification sheet, the Falcon X200 has a max
+   flight time of 63 minutes. [Retrieved 3 sources — falcon-x200-spec.pdf]`} />
 
         <div style={noteStyle}>
           <strong>Why this counts as proof, twice over:</strong> first, the same &quot;implausible
