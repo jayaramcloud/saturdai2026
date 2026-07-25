@@ -225,11 +225,19 @@ sudo docker rm -f open-webui   # the currently-running container, now stopped by
 
 sudo vi /etc/systemd/system/open-webui.service`}</code></pre>
         <p style={pStyle}>
-          Add the three <code>CHROMA_HTTP_*</code> flags and <code>VECTOR_DB=chroma</code> to{" "}
-          <code>ExecStart</code> (leave <code>OLLAMA_BASE_URL</code> alone — it&apos;s unrelated to this
-          change):
+          Only the <code>ExecStart</code> line inside <code>[Service]</code> needs to change — add the
+          three <code>CHROMA_HTTP_*</code> flags and <code>VECTOR_DB=chroma</code>, and leave{" "}
+          <code>OLLAMA_BASE_URL</code> alone (it&apos;s unrelated to this change). Everything else in
+          the file, including the <code>[Unit]</code> and <code>[Install]</code> sections, stays exactly
+          as it was — don&apos;t delete those lines, only edit inside <code>[Service]</code>. The full
+          file should look like this afterward:
         </p>
-        <pre style={codeStyle}><code>{`[Service]
+        <pre style={codeStyle}><code>{`[Unit]
+Description=Open WebUI
+After=network.target docker.service llama-inference.service llama-inference-2.service
+Requires=docker.service
+
+[Service]
 Type=simple
 User=jay
 ExecStart=/usr/bin/docker run \\
@@ -244,7 +252,10 @@ ExecStart=/usr/bin/docker run \\
   ghcr.io/open-webui/open-webui:main
 ExecStop=/usr/bin/docker stop open-webui
 Restart=always
-RestartSec=10`}</code></pre>
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target`}</code></pre>
         <pre style={codeStyle}><code>{`sudo systemctl daemon-reload
 sudo systemctl start open-webui.service
 
