@@ -103,32 +103,19 @@ docker ps -a`} />
 
         <h2 style={h2Style}>2. Run ChromaDB as its own container</h2>
         <p style={pStyle}>
-          Pull and start the official Chroma server image, persisting its data to a named Docker
-          volume so it survives restarts:
+          Pull the official Chroma server image, then set it up as a systemd service right away —
+          every other service on this box (<code>llama-inference-*</code>, <code>open-webui</code>) is
+          systemd-managed with <code>Restart=always</code>, and a plain <code>docker run -d</code> has no
+          restart policy of its own, so it would not survive a reboot. Skip the ad-hoc container
+          entirely and go straight to the unit file:
         </p>
-        <CodeBlock code={`sudo docker pull chromadb/chroma
-
-sudo docker run -d \\
-  --name chromadb \\
-  --network host \\
-  -v chroma-data:/data \\
-  -e IS_PERSISTENT=TRUE \\
-  -e ANONYMIZED_TELEMETRY=FALSE \\
-  chromadb/chroma`} />
+        <CodeBlock code={`sudo docker pull chromadb/chroma`} />
         <p style={pStyle}>
-          <code>--network host</code> matches how <code>open-webui</code> is already running, so both
-          containers can reach each other over <code>localhost</code> without extra Docker networking.
+          <code>--network host</code> (in the unit below) matches how <code>open-webui</code> is
+          already running, so both containers can reach each other over <code>localhost</code> without
+          extra Docker networking.
         </p>
-        <div style={warnStyle}>
-          A plain <code>docker run -d</code> has no restart policy — it will <strong>not</strong> come
-          back after a reboot (<code>docker inspect chromadb --format &apos;{"{{"}.HostConfig.RestartPolicy.Name{"}}"}&apos;</code>{" "}
-          confirms <code>no</code>). Every other service on this box (
-          <code>llama-inference-*</code>, <code>open-webui</code>) is managed by a systemd unit for
-          exactly this reason — do the same for ChromaDB instead of relying on the ad-hoc container:
-        </div>
-        <CodeBlock code={`sudo docker rm -f chromadb   # remove the ad-hoc container, systemd will recreate it
-
-sudo tee /etc/systemd/system/chromadb.service > /dev/null <<'EOF'
+        <CodeBlock code={`sudo tee /etc/systemd/system/chromadb.service > /dev/null <<'EOF'
 [Unit]
 Description=ChromaDB vector database
 After=network.target docker.service
