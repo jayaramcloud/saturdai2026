@@ -627,6 +627,139 @@ file-b46cb365-5788-4387-972c-8513e0a6fcef -> 139 chunks   # investor presentatio
           numeric data) or a verification step, because &quot;it cited a source&quot; is necessary but
           not sufficient proof of a correct answer.
         </p>
+        <h2 style={h2Style}>Exercise: Does a smaller chunk size fix the CPKC misses?</h2>
+        <p style={pStyle}>
+          The case study above diagnosed two failures — the missed operating ratio and the wrong GHG
+          total — as likely chunking problems: dense tables don&apos;t extract into clean, contiguous
+          prose, so a label and its number can end up in different chunks, or in the same chunk as an
+          unrelated row. This exercise tests that hypothesis directly instead of just asserting it.
+        </p>
+
+        <h3 style={h3Style}>1. Check the current chunk settings</h3>
+        <p style={pStyle}>
+          <strong>Admin Panel → Settings → Documents</strong>. Note the current <code>Chunk Size</code>{" "}
+          and <code>Chunk Overlap</code> (Open WebUI ships with 1000 / 100 by default).
+        </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/exercise-chunk-settings-before.png"
+            alt="Open WebUI Admin Panel Documents settings showing the default Chunk Size of 1000 and Chunk Overlap of 100"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>Default chunking configuration: Chunk Size 1000, Chunk Overlap 100.</figcaption>
+        </figure>
+
+        <h3 style={h3Style}>2. Lower the chunk size and re-ingest into a new collection</h3>
+        <p style={pStyle}>
+          Chunk settings only apply at upload time — existing collections keep their original chunks.
+          Set <code>Chunk Size</code> to <strong>400</strong> and <code>Chunk Overlap</code> to{" "}
+          <strong>80</strong>, save, then create a new knowledge collection (<strong>Chroma POC - Jul
+          27</strong>) and upload the same two CPKC PDFs from <code>case-study-samples/</code> again.
+        </p>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/exercise-chunk-settings-after.png"
+            alt="Open WebUI Admin Panel Documents settings with Chunk Size lowered to 400 and Chunk Overlap set to 80, with a 'Settings saved successfully' toast"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>Chunk size lowered to 400 / overlap 80, saved.</figcaption>
+        </figure>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/exercise-new-collection-upload.png"
+            alt="Open WebUI Workspace Knowledge page for the 'Chroma POC - Jul 27' collection, uploading cpkc-investor-presentation-jun2025.pdf"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            Re-uploading both CPKC PDFs into a fresh collection so the new chunk size actually applies.
+          </figcaption>
+        </figure>
+
+        <h3 style={h3Style}>3. Confirm the chunk count actually changed</h3>
+        <p style={pStyle}>Same direct-to-Chroma check as before, now against the new collection:</p>
+        <CodeBlock code={`python3 chroma.py
+# chroma.py:
+#   import chromadb
+#   client = chromadb.HttpClient(host="localhost", port=8000)
+#   for c in client.list_collections():
+#       print(c.name, "->", c.count(), "chunks")`} />
+        <CodeBlock code={`94bd79d1-2cb6-4da0-8b82-dbc3cefc980d -> 510 chunks   # "Chroma POC - Jul 27"
+file-4c669c60-a8d1-452b-a952-f42048277a0c -> 349 chunks    # investor presentation (was 139)
+file-853f5f34-4a23-4600-8b05-ae49c94a76c2 -> 161 chunks    # sustainability report (was 65)`} />
+        <p style={pStyle}>
+          Both files landed almost exactly <strong>2.5×</strong> more chunks — consistent with dropping
+          chunk size from 1000 to 400 (also a 2.5× reduction). 204 total chunks became 510.
+        </p>
+
+        <h3 style={h3Style}>4. Re-ask the two documented failures</h3>
+        <p style={pStyle}>
+          With the new collection attached via <code>#</code>:
+        </p>
+        <ul style={{ ...pStyle, paddingLeft: "1.5rem" }}>
+          <li>
+            <em>&quot;What was CPKC&apos;s operating ratio as reported for Q1 2025?&quot;</em> — real
+            answer <strong>64.4%</strong>.
+          </li>
+          <li>
+            <em>
+              &quot;What were CPKC&apos;s total Scope 1 and Scope 2 GHG emissions in 2024, in metric
+              tonnes CO2e?&quot;
+            </em>{" "}
+            — real answer <strong>4,705.0 thousand metric tonnes CO2e</strong>.
+          </li>
+        </ul>
+        <figure style={figureStyle}>
+          <img
+            src="/docs/chromadb-rag-open-webui/exercise-retest-results.png"
+            alt="Open WebUI chat re-asking both questions against the smaller-chunk collection: the operating ratio question still fails with 'I don't have specific numbers to cite', while the GHG emissions question now correctly answers 4,705.0 metric tonnes CO2e citing the sustainability report"
+            style={imgStyle}
+          />
+          <figcaption style={captionStyle}>
+            Mixed result: the GHG emissions question now answers correctly; the operating ratio question
+            still misses.
+          </figcaption>
+        </figure>
+
+        <div style={noteStyle}>
+          <strong>Real outcome — one fixed, one didn&apos;t:</strong>
+          <ul style={{ margin: "0.5rem 0 0", paddingLeft: "1.5rem" }}>
+            <li>
+              <strong>GHG emissions (Q3): fixed.</strong> Previously the model confidently added two
+              mismatched line items (63.7 + 3.5 ≈ 67.2, a completely wrong figure) and cited it as fact.
+              At chunk size 400 it now answers <strong>4,705.0 metric tonnes CO2e</strong>, matching the
+              real total — smaller chunks kept the Scope 1/2 total row separate from the unrelated biogenic
+              emissions rows that previously got pulled into the same chunk and confused the model.
+            </li>
+            <li>
+              <strong>Operating ratio (Q2): still a miss.</strong> Still retrieves sources (2, from the
+              investor presentation) but reports it can&apos;t find specific numbers — the same failure
+              mode as before, unresolved by a smaller chunk size. Whatever separates the &quot;operating
+              ratio&quot; label from its 64.4% value in the extracted slide-deck text apparently survives a
+              400-character window too, which points at extraction quality (how the PDF loader linearizes
+              a multi-column slide) rather than chunk size as the actual bottleneck for this one.
+            </li>
+          </ul>
+        </div>
+
+        <h3 style={h3Style}>What this exercise demonstrates</h3>
+        <p style={pStyle}>
+          Chunking strategy is not a one-time config decision — it is a variable you tune against
+          observed retrieval failures, the same way you&apos;d tune a hyperparameter. But the fix isn&apos;t
+          uniform: shrinking the chunk size resolved the failure caused by two unrelated numbers sharing a
+          chunk (a chunk-boundary problem), while leaving untouched the failure caused by a label and its
+          value not extracting as adjacent text in the first place (an extraction problem). One knob does
+          not fix every retrieval bug — the two CPKC failures needed two different diagnoses, and only one
+          of them was actually about chunk size.
+        </p>
+
+        <h2 style={h2Style}>Next up: a data validation pass</h2>
+        <p style={pStyle}>
+          A follow-on exercise for a future class: before chunks ever reach Chroma, add a validation step
+          that checks for empty or near-empty chunks (PDF extraction sometimes yields whitespace-only
+          fragments from table gutters), duplicate chunks across files, and chunks missing source
+          metadata — the kind of ingestion-hygiene bugs that are invisible in the UI but show up as silent
+          retrieval gaps.
+        </p>
       </div>
     </main>
   );
