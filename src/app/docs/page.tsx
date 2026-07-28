@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/hermes-agent-open-webui",
+    date: "2026-07-27",
+    title: "Adding a Hermes Agent Alongside Open WebUI",
+    icon: "🪽",
+    description:
+      "Running NousResearch's Hermes-3-Llama-3.2-3B locally for real tool-calling — VRAM constraints, a chat-template gotcha that silently broke tool calls, and a temperature fix, wired into the existing mcpo MCP bridge.",
+  },
+  {
     href: "/docs/chromadb-rag-open-webui",
     date: "2026-07-24",
     title: "Standalone ChromaDB for RAG in Open WebUI",
