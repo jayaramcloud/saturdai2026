@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/deepseek-v4-flash-summary",
+    date: "2026-08-02",
+    title: "DeepSeek V4 Flash 0731 — Quick Summary",
+    icon: "🐳",
+    description:
+      "A discussion with Sanjay on DeepSeek V4 Flash's launch pricing, the wider market shakeup it's causing among providers, and a live local deployment on a single 128GB-VRAM GPU with llama.cpp.",
+  },
+  {
     href: "/docs/hermes-agent-open-webui",
     date: "2026-07-27",
     title: "Adding a Hermes Agent Alongside Open WebUI",
