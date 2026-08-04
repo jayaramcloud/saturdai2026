@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/hermes-agent-deepseek-v4",
+    date: "2026-08-03",
+    title: "10 Things to Demo: Hermes Agent CLI on DeepSeek V4",
+    icon: "🔬",
+    description:
+      "Live-tested against the real jay-z820 + DeepSeek V4 setup: web search and code execution worked and were independently verified, while MCP tool calling, skills, memory, and delegation all traced back to one shared chat-template gotcha — including one case where the model confidently claimed to save a memory that was never written.",
+  },
+  {
     href: "/docs/deepseek-v4-flash-summary",
     date: "2026-08-02",
     title: "DeepSeek V4 Flash 0731 — Quick Summary",
