@@ -2,6 +2,14 @@ import Link from "next/link";
 
 const DOCS = [
   {
+    href: "/docs/hermes-agent-5-tricks",
+    date: "2026-08-05",
+    title: "5 Simple Tricks for Running Hermes Agent Against a Local LLM",
+    icon: "🧰",
+    description:
+      "A practical how-to distilled from the two earlier live Hermes Agent sessions: point it at any OpenAI-compatible local endpoint, use one-shot mode and --yolo deliberately, check the chat_format before trusting any tool-calling result, and register MCP servers with absolute paths to dodge a real PATH bug.",
+  },
+  {
     href: "/docs/hermes-agent-deepseek-v4",
     date: "2026-08-03",
     title: "10 Things to Demo: Hermes Agent CLI on DeepSeek V4",
