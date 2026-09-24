@@ -472,6 +472,9 @@ a {
   max-width: 900px;
   margin: 0 auto;
 }
+.slideshow-wide {
+  max-width: 1400px;
+}
 .slideshow-frame {
   border-radius: 20px;
   overflow: hidden;

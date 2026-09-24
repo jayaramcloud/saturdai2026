@@ -8,7 +8,7 @@ export type Slide = {
   paragraph: string;
 };
 
-export default function Slideshow({ slides }: { slides: Slide[] }) {
+export default function Slideshow({ slides, wide }: { slides: Slide[]; wide?: boolean }) {
   const [index, setIndex] = useState(0);
   const slide = slides[index];
 
@@ -16,7 +16,7 @@ export default function Slideshow({ slides }: { slides: Slide[] }) {
   const goNext = () => setIndex((i) => Math.min(slides.length - 1, i + 1));
 
   return (
-    <div className="slideshow">
+    <div className={wide ? "slideshow slideshow-wide" : "slideshow"}>
       <div className="slideshow-frame">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={slide.src} alt={slide.alt} className="slideshow-image" />

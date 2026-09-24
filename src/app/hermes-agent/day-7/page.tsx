@@ -86,7 +86,7 @@ const warnStyle: CSSProperties = {
 
 export default function HermesAgentDay7() {
   return (
-    <main style={{ maxWidth: 900, margin: "0 auto", padding: "4rem 2rem" }}>
+    <main style={{ maxWidth: 1400, margin: "0 auto", padding: "4rem 2rem" }}>
       <Link href="/hermes-agent" style={{ color: "#8888aa", textDecoration: "underline" }}>
         ← Agentic AI with Hermes Agent
       </Link>
@@ -97,7 +97,7 @@ export default function HermesAgentDay7() {
         Deploy a Production Hermes Agent
       </h1>
 
-      <Slideshow slides={SLIDES} />
+      <Slideshow slides={SLIDES} wide />
 
       <div className="description" style={{ margin: "0 auto 2rem", maxWidth: 700, textAlign: "left" }}>
         <p style={pStyle}>
