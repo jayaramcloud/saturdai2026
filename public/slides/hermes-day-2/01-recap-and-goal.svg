@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">From Talk to Terminal</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Day 1 was a talk. Day 2 is where the labs start.</text>
+
+  <g transform="translate(160,220)">
+    <rect width="560" height="480" rx="20" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="32" y="50" font-size="20" font-weight="700" fill="#9db1fb">Day 1 recap</text>
+    <text x="32" y="96" font-size="16" fill="#c0c0d0">✓ What an LLM is, and what makes an</text>
+    <text x="52" y="120" font-size="16" fill="#c0c0d0">agent different from a chatbot</text>
+    <text x="32" y="160" font-size="16" fill="#c0c0d0">✓ Hermes Agent is provider-agnostic —</text>
+    <text x="52" y="184" font-size="16" fill="#c0c0d0">any OpenAI-compatible endpoint</text>
+    <text x="32" y="224" font-size="16" fill="#c0c0d0">✓ First look at the DGX Spark and</text>
+    <text x="52" y="248" font-size="16" fill="#c0c0d0">Sanjay&#8217;s Mac Mini</text>
+    <text x="32" y="288" font-size="16" fill="#c0c0d0">✓ Preview of the 7-session arc</text>
+    <text x="32" y="328" font-size="16" fill="#c0c0d0">✓ Logistics: schedule and time zones</text>
+  </g>
+
+  <path d="M740,460 L860,460" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(880,220)">
+    <rect width="560" height="480" rx="20" fill="#8b5cf6" fill-opacity="0.20" stroke="#c4b5fd" stroke-width="3"/>
+    <text x="32" y="50" font-size="20" font-weight="700" fill="#c4b5fd">Today&#8217;s goal</text>
+    <text x="32" y="100" font-size="24" font-weight="700" fill="#ffffff">Get Hermes talking to a</text>
+    <text x="32" y="132" font-size="24" font-weight="700" fill="#ffffff">real local LLM, end to end</text>
+    <text x="32" y="182" font-size="16" fill="#e9e4fc">1. Point Hermes at a local endpoint</text>
+    <text x="32" y="214" font-size="16" fill="#e9e4fc">2. Send a one-shot prompt and get a</text>
+    <text x="52" y="238" font-size="16" fill="#e9e4fc">real response back</text>
+    <text x="32" y="278" font-size="16" fill="#e9e4fc">3. Run <tspan font-family="monospace">hermes doctor</tspan> to confirm</text>
+    <text x="52" y="302" font-size="16" fill="#e9e4fc">the whole setup is healthy</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

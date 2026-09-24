@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">hermes doctor: The Pre-Flight Check</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One command that checks everything before you build on top of it.</text>
+
+  <g transform="translate(160,210)">
+    <rect width="1280" height="70" rx="12" fill="#0a0a14" stroke="#33335a" stroke-width="2"/>
+    <text x="32" y="45" font-size="17" font-family="monospace" fill="#7be0a0">$ hermes doctor</text>
+  </g>
+
+  <g transform="translate(160,320)">
+    <rect width="620" height="130" rx="16" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="38" font-size="17" font-weight="700" fill="#7be0a0">✓ Endpoint reachable</text>
+    <text x="24" y="70" font-size="14" fill="#c0c0d0">Confirms the configured base URL</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">actually responds &#8212; catches typos.</text>
+  </g>
+
+  <g transform="translate(820,320)">
+    <rect width="620" height="130" rx="16" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="38" font-size="17" font-weight="700" fill="#7be0a0">✓ Chat template correct</text>
+    <text x="24" y="70" font-size="14" fill="#c0c0d0">Verifies the model&#8217;s expected format</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">matches what Hermes is sending.</text>
+  </g>
+
+  <g transform="translate(160,470)">
+    <rect width="620" height="130" rx="16" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="38" font-size="17" font-weight="700" fill="#7be0a0">✓ Dependencies present</text>
+    <text x="24" y="70" font-size="14" fill="#c0c0d0">Checks that tools like <tspan font-family="monospace">uvx</tspan> that</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">MCP servers rely on are on PATH.</text>
+  </g>
+
+  <g transform="translate(820,470)">
+    <rect width="620" height="130" rx="16" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="38" font-size="17" font-weight="700" fill="#7be0a0">✓ Model responds</text>
+    <text x="24" y="70" font-size="14" fill="#c0c0d0">Sends a tiny test prompt end-to-end</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">to confirm real generation works.</text>
+  </g>
+
+  <g transform="translate(160,650)">
+    <rect width="1280" height="150" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="32" y="42" font-size="17" font-weight="700" fill="#c4b5fd">Habit to build now</text>
+    <text x="32" y="76" font-size="15" fill="#c0c0d0">Run <tspan font-family="monospace">hermes doctor</tspan> before every new lab in this course, not just today. A five-second check</text>
+    <text x="32" y="100" font-size="15" fill="#c0c0d0">now saves twenty minutes of confused debugging later when an MCP server or RAG tool doesn&#8217;t work.</text>
+    <text x="32" y="124" font-size="15" fill="#c0c0d0">We&#8217;ll run it again at the very start of the Day 7 deployment capstone.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

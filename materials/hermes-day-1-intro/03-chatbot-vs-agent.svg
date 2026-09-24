@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Chatbot vs. Agent</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">What actually makes something &#8220;agentic&#8221; instead of just conversational.</text>
+
+  <!-- Left: chatbot single turn -->
+  <rect x="80" y="190" width="680" height="600" rx="24" fill="#5b7cfa" fill-opacity="0.10" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="120" y="240" font-size="24" font-weight="700" fill="#9db1fb">A Chatbot</text>
+  <text x="120" y="270" font-size="16" fill="#a0a0c0">One question, one answer. No memory of taking action.</text>
+
+  <rect x="140" y="320" width="560" height="80" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+  <text x="420" y="368" font-size="17" fill="#ffffff" text-anchor="middle">You ask a question</text>
+
+  <path d="M420,400 L420,440" stroke="#5b7cfa" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="140" y="450" width="560" height="80" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.15"/>
+  <text x="420" y="498" font-size="17" fill="#ffffff" text-anchor="middle">It replies with text</text>
+
+  <text x="420" y="600" font-size="18" font-weight="700" fill="#f3b978" text-anchor="middle">Done. Loop ends here.</text>
+  <text x="420" y="640" font-size="15" fill="#a0a0c0" text-anchor="middle">It cannot check its own answer,</text>
+  <text x="420" y="664" font-size="15" fill="#a0a0c0" text-anchor="middle">look anything up, or act on the world.</text>
+
+  <!-- Right: agent loop -->
+  <rect x="840" y="190" width="680" height="600" rx="24" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="2.5"/>
+  <text x="880" y="240" font-size="24" font-weight="700" fill="#c4b5fd">An Agent (Hermes)</text>
+  <text x="880" y="270" font-size="16" fill="#a0a0c0">A loop: perceive, decide, act, observe &#8212; repeat until done.</text>
+
+  <rect x="900" y="320" width="200" height="80" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="1000" y="368" font-size="15" fill="#ffffff" text-anchor="middle">Perceive task</text>
+
+  <path d="M1100,360 L1200,360" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1220" y="320" width="200" height="80" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="1320" y="368" font-size="15" fill="#ffffff" text-anchor="middle">Decide: call a tool</text>
+
+  <path d="M1320,400 L1320,440" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="1220" y="450" width="200" height="80" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="1320" y="498" font-size="15" fill="#ffffff" text-anchor="middle">Act: run the tool</text>
+
+  <path d="M1220,490 L1100,490" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="900" y="450" width="200" height="80" rx="14" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.2"/>
+  <text x="1000" y="498" font-size="15" fill="#ffffff" text-anchor="middle">Observe result</text>
+
+  <path d="M1000,450 C1000,420 1000,410 1000,400" stroke="#c4b5fd" stroke-width="3" stroke-dasharray="4 4" marker-end="url(#arrow)"/>
+
+  <text x="1180" y="600" font-size="18" font-weight="700" fill="#7ee2a0" text-anchor="middle">Repeats until the task is actually done</text>
+  <text x="1180" y="640" font-size="15" fill="#a0a0c0" text-anchor="middle">This loop &#8212; not the chat window &#8212;</text>
+  <text x="1180" y="664" font-size="15" fill="#a0a0c0" text-anchor="middle">is what this whole course is about.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">3 / 10</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow3" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Get Ready for Day 2</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Hands-on labs start Monday, Sep 28 &#8212; Hermes Fundamentals.</text>
+
+  <!-- Checklist -->
+  <g>
+    <circle cx="120" cy="240" r="16" fill="#8b5cf6" fill-opacity="0.3" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="120" y="247" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">1</text>
+    <text x="160" y="248" font-size="19" fill="#ffffff">Install Hermes Agent on your own machine before Day 2</text>
+  </g>
+
+  <g>
+    <circle cx="120" cy="320" r="16" fill="#8b5cf6" fill-opacity="0.3" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="120" y="327" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">2</text>
+    <text x="160" y="328" font-size="19" fill="#ffffff">Have a terminal ready &#8212; macOS, Linux, or WSL on Windows</text>
+  </g>
+
+  <g>
+    <circle cx="120" cy="400" r="16" fill="#8b5cf6" fill-opacity="0.3" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="120" y="407" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">3</text>
+    <text x="160" y="408" font-size="19" fill="#ffffff">Bookmark saturdai.com/hermes-agent for the full lab notes</text>
+  </g>
+
+  <g>
+    <circle cx="120" cy="480" r="16" fill="#8b5cf6" fill-opacity="0.3" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="120" y="487" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">4</text>
+    <text x="160" y="488" font-size="19" fill="#ffffff">If Hermes install fails, bring the exact error &#8212; we&#8217;ll debug it live</text>
+  </g>
+
+  <g>
+    <circle cx="120" cy="560" r="16" fill="#8b5cf6" fill-opacity="0.3" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="120" y="567" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">5</text>
+    <text x="160" y="568" font-size="19" fill="#ffffff">No install yet? That&#8217;s fine too &#8212; we&#8217;ll do it together on Day 2</text>
+  </g>
+
+  <!-- Closing banner -->
+  <rect x="80" y="660" width="1440" height="150" rx="22" fill="#8b5cf6" fill-opacity="0.18" stroke="#c4b5fd" stroke-width="3" filter="url(#glow3)"/>
+  <text x="800" y="712" font-size="24" font-weight="800" fill="#ffffff" text-anchor="middle">See you Monday, September 28. Let&#8217;s go. 🧠</text>
+  <text x="800" y="748" font-size="16" fill="#e9e4fc" text-anchor="middle">Hands-on. Real infrastructure. Real agents.</text>
+  <text x="800" y="778" font-size="14" fill="#c4b5fd" text-anchor="middle">saturdai.com/hermes-agent/day-2</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

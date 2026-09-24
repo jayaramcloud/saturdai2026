@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">When the Docs Don&#8217;t Cover It</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">RAG doesn&#8217;t remove the guessing problem by itself &#8212; how you prompt it does.</text>
+
+  <!-- bad outcome -->
+  <rect x="80" y="190" width="670" height="560" rx="22" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="240" font-size="32">&#10060;</text>
+  <text x="112" y="286" font-size="24" font-weight="800" fill="#ffffff">Confidently wrong</text>
+  <text x="112" y="320" font-size="16" fill="#e0c0c4">Retrieval returns weak or irrelevant</text>
+  <text x="112" y="342" font-size="16" fill="#e0c0c4">chunks, but the model still writes a</text>
+  <text x="112" y="364" font-size="16" fill="#e0c0c4">fluent, confident-sounding answer.</text>
+
+  <rect x="112" y="404" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="434" font-size="14" font-weight="700" fill="#f5a3ac">WORSE THAN NO RAG</text>
+  <text x="132" y="458" font-size="14" fill="#e0c0c4">Looks grounded, isn&#8217;t &#8212; harder to catch than a plain guess.</text>
+
+  <rect x="112" y="510" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="540" font-size="14" font-weight="700" fill="#f5a3ac">HOW IT HAPPENS</text>
+  <text x="132" y="564" font-size="14" fill="#e0c0c4">Model blends a weak chunk with its own prior training.</text>
+
+  <!-- good outcome -->
+  <rect x="850" y="190" width="670" height="560" rx="22" fill="#16a34a" fill-opacity="0.14" stroke="#86efac" stroke-width="3"/>
+  <text x="882" y="240" font-size="32">&#9989;</text>
+  <text x="882" y="286" font-size="24" font-weight="800" fill="#ffffff">Honestly uncertain</text>
+  <text x="882" y="320" font-size="16" fill="#e0f0e4">Instructed to answer only from the</text>
+  <text x="882" y="342" font-size="16" fill="#e0f0e4">retrieved chunks, Hermes says it can&#8217;t</text>
+  <text x="882" y="364" font-size="16" fill="#e0f0e4">find the answer &#8212; instead of guessing.</text>
+
+  <rect x="882" y="404" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="902" y="434" font-size="14" font-weight="700" fill="#86efac">TRUSTWORTHY</text>
+  <text x="902" y="458" font-size="14" fill="#e0f0e4">You know exactly when to go look elsewhere.</text>
+
+  <rect x="882" y="510" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="902" y="540" font-size="14" font-weight="700" fill="#86efac">HOW WE GET THIS</text>
+  <text x="902" y="564" font-size="14" fill="#e0f0e4">Prompt Hermes to answer only from retrieved context.</text>
+
+  <text x="800" y="800" font-size="17" fill="#c4b5fd" text-anchor="middle" font-style="italic">Today&#8217;s lab tests this on purpose &#8212; ask something outside the loaded docs and see which one happens.</text>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

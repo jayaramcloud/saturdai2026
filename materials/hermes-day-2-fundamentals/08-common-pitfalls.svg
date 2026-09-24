@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Three Ways Day 2 Goes Wrong</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Recognize these fast instead of guessing at random fixes.</text>
+
+  <g transform="translate(160,210)">
+    <rect width="1280" height="180" rx="18" fill="#3a2222" stroke="#6a3a3a" stroke-width="2.5"/>
+    <text x="32" y="44" font-size="19" font-weight="700" fill="#ff9d9d">Wrong endpoint URL</text>
+    <text x="32" y="80" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Symptom:</tspan> connection refused, or Hermes silently falls back to a cloud default.</text>
+    <text x="32" y="108" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Fix:</tspan> double-check the port <tspan font-family="monospace">llama-server</tspan> is actually listening on, and that</text>
+    <text x="32" y="132" font-size="15" fill="#e0c0c0">the URL ends in <tspan font-family="monospace">/v1</tspan> the way the OpenAI-compatible route expects.</text>
+    <text x="32" y="160" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Catch it with:</tspan> <tspan font-family="monospace">hermes doctor</tspan> &#8212; endpoint reachable check.</text>
+  </g>
+
+  <g transform="translate(160,410)">
+    <rect width="1280" height="180" rx="18" fill="#3a2222" stroke="#6a3a3a" stroke-width="2.5"/>
+    <text x="32" y="44" font-size="19" font-weight="700" fill="#ff9d9d">Missing API key placeholder</text>
+    <text x="32" y="80" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Symptom:</tspan> <tspan font-family="monospace">hermes config</tspan> won&#8217;t save, or errors on an empty field.</text>
+    <text x="32" y="108" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Fix:</tspan> local servers usually ignore the key entirely &#8212; enter any placeholder value</text>
+    <text x="32" y="132" font-size="15" fill="#e0c0c0">like <tspan font-family="monospace">not-needed</tspan> rather than leaving the field blank.</text>
+    <text x="32" y="160" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Catch it with:</tspan> the config step itself will refuse to save otherwise.</text>
+  </g>
+
+  <g transform="translate(160,610)">
+    <rect width="1280" height="180" rx="18" fill="#3a2222" stroke="#6a3a3a" stroke-width="2.5"/>
+    <text x="32" y="44" font-size="19" font-weight="700" fill="#ff9d9d">Mismatched chat template</text>
+    <text x="32" y="80" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Symptom:</tspan> the model answers, but rambles, ignores instructions, or never stops.</text>
+    <text x="32" y="108" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Fix:</tspan> confirm <tspan font-family="monospace">llama-server</tspan> was started with the correct chat template for</text>
+    <text x="32" y="132" font-size="15" fill="#e0c0c0">the model family you loaded &#8212; this is the single most common cause of weird output.</text>
+    <text x="32" y="160" font-size="15" fill="#e0c0c0"><tspan font-weight="700">Catch it with:</tspan> <tspan font-family="monospace">hermes doctor</tspan> &#8212; chat template check.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Chat Window vs. Agent CLI</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Both talk to an LLM. Only one of them can act on your behalf.</text>
+
+  <g transform="translate(140,210)">
+    <rect width="640" height="580" rx="22" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="32" y="52" font-size="24" font-weight="700" fill="#9db1fb">ChatGPT / Claude web</text>
+    <text x="32" y="106" font-size="16" fill="#ffffff">💬 One conversation at a time</text>
+    <text x="32" y="146" font-size="16" fill="#ffffff">🖱️ You copy-paste results manually</text>
+    <text x="32" y="186" font-size="16" fill="#ffffff">🚫 Can&#8217;t touch your filesystem</text>
+    <text x="32" y="226" font-size="16" fill="#ffffff">🚫 No MCP tool servers</text>
+    <text x="32" y="266" font-size="16" fill="#ffffff">🚫 Not scriptable from a terminal</text>
+    <text x="32" y="306" font-size="16" fill="#ffffff">✅ Great for open-ended thinking</text>
+    <text x="32" y="346" font-size="16" fill="#ffffff">✅ Zero setup, works in a browser</text>
+  </g>
+
+  <g transform="translate(820,210)">
+    <rect width="640" height="580" rx="22" fill="#8b5cf6" fill-opacity="0.20" stroke="#c4b5fd" stroke-width="3"/>
+    <text x="32" y="52" font-size="24" font-weight="700" fill="#c4b5fd">Hermes Agent (CLI)</text>
+    <text x="32" y="106" font-size="16" fill="#ffffff">⌨️ Scriptable, one-shot or interactive</text>
+    <text x="32" y="146" font-size="16" fill="#ffffff">📁 Can read/write files directly</text>
+    <text x="32" y="186" font-size="16" fill="#ffffff">🔌 Connects to MCP tool servers</text>
+    <text x="32" y="226" font-size="16" fill="#ffffff">🔁 Runs multi-step agent loops</text>
+    <text x="32" y="266" font-size="16" fill="#ffffff">🖥️ Works against any local model</text>
+    <text x="32" y="306" font-size="16" fill="#ffffff">✅ Built for this course&#8217;s labs</text>
+    <text x="32" y="346" font-size="16" fill="#ffffff">✅ What we&#8217;ll build a real agent with</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

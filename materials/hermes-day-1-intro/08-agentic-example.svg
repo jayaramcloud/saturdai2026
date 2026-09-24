@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow4" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#c4b5fd"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">&#8220;Agentic&#8221; in Practice</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One task, four real steps a chatbot alone can&#8217;t do.</text>
+
+  <!-- Task prompt banner -->
+  <rect x="80" y="190" width="1440" height="70" rx="16" fill="#8b5cf6" fill-opacity="0.18" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="800" y="234" font-size="17" font-style="italic" fill="#e9e4fc" text-anchor="middle">Task: &#8220;Check the time in Tokyo, then save a note reminding me to message the team at 9am their time.&#8221;</text>
+
+  <!-- Steps -->
+  <g>
+    <rect x="80" y="320" width="320" height="200" rx="18" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="240" y="360" font-size="16" font-weight="800" fill="#9db1fb" text-anchor="middle">1. Reason</text>
+    <text x="240" y="400" font-size="15" fill="#a0a0c0" text-anchor="middle">Hermes decides it needs</text>
+    <text x="240" y="422" font-size="15" fill="#a0a0c0" text-anchor="middle">the current time in Tokyo</text>
+    <text x="240" y="444" font-size="15" fill="#a0a0c0" text-anchor="middle">before it can compute 9am</text>
+    <text x="240" y="480" font-size="13" fill="#8888aa" text-anchor="middle">It cannot just guess this.</text>
+  </g>
+  <path d="M400,420 L440,420" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow4)"/>
+
+  <g>
+    <rect x="460" y="320" width="320" height="200" rx="18" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="620" y="360" font-size="16" font-weight="800" fill="#5fd4c6" text-anchor="middle">2. Call a tool</text>
+    <text x="620" y="400" font-size="15" fill="#a0a0c0" text-anchor="middle">Calls the MCP time server</text>
+    <text x="620" y="422" font-size="15" fill="#a0a0c0" text-anchor="middle">(Day 5 territory) and gets</text>
+    <text x="620" y="444" font-size="15" fill="#a0a0c0" text-anchor="middle">back the real Tokyo time</text>
+    <text x="620" y="480" font-size="13" fill="#8888aa" text-anchor="middle">A real action, not a chat reply.</text>
+  </g>
+  <path d="M780,420 L820,420" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow4)"/>
+
+  <g>
+    <rect x="840" y="320" width="320" height="200" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="1000" y="360" font-size="16" font-weight="800" fill="#f3b978" text-anchor="middle">3. Compute</text>
+    <text x="1000" y="400" font-size="15" fill="#a0a0c0" text-anchor="middle">Converts 9am Tokyo time</text>
+    <text x="1000" y="422" font-size="15" fill="#a0a0c0" text-anchor="middle">into your local time zone</text>
+    <text x="1000" y="444" font-size="15" fill="#a0a0c0" text-anchor="middle">using the tool&#8217;s real output</text>
+    <text x="1000" y="480" font-size="13" fill="#8888aa" text-anchor="middle">Grounded, not hallucinated.</text>
+  </g>
+  <path d="M1160,420 L1200,420" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow4)"/>
+
+  <g>
+    <rect x="1220" y="320" width="300" height="200" rx="18" fill="#8b5cf6" fill-opacity="0.24" stroke="#c4b5fd" stroke-width="3"/>
+    <text x="1370" y="360" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">4. Act again</text>
+    <text x="1370" y="400" font-size="15" fill="#e9e4fc" text-anchor="middle">Writes the reminder note</text>
+    <text x="1370" y="422" font-size="15" fill="#e9e4fc" text-anchor="middle">to a file &#8212; a second real</text>
+    <text x="1370" y="444" font-size="15" fill="#e9e4fc" text-anchor="middle">action, task complete</text>
+    <text x="1370" y="480" font-size="13" fill="#e9e4fc" text-anchor="middle">This chaining is Day 6.</text>
+  </g>
+
+  <text x="800" y="620" font-size="19" font-weight="700" fill="#ffffff" text-anchor="middle">Four steps, two real tool calls, zero guessing &#8212; that&#8217;s the difference &#8220;agentic&#8221; buys you.</text>
+  <text x="800" y="660" font-size="16" fill="#a0a0c0" text-anchor="middle">A plain chatbot could only have replied: &#8220;I don&#8217;t know the current time in Tokyo.&#8221;</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

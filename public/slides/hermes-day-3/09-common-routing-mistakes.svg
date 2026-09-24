@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Common Routing Mistakes</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Three habits worth catching early, before they become defaults.</text>
+
+  <g transform="translate(80,200)">
+    <rect width="1440" height="170" rx="16" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="45" font-size="16" font-weight="700" fill="#fcc9d0">MISTAKE 1</text>
+    <text x="30" y="85" font-size="22" font-weight="800" fill="#ffffff">Always defaulting to the big model &#8220;just in case&#8221;</text>
+    <text x="30" y="120" font-size="16" fill="#fcc9d0">Pays the latency and memory cost on every simple lookup, for no quality gain.</text>
+    <text x="30" y="145" font-size="16" fill="#fcc9d0">Fix: default to small, escalate deliberately.</text>
+  </g>
+
+  <g transform="translate(80,390)">
+    <rect width="1440" height="170" rx="16" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="45" font-size="16" font-weight="700" fill="#fcc9d0">MISTAKE 2</text>
+    <text x="30" y="85" font-size="22" font-weight="800" fill="#ffffff">Never re-checking a small-model answer that looks confident but is wrong</text>
+    <text x="30" y="120" font-size="16" fill="#fcc9d0">A fluent wrong answer is easy to miss when speed feels like a proxy for correctness.</text>
+    <text x="30" y="145" font-size="16" fill="#fcc9d0">Fix: spot-check outputs on tasks near the small model&#8217;s limit.</text>
+  </g>
+
+  <g transform="translate(80,580)">
+    <rect width="1440" height="170" rx="16" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="45" font-size="16" font-weight="700" fill="#fcc9d0">MISTAKE 3</text>
+    <text x="30" y="85" font-size="22" font-weight="800" fill="#ffffff">Loading both models but never actually comparing them</text>
+    <text x="30" y="120" font-size="16" fill="#fcc9d0">Routing decisions based on assumption, not on measured latency/quality data.</text>
+    <text x="30" y="145" font-size="16" fill="#fcc9d0">Fix: keep the comparison from Slide 8 as a running habit, not a one-off exercise.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#8212; Day 3</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

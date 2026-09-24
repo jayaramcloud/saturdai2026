@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">A Tour of Useful MCP Servers</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">The time server is one of dozens of ready-made servers you can register the same way.</text>
+
+  <g transform="translate(112,210)">
+    <rect width="360" height="180" rx="16" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#5fd4c6">Filesystem</text>
+    <text x="24" y="74" font-size="15" fill="#e0e0f0">Read, write, and list real</text>
+    <text x="24" y="98" font-size="15" fill="#e0e0f0">files on disk under a</text>
+    <text x="24" y="122" font-size="15" fill="#e0e0f0">directory you allow.</text>
+    <text x="24" y="154" font-size="13" fill="#8888aa" font-style="italic">Great for &#8220;summarize this folder.&#8221;</text>
+  </g>
+
+  <g transform="translate(500,210)">
+    <rect width="360" height="180" rx="16" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#f5a8c9">Web search</text>
+    <text x="24" y="74" font-size="15" fill="#e0e0f0">Pulls current, real-world</text>
+    <text x="24" y="98" font-size="15" fill="#e0e0f0">information the model&#8217;s</text>
+    <text x="24" y="122" font-size="15" fill="#e0e0f0">training data can&#8217;t have.</text>
+    <text x="24" y="154" font-size="13" fill="#8888aa" font-style="italic">&#8220;Summarize today&#8217;s top HN story.&#8221;</text>
+  </g>
+
+  <g transform="translate(888,210)">
+    <rect width="360" height="180" rx="16" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#9db1fb">Database</text>
+    <text x="24" y="74" font-size="15" fill="#e0e0f0">Runs structured queries</text>
+    <text x="24" y="98" font-size="15" fill="#e0e0f0">against a real database</text>
+    <text x="24" y="122" font-size="15" fill="#e0e0f0">instead of a static export.</text>
+    <text x="24" y="154" font-size="13" fill="#8888aa" font-style="italic">&#8220;How many rows changed today?&#8221;</text>
+  </g>
+
+  <g transform="translate(1276,210)">
+    <rect width="212" height="180" rx="16" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#f3b978">GitHub</text>
+    <text x="24" y="74" font-size="14" fill="#e0e0f0">Issues, PRs, and</text>
+    <text x="24" y="96" font-size="14" fill="#e0e0f0">repo contents as</text>
+    <text x="24" y="118" font-size="14" fill="#e0e0f0">callable tools.</text>
+  </g>
+
+  <rect x="112" y="440" width="1376" height="190" rx="18" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="2.5"/>
+  <text x="144" y="490" font-size="18" font-weight="800" fill="#ffffff">The pattern is always the same</text>
+  <text x="144" y="530" font-size="16" fill="#e9e4fc">Every one of these registers with the same <tspan font-family="monospace" fill="#f3b978">hermes mcp add</tspan> command &#8212;</text>
+  <text x="144" y="558" font-size="16" fill="#e9e4fc">only the name, command, and args change. Once you&#8217;ve wired up one server, wiring up</text>
+  <text x="144" y="586" font-size="16" fill="#e9e4fc">the next is the same five minutes of work, not a new integration from scratch.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

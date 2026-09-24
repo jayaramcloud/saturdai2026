@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Our Hardware: Mac Mini</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Sanjay&#8217;s second research machine, picked up after interning at Apple in Cupertino.</text>
+
+  <!-- Mac mini visual -->
+  <rect x="150" y="260" width="420" height="60" rx="12" fill="#ec4899" fill-opacity="0.20" stroke="#f5a8c9" stroke-width="3"/>
+  <rect x="170" y="300" width="380" height="18" rx="6" fill="#f5a8c9" fill-opacity="0.4"/>
+  <text x="360" y="300" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Apple Mac Mini</text>
+
+  <!-- Two-machine comparison -->
+  <rect x="150" y="380" width="640" height="380" rx="20" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="180" y="428" font-size="20" font-weight="700" fill="#5fd4c6">DGX Spark</text>
+  <text x="180" y="464" font-size="16" fill="#a0a0c0">Best for: bigger models,</text>
+  <text x="180" y="488" font-size="16" fill="#a0a0c0">multi-model routing, heavier RAG</text>
+  <text x="180" y="524" font-size="16" fill="#a0a0c0">indexes, and the Day 7 deployment.</text>
+
+  <rect x="150" y="560" width="640" height="1" fill="#ffffff" fill-opacity="0.1"/>
+  <text x="180" y="600" font-size="15" fill="#8888aa">Linux &#183; NVIDIA CUDA &#183; llama.cpp / vLLM</text>
+
+  <rect x="810" y="380" width="640" height="380" rx="20" fill="#ec4899" fill-opacity="0.14" stroke="#f5a8c9" stroke-width="2.5"/>
+  <text x="840" y="428" font-size="20" font-weight="700" fill="#f5a8c9">Mac Mini</text>
+  <text x="840" y="464" font-size="16" fill="#a0a0c0">Best for: quiet, efficient, always-on</text>
+  <text x="840" y="488" font-size="16" fill="#a0a0c0">local research &#8212; a second real target</text>
+  <text x="840" y="524" font-size="16" fill="#a0a0c0">to point Hermes Agent at, not just a demo.</text>
+
+  <rect x="810" y="560" width="640" height="1" fill="#ffffff" fill-opacity="0.1"/>
+  <text x="840" y="600" font-size="15" fill="#8888aa">macOS &#183; Apple Silicon &#183; llama.cpp (Metal)</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="150" y="800" width="1300" height="1" fill="#ffffff" fill-opacity="0"/>
+  <text x="800" y="810" font-size="17" fill="#ffffff" text-anchor="middle">Two different machines, one lesson: Hermes Agent doesn&#8217;t care which one answers &#8212; same commands either way.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">6 / 10</text>
+</svg>

@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow3" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The 7-Day Arc as a Pipeline</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Each session builds directly on the last &#8212; nothing is stand-alone.</text>
+
+  <!-- Pipeline stages -->
+  <g>
+    <rect x="90" y="260" width="200" height="180" rx="18" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="190" y="300" font-size="15" font-weight="800" fill="#9db1fb" text-anchor="middle">Day 2</text>
+    <text x="190" y="330" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Fundamentals</text>
+    <text x="190" y="360" font-size="13" fill="#a0a0c0" text-anchor="middle">Hermes talks to</text>
+    <text x="190" y="380" font-size="13" fill="#a0a0c0" text-anchor="middle">one local model</text>
+  </g>
+  <path d="M290,350 L320,350" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow3)"/>
+
+  <g>
+    <rect x="330" y="260" width="200" height="180" rx="18" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="430" y="300" font-size="15" font-weight="800" fill="#5fd4c6" text-anchor="middle">Day 3</text>
+    <text x="430" y="330" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">LLM Routing</text>
+    <text x="430" y="360" font-size="13" fill="#a0a0c0" text-anchor="middle">...now several</text>
+    <text x="430" y="380" font-size="13" fill="#a0a0c0" text-anchor="middle">models at once</text>
+  </g>
+  <path d="M530,350 L560,350" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow3)"/>
+
+  <g>
+    <rect x="570" y="260" width="200" height="180" rx="18" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2.5"/>
+    <text x="670" y="300" font-size="15" font-weight="800" fill="#f3b978" text-anchor="middle">Day 4</text>
+    <text x="670" y="330" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">RAG</text>
+    <text x="670" y="360" font-size="13" fill="#a0a0c0" text-anchor="middle">...grounded in</text>
+    <text x="670" y="380" font-size="13" fill="#a0a0c0" text-anchor="middle">real documents</text>
+  </g>
+  <path d="M770,350 L800,350" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow3)"/>
+
+  <g>
+    <rect x="810" y="260" width="200" height="180" rx="18" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="910" y="300" font-size="15" font-weight="800" fill="#f5a8c9" text-anchor="middle">Day 5</text>
+    <text x="910" y="330" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">MCPs</text>
+    <text x="910" y="360" font-size="13" fill="#a0a0c0" text-anchor="middle">...connected to</text>
+    <text x="910" y="380" font-size="13" fill="#a0a0c0" text-anchor="middle">outside systems</text>
+  </g>
+  <path d="M1010,350 L1040,350" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow3)"/>
+
+  <g>
+    <rect x="1050" y="260" width="200" height="180" rx="18" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="1150" y="300" font-size="15" font-weight="800" fill="#7ee2a0" text-anchor="middle">Day 6</text>
+    <text x="1150" y="330" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Tool Calling</text>
+    <text x="1150" y="360" font-size="13" fill="#a0a0c0" text-anchor="middle">...looping to</text>
+    <text x="1150" y="380" font-size="13" fill="#a0a0c0" text-anchor="middle">finish real tasks</text>
+  </g>
+  <path d="M1250,350 L1280,350" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow3)"/>
+
+  <g>
+    <rect x="1290" y="260" width="220" height="180" rx="18" fill="#8b5cf6" fill-opacity="0.24" stroke="#c4b5fd" stroke-width="3"/>
+    <text x="1400" y="300" font-size="15" font-weight="800" fill="#c4b5fd" text-anchor="middle">Day 7</text>
+    <text x="1400" y="330" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Deploy</text>
+    <text x="1400" y="360" font-size="13" fill="#e9e4fc" text-anchor="middle">...shipped as a</text>
+    <text x="1400" y="380" font-size="13" fill="#e9e4fc" text-anchor="middle">24x7 agent</text>
+  </g>
+
+  <!-- Bottom explainer -->
+  <rect x="90" y="520" width="1420" height="220" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="800" y="576" font-size="19" fill="#ffffff" text-anchor="middle">Skip a day and the next one gets harder to follow &#8212; Day 6&#8217;s tool-calling loops</text>
+  <text x="800" y="608" font-size="19" fill="#ffffff" text-anchor="middle">use the exact MCP servers registered on Day 5, and Day 7&#8217;s deployment ships</text>
+  <text x="800" y="640" font-size="19" fill="#ffffff" text-anchor="middle">everything built across Days 2&#8211;6 as one running agent.</text>
+  <text x="800" y="690" font-size="16" fill="#8888aa" text-anchor="middle">Miss a session? Every day&#8217;s written lab notes stay live at saturdai.com/hermes-agent.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

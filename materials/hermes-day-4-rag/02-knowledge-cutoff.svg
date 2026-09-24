@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow4" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The Knowledge-Cutoff Problem</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">An LLM only knows what existed before its training data was frozen.</text>
+
+  <!-- Timeline -->
+  <line x1="120" y1="420" x2="1480" y2="420" stroke="#3a3a5a" stroke-width="4"/>
+
+  <!-- Training data region -->
+  <rect x="120" y="380" width="700" height="80" rx="14" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2"/>
+  <text x="470" y="360" font-size="16" font-weight="700" fill="#9db1fb" text-anchor="middle">TRAINING DATA</text>
+  <text x="470" y="430" font-size="15" fill="#e0e0f0" text-anchor="middle">Everything the model learned during training</text>
+
+  <!-- Cutoff line -->
+  <line x1="820" y1="340" x2="820" y2="500" stroke="#f5576c" stroke-width="4"/>
+  <text x="820" y="320" font-size="18" font-weight="800" fill="#f5a3ac" text-anchor="middle">CUTOFF</text>
+  <text x="820" y="530" font-size="14" fill="#f5a3ac" text-anchor="middle">A hard line the model cannot see past</text>
+
+  <!-- Unknown region -->
+  <rect x="820" y="380" width="660" height="80" rx="14" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-width="2" stroke-dasharray="8,6"/>
+  <text x="1150" y="360" font-size="16" font-weight="700" fill="#f5a3ac" text-anchor="middle">EVERYTHING AFTER</text>
+  <text x="1150" y="430" font-size="15" fill="#e0c0c4" text-anchor="middle">Your documents. This morning&#8217;s news. Unknown.</text>
+
+  <!-- Example bubbles -->
+  <g transform="translate(160,600)">
+    <rect width="420" height="150" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#3a3a5a" stroke-width="2"/>
+    <text x="24" y="40" font-size="14" font-weight="700" fill="#9db1fb">MODEL KNOWS</text>
+    <text x="24" y="76" font-size="16" fill="#e0e0f0">General programming concepts,</text>
+    <text x="24" y="100" font-size="16" fill="#e0e0f0">history up to its cutoff, common</text>
+    <text x="24" y="124" font-size="16" fill="#e0e0f0">public knowledge.</text>
+  </g>
+
+  <g transform="translate(1020,600)">
+    <rect width="420" height="150" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#f5576c" stroke-width="2"/>
+    <text x="24" y="40" font-size="14" font-weight="700" fill="#f5a3ac">MODEL DOES NOT KNOW</text>
+    <text x="24" y="76" font-size="16" fill="#e0c0c4">Your course material, your team&#8217;s</text>
+    <text x="24" y="100" font-size="16" fill="#e0c0c4">private docs, or anything that</text>
+    <text x="24" y="124" font-size="16" fill="#e0c0c4">happened after training.</text>
+  </g>
+
+  <text x="800" y="800" font-size="17" fill="#c4b5fd" text-anchor="middle" font-style="italic">Asked about the unknown side, it will either say so &#8212; or confidently guess. RAG is how we fix that.</text>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

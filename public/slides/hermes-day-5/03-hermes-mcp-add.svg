@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The <tspan font-family="monospace">hermes mcp add</tspan> Command</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One command registers a new tool Hermes can call.</text>
+
+  <rect x="112" y="200" width="1376" height="90" rx="14" fill="#1a1a2e" stroke="#33335a" stroke-width="2"/>
+  <text x="144" y="256" font-size="24" font-family="monospace" fill="#e0e0f0">$ hermes mcp add <tspan fill="#5fd4c6">mcp-time</tspan> --command <tspan fill="#f3b978">uvx</tspan> --args <tspan fill="#f5a8c9">mcp-server-time</tspan></text>
+
+  <g transform="translate(112,340)">
+    <rect width="360" height="150" rx="14" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2"/>
+    <text x="24" y="40" font-size="16" font-weight="700" fill="#5fd4c6" font-family="monospace">mcp-time</text>
+    <text x="24" y="72" font-size="15" fill="#e0e0f0">The name Hermes will use</text>
+    <text x="24" y="96" font-size="15" fill="#e0e0f0">to refer to this server from</text>
+    <text x="24" y="120" font-size="15" fill="#e0e0f0">now on &#8212; pick something clear.</text>
+  </g>
+
+  <g transform="translate(520,340)">
+    <rect width="360" height="150" rx="14" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2"/>
+    <text x="24" y="40" font-size="16" font-weight="700" fill="#f3b978" font-family="monospace">--command uvx</text>
+    <text x="24" y="72" font-size="15" fill="#e0e0f0">The program that starts the</text>
+    <text x="24" y="96" font-size="15" fill="#e0e0f0">server &#8212; must be something</text>
+    <text x="24" y="120" font-size="15" fill="#e0e0f0">Hermes can actually find on PATH.</text>
+  </g>
+
+  <g transform="translate(928,340)">
+    <rect width="360" height="150" rx="14" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2"/>
+    <text x="24" y="40" font-size="16" font-weight="700" fill="#f5a8c9" font-family="monospace">--args mcp-server-time</text>
+    <text x="24" y="72" font-size="15" fill="#e0e0f0">What to run with that</text>
+    <text x="24" y="96" font-size="15" fill="#e0e0f0">command &#8212; the actual</text>
+    <text x="24" y="120" font-size="15" fill="#e0e0f0">MCP server package.</text>
+  </g>
+
+  <rect x="112" y="560" width="1376" height="120" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="144" y="610" font-size="17" fill="#e0e0f0">&#9888;&#65039; Order matters: any flag meant for <tspan font-family="monospace" fill="#f3b978">hermes mcp add</tspan> itself has to come</text>
+  <text x="144" y="640" font-size="17" fill="#e0e0f0">before <tspan font-family="monospace" fill="#f5a8c9">--args</tspan> &#8212; anything after that point is handed straight to the server.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">3 / 10</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Recap &amp; What&#8217;s Next</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Day 4 grounded Hermes in real data. Day 5 connects it to the outside world.</text>
+
+  <rect x="80" y="190" width="670" height="560" rx="22" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="112" y="240" font-size="14" font-weight="700" fill="#c4b5fd">TODAY&#8217;S FIVE TAKEAWAYS</text>
+  <text x="112" y="284" font-size="18" font-weight="700" fill="#ffffff">1. LLMs freeze at training time</text>
+  <text x="112" y="330" font-size="18" font-weight="700" fill="#ffffff">2. RAG: chunk &#8594; embed &#8594; store &#8594; retrieve</text>
+  <text x="112" y="376" font-size="18" font-weight="700" fill="#ffffff">3. ChromaDB is the vector store</text>
+  <text x="112" y="422" font-size="18" font-weight="700" fill="#ffffff">4. Hermes calls retrieval as an MCP tool</text>
+  <text x="112" y="468" font-size="18" font-weight="700" fill="#ffffff">5. Honest uncertainty beats a fluent guess</text>
+
+  <rect x="112" y="510" width="606" height="200" rx="14" fill="#ffffff" fill-opacity="0.06"/>
+  <text x="132" y="546" font-size="14" font-weight="700" fill="#c4b5fd">CHUNK SIZE MATTERS</text>
+  <text x="132" y="576" font-size="15" fill="#e9e4fc">Small = precise but narrow.</text>
+  <text x="132" y="600" font-size="15" fill="#e9e4fc">Large = broad but noisy.</text>
+  <text x="132" y="640" font-size="14" font-weight="700" fill="#c4b5fd">WATCH FOR</text>
+  <text x="132" y="666" font-size="15" fill="#e9e4fc">Wrong collection, stale index, irrelevant hits.</text>
+
+  <rect x="850" y="190" width="670" height="560" rx="22" fill="#5b7cfa" fill-opacity="0.12" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="882" y="240" font-size="14" font-weight="700" fill="#9db1fb">NEXT &#8226; DAY 5</text>
+  <text x="882" y="284" font-size="24" font-weight="800" fill="#ffffff">MCPs for Hermes</text>
+  <text x="882" y="320" font-size="16" fill="#c0c0d0">Retrieval was our first MCP tool. Day 5</text>
+  <text x="882" y="342" font-size="16" fill="#c0c0d0">generalizes the pattern to any external</text>
+  <text x="882" y="364" font-size="16" fill="#c0c0d0">system Hermes needs to reach.</text>
+
+  <rect x="882" y="404" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="902" y="434" font-size="14" font-weight="700" fill="#9db1fb">REGISTER A NEW SERVER</text>
+  <text x="902" y="458" font-size="14" fill="#c0c0d0">hermes mcp add mcp-time --command uvx --args mcp-server-time</text>
+
+  <rect x="882" y="510" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="902" y="540" font-size="14" font-weight="700" fill="#9db1fb">FORCE A REAL TOOL CALL</text>
+  <text x="902" y="564" font-size="14" fill="#c0c0d0">A question only the tool, not a guess, can answer correctly.</text>
+
+  <text x="882" y="660" font-size="16" fill="#c0c0d0">See you Monday, Oct 5 for MCPs.</text>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

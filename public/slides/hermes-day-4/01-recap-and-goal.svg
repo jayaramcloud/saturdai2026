@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Day 4: RAG with Hermes</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Grounding Hermes Agent in real data, instead of letting it guess.</text>
+
+  <!-- Recap card -->
+  <rect x="80" y="190" width="670" height="560" rx="22" fill="#5b7cfa" fill-opacity="0.12" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="112" y="240" font-size="14" font-weight="700" fill="#9db1fb">RECAP &#8226; DAY 3</text>
+  <text x="112" y="284" font-size="24" font-weight="800" fill="#ffffff">LLM Routing with Hermes</text>
+  <text x="112" y="320" font-size="16" fill="#c0c0d0">We registered more than one local model</text>
+  <text x="112" y="342" font-size="16" fill="#c0c0d0">endpoint and routed requests between them &#8212;</text>
+  <text x="112" y="364" font-size="16" fill="#c0c0d0">small &amp; fast vs. large &amp; capable.</text>
+
+  <rect x="112" y="404" width="606" height="130" rx="12" fill="#ffffff" fill-opacity="0.05"/>
+  <text x="132" y="436" font-size="14" font-weight="700" fill="#9db1fb">STILL A GAP</text>
+  <text x="132" y="462" font-size="14" fill="#c0c0d0">No matter which model answers, it only knows</text>
+  <text x="132" y="484" font-size="14" fill="#c0c0d0">what it was trained on &#8212; nothing about our</text>
+  <text x="132" y="506" font-size="14" fill="#c0c0d0">course material, our documents, or today&#8217;s news.</text>
+
+  <text x="112" y="590" font-size="16" fill="#c0c0d0">Routing picks the right model. It doesn&#8217;t give</text>
+  <text x="112" y="612" font-size="16" fill="#c0c0d0">any model new knowledge.</text>
+
+  <!-- Today's goal -->
+  <rect x="850" y="190" width="670" height="560" rx="22" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="882" y="240" font-size="14" font-weight="700" fill="#c4b5fd">TODAY &#8226; DAY 4</text>
+  <text x="882" y="284" font-size="24" font-weight="800" fill="#ffffff">Ground Hermes in real data</text>
+  <text x="882" y="320" font-size="16" fill="#e9e4fc">Retrieval-Augmented Generation (RAG) lets</text>
+  <text x="882" y="342" font-size="16" fill="#e9e4fc">Hermes look things up before it answers.</text>
+
+  <rect x="882" y="374" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="902" y="404" font-size="14" font-weight="700" fill="#c4b5fd">STAND UP A VECTOR STORE</text>
+  <text x="902" y="428" font-size="14" fill="#e0e0f0">ChromaDB, loaded with real course documents.</text>
+
+  <rect x="882" y="480" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="902" y="510" font-size="14" font-weight="700" fill="#c4b5fd">WIRE IT IN AS A TOOL</text>
+  <text x="902" y="534" font-size="14" fill="#e0e0f0">Hermes calls retrieval itself, mid-conversation.</text>
+
+  <rect x="882" y="586" width="606" height="90" rx="12" fill="#ffffff" fill-opacity="0.08"/>
+  <text x="902" y="616" font-size="14" font-weight="700" fill="#c4b5fd">TEST BOTH SIDES</text>
+  <text x="902" y="640" font-size="14" fill="#e0e0f0">A grounded question, and one the docs don&#8217;t cover.</text>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

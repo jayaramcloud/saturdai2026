@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Course Logistics</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Everything you need to know to show up ready.</text>
+
+  <!-- Schedule card -->
+  <rect x="80" y="190" width="700" height="280" rx="20" fill="#5b7cfa" fill-opacity="0.12" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="110" y="238" font-size="22" font-weight="700" fill="#9db1fb">Schedule</text>
+  <text x="110" y="278" font-size="17" fill="#ffffff">Mon &#8211; Wed &#8211; Fri</text>
+  <text x="110" y="306" font-size="17" fill="#ffffff">6:00 &#8211; 7:00 PM MST</text>
+  <text x="110" y="344" font-size="16" fill="#a0a0c0">7 sessions total</text>
+  <text x="110" y="370" font-size="16" fill="#a0a0c0">Fri Sep 25 &#8211; Fri Oct 9, 2026</text>
+  <text x="110" y="410" font-size="15" fill="#8888aa">Day 1 is a talk &#8212; labs start Day 2</text>
+  <text x="110" y="436" font-size="15" fill="#8888aa">and run every session after that</text>
+
+  <!-- Time zones card -->
+  <rect x="820" y="190" width="700" height="280" rx="20" fill="#0d9488" fill-opacity="0.12" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="850" y="238" font-size="22" font-weight="700" fill="#5fd4c6">Time Zones</text>
+  <text x="850" y="280" font-size="18" fill="#ffffff">6:00 PM MST &#8212; Calgary</text>
+  <text x="850" y="312" font-size="18" fill="#ffffff">5:00 PM PST &#8212; Pacific</text>
+  <text x="850" y="344" font-size="18" fill="#ffffff">7:00 PM EST &#8212; Eastern</text>
+  <text x="850" y="376" font-size="18" fill="#ffffff">7:30 AM IST &#8212; India (next day)</text>
+  <text x="850" y="420" font-size="15" fill="#8888aa">Recordings posted for anyone who</text>
+  <text x="850" y="446" font-size="15" fill="#8888aa">can&#8217;t make a live time slot.</text>
+
+  <!-- Cost / access card -->
+  <rect x="80" y="500" width="700" height="220" rx="20" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+  <text x="110" y="548" font-size="22" font-weight="700" fill="#f3b978">Cost &amp; Access</text>
+  <text x="110" y="588" font-size="18" fill="#ffffff">100% free &#183; open to everyone</text>
+  <text x="110" y="620" font-size="16" fill="#a0a0c0">No prerequisites &#8212; just curiosity</text>
+  <text x="110" y="652" font-size="16" fill="#a0a0c0">Remote access to the DGX Spark</text>
+  <text x="110" y="678" font-size="16" fill="#a0a0c0">shared with everyone attending</text>
+
+  <!-- Sign up card -->
+  <rect x="820" y="500" width="700" height="220" rx="20" fill="#8b5cf6" fill-opacity="0.18" stroke="#c4b5fd" stroke-width="2.5"/>
+  <text x="850" y="548" font-size="22" font-weight="700" fill="#c4b5fd">Sign Up &amp; Questions</text>
+  <text x="850" y="588" font-size="18" fill="#ffffff">saturdai.com</text>
+  <text x="850" y="622" font-size="16" fill="#a0a0c0">jayaram.linux@gmail.com</text>
+  <text x="850" y="656" font-size="16" fill="#a0a0c0">Full curriculum: /hermes-agent</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

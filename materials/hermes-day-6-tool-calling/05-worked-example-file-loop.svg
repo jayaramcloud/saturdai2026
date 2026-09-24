@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Worked Example: Write, Then Read</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Two chained tool calls in a single Hermes turn — the simplest real loop.</text>
+
+  <text x="80" y="210" font-size="18" fill="#c0c0d0" font-family="monospace">hermes -z "Create a file at /tmp/hermes-demo.txt containing some text,</text>
+  <text x="80" y="238" font-size="18" fill="#c0c0d0" font-family="monospace">then read it back and show me the contents." --cli --yolo</text>
+
+  <g transform="translate(80,300)">
+    <rect width="340" height="160" rx="18" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#9db1fb">CALL 1</text>
+    <text x="24" y="72" font-size="18" font-weight="700" fill="#ffffff">write_file</text>
+    <text x="24" y="102" font-size="14" fill="#c0c0d0">path: /tmp/hermes-demo.txt</text>
+    <text x="24" y="124" font-size="14" fill="#c0c0d0">content: "Hello from Hermes"</text>
+  </g>
+
+  <path d="M420,380 L520,380" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(520,300)">
+    <rect width="340" height="160" rx="18" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#5fd4c6">RESULT 1</text>
+    <text x="24" y="72" font-size="18" font-weight="700" fill="#ffffff">File written</text>
+    <text x="24" y="102" font-size="14" fill="#c0c0d0">Hermes sees: success,</text>
+    <text x="24" y="124" font-size="14" fill="#c0c0d0">14 bytes written.</text>
+  </g>
+
+  <path d="M860,380 C920,380 900,380 960,380" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="880" y="360" font-size="13" fill="#f3b978" font-style="italic">decides: not done yet</text>
+
+  <g transform="translate(960,300)">
+    <rect width="340" height="160" rx="18" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#f5a8c9">CALL 2</text>
+    <text x="24" y="72" font-size="18" font-weight="700" fill="#ffffff">read_file</text>
+    <text x="24" y="102" font-size="14" fill="#c0c0d0">path: /tmp/hermes-demo.txt</text>
+  </g>
+
+  <path d="M1180,460 L1180,520" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(940,520)">
+    <rect width="480" height="150" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#f3b978">FINAL ANSWER</text>
+    <text x="24" y="76" font-size="16" fill="#ffffff">"I created the file and read it back —</text>
+    <text x="24" y="102" font-size="16" fill="#ffffff">it contains: 'Hello from Hermes'."</text>
+  </g>
+
+  <rect x="80" y="700" width="800" height="120" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="104" y="738" font-size="16" font-weight="700" fill="#f3b978">🔎 What to watch for</text>
+  <text x="104" y="766" font-size="14" fill="#c0c0d0">Two separate tool calls, one after another, with no human in between —</text>
+  <text x="104" y="788" font-size="14" fill="#c0c0d0">Hermes decided on its own that reading was the necessary next step.</text>
+
+  <text x="80" y="870" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="870" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

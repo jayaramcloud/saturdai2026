@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Recap &amp; What&#8217;s Next</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Day 3 in three sentences, then a look ahead to Day 4.</text>
+
+  <g transform="translate(80,200)">
+    <rect width="1440" height="360" rx="18" fill="#0d9488" fill-opacity="0.10" stroke="#0d9488" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="50" font-size="18" font-weight="700" fill="#5fd4c6">TODAY, WE:</text>
+    <text x="30" y="100" font-size="19" fill="#e0fff8">1. Registered a second local provider alongside the first</text>
+    <text x="30" y="150" font-size="19" fill="#e0fff8">2. Routed a quick lookup to the small model and a reasoning task to the large one</text>
+    <text x="30" y="200" font-size="19" fill="#e0fff8">3. Measured latency and quality instead of assuming either</text>
+    <text x="30" y="250" font-size="19" fill="#e0fff8">4. Named the mistakes that turn multiple models into wasted capacity</text>
+    <text x="30" y="310" font-size="16" fill="#8888aa" font-style="italic">The lab commands for these steps are just below the deck on this page.</text>
+  </g>
+
+  <g transform="translate(80,600)">
+    <rect width="1440" height="200" rx="18" fill="#8b5cf6" fill-opacity="0.10" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="50" font-size="18" font-weight="700" fill="#c4b5fd">NEXT: DAY 4 &#8212; RAG WITH HERMES</text>
+    <text x="30" y="95" font-size="19" fill="#e9d4fd">A model &#8212; small or large &#8212; only knows what it was trained on.</text>
+    <text x="30" y="130" font-size="19" fill="#e9d4fd">Day 4 grounds Hermes in real documents so it stops guessing and starts citing.</text>
+    <text x="30" y="170" font-size="15" fill="#8888aa">Fri, Oct 2, 2026 &#8212; 6:00pm MST</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#8212; Day 3</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow10" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Recap &#38; What&#8217;s Next</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">You now have a working Hermes → local LLM connection. Everything else builds on it.</text>
+
+  <g transform="translate(160,220)">
+    <rect width="560" height="480" rx="20" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="32" y="50" font-size="20" font-weight="700" fill="#9db1fb">Day 2 recap</text>
+    <text x="32" y="100" font-size="16" fill="#c0c0d0">✓ Hermes is provider-agnostic &#8212;</text>
+    <text x="52" y="124" font-size="16" fill="#c0c0d0">any OpenAI-compatible /v1 endpoint</text>
+    <text x="32" y="164" font-size="16" fill="#c0c0d0">✓ Configured a custom local provider</text>
+    <text x="52" y="188" font-size="16" fill="#c0c0d0">with <tspan font-family="monospace">hermes config</tspan></text>
+    <text x="32" y="228" font-size="16" fill="#c0c0d0">✓ Ran a real one-shot round trip</text>
+    <text x="52" y="252" font-size="16" fill="#c0c0d0">against a local model</text>
+    <text x="32" y="292" font-size="16" fill="#c0c0d0">✓ Learned why chat templates matter</text>
+    <text x="32" y="332" font-size="16" fill="#c0c0d0">✓ Confirmed health with <tspan font-family="monospace">hermes doctor</tspan></text>
+  </g>
+
+  <path d="M740,460 L860,460" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow10)"/>
+
+  <g transform="translate(880,220)">
+    <rect width="560" height="480" rx="20" fill="#0d9488" fill-opacity="0.20" stroke="#0d9488" stroke-width="3"/>
+    <text x="32" y="50" font-size="20" font-weight="700" fill="#5fd4c6">Day 3: LLM Routing</text>
+    <text x="32" y="100" font-size="16" fill="#e9e4fc">Wed, Sep 30, 2026</text>
+    <text x="32" y="150" font-size="16" fill="#ffffff">The DGX Spark&#8217;s 128 GB can hold</text>
+    <text x="32" y="174" font-size="16" fill="#ffffff">more than one model at once.</text>
+    <text x="32" y="214" font-size="16" fill="#ffffff">We&#8217;ll register a second local</text>
+    <text x="32" y="238" font-size="16" fill="#ffffff">endpoint and route requests to</text>
+    <text x="32" y="262" font-size="16" fill="#ffffff">whichever model fits the task &#8212;</text>
+    <text x="32" y="286" font-size="16" fill="#ffffff">a fast small model for quick</text>
+    <text x="32" y="310" font-size="16" fill="#ffffff">lookups, a larger one for depth.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

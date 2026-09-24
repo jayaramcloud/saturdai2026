@@ -1,0 +1,48 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">From Grounded Answers to Real Actions</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Day 4 taught Hermes to know things. Day 5 teaches it to reach things.</text>
+
+  <rect x="112" y="200" width="620" height="440" rx="20" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="144" y="250" font-size="20" font-weight="800" fill="#5fd4c6">Day 4 recap</text>
+  <text x="144" y="290" font-size="16" fill="#e0e0f0">Hermes could look up real</text>
+  <text x="144" y="314" font-size="16" fill="#e0e0f0">documents in a vector store</text>
+  <text x="144" y="338" font-size="16" fill="#e0e0f0">before answering a question.</text>
+  <text x="144" y="380" font-size="16" fill="#c0c0d0" font-style="italic">Grounded in data — but still</text>
+  <text x="144" y="404" font-size="16" fill="#c0c0d0" font-style="italic">read-only, still passive.</text>
+
+  <text x="780" y="440" font-size="36" fill="#a0a0c0" text-anchor="middle">&#8594;</text>
+
+  <rect x="868" y="200" width="620" height="440" rx="20" fill="#8b5cf6" fill-opacity="0.16" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="900" y="250" font-size="20" font-weight="800" fill="#ffffff">Today&#8217;s goal: MCP</text>
+  <text x="900" y="290" font-size="16" fill="#e9e4fc">Connect Hermes to real</text>
+  <text x="900" y="314" font-size="16" fill="#e9e4fc">external systems &#8212; a clock,</text>
+  <text x="900" y="338" font-size="16" fill="#e9e4fc">a filesystem, a search engine,</text>
+  <text x="900" y="362" font-size="16" fill="#e9e4fc">a database &#8212; over one</text>
+  <text x="900" y="386" font-size="16" fill="#e9e4fc">standard protocol.</text>
+  <text x="900" y="430" font-size="16" fill="#c4b5fd" font-style="italic">By the end of today, Hermes</text>
+  <text x="900" y="454" font-size="16" fill="#c4b5fd" font-style="italic">answers questions it could only</text>
+  <text x="900" y="478" font-size="16" fill="#c4b5fd" font-style="italic">get right by actually calling a tool.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

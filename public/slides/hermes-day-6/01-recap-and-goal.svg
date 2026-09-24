@@ -1,0 +1,54 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">From One Call to a Loop</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Day 5 gave Hermes a tool. Today it learns to keep using tools until the job is done.</text>
+
+  <g transform="translate(80,220)">
+    <rect width="380" height="420" rx="18" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="28" y="48" font-size="16" font-weight="700" fill="#9db1fb">DAY 5 RECAP</text>
+    <text x="28" y="90" font-size="22" font-weight="700" fill="#ffffff">One tool, one call</text>
+    <text x="28" y="130" font-size="15" fill="#c0c0d0">Hermes registered an MCP</text>
+    <text x="28" y="153" font-size="15" fill="#c0c0d0">server and called it once to</text>
+    <text x="28" y="176" font-size="15" fill="#c0c0d0">answer a single question.</text>
+    <text x="28" y="230" font-size="15" fill="#c0c0d0">"What time is it in Tokyo?"</text>
+    <text x="28" y="260" font-size="15" fill="#c0c0d0">→ one call → one answer.</text>
+  </g>
+
+  <g transform="translate(1140,220)">
+    <rect width="380" height="420" rx="18" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="28" y="48" font-size="16" font-weight="700" fill="#c4b5fd">TODAY</text>
+    <text x="28" y="90" font-size="22" font-weight="700" fill="#ffffff">Many calls, one loop</text>
+    <text x="28" y="130" font-size="15" fill="#c0c0d0">Hermes decides it needs</text>
+    <text x="28" y="153" font-size="15" fill="#c0c0d0">another tool after seeing a</text>
+    <text x="28" y="176" font-size="15" fill="#c0c0d0">result, and keeps going.</text>
+    <text x="28" y="230" font-size="15" fill="#c0c0d0">write file → read file →</text>
+    <text x="28" y="253" font-size="15" fill="#c0c0d0">run code → delegate →</text>
+    <text x="28" y="276" font-size="15" fill="#c0c0d0">answer, all in one turn.</text>
+  </g>
+
+  <path d="M460,430 C650,430 950,430 1140,430" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="660" y="400" font-size="16" fill="#f3b978" font-style="italic">the agent loop</text>
+
+  <rect x="500" y="700" width="600" height="110" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="524" y="738" font-size="16" font-weight="700" fill="#f3b978">🎯 Today's goal</text>
+  <text x="524" y="766" font-size="14" fill="#c0c0d0">Give Hermes tasks that take more than one tool call, and watch</text>
+  <text x="524" y="788" font-size="14" fill="#c0c0d0">it decide when to stop — not just call tools, but reason about them.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Retrieval as an MCP Tool</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Not a manual copy-paste step &#8212; Hermes calls it itself.</text>
+
+  <!-- Manual way (crossed out) -->
+  <rect x="80" y="190" width="670" height="300" rx="22" fill="#f5576c" fill-opacity="0.10" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="112" y="240" font-size="14" font-weight="700" fill="#f5a3ac">THE OLD WAY</text>
+  <text x="112" y="280" font-size="20" font-weight="800" fill="#ffffff">Manual copy-paste RAG</text>
+  <text x="112" y="316" font-size="15" fill="#e0c0c4">1. You search the vector store yourself</text>
+  <text x="112" y="346" font-size="15" fill="#e0c0c4">2. You copy the results into the chat</text>
+  <text x="112" y="376" font-size="15" fill="#e0c0c4">3. You ask the question, hoping you</text>
+  <text x="132" y="404" font-size="15" fill="#e0c0c4">grabbed the right passage</text>
+  <text x="112" y="450" font-size="15" fill="#f5a3ac" font-weight="700">Slow, easy to forget, doesn&#8217;t scale.</text>
+
+  <!-- MCP way -->
+  <rect x="850" y="190" width="670" height="300" rx="22" fill="#16a34a" fill-opacity="0.14" stroke="#86efac" stroke-width="3"/>
+  <text x="882" y="240" font-size="14" font-weight="700" fill="#86efac">TODAY&#8217;S WAY</text>
+  <text x="882" y="280" font-size="20" font-weight="800" fill="#ffffff">Registered as an MCP tool</text>
+  <text x="882" y="316" font-size="15" fill="#e0f0e4">1. hermes mcp add chroma-rag ...</text>
+  <text x="882" y="346" font-size="15" fill="#e0f0e4">2. You just ask your question in plain</text>
+  <text x="902" y="374" font-size="15" fill="#e0f0e4">English</text>
+  <text x="882" y="404" font-size="15" fill="#e0f0e4">3. Hermes decides on its own to call</text>
+  <text x="902" y="432" font-size="15" fill="#e0f0e4">the retrieval tool before answering</text>
+  <text x="882" y="470" font-size="15" fill="#86efac" font-weight="700">Repeatable, and it happens every time.</text>
+
+  <!-- Flow strip -->
+  <g transform="translate(80,560)">
+    <rect width="1440" height="240" rx="20" fill="#ffffff" fill-opacity="0.04" stroke="#3a3a5a" stroke-width="2"/>
+    <text x="30" y="46" font-size="16" font-weight="700" fill="#c4b5fd">WHAT HERMES ACTUALLY DOES</text>
+    <text x="60" y="100" font-size="40" text-anchor="middle">&#128172;</text>
+    <text x="60" y="140" font-size="14" fill="#c0c0d0" text-anchor="middle">Your</text>
+    <text x="60" y="158" font-size="14" fill="#c0c0d0" text-anchor="middle">question</text>
+    <text x="240" y="112" font-size="26" fill="#a0a0c0">&#8594;</text>
+    <text x="420" y="100" font-size="40" text-anchor="middle">&#129504;</text>
+    <text x="420" y="140" font-size="14" fill="#c0c0d0" text-anchor="middle">Hermes decides:</text>
+    <text x="420" y="158" font-size="14" fill="#c0c0d0" text-anchor="middle">"I should search"</text>
+    <text x="600" y="112" font-size="26" fill="#a0a0c0">&#8594;</text>
+    <text x="780" y="100" font-size="40" text-anchor="middle">&#128451;&#65039;</text>
+    <text x="780" y="140" font-size="14" fill="#c0c0d0" text-anchor="middle">Calls chroma-rag,</text>
+    <text x="780" y="158" font-size="14" fill="#c0c0d0" text-anchor="middle">gets chunks back</text>
+    <text x="960" y="112" font-size="26" fill="#a0a0c0">&#8594;</text>
+    <text x="1140" y="100" font-size="40" text-anchor="middle">&#9997;&#65039;</text>
+    <text x="1140" y="140" font-size="14" fill="#c0c0d0" text-anchor="middle">Answers, citing</text>
+    <text x="1140" y="158" font-size="14" fill="#c0c0d0" text-anchor="middle">what it found</text>
+  </g>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

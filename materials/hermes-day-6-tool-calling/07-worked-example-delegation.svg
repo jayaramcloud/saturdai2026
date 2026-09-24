@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Worked Example: Delegation</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A tool call can spawn another agent, not just a function.</text>
+
+  <text x="80" y="200" font-size="17" fill="#c0c0d0" font-family="monospace">hermes -z "Delegate a subagent to write a haiku about local LLMs,</text>
+  <text x="80" y="226" font-size="17" fill="#c0c0d0" font-family="monospace">then show me what the subagent returned." --cli --yolo</text>
+
+  <g transform="translate(150,290)">
+    <rect width="360" height="150" rx="18" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#9db1fb">MAIN AGENT</text>
+    <text x="24" y="76" font-size="18" font-weight="700" fill="#ffffff">Hermes</text>
+    <text x="24" y="106" font-size="14" fill="#c0c0d0">Decides the haiku task is</text>
+    <text x="24" y="128" font-size="14" fill="#c0c0d0">separable — delegates it.</text>
+  </g>
+
+  <path d="M510,365 C620,365 700,365 800,365" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="560" y="345" font-size="13" fill="#f3b978" font-style="italic">delegate_subagent(task)</text>
+
+  <g transform="translate(800,290)">
+    <rect width="360" height="150" rx="18" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#c4b5fd">SUBAGENT</text>
+    <text x="24" y="76" font-size="18" font-weight="700" fill="#ffffff">Fresh context</text>
+    <text x="24" y="106" font-size="14" fill="#c0c0d0">Writes the haiku with no</text>
+    <text x="24" y="128" font-size="14" fill="#c0c0d0">memory of the parent turn.</text>
+  </g>
+
+  <path d="M800,470 C700,470 620,470 510,470" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="560" y="450" font-size="13" fill="#f3b978" font-style="italic">returns finished haiku</text>
+
+  <g transform="translate(150,470)">
+    <rect width="360" height="150" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#f3b978">MAIN AGENT</text>
+    <text x="24" y="76" font-size="16" font-weight="700" fill="#ffffff">Reports back to you</text>
+    <text x="24" y="106" font-size="14" fill="#c0c0d0">"Silicon dreaming, /</text>
+    <text x="24" y="128" font-size="14" fill="#c0c0d0">weights hum in the quiet dark, / ..."</text>
+  </g>
+
+  <rect x="1080" y="290" width="440" height="330" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="1104" y="330" font-size="16" font-weight="700" fill="#f3b978">🔎 Why delegate?</text>
+  <text x="1104" y="366" font-size="14" fill="#c0c0d0">Keeps the main conversation's</text>
+  <text x="1104" y="388" font-size="14" fill="#c0c0d0">context clean — the subagent's</text>
+  <text x="1104" y="410" font-size="14" fill="#c0c0d0">draft attempts and scratch work</text>
+  <text x="1104" y="432" font-size="14" fill="#c0c0d0">don't clutter your main history.</text>
+  <text x="1104" y="472" font-size="14" fill="#c0c0d0">Same pattern scales to real</text>
+  <text x="1104" y="494" font-size="14" fill="#c0c0d0">work: research a sub-question,</text>
+  <text x="1104" y="516" font-size="14" fill="#c0c0d0">draft a file, run a long task —</text>
+  <text x="1104" y="538" font-size="14" fill="#c0c0d0">all as delegated subagent calls.</text>
+
+  <text x="80" y="700" font-size="15" fill="#8888aa">Inspect what actually came back — a subagent that silently fails looks identical</text>
+  <text x="80" y="726" font-size="15" fill="#8888aa">to one that succeeded unless you check its returned text.</text>
+
+  <text x="80" y="870" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="870" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

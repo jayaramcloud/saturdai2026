@@ -1,0 +1,52 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Registering a Second Local Provider</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">hermes config accepts more than one custom endpoint &#8212; Hermes just needs to know both exist.</text>
+
+  <g transform="translate(660,230)">
+    <rect width="280" height="110" rx="16" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="140" y="45" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">hermes config</text>
+    <text x="140" y="75" font-size="14" fill="#c7d0fc" text-anchor="middle">one CLI, two backends</text>
+  </g>
+
+  <path d="M700,340 C600,420 480,470 380,500" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M900,340 C1000,420 1120,470 1220,500" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(180,500)">
+    <rect width="400" height="260" rx="18" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="24" y="45" font-size="16" font-weight="700" fill="#7be0a0">PROVIDER: local-small</text>
+    <text x="24" y="90" font-size="18" font-weight="800" fill="#ffffff">7B model</text>
+    <text x="24" y="125" font-size="14" fill="#bdeccb">llama-server on port 8081</text>
+    <text x="24" y="150" font-size="14" fill="#bdeccb">OpenAI-compatible /v1 route</text>
+    <text x="24" y="195" font-size="14" fill="#8888aa" font-style="italic">Default for quick, everyday prompts.</text>
+  </g>
+
+  <g transform="translate(1020,500)">
+    <rect width="400" height="260" rx="18" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="24" y="45" font-size="16" font-weight="700" fill="#f3b978">PROVIDER: local-large</text>
+    <text x="24" y="90" font-size="18" font-weight="800" fill="#ffffff">30B model</text>
+    <text x="24" y="125" font-size="14" fill="#fbdba8">llama-server on port 8082</text>
+    <text x="24" y="150" font-size="14" fill="#fbdba8">OpenAI-compatible /v1 route</text>
+    <text x="24" y="195" font-size="14" fill="#8888aa" font-style="italic">Called deliberately for harder tasks.</text>
+  </g>
+
+  <text x="800" y="820" font-size="15" fill="#8888aa" text-anchor="middle" font-style="italic">Both endpoints run on the DGX Spark at once &#8212; picking between them is now a decision, not a limitation.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#8212; Day 3</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

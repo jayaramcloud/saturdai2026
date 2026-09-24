@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The Hidden Step: Chat Templates</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Your plain-text prompt gets reformatted before the model ever sees it.</text>
+
+  <g transform="translate(120,220)">
+    <rect width="330" height="140" rx="16" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="36" font-size="14" font-weight="700" fill="#9db1fb">Your prompt</text>
+    <text x="24" y="70" font-size="14" font-family="monospace" fill="#c0c0d0">&#8220;What time is it?&#8221;</text>
+  </g>
+
+  <g transform="translate(510,220)">
+    <rect width="330" height="140" rx="16" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="24" y="36" font-size="14" font-weight="700" fill="#f5a8c9">Chat template applied</text>
+    <text x="24" y="66" font-size="12" font-family="monospace" fill="#c0c0d0">&#60;|im_start|&#62;user</text>
+    <text x="24" y="86" font-size="12" font-family="monospace" fill="#c0c0d0">What time is it?</text>
+    <text x="24" y="106" font-size="12" font-family="monospace" fill="#c0c0d0">&#60;|im_end|&#62;</text>
+  </g>
+
+  <g transform="translate(900,220)">
+    <rect width="330" height="140" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="36" font-size="14" font-weight="700" fill="#f3b978">Tokenized</text>
+    <text x="24" y="70" font-size="14" fill="#c0c0d0">Broken into tokens the</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">model actually reads.</text>
+  </g>
+
+  <g transform="translate(1290,220)">
+    <rect width="210" height="140" rx="16" fill="#8b5cf6" fill-opacity="0.30" stroke="#c4b5fd" stroke-width="3"/>
+    <text x="24" y="36" font-size="14" font-weight="700" fill="#c4b5fd">Model</text>
+    <text x="24" y="70" font-size="14" fill="#e9e4fc">Generates a</text>
+    <text x="24" y="92" font-size="14" fill="#e9e4fc">response.</text>
+  </g>
+
+  <path d="M450,290 L510,290" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow6)"/>
+  <path d="M840,290 L900,290" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow6)"/>
+  <path d="M1230,290 L1290,290" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow6)"/>
+
+  <g transform="translate(160,460)">
+    <rect width="1340" height="280" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="32" y="46" font-size="20" font-weight="700" fill="#ffffff">Why this matters more than it looks like it should</text>
+    <text x="32" y="86" font-size="15" fill="#c0c0d0">Every model family expects its own exact template &#8212; the wrong one doesn&#8217;t crash, it just quietly</text>
+    <text x="32" y="110" font-size="15" fill="#c0c0d0">degrades output quality, breaks tool-calling, or produces confused, rambling answers.</text>
+    <text x="32" y="150" font-size="15" fill="#c0c0d0">This is a real gotcha we&#8217;ll hit again later in the course: a mismatched chat template was the root</text>
+    <text x="32" y="174" font-size="15" fill="#c0c0d0">cause behind several confusing tool-calling failures in earlier live Hermes sessions.</text>
+    <text x="32" y="214" font-size="15" fill="#7be0a0"><tspan font-weight="700">Good news:</tspan> <tspan font-family="monospace">hermes doctor</tspan> (next slide) checks this for you automatically.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">6 / 10</text>
+</svg>

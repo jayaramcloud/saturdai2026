@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow5" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Your First Round Trip</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One command, out and back, proving the whole chain works.</text>
+
+  <g transform="translate(160,220)">
+    <rect width="1280" height="90" rx="14" fill="#0a0a14" stroke="#33335a" stroke-width="2"/>
+    <text x="32" y="55" font-size="18" font-family="monospace" fill="#7be0a0">$ hermes -z &#8220;In one sentence, who are you and what model are you running on?&#8221; --cli</text>
+  </g>
+
+  <g transform="translate(160,360)">
+    <rect width="300" height="150" rx="18" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="15" font-weight="700" fill="#9db1fb">1. Your terminal</text>
+    <text x="24" y="76" font-size="14" fill="#c0c0d0">Sends the prompt as a</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">one-shot CLI call, no</text>
+    <text x="24" y="120" font-size="14" fill="#c0c0d0">interactive session.</text>
+  </g>
+
+  <g transform="translate(650,360)">
+    <rect width="300" height="150" rx="18" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="15" font-weight="700" fill="#5fd4c6">2. Hermes Agent</text>
+    <text x="24" y="76" font-size="14" fill="#c0c0d0">Wraps it per the config</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">from step 4, sends an</text>
+    <text x="24" y="120" font-size="14" fill="#c0c0d0">HTTP request to /v1.</text>
+  </g>
+
+  <g transform="translate(1140,360)">
+    <rect width="300" height="150" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="15" font-weight="700" fill="#f3b978">3. llama-server</text>
+    <text x="24" y="76" font-size="14" fill="#c0c0d0">Runs the model on the</text>
+    <text x="24" y="98" font-size="14" fill="#c0c0d0">DGX Spark, generates a</text>
+    <text x="24" y="120" font-size="14" fill="#c0c0d0">real response.</text>
+  </g>
+
+  <path d="M460,435 L650,435" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow5)"/>
+  <path d="M950,435 L1140,435" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow5)"/>
+  <path d="M1290,510 C1290,600 500,600 310,540" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow5)"/>
+  <text x="700" y="610" font-size="14" fill="#8888aa" font-style="italic">the response streams back and prints to your terminal</text>
+
+  <g transform="translate(160,670)">
+    <rect width="1280" height="120" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="32" y="42" font-size="16" font-weight="700" fill="#c4b5fd">What to look for</text>
+    <text x="32" y="72" font-size="15" fill="#c0c0d0">If the answer names our local model (not GPT-4 or Claude), the round trip is real —</text>
+    <text x="32" y="96" font-size="15" fill="#c0c0d0">you&#8217;re talking to the DGX Spark, not a cloud fallback that silently kicked in.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 2: Fundamentals</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

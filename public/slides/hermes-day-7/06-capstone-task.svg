@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">The Capstone: One Prompt, Three Skills</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">RAG, an MCP tool, and a multi-step loop &#8212; exercised together, against the deployed service.</text>
+
+  <rect x="200" y="220" width="1200" height="100" rx="18" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="228" y="262" font-size="16" font-weight="700" fill="#9db1fb">PROMPT</text>
+  <text x="228" y="292" font-size="15" fill="#ffffff">&#8220;Look up what our course material says about deploying agents, then log the current timestamp next to that answer.&#8221;</text>
+
+  <path d="M500,320 L340,420" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M800,320 L800,420" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M1100,320 L1260,420" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(180,420)">
+    <rect width="360" height="180" rx="18" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="28" y="46" font-size="18" font-weight="700" fill="#ffffff">1. RAG lookup</text>
+    <text x="28" y="80" font-size="14" fill="#c0c0d0">Queries the ChromaDB tool</text>
+    <text x="28" y="102" font-size="14" fill="#c0c0d0">from Day 4 for grounded</text>
+    <text x="28" y="124" font-size="14" fill="#c0c0d0">course content.</text>
+  </g>
+  <g transform="translate(620,420)">
+    <rect width="360" height="180" rx="18" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="28" y="46" font-size="18" font-weight="700" fill="#ffffff">2. MCP tool call</text>
+    <text x="28" y="80" font-size="14" fill="#c0c0d0">Calls the time MCP server</text>
+    <text x="28" y="102" font-size="14" fill="#c0c0d0">from Day 5 for a real,</text>
+    <text x="28" y="124" font-size="14" fill="#c0c0d0">not-guessed timestamp.</text>
+  </g>
+  <g transform="translate(1060,420)">
+    <rect width="360" height="180" rx="18" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="28" y="46" font-size="18" font-weight="700" fill="#ffffff">3. Loop &amp; combine</text>
+    <text x="28" y="80" font-size="14" fill="#c0c0d0">The Day 6 agent loop chains</text>
+    <text x="28" y="102" font-size="14" fill="#c0c0d0">both results into a single</text>
+    <text x="28" y="124" font-size="14" fill="#c0c0d0">final answer.</text>
+  </g>
+
+  <rect x="380" y="660" width="840" height="120" rx="18" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="410" y="702" font-size="16" font-weight="700" fill="#4ade80">If this works against the deployed service &#8212;</text>
+  <text x="410" y="730" font-size="15" fill="#c0c0d0">not a terminal session &#8212; every piece from this course is confirmed live at once.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 7: Deploy</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">6 / 10</text>
+</svg>

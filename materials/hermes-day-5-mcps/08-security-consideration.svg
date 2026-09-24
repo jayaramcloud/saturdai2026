@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">An MCP Server Is a Real Capability Grant</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Registering a server means the model can now actually touch whatever that server touches.</text>
+
+  <rect x="112" y="210" width="1376" height="180" rx="18" fill="#f5576c" fill-opacity="0.14" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="144" y="256" font-size="20" font-weight="800" fill="#f5a3ac">&#9888;&#65039; Think before you register</text>
+  <text x="144" y="296" font-size="16" fill="#e0e0f0">A filesystem server scoped to your whole home directory can read (and maybe write)</text>
+  <text x="144" y="322" font-size="16" fill="#e0e0f0">anything in it. A database server with write access can delete rows, not just read them.</text>
+  <text x="144" y="360" font-size="16" fill="#e0e0f0">Scope every server to the narrowest directory, account, or permission it actually needs.</text>
+
+  <g transform="translate(112,430)">
+    <rect width="430" height="220" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#f3b978">Scope narrowly</text>
+    <text x="24" y="78" font-size="15" fill="#e0e0f0">Point a filesystem server at</text>
+    <text x="24" y="102" font-size="15" fill="#e0e0f0">one project folder, not your</text>
+    <text x="24" y="126" font-size="15" fill="#e0e0f0">entire home directory.</text>
+  </g>
+
+  <g transform="translate(586,430)">
+    <rect width="430" height="220" rx="16" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#f5a8c9">Trust the source</text>
+    <text x="24" y="78" font-size="15" fill="#e0e0f0">Only register MCP servers</text>
+    <text x="24" y="102" font-size="15" fill="#e0e0f0">from packages or sources you</text>
+    <text x="24" y="126" font-size="15" fill="#e0e0f0">actually recognize and trust.</text>
+  </g>
+
+  <g transform="translate(1060,430)">
+    <rect width="428" height="220" rx="16" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#7ee0a0">Watch --yolo</text>
+    <text x="24" y="78" font-size="15" fill="#e0e0f0">--yolo skips confirmation</text>
+    <text x="24" y="102" font-size="15" fill="#e0e0f0">prompts &#8212; fine for a demo,</text>
+    <text x="24" y="126" font-size="15" fill="#e0e0f0">risky for a write-capable tool.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

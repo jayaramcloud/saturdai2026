@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Common RAG Pitfalls</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Three ways this quietly goes wrong &#8212; and the guard for each.</text>
+
+  <g transform="translate(80,220)">
+    <rect width="450" height="520" rx="20" fill="#f5576c" fill-opacity="0.12" stroke="#f5576c" stroke-width="2.5"/>
+    <text x="30" y="56" font-size="36">&#128683;</text>
+    <text x="30" y="106" font-size="20" font-weight="800" fill="#ffffff">Wrong Collection Loaded</text>
+    <text x="30" y="146" font-size="15" fill="#e0c0c4">Retrieval tool points at last</text>
+    <text x="30" y="168" font-size="15" fill="#e0c0c4">week&#8217;s docs, not today&#8217;s.</text>
+    <rect x="30" y="440" width="390" height="60" rx="10" fill="#ffffff" fill-opacity="0.08"/>
+    <text x="46" y="464" font-size="13" font-weight="700" fill="#f5a3ac">GUARD</text>
+    <text x="46" y="486" font-size="13" fill="#e0c0c4">Confirm the collection name before every live demo.</text>
+  </g>
+
+  <g transform="translate(575,220)">
+    <rect width="450" height="520" rx="20" fill="#d97706" fill-opacity="0.12" stroke="#d97706" stroke-width="2.5"/>
+    <text x="30" y="56" font-size="36">&#128260;</text>
+    <text x="30" y="106" font-size="20" font-weight="800" fill="#ffffff">Stale Index</text>
+    <text x="30" y="146" font-size="15" fill="#f7d9ab">Documents changed but the</text>
+    <text x="30" y="168" font-size="15" fill="#f7d9ab">vector store was never re-embedded.</text>
+    <rect x="30" y="440" width="390" height="60" rx="10" fill="#ffffff" fill-opacity="0.08"/>
+    <text x="46" y="464" font-size="13" font-weight="700" fill="#f3b978">GUARD</text>
+    <text x="46" y="486" font-size="13" fill="#f7d9ab">Re-run ingestion whenever source docs change.</text>
+  </g>
+
+  <g transform="translate(1070,220)">
+    <rect width="450" height="520" rx="20" fill="#8b5cf6" fill-opacity="0.14" stroke="#c4b5fd" stroke-width="2.5"/>
+    <text x="30" y="56" font-size="36">&#128171;</text>
+    <text x="30" y="106" font-size="20" font-weight="800" fill="#ffffff">Irrelevant Retrieval</text>
+    <text x="30" y="146" font-size="15" fill="#e9e4fc">Top-k chunks come back, but</text>
+    <text x="30" y="168" font-size="15" fill="#e9e4fc">none actually answer the question.</text>
+    <rect x="30" y="440" width="390" height="60" rx="10" fill="#ffffff" fill-opacity="0.08"/>
+    <text x="46" y="464" font-size="13" font-weight="700" fill="#c4b5fd">GUARD</text>
+    <text x="46" y="486" font-size="13" fill="#e9e4fc">Instruct Hermes to say so instead of guessing.</text>
+  </g>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

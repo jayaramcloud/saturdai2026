@@ -1,0 +1,51 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">From One Model to Many</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Day 2 got Hermes talking to a single local model. Today: choosing the right model for the job.</text>
+
+  <g transform="translate(160,220)">
+    <rect width="580" height="420" rx="18" fill="#5b7cfa" fill-opacity="0.10" stroke="#5b7cfa" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="55" font-size="16" font-weight="700" fill="#9db1fb">DAY 2 RECAP</text>
+    <text x="30" y="95" font-size="26" font-weight="800" fill="#ffffff">One Hermes, one model</text>
+    <text x="30" y="140" font-size="15" fill="#c7d0fc">hermes config pointed at a single</text>
+    <text x="30" y="164" font-size="15" fill="#c7d0fc">OpenAI-compatible endpoint</text>
+    <text x="30" y="210" font-size="15" fill="#c7d0fc">Confirmed the round trip with</text>
+    <text x="30" y="234" font-size="15" fill="#c7d0fc">hermes -z "..." --cli</text>
+    <text x="30" y="280" font-size="15" fill="#c7d0fc">Verified health with</text>
+    <text x="30" y="304" font-size="15" fill="#c7d0fc">hermes doctor</text>
+    <text x="30" y="370" font-size="15" fill="#8888aa" font-style="italic">Good enough for one job at a time.</text>
+  </g>
+
+  <path d="M760,430 L860,430" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(860,220)">
+    <rect width="580" height="420" rx="18" fill="#0d9488" fill-opacity="0.10" stroke="#0d9488" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="30" y="55" font-size="16" font-weight="700" fill="#5fd4c6">TODAY&#8217;S GOAL</text>
+    <text x="30" y="95" font-size="26" font-weight="800" fill="#ffffff">One Hermes, many models</text>
+    <text x="30" y="140" font-size="15" fill="#c0f0e8">Register a second local provider</text>
+    <text x="30" y="164" font-size="15" fill="#c0f0e8">alongside the first</text>
+    <text x="30" y="210" font-size="15" fill="#c0f0e8">Send different kinds of prompts</text>
+    <text x="30" y="234" font-size="15" fill="#c0f0e8">to the model that fits each one</text>
+    <text x="30" y="280" font-size="15" fill="#c0f0e8">Compare real latency and quality,</text>
+    <text x="30" y="304" font-size="15" fill="#c0f0e8">not just guess</text>
+    <text x="30" y="370" font-size="15" fill="#8888aa" font-style="italic">Treat multiple models as a feature, not clutter.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#8212; Day 3</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

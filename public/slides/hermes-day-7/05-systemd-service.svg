@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">A Long-Lived Background Service</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">systemd replaces the terminal window as the thing keeping Hermes alive.</text>
+
+  <g transform="translate(120,240)">
+    <rect width="640" height="480" rx="20" fill="#1a1a2e" stroke="#33335a" stroke-width="2"/>
+    <text x="32" y="46" font-size="16" font-weight="700" fill="#9db1fb">hermes-agent.service</text>
+    <text x="32" y="86" font-size="14" fill="#c0c0d0">[Unit]</text>
+    <text x="32" y="110" font-size="14" fill="#c0c0d0">Description=Hermes production agent</text>
+    <text x="32" y="150" font-size="14" fill="#c0c0d0">[Service]</text>
+    <text x="32" y="174" font-size="14" fill="#c0c0d0">ExecStart=hermes serve --config ...</text>
+    <text x="32" y="198" font-size="14" fill="#c0c0d0">Restart=on-failure</text>
+    <text x="32" y="222" font-size="14" fill="#c0c0d0">RestartSec=5</text>
+    <text x="32" y="262" font-size="14" fill="#c0c0d0">[Install]</text>
+    <text x="32" y="286" font-size="14" fill="#c0c0d0">WantedBy=multi-user.target</text>
+  </g>
+
+  <path d="M780,440 L900,440" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(920,260)">
+    <rect width="560" height="140" rx="16" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="28" y="42" font-size="18" font-weight="700" fill="#ffffff">systemctl enable --now</text>
+    <text x="28" y="72" font-size="14" fill="#c0c0d0">Starts the agent now, and again on every</text>
+    <text x="28" y="94" font-size="14" fill="#c0c0d0">boot &#8212; no manual restart after a reboot.</text>
+  </g>
+  <g transform="translate(920,430)">
+    <rect width="560" height="140" rx="16" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="28" y="42" font-size="18" font-weight="700" fill="#ffffff">Restart=on-failure</text>
+    <text x="28" y="72" font-size="14" fill="#c0c0d0">If the process crashes at 3am, systemd</text>
+    <text x="28" y="94" font-size="14" fill="#c0c0d0">brings it back up 5 seconds later.</text>
+  </g>
+  <g transform="translate(920,600)">
+    <rect width="560" height="120" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="28" y="42" font-size="18" font-weight="700" fill="#ffffff">systemctl status</text>
+    <text x="28" y="72" font-size="14" fill="#c0c0d0">The everyday health check &#8212; is it up, and</text>
+    <text x="28" y="94" font-size="14" fill="#c0c0d0">for how long.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 7: Deploy</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

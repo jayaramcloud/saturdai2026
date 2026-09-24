@@ -1,0 +1,60 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What --yolo Actually Skips</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A deliberate choice, not a default — you're removing a safety pause.</text>
+
+  <text x="150" y="210" font-size="20" font-weight="700" fill="#f5576c">WITHOUT --yolo (default)</text>
+  <g transform="translate(100,240)">
+    <rect width="240" height="90" rx="14" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="120" y="50" font-size="15" fill="#ffffff" text-anchor="middle">Call tool</text>
+  </g>
+  <path d="M340,285 L430,285" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <g transform="translate(430,240)">
+    <rect width="280" height="90" rx="14" fill="#f5576c" fill-opacity="0.16" stroke="#f5576c" stroke-width="2"/>
+    <text x="140" y="42" font-size="14" fill="#ffffff" text-anchor="middle" font-weight="700">⏸ Pause for confirm</text>
+    <text x="140" y="66" font-size="13" fill="#c0c0d0" text-anchor="middle">"Run this? [y/n]"</text>
+  </g>
+  <path d="M710,285 L800,285" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <g transform="translate(800,240)">
+    <rect width="240" height="90" rx="14" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2"/>
+    <text x="120" y="50" font-size="15" fill="#ffffff" text-anchor="middle">Executes</text>
+  </g>
+  <text x="150" y="380" font-size="15" fill="#8888aa">Every single tool call stops and waits for you to approve it — safe, but slow in a loop.</text>
+
+  <line x1="100" y1="440" x2="1500" y2="440" stroke="#ffffff" stroke-opacity="0.1"/>
+
+  <text x="150" y="500" font-size="20" font-weight="700" fill="#16a34a">WITH --yolo</text>
+  <g transform="translate(100,530)">
+    <rect width="240" height="90" rx="14" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2"/>
+    <text x="120" y="50" font-size="15" fill="#ffffff" text-anchor="middle">Call tool</text>
+  </g>
+  <path d="M340,575 L430,575" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <g transform="translate(430,530)">
+    <rect width="240" height="90" rx="14" fill="#0d9488" fill-opacity="0.16" stroke="#0d9488" stroke-width="2"/>
+    <text x="120" y="50" font-size="15" fill="#ffffff" text-anchor="middle">Executes</text>
+  </g>
+  <text x="150" y="680" font-size="15" fill="#8888aa">No pause between calls — every step of the loop runs straight through, unattended.</text>
+
+  <rect x="380" y="740" width="840" height="120" rx="16" fill="#f5576c" fill-opacity="0.08" stroke="#f5576c" stroke-opacity="0.4"/>
+  <text x="404" y="778" font-size="16" font-weight="700" fill="#f5a8b0">⚠ Use it deliberately</text>
+  <text x="404" y="806" font-size="14" fill="#c0c0d0">Reach for --yolo for demos and trusted sandboxes with read/write-only</text>
+  <text x="404" y="828" font-size="14" fill="#c0c0d0">side effects (like /tmp files) — not for anything with real-world consequences.</text>
+
+  <text x="80" y="870" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="870" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

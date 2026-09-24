@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What Happens If It Crashes Overnight?</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Monitoring and a restart policy turn a crash into a non-event.</text>
+
+  <g transform="translate(120,240)">
+    <rect width="300" height="140" rx="16" fill="#f5576c" fill-opacity="0.16" stroke="#f5576c" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">Process crashes</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">A tool call errors out,</text>
+    <text x="24" y="94" font-size="14" fill="#c0c0d0">or the model endpoint</text>
+    <text x="24" y="116" font-size="14" fill="#c0c0d0">drops mid-request.</text>
+  </g>
+
+  <path d="M420,310 L520,310" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(540,240)">
+    <rect width="300" height="140" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">systemd notices</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">Exit code != 0 trips</text>
+    <text x="24" y="94" font-size="14" fill="#c0c0d0">Restart=on-failure</text>
+    <text x="24" y="116" font-size="14" fill="#c0c0d0">from the unit file.</text>
+  </g>
+
+  <path d="M840,310 L940,310" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(960,240)">
+    <rect width="300" height="140" rx="16" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">Auto-restart, 5s</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">The service comes</text>
+    <text x="24" y="94" font-size="14" fill="#c0c0d0">back up with the same</text>
+    <text x="24" y="116" font-size="14" fill="#c0c0d0">config bundle.</text>
+  </g>
+
+  <path d="M1260,310 L1360,310" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1180,420)">
+    <rect width="300" height="140" rx="16" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#4ade80">Logged, not lost</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">journalctl keeps the</text>
+    <text x="24" y="94" font-size="14" fill="#c0c0d0">crash reason for</text>
+    <text x="24" y="116" font-size="14" fill="#c0c0d0">the morning review.</text>
+  </g>
+  <path d="M1330,380 L1330,420" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="620" width="1360" height="130" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="150" y="660" font-size="16" font-weight="700" fill="#f3b978">&#128273; Key idea</text>
+  <text x="150" y="690" font-size="14" fill="#c0c0d0">A restart policy doesn&#8217;t prevent crashes &#8212; it makes them survivable without you being awake to fix them.</text>
+  <text x="150" y="714" font-size="14" fill="#c0c0d0">Check `journalctl -u hermes-agent` in the morning, not a pager alert at 3am.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 7: Deploy</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">7 / 10</text>
+</svg>

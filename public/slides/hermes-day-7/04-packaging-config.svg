@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Packaging Config So It Survives a Restart</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Everything Hermes learned across five days, in one place.</text>
+
+  <!-- three inputs -->
+  <g transform="translate(120,260)">
+    <rect width="320" height="120" rx="16" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">Model endpoint</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">Local llama-server URL, from</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">Day 2&#8217;s `hermes config`.</text>
+  </g>
+  <g transform="translate(120,420)">
+    <rect width="320" height="120" rx="16" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">MCP servers</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">Time server, RAG tool &#8212;</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">registered on Day 5.</text>
+  </g>
+  <g transform="translate(120,580)">
+    <rect width="320" height="120" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">RAG collection</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">Vector store pointer, from</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">Day 4&#8217;s ChromaDB setup.</text>
+  </g>
+
+  <path d="M440,320 C560,320 560,420 700,420" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M440,480 L700,470" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M440,640 C560,640 560,520 700,480" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect x="720" y="360" width="380" height="200" rx="20" fill="#16a34a" fill-opacity="0.18" stroke="#16a34a" stroke-width="3"/>
+  <text x="756" y="410" font-size="20" font-weight="700" fill="#4ade80">One config bundle</text>
+  <text x="756" y="446" font-size="14" fill="#c0c0d0">Written to disk once, read every</text>
+  <text x="756" y="468" font-size="14" fill="#c0c0d0">time the service starts &#8212; not</text>
+  <text x="756" y="490" font-size="14" fill="#c0c0d0">re-typed into a terminal each time.</text>
+  <text x="756" y="522" font-size="14" fill="#c0c0d0">This is what "survives a restart"</text>
+  <text x="756" y="544" font-size="14" fill="#c0c0d0">actually means in practice.</text>
+
+  <path d="M1100,460 L1220,460" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(1240,380)">
+    <rect width="260" height="160" rx="16" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="24" y="42" font-size="18" font-weight="700" fill="#ffffff">Systemd service</text>
+    <text x="24" y="72" font-size="14" fill="#c0c0d0">Reads the bundle on</text>
+    <text x="24" y="92" font-size="14" fill="#c0c0d0">every start &#8212; see the</text>
+    <text x="24" y="112" font-size="14" fill="#c0c0d0">next slide.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 7: Deploy</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

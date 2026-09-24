@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What Is a Large Language Model?</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">LLMs are one small, specific piece of a much bigger picture.</text>
+
+  <!-- Nested zones -->
+  <rect x="120" y="190" width="900" height="600" rx="26" fill="#5b7cfa" fill-opacity="0.10" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="150" y="236" font-size="24" font-weight="700" fill="#9db1fb">Artificial Intelligence</text>
+
+  <rect x="180" y="280" width="780" height="470" rx="24" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+  <text x="210" y="322" font-size="22" font-weight="700" fill="#5fd4c6">Machine Learning</text>
+
+  <rect x="240" y="366" width="660" height="330" rx="22" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2.5"/>
+  <text x="270" y="406" font-size="20" font-weight="700" fill="#f3b978">Deep Learning</text>
+
+  <rect x="300" y="450" width="540" height="196" rx="20" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-width="2.5"/>
+  <text x="330" y="486" font-size="18" font-weight="700" fill="#f5a8c9">Generative AI</text>
+
+  <rect x="360" y="540" width="420" height="90" rx="18" fill="#8b5cf6" fill-opacity="0.35" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+  <text x="570" y="580" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">LLMs</text>
+  <text x="570" y="605" font-size="14" fill="#e9e4fc" text-anchor="middle">Trained on massive amounts of text</text>
+
+  <!-- Side panel: what an LLM actually does -->
+  <rect x="1080" y="190" width="440" height="600" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="1110" y="236" font-size="20" font-weight="700" fill="#ffffff">In one sentence</text>
+  <text x="1110" y="272" font-size="16" fill="#a0a0c0">A model that predicts the next</text>
+  <text x="1110" y="296" font-size="16" fill="#a0a0c0">most-likely word, over and over,</text>
+  <text x="1110" y="320" font-size="16" fill="#a0a0c0">to generate fluent text.</text>
+
+  <line x1="1110" y1="360" x2="1490" y2="360" stroke="#ffffff" stroke-opacity="0.1"/>
+
+  <text x="1110" y="400" font-size="18" font-weight="700" fill="#9db1fb">Examples you already know</text>
+  <text x="1110" y="432" font-size="16" fill="#a0a0c0">ChatGPT, Claude, Gemini, DeepSeek</text>
+
+  <line x1="1110" y1="470" x2="1490" y2="470" stroke="#ffffff" stroke-opacity="0.1"/>
+
+  <text x="1110" y="510" font-size="18" font-weight="700" fill="#f3b978">What it doesn&#8217;t do on its own</text>
+  <text x="1110" y="542" font-size="16" fill="#a0a0c0">Browse the web, run code, remember</text>
+  <text x="1110" y="566" font-size="16" fill="#a0a0c0">past sessions, or take real actions</text>
+
+  <line x1="1110" y1="606" x2="1490" y2="606" stroke="#ffffff" stroke-opacity="0.1"/>
+
+  <text x="1110" y="646" font-size="18" font-weight="700" fill="#c4b5fd">That&#8217;s where an agent comes in</text>
+  <text x="1110" y="678" font-size="16" fill="#a0a0c0">Wrap an LLM with tools and a loop</text>
+  <text x="1110" y="702" font-size="16" fill="#a0a0c0">&#8212; that&#8217;s Hermes Agent. More next.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

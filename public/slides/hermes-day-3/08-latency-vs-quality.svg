@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Comparing the Two Backends Side by Side</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">The same two prompts, run against both models, measured rather than assumed.</text>
+
+  <g transform="translate(80,200)">
+    <rect width="1440" height="60" rx="10" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="40" y="38" font-size="17" font-weight="700" fill="#ffffff">Metric</text>
+    <text x="640" y="38" font-size="17" font-weight="700" fill="#7be0a0">local-small (7B)</text>
+    <text x="1140" y="38" font-size="17" font-weight="700" fill="#f3b978">local-large (30B)</text>
+  </g>
+
+  <g transform="translate(80,280)">
+    <rect width="1440" height="70" rx="10" fill="#ffffff" fill-opacity="0.03"/>
+    <text x="40" y="45" font-size="17" fill="#c0c0d0">Time to first token</text>
+    <text x="640" y="45" font-size="17" fill="#bdeccb">&#126; fast</text>
+    <text x="1140" y="45" font-size="17" fill="#fbdba8">&#126; noticeably slower</text>
+  </g>
+
+  <g transform="translate(80,360)">
+    <rect width="1440" height="70" rx="10" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="40" y="45" font-size="17" fill="#c0c0d0">Factual lookup quality</text>
+    <text x="640" y="45" font-size="17" fill="#bdeccb">correct, to the point</text>
+    <text x="1140" y="45" font-size="17" fill="#fbdba8">correct, but no faster</text>
+  </g>
+
+  <g transform="translate(80,440)">
+    <rect width="1440" height="70" rx="10" fill="#ffffff" fill-opacity="0.03"/>
+    <text x="40" y="45" font-size="17" fill="#c0c0d0">Multi-step reasoning quality</text>
+    <text x="640" y="45" font-size="17" fill="#f5b8b8">shallow, skips comparison</text>
+    <text x="1140" y="45" font-size="17" fill="#bdeccb">thorough, justified answer</text>
+  </g>
+
+  <g transform="translate(80,520)">
+    <rect width="1440" height="70" rx="10" fill="#ffffff" fill-opacity="0.06"/>
+    <text x="40" y="45" font-size="17" fill="#c0c0d0">Memory held while resident</text>
+    <text x="640" y="45" font-size="17" fill="#bdeccb">smaller share of 128 GB</text>
+    <text x="1140" y="45" font-size="17" fill="#fbdba8">larger share of 128 GB</text>
+  </g>
+
+  <g transform="translate(80,620)">
+    <rect width="1440" height="160" rx="16" fill="#8b5cf6" fill-opacity="0.10" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="30" y="45" font-size="16" font-weight="700" fill="#c4b5fd">THE TAKEAWAY</text>
+    <text x="30" y="85" font-size="18" fill="#ffffff">Neither backend "wins" outright &#8212; the small model is the better default,</text>
+    <text x="30" y="115" font-size="18" fill="#ffffff">and the large model is the deliberate exception for tasks that actually need it.</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#8212; Day 3</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

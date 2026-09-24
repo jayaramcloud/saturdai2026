@@ -1,0 +1,36 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Debugging an Agent Loop</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Read the trace, not just the final answer.</text>
+
+  <rect x="80" y="200" width="1440" height="480" rx="16" fill="#000000" fill-opacity="0.4" stroke="#33335a" stroke-width="2"/>
+  <text x="110" y="240" font-size="15" font-family="monospace" fill="#5fd4c6">[trace] step 1  tool=write_file   args={path:"/tmp/x.txt", content:"hi"}</text>
+  <text x="110" y="270" font-size="15" font-family="monospace" fill="#5fd4c6">[trace] step 1  result=ok  bytes_written=2</text>
+  <text x="110" y="310" font-size="15" font-family="monospace" fill="#9db1fb">[trace] step 2  tool=read_file    args={path:"/tmp/x.txt"}</text>
+  <text x="110" y="340" font-size="15" font-family="monospace" fill="#9db1fb">[trace] step 2  result=ok  content="hi"</text>
+  <text x="110" y="380" font-size="15" font-family="monospace" fill="#f3b978">[trace] step 3  tool=search       args={query:"weather calgary"}</text>
+  <text x="110" y="410" font-size="15" font-family="monospace" fill="#f3b978">[trace] step 3  result=error  reason="rate_limited"</text>
+  <text x="110" y="450" font-size="15" font-family="monospace" fill="#f5a8b0">[trace] step 4  tool=search       args={query:"weather calgary"}</text>
+  <text x="110" y="480" font-size="15" font-family="monospace" fill="#f5a8b0">[trace] step 4  result=error  reason="rate_limited"  ← retry, same error</text>
+  <text x="110" y="520" font-size="15" font-family="monospace" fill="#c4b5fd">[trace] step 5  final_answer  "Here's the weather..." ← built on a failed call!</text>
+
+  <rect x="80" y="720" width="1440" height="120" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="104" y="758" font-size="16" font-weight="700" fill="#f3b978">🔎 What the trace tells you</text>
+  <text x="104" y="786" font-size="14" fill="#c0c0d0">Step 3 and 4 are the same failing call repeated, and step 5's answer was produced anyway —</text>
+  <text x="104" y="808" font-size="14" fill="#c0c0d0">a failure the final answer alone would never reveal. Always check the trace, not just the output.</text>
+
+  <text x="80" y="870" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="870" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

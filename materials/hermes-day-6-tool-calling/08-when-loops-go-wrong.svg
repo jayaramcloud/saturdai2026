@@ -1,0 +1,53 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">When Loops Go Wrong</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Two failure modes worth watching for once tool calls chain together.</text>
+
+  <g transform="translate(80,220)">
+    <rect width="680" height="420" rx="18" fill="#f5576c" fill-opacity="0.14" stroke="#f5576c" stroke-width="2.5"/>
+    <text x="28" y="48" font-size="16" font-weight="700" fill="#f5a8b0">FAILURE MODE 1</text>
+    <text x="28" y="90" font-size="24" font-weight="700" fill="#ffffff">The infinite loop</text>
+    <text x="28" y="132" font-size="15" fill="#c0c0d0">Hermes calls the same tool again</text>
+    <text x="28" y="156" font-size="15" fill="#c0c0d0">and again, never satisfied with the</text>
+    <text x="28" y="180" font-size="15" fill="#c0c0d0">result — e.g. retrying a search that</text>
+    <text x="28" y="204" font-size="15" fill="#c0c0d0">keeps returning the same page.</text>
+    <rect x="28" y="240" width="600" height="130" rx="12" fill="#000000" fill-opacity="0.3"/>
+    <text x="48" y="272" font-size="14" font-family="monospace" fill="#f5a8b0">search("weather calgary") → no result</text>
+    <text x="48" y="298" font-size="14" font-family="monospace" fill="#f5a8b0">search("weather calgary") → no result</text>
+    <text x="48" y="324" font-size="14" font-family="monospace" fill="#f5a8b0">search("weather calgary") → ...</text>
+    <text x="28" y="410" font-size="14" fill="#8888aa">Watch for: same call, same arguments, no progress.</text>
+  </g>
+
+  <g transform="translate(840,220)">
+    <rect width="680" height="420" rx="18" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="28" y="48" font-size="16" font-weight="700" fill="#f3b978">FAILURE MODE 2</text>
+    <text x="28" y="90" font-size="24" font-weight="700" fill="#ffffff">"Success" on a wrong step</text>
+    <text x="28" y="132" font-size="15" fill="#c0c0d0">A tool call technically succeeds, but</text>
+    <text x="28" y="156" font-size="15" fill="#c0c0d0">Hermes misreads the result and</text>
+    <text x="28" y="180" font-size="15" fill="#c0c0d0">confidently builds the final answer</text>
+    <text x="28" y="204" font-size="15" fill="#c0c0d0">on that wrong intermediate step.</text>
+    <rect x="28" y="240" width="600" height="130" rx="12" fill="#000000" fill-opacity="0.3"/>
+    <text x="48" y="272" font-size="14" font-family="monospace" fill="#f3b978">read_file("/tmp/old-draft.txt") → success</text>
+    <text x="48" y="298" font-size="14" font-family="monospace" fill="#f3b978">(wrong file — stale content from earlier)</text>
+    <text x="48" y="324" font-size="14" font-family="monospace" fill="#f3b978">→ answer is confidently, quietly wrong</text>
+    <text x="28" y="410" font-size="14" fill="#8888aa">Watch for: a plausible answer built on the wrong evidence.</text>
+  </g>
+
+  <text x="80" y="720" font-size="16" fill="#c0c0d0">Both failures look identical from the final answer alone — you only catch them by</text>
+  <text x="80" y="748" font-size="16" fill="#c0c0d0">looking at the actual sequence of tool calls, which is exactly what the next slide covers.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">8 / 10</text>
+</svg>

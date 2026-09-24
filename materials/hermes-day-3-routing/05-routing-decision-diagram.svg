@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">A Routing Decision, Step by Step</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Every prompt passes through the same three-stage decision before it reaches a model.</text>
+
+  <g transform="translate(80,220)">
+    <rect width="320" height="140" rx="16" fill="#5b7cfa" fill-opacity="0.16" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#9db1fb">INCOMING</text>
+    <text x="24" y="72" font-size="20" font-weight="700" fill="#ffffff">A prompt arrives</text>
+    <text x="24" y="100" font-size="14" fill="#c0c0d0">"What time is it in Tokyo?"</text>
+    <text x="24" y="120" font-size="14" fill="#c0c0d0">or a complex planning task</text>
+  </g>
+
+  <path d="M400,290 L500,290" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(500,220)">
+    <rect width="320" height="140" rx="16" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="24" y="40" font-size="15" font-weight="700" fill="#c4b5fd">CLASSIFY</text>
+    <text x="24" y="72" font-size="20" font-weight="700" fill="#ffffff">What kind of task is this?</text>
+    <text x="24" y="100" font-size="14" fill="#c0c0d0">Quick lookup? Multi-step</text>
+    <text x="24" y="120" font-size="14" fill="#c0c0d0">reasoning? Tool-heavy?</text>
+  </g>
+
+  <path d="M660,360 C660,430 500,470 380,500" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <path d="M660,360 C660,430 820,470 940,500" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(120,500)">
+    <rect width="400" height="220" rx="18" fill="#16a34a" fill-opacity="0.10" stroke="#16a34a" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="24" y="45" font-size="16" font-weight="700" fill="#7be0a0">SIMPLE / QUICK</text>
+    <text x="24" y="85" font-size="22" font-weight="800" fill="#ffffff">&#8594; local-small</text>
+    <text x="24" y="130" font-size="14" fill="#bdeccb">Fast answer, low cost,</text>
+    <text x="24" y="154" font-size="14" fill="#bdeccb">good enough accuracy</text>
+  </g>
+
+  <g transform="translate(940,500)">
+    <rect width="400" height="220" rx="18" fill="#d97706" fill-opacity="0.10" stroke="#d97706" stroke-opacity="0.5" stroke-width="2.5"/>
+    <text x="24" y="45" font-size="16" font-weight="700" fill="#f3b978">COMPLEX / MULTI-STEP</text>
+    <text x="24" y="85" font-size="22" font-weight="800" fill="#ffffff">&#8594; local-large</text>
+    <text x="24" y="130" font-size="14" fill="#fbdba8">Slower, but the reasoning</text>
+    <text x="24" y="154" font-size="14" fill="#fbdba8">quality is worth the wait</text>
+  </g>
+
+  <text x="800" y="800" font-size="15" fill="#8888aa" text-anchor="middle" font-style="italic">Today the classification step is you, reading the prompt &#8212; that&#8217;s a deliberate simplification for this lab, not a production router.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#8212; Day 3</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">5 / 10</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Worked Example: the Time Server</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A small, dependency-light server &#8212; a good first target because a wrong answer is easy to spot.</text>
+
+  <g transform="translate(160,220)">
+    <rect width="1280" height="80" rx="14" fill="#1a1a2e" stroke="#33335a" stroke-width="2"/>
+    <text x="32" y="50" font-size="20" font-family="monospace" fill="#e0e0f0">$ hermes mcp add mcp-time --command uvx --args mcp-server-time</text>
+  </g>
+
+  <text x="800" y="360" font-size="30" fill="#a0a0c0" text-anchor="middle">&#8595;</text>
+
+  <g transform="translate(160,390)">
+    <rect width="1280" height="90" rx="14" fill="#1a1a2e" stroke="#33335a" stroke-width="2"/>
+    <text x="32" y="45" font-size="18" font-family="monospace" fill="#e0e0f0">$ hermes -z "What time is it right now in Calgary and</text>
+    <text x="32" y="72" font-size="18" font-family="monospace" fill="#e0e0f0">  in Bengaluru? Use your MCP time tool, do not guess." --cli --yolo</text>
+  </g>
+
+  <text x="800" y="540" font-size="30" fill="#a0a0c0" text-anchor="middle">&#8595;</text>
+
+  <rect x="360" y="570" width="880" height="150" rx="18" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="800" y="620" font-size="18" font-weight="700" fill="#7ee0a0" text-anchor="middle">Expected: a real, current answer</text>
+  <text x="800" y="654" font-size="16" fill="#e0e0f0" text-anchor="middle">Hermes calls mcp-time, gets the actual clock time for</text>
+  <text x="800" y="680" font-size="16" fill="#e0e0f0" text-anchor="middle">both cities, and reports it &#8212; not a memorized guess.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

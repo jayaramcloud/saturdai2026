@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Header -->
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Agentic AI with Hermes Agent</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A free, live, hands-on 2-week intensive &#8212; 7 sessions, no prerequisites, just curiosity.</text>
+
+  <!-- Roadmap timeline -->
+  <line x1="120" y1="480" x2="1480" y2="480" stroke="#ffffff" stroke-opacity="0.15" stroke-width="3"/>
+
+  <!-- Day nodes -->
+  <g>
+    <circle cx="180" cy="480" r="16" fill="#8b5cf6" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+    <text x="180" y="410" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">Day 1</text>
+    <text x="180" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Fri Sep 25</text>
+    <text x="180" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Intro</text>
+    <text x="180" y="552" font-size="13" fill="#a0a0c0" text-anchor="middle">(you are here)</text>
+  </g>
+
+  <g>
+    <circle cx="380" cy="480" r="14" fill="#5b7cfa"/>
+    <text x="380" y="410" font-size="16" font-weight="800" fill="#9db1fb" text-anchor="middle">Day 2</text>
+    <text x="380" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Mon Sep 28</text>
+    <text x="380" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Fundamentals</text>
+  </g>
+
+  <g>
+    <circle cx="580" cy="480" r="14" fill="#0d9488"/>
+    <text x="580" y="410" font-size="16" font-weight="800" fill="#5fd4c6" text-anchor="middle">Day 3</text>
+    <text x="580" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Wed Sep 30</text>
+    <text x="580" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">LLM Routing</text>
+  </g>
+
+  <g>
+    <circle cx="780" cy="480" r="14" fill="#d97706"/>
+    <text x="780" y="410" font-size="16" font-weight="800" fill="#f3b978" text-anchor="middle">Day 4</text>
+    <text x="780" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Fri Oct 2</text>
+    <text x="780" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">RAG</text>
+  </g>
+
+  <g>
+    <circle cx="980" cy="480" r="14" fill="#ec4899"/>
+    <text x="980" y="410" font-size="16" font-weight="800" fill="#f5a8c9" text-anchor="middle">Day 5</text>
+    <text x="980" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Mon Oct 5</text>
+    <text x="980" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">MCPs</text>
+  </g>
+
+  <g>
+    <circle cx="1180" cy="480" r="14" fill="#16a34a"/>
+    <text x="1180" y="410" font-size="16" font-weight="800" fill="#7ee2a0" text-anchor="middle">Day 6</text>
+    <text x="1180" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Wed Oct 7</text>
+    <text x="1180" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Tool Calling</text>
+  </g>
+
+  <g>
+    <circle cx="1420" cy="480" r="16" fill="#8b5cf6" stroke="#c4b5fd" stroke-width="3"/>
+    <text x="1420" y="410" font-size="16" font-weight="800" fill="#c4b5fd" text-anchor="middle">Day 7</text>
+    <text x="1420" y="435" font-size="13" fill="#a0a0c0" text-anchor="middle">Fri Oct 9</text>
+    <text x="1420" y="530" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">Deploy</text>
+    <text x="1420" y="552" font-size="13" fill="#a0a0c0" text-anchor="middle">(capstone)</text>
+  </g>
+
+  <!-- Bottom banner -->
+  <rect x="80" y="640" width="1440" height="140" rx="20" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="800" y="690" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">By the end, you&#8217;ll have deployed a working Hermes agent</text>
+  <text x="800" y="720" font-size="17" fill="#a0a0c0" text-anchor="middle">Your own digital agent &#8212; working and learning for you 24x7.</text>
+  <text x="800" y="752" font-size="15" fill="#8888aa" text-anchor="middle">Mon&#8211;Wed&#8211;Fri &#183; 6&#8211;7pm MST &#183; Free &#183; Everyone welcome</text>
+
+  <!-- Footer -->
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">1 / 10</text>
+</svg>

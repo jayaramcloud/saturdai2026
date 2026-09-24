@@ -1,0 +1,61 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow6" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">A Grounded Question, Traced</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">What actually happens between your prompt and the answer.</text>
+
+  <g transform="translate(80,220)">
+    <rect width="1440" height="90" rx="16" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="30" y="38" font-size="14" font-weight="700" fill="#9db1fb">1. YOU ASK</text>
+    <text x="30" y="66" font-size="17" fill="#ffffff">"What does our course material say about MCP servers?"</text>
+  </g>
+
+  <path d="M800,310 L800,350" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow6)"/>
+
+  <g transform="translate(80,360)">
+    <rect width="1440" height="90" rx="16" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="30" y="38" font-size="14" font-weight="700" fill="#f3b978">2. HERMES CALLS THE RETRIEVAL TOOL</text>
+    <text x="30" y="66" font-size="17" fill="#ffffff">chroma-rag.query("MCP servers", n_results=5)</text>
+  </g>
+
+  <path d="M800,450 L800,490" fill="none" stroke="#a0a0c0" stroke-width="3" marker-end="url(#arrow6)"/>
+
+  <g transform="translate(80,500)">
+    <rect width="1440" height="90" rx="16" fill="#ec4899" fill-opacity="0.14" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="30" y="38" font-size="14" font-weight="700" fill="#f5a8c9">3. CHROMADB RETURNS THE TOP-K CHUNKS</text>
+    <text x="30" y="66" font-size="17" fill="#ffffff">5 passages from our docs, ranked by similarity</text>
+  </g>
+
+  <path d="M800,590 L800,630" fill="none" stroke="#c4b5fd" stroke-width="3" marker-end="url(#arrow6)"/>
+
+  <g transform="translate(80,640)">
+    <rect width="1440" height="130" rx="20" fill="#8b5cf6" fill-opacity="0.28" stroke="#c4b5fd" stroke-width="3" filter="url(#glow)"/>
+    <text x="30" y="42" font-size="14" font-weight="800" fill="#c4b5fd">4. HERMES ANSWERS &#8212; GROUNDED, WITH A CITATION</text>
+    <text x="30" y="76" font-size="18" fill="#ffffff">"Based on the MCP doc, servers register with `hermes mcp add`..."</text>
+    <text x="30" y="106" font-size="14" fill="#e9e4fc">The answer traces back to a real chunk, not a guess.</text>
+  </g>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">6 / 10</text>
+</svg>

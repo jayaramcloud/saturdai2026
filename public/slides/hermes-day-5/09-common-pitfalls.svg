@@ -1,0 +1,55 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Common MCP Pitfalls</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Almost every broken MCP registration traces back to one of these four things.</text>
+
+  <g transform="translate(112,210)">
+    <rect width="660" height="170" rx="16" fill="#f5576c" fill-opacity="0.14" stroke="#f5576c" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#f5a3ac">1. Wrong flag order</text>
+    <text x="24" y="76" font-size="15" fill="#e0e0f0">Putting a hermes-side flag after</text>
+    <text x="24" y="100" font-size="15" fill="#e0e0f0"><tspan font-family="monospace">--args</tspan> sends it to the server instead,</text>
+    <text x="24" y="124" font-size="15" fill="#e0e0f0">where it&#8217;s silently ignored or breaks.</text>
+  </g>
+
+  <g transform="translate(828,210)">
+    <rect width="660" height="170" rx="16" fill="#d97706" fill-opacity="0.16" stroke="#d97706" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#f3b978">2. Missing dependency</text>
+    <text x="24" y="76" font-size="15" fill="#e0e0f0">The server package (or a pinned</text>
+    <text x="24" y="100" font-size="15" fill="#e0e0f0">version like <tspan font-family="monospace">mcp&lt;1.10</tspan>) isn&#8217;t</text>
+    <text x="24" y="124" font-size="15" fill="#e0e0f0">installed where Hermes can see it.</text>
+  </g>
+
+  <g transform="translate(112,410)">
+    <rect width="660" height="170" rx="16" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#f5a8c9">3. PATH not found</text>
+    <text x="24" y="76" font-size="15" fill="#e0e0f0">The command (like <tspan font-family="monospace">uvx</tspan>) works</text>
+    <text x="24" y="100" font-size="15" fill="#e0e0f0">in your shell but not in Hermes&#8217;s</text>
+    <text x="24" y="124" font-size="15" fill="#e0e0f0">environment &#8212; use an absolute path.</text>
+  </g>
+
+  <g transform="translate(828,410)">
+    <rect width="660" height="170" rx="16" fill="#8b5cf6" fill-opacity="0.16" stroke="#c4b5fd" stroke-width="2"/>
+    <text x="24" y="42" font-size="17" font-weight="700" fill="#c4b5fd">4. Server crashes silently</text>
+    <text x="24" y="76" font-size="15" fill="#e0e0f0">A misconfigured server starts,</text>
+    <text x="24" y="100" font-size="15" fill="#e0e0f0">then exits without a clear error &#8212;</text>
+    <text x="24" y="124" font-size="15" fill="#e0e0f0">run <tspan font-family="monospace">hermes doctor</tspan> to surface it.</text>
+  </g>
+
+  <rect x="112" y="620" width="1376" height="80" rx="14" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="144" y="668" font-size="17" fill="#e0e0f0">&#128161; When a tool call fails, check the four boxes above in order before assuming the model or the tool itself is broken.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">9 / 10</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What Is MCP?</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">One protocol between Hermes and every external system it might need.</text>
+
+  <rect x="150" y="240" width="260" height="120" rx="18" fill="#5b7cfa" fill-opacity="0.18" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="280" y="300" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">Hermes Agent</text>
+  <text x="280" y="328" font-size="14" fill="#c0c0d0" text-anchor="middle">the LLM deciding what to do</text>
+
+  <g transform="translate(700,470)">
+    <circle r="80" fill="#8b5cf6" filter="url(#glow)"/>
+    <text y="-4" font-size="18" font-weight="800" fill="#ffffff" text-anchor="middle">MCP</text>
+    <text y="20" font-size="13" fill="#e9e4fc" text-anchor="middle">server</text>
+  </g>
+  <path d="M410,300 C560,300 620,420 655,440" fill="none" stroke="#a0a0c0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="470" y="380" font-size="14" fill="#8888aa" font-style="italic">registers with</text>
+
+  <g stroke="#c4b5fd" stroke-width="2.5" fill="none">
+    <path d="M778,430 L1140,270" marker-end="url(#arrow)"/>
+    <path d="M778,470 L1140,420" marker-end="url(#arrow)"/>
+    <path d="M778,510 L1140,570" marker-end="url(#arrow)"/>
+    <path d="M778,545 L1140,720" marker-end="url(#arrow)"/>
+  </g>
+
+  <rect x="1140" y="230" width="330" height="76" rx="14" fill="#0d9488" fill-opacity="0.18" stroke="#0d9488" stroke-width="2"/>
+  <text x="1305" y="264" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Time server</text>
+  <text x="1305" y="288" font-size="13" fill="#c0c0d0" text-anchor="middle">what time is it, where</text>
+
+  <rect x="1140" y="382" width="330" height="76" rx="14" fill="#d97706" fill-opacity="0.18" stroke="#d97706" stroke-width="2"/>
+  <text x="1305" y="416" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Filesystem</text>
+  <text x="1305" y="440" font-size="13" fill="#c0c0d0" text-anchor="middle">read, write, list real files</text>
+
+  <rect x="1140" y="534" width="330" height="76" rx="14" fill="#ec4899" fill-opacity="0.18" stroke="#ec4899" stroke-width="2"/>
+  <text x="1305" y="568" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Web search</text>
+  <text x="1305" y="592" font-size="13" fill="#c0c0d0" text-anchor="middle">current, real-world info</text>
+
+  <rect x="1140" y="684" width="330" height="76" rx="14" fill="#16a34a" fill-opacity="0.18" stroke="#16a34a" stroke-width="2"/>
+  <text x="1305" y="718" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Database</text>
+  <text x="1305" y="742" font-size="13" fill="#c0c0d0" text-anchor="middle">structured, queryable records</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">2 / 10</text>
+</svg>

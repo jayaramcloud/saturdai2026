@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">hermes doctor: Pre-Flight, Not Post-Mortem</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Catch a broken endpoint before it wastes an overnight run, not after.</text>
+
+  <g font-size="16">
+    <!-- checklist rows -->
+    <g transform="translate(100,220)">
+      <circle cx="18" cy="18" r="18" fill="#16a34a"/>
+      <text x="10" y="24" font-size="18" fill="#ffffff">&#10003;</text>
+      <text x="52" y="12" font-size="18" font-weight="700" fill="#ffffff">Endpoint reachable</text>
+      <text x="52" y="38" font-size="14" fill="#c0c0d0">The local llama-server / model endpoint responds to a health check.</text>
+    </g>
+    <g transform="translate(100,300)">
+      <circle cx="18" cy="18" r="18" fill="#16a34a"/>
+      <text x="10" y="24" font-size="18" fill="#ffffff">&#10003;</text>
+      <text x="52" y="12" font-size="18" font-weight="700" fill="#ffffff">Chat template correct</text>
+      <text x="52" y="38" font-size="14" fill="#c0c0d0">A wrong template silently breaks tool calling &#8212; caught here first.</text>
+    </g>
+    <g transform="translate(100,380)">
+      <circle cx="18" cy="18" r="18" fill="#16a34a"/>
+      <text x="10" y="24" font-size="18" fill="#ffffff">&#10003;</text>
+      <text x="52" y="12" font-size="18" font-weight="700" fill="#ffffff">MCP servers registered</text>
+      <text x="52" y="38" font-size="14" fill="#c0c0d0">Every server from Day 5 (time, RAG) responds, no broken PATHs.</text>
+    </g>
+    <g transform="translate(100,460)">
+      <circle cx="18" cy="18" r="18" fill="#16a34a"/>
+      <text x="10" y="24" font-size="18" fill="#ffffff">&#10003;</text>
+      <text x="52" y="12" font-size="18" font-weight="700" fill="#ffffff">Credentials / config present</text>
+      <text x="52" y="38" font-size="14" fill="#c0c0d0">No missing environment variables that only show up under load.</text>
+    </g>
+    <g transform="translate(100,540)">
+      <circle cx="18" cy="18" r="18" fill="#16a34a"/>
+      <text x="10" y="24" font-size="18" fill="#ffffff">&#10003;</text>
+      <text x="52" y="12" font-size="18" font-weight="700" fill="#ffffff">Disk / memory headroom</text>
+      <text x="52" y="38" font-size="14" fill="#c0c0d0">Enough room left on the DGX Spark / Mac Mini to run unattended.</text>
+    </g>
+  </g>
+
+  <rect x="900" y="220" width="600" height="360" rx="20" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="936" y="266" font-size="18" font-weight="700" fill="#9db1fb">$ hermes doctor</text>
+  <text x="936" y="306" font-size="15" fill="#c0c0d0">Runs every check above in a</text>
+  <text x="936" y="330" font-size="15" fill="#c0c0d0">few seconds, before you touch</text>
+  <text x="936" y="354" font-size="15" fill="#c0c0d0">a systemd unit file at all.</text>
+  <text x="936" y="400" font-size="15" fill="#c0c0d0">A green run here is the</text>
+  <text x="936" y="424" font-size="15" fill="#c0c0d0">go/no-go gate for the rest</text>
+  <text x="936" y="448" font-size="15" fill="#c0c0d0">of today&#8217;s deploy steps.</text>
+
+  <rect x="80" y="700" width="1440" height="100" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="104" y="736" font-size="16" font-weight="700" fill="#f3b978">&#128273; Key idea</text>
+  <text x="104" y="764" font-size="14" fill="#c0c0d0">Every failure mode we hit in earlier live sessions &#8212; broken PATH, wrong chat template &#8212; is exactly what this command catches.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 7: Deploy</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">3 / 10</text>
+</svg>

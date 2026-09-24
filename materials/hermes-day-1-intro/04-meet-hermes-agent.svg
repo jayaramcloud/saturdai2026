@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#0d9488"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Meet Hermes Agent</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Nous Research&#8217;s CLI agent &#8212; provider-agnostic by design.</text>
+
+  <!-- Center: Hermes box -->
+  <rect x="620" y="220" width="360" height="140" rx="22" fill="#8b5cf6" fill-opacity="0.25" stroke="#c4b5fd" stroke-width="3"/>
+  <text x="800" y="280" font-size="26" font-weight="800" fill="#ffffff" text-anchor="middle">Hermes Agent</text>
+  <text x="800" y="312" font-size="15" fill="#e9e4fc" text-anchor="middle">CLI &#183; tool-calling &#183; MCP client</text>
+
+  <!-- Left: cloud endpoint -->
+  <rect x="140" y="500" width="420" height="200" rx="20" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+  <text x="350" y="550" font-size="20" font-weight="700" fill="#9db1fb" text-anchor="middle">Cloud endpoint</text>
+  <text x="350" y="585" font-size="15" fill="#a0a0c0" text-anchor="middle">Any OpenAI-compatible API</text>
+  <text x="350" y="610" font-size="15" fill="#a0a0c0" text-anchor="middle">(hosted provider, API key required)</text>
+  <text x="350" y="655" font-size="14" fill="#8888aa" text-anchor="middle">Same client, same commands</text>
+
+  <!-- Right: local endpoint (highlighted, since it's what we use) -->
+  <rect x="1040" y="500" width="420" height="200" rx="20" fill="#0d9488" fill-opacity="0.20" stroke="#5fd4c6" stroke-width="3"/>
+  <text x="1250" y="550" font-size="20" font-weight="700" fill="#5fd4c6" text-anchor="middle">Local endpoint (ours)</text>
+  <text x="1250" y="585" font-size="15" fill="#a0a0c0" text-anchor="middle">llama-server on the DGX Spark</text>
+  <text x="1250" y="610" font-size="15" fill="#a0a0c0" text-anchor="middle">or Mac Mini &#8212; no API key needed</text>
+  <text x="1250" y="655" font-size="14" fill="#7ee2a0" text-anchor="middle">This is what we&#8217;ll use all course</text>
+
+  <!-- Arrows from Hermes down to both -->
+  <path d="M660,360 C500,420 400,460 350,500" stroke="#5b7cfa" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+  <path d="M940,360 C1100,420 1200,460 1250,500" stroke="#0d9488" stroke-width="3" fill="none" marker-end="url(#arrow2)"/>
+
+  <!-- Bottom takeaway -->
+  <rect x="140" y="760" width="1320" height="80" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="800" y="808" font-size="17" fill="#ffffff" text-anchor="middle">Hermes doesn&#8217;t care which model answers &#8212; only that it speaks the same protocol. That&#8217;s why it can run on our own hardware.</text>
+
+  <text x="80" y="880" font-size="14" fill="#8888aa">SaturdAI &#183; Day 1: Intro to LLMs and Hermes</text>
+  <text x="1520" y="880" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

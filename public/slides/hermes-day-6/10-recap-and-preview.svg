@@ -1,0 +1,57 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Recap &amp; What's Next</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Everything today's labs actually exercised.</text>
+
+  <g transform="translate(80,190)">
+    <circle cx="16" cy="0" r="8" fill="#5b7cfa"/>
+    <text x="40" y="8" font-size="18" fill="#ffffff">An agent loop repeats call → observe → decide until Hermes stops on its own.</text>
+  </g>
+  <g transform="translate(80,240)">
+    <circle cx="16" cy="0" r="8" fill="#0d9488"/>
+    <text x="40" y="8" font-size="18" fill="#ffffff">--yolo skips the confirmation pause between calls — use it deliberately.</text>
+  </g>
+  <g transform="translate(80,290)">
+    <circle cx="16" cy="0" r="8" fill="#ec4899"/>
+    <text x="40" y="8" font-size="18" fill="#ffffff">File write-then-read and code execution both showed real, chained tool calls.</text>
+  </g>
+  <g transform="translate(80,340)">
+    <circle cx="16" cy="0" r="8" fill="#8b5cf6"/>
+    <text x="40" y="8" font-size="18" fill="#ffffff">Delegating to a subagent keeps sub-task scratch work out of the main context.</text>
+  </g>
+  <g transform="translate(80,390)">
+    <circle cx="16" cy="0" r="8" fill="#f5576c"/>
+    <text x="40" y="8" font-size="18" fill="#ffffff">Loops fail quietly — infinite retries and wrong-but-confident steps both hide in the trace.</text>
+  </g>
+
+  <line x1="80" y1="450" x2="1520" y2="450" stroke="#ffffff" stroke-opacity="0.1"/>
+
+  <g transform="translate(80,500)">
+    <rect width="1440" height="280" rx="18" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="40" y="50" font-size="16" font-weight="700" fill="#f3b978">DAY 7 · FRI, OCT 9, 2026 · CAPSTONE</text>
+    <text x="40" y="100" font-size="30" font-weight="700" fill="#ffffff">Deploy a Production Hermes Agent</text>
+    <text x="40" y="146" font-size="17" fill="#c0c0d0">Everything from Days 2–6 — a local model, RAG grounding, MCP tools,</text>
+    <text x="40" y="172" font-size="17" fill="#c0c0d0">and the agent loop you just learned — comes together into one Hermes</text>
+    <text x="40" y="198" font-size="17" fill="#c0c0d0">agent that keeps running on its own, working and learning for you 24x7.</text>
+    <path d="M40,230 L200,230" fill="none" stroke="#f3b978" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="220" y="238" font-size="16" fill="#f3b978" font-style="italic">saturdai.com/hermes-agent/day-7</text>
+  </g>
+
+  <text x="80" y="870" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Day 6: Tool Calling &amp; Agent Loops</text>
+  <text x="1520" y="870" font-size="14" fill="#8888aa" text-anchor="end">10 / 10</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">ChromaDB: Our Vector Store</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A standalone service Hermes queries &#8212; not baked into the model.</text>
+
+  <!-- Central DB icon -->
+  <g transform="translate(650,220)">
+    <rect width="300" height="200" rx="24" fill="#ec4899" fill-opacity="0.16" stroke="#ec4899" stroke-width="3"/>
+    <text x="150" y="90" font-size="52" text-anchor="middle">&#128451;&#65039;</text>
+    <text x="150" y="140" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">ChromaDB</text>
+    <text x="150" y="168" font-size="14" fill="#f5c8dc" text-anchor="middle">Runs as its own container</text>
+  </g>
+
+  <!-- Three feature cards -->
+  <g transform="translate(80,480)">
+    <rect width="460" height="260" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#3a3a5a" stroke-width="2"/>
+    <text x="28" y="46" font-size="30">&#128190;</text>
+    <text x="28" y="90" font-size="18" font-weight="800" fill="#ffffff">Stores Embeddings</text>
+    <text x="28" y="122" font-size="14" fill="#c0c0d0">Every chunk of our course</text>
+    <text x="28" y="144" font-size="14" fill="#c0c0d0">material becomes a vector,</text>
+    <text x="28" y="166" font-size="14" fill="#c0c0d0">saved alongside its source text.</text>
+    <text x="28" y="210" font-size="14" fill="#8888aa">collection.add(documents, embeddings)</text>
+  </g>
+
+  <g transform="translate(570,480)">
+    <rect width="460" height="260" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#3a3a5a" stroke-width="2"/>
+    <text x="28" y="46" font-size="30">&#128269;</text>
+    <text x="28" y="90" font-size="18" font-weight="800" fill="#ffffff">Similarity Search</text>
+    <text x="28" y="122" font-size="14" fill="#c0c0d0">Given a query vector, finds</text>
+    <text x="28" y="144" font-size="14" fill="#c0c0d0">the nearest-neighbor chunks</text>
+    <text x="28" y="166" font-size="14" fill="#c0c0d0">by meaning, not keyword match.</text>
+    <text x="28" y="210" font-size="14" fill="#8888aa">collection.query(query_texts, n_results=5)</text>
+  </g>
+
+  <g transform="translate(1060,480)">
+    <rect width="460" height="260" rx="18" fill="#ffffff" fill-opacity="0.05" stroke="#3a3a5a" stroke-width="2"/>
+    <text x="28" y="46" font-size="30">&#128268;</text>
+    <text x="28" y="90" font-size="18" font-weight="800" fill="#ffffff">Reachable by Hermes</text>
+    <text x="28" y="122" font-size="14" fill="#c0c0d0">Exposed over MCP so Hermes</text>
+    <text x="28" y="144" font-size="14" fill="#c0c0d0">can call it as a tool mid-</text>
+    <text x="28" y="166" font-size="14" fill="#c0c0d0">conversation, not a manual step.</text>
+    <text x="28" y="210" font-size="14" fill="#8888aa">hermes mcp add chroma-rag ...</text>
+  </g>
+
+  <text x="80" y="866" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent &#183; Day 4: RAG</text>
+  <text x="1520" y="866" font-size="14" fill="#8888aa" text-anchor="end">4 / 10</text>
+</svg>

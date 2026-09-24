@@ -1,0 +1,44 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Did It Actually Call the Tool?</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">A confident answer isn&#8217;t proof &#8212; a plausible guess looks identical to a real one.</text>
+
+  <rect x="112" y="210" width="660" height="400" rx="20" fill="#f5576c" fill-opacity="0.14" stroke="#f5576c" stroke-width="2.5"/>
+  <text x="144" y="260" font-size="20" font-weight="800" fill="#f5a3ac">Silent guess</text>
+  <text x="144" y="300" font-size="16" fill="#e0e0f0">Model answers from training</text>
+  <text x="144" y="324" font-size="16" fill="#e0e0f0">data or a plausible pattern,</text>
+  <text x="144" y="348" font-size="16" fill="#e0e0f0">with no tool call at all.</text>
+  <text x="144" y="400" font-size="16" fill="#e0e0f0">Looks fine until the time zone</text>
+  <text x="144" y="424" font-size="16" fill="#e0e0f0">is wrong, or daylight saving</text>
+  <text x="144" y="448" font-size="16" fill="#e0e0f0">isn&#8217;t accounted for.</text>
+  <text x="144" y="500" font-size="16" fill="#f5a3ac" font-style="italic">Hard to catch without checking.</text>
+
+  <rect x="828" y="210" width="660" height="400" rx="20" fill="#16a34a" fill-opacity="0.16" stroke="#16a34a" stroke-width="2.5"/>
+  <text x="860" y="260" font-size="20" font-weight="800" fill="#7ee0a0">Verified tool call</text>
+  <text x="860" y="300" font-size="16" fill="#e0e0f0">Check Hermes&#8217;s own trace or</text>
+  <text x="860" y="324" font-size="16" fill="#e0e0f0">verbose output for the actual</text>
+  <text x="860" y="348" font-size="16" fill="#e0e0f0">mcp-time invocation.</text>
+  <text x="860" y="400" font-size="16" fill="#e0e0f0">Cross-check the answer against</text>
+  <text x="860" y="424" font-size="16" fill="#e0e0f0">a real clock yourself, at least</text>
+  <text x="860" y="448" font-size="16" fill="#e0e0f0">the first few times.</text>
+  <text x="860" y="500" font-size="16" fill="#7ee0a0" font-style="italic">Trust, but verify the trace.</text>
+
+  <rect x="112" y="650" width="1376" height="100" rx="16" fill="#ffffff" fill-opacity="0.05" stroke="#ffffff" stroke-opacity="0.12"/>
+  <text x="144" y="700" font-size="17" fill="#e0e0f0">&#128161; This is the same lesson from Day 4&#8217;s RAG session, applied to tools instead of documents:</text>
+  <text x="144" y="728" font-size="17" fill="#e0e0f0">a confidently-wrong answer is worse for teaching than an honest &#8220;I don&#8217;t know.&#8221;</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 5: MCPs for Hermes</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">6 / 10</text>
+</svg>
