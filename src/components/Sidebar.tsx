@@ -15,6 +15,7 @@ const WEEKS = [
   { href: "/week-2", label: "Week 2: RAG" },
   { href: "/week-3", label: "Week 3: MCPs" },
   { href: "/week-4", label: "Week 4: Tool Calling" },
+  { href: "/hermes-agent", label: "Hermes Agent (New)" },
 ];
 
 export default function Sidebar() {

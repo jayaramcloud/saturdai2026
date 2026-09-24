@@ -5,7 +5,9 @@ const CONTACT_EMAIL = "jayaram.linux@gmail.com";
 export default function RegisterBanner() {
   return (
     <div className="register-banner">
-      <span className="register-banner-text">🚀 Free AI Bootcamp starts July 4 — spots are limited</span>
+      <span className="register-banner-text">
+        🚀 Agentic AI with Hermes Agent starts Fri, Sep 25 — spots are limited
+      </span>
       <a
         href={REGISTRATION_FORM_URL}
         target="_blank"

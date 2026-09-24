@@ -36,6 +36,13 @@ const WEEKS = [
     icon: "🛠️",
     description: "Making AI agents do real work",
   },
+  {
+    href: "/hermes-agent",
+    week: "New",
+    title: "Agentic AI with Hermes Agent",
+    icon: "🧑‍🚀",
+    description: "Free 2-week intensive: build and deploy a real Hermes agent, hands-on",
+  },
 ];
 
 export default function CoursesPage() {

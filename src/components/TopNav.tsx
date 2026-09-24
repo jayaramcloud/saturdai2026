@@ -3,14 +3,7 @@ import { auth, signIn, signOut } from "@/auth";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
   { href: "/courses", label: "Courses" },
-  { href: "/week-1", label: "Week 1" },
-  { href: "/week-2", label: "Week 2" },
-  { href: "/week-3", label: "Week 3" },
-  { href: "/week-4", label: "Week 4" },
-  { href: "/feed", label: "AI Feed" },
-  { href: "/progress", label: "My Progress" },
 ];
 
 export default async function TopNav() {
