@@ -3,6 +3,7 @@ import { auth, signIn, signOut } from "@/auth";
 
 const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/hermes-agent", label: "Hermes Agent" },
   { href: "/courses", label: "Courses" },
 ];
 

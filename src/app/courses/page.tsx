@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const WEEKS = [
+const FOUNDATIONS = [
   {
     href: "/intro-to-ai",
     week: "Intro to AI",
@@ -36,24 +36,38 @@ const WEEKS = [
     icon: "🛠️",
     description: "Making AI agents do real work",
   },
-  {
-    href: "/hermes-agent",
-    week: "New",
-    title: "Agentic AI with Hermes Agent",
-    icon: "🧑‍🚀",
-    description: "Free 2-week intensive: build and deploy a real Hermes agent, hands-on",
-  },
 ];
 
 export default function CoursesPage() {
   return (
     <main style={{ maxWidth: 1200, margin: "0 auto", padding: "4rem 2rem" }}>
       <h1 className="section-title">Courses</h1>
+
+      <p className="description" style={{ margin: "0 auto 2rem" }}>
+        Currently running — a free, live, hands-on intensive.
+      </p>
+      <Link
+        href="/hermes-agent"
+        className="feature-card"
+        style={{ display: "block", maxWidth: 700, margin: "0 auto 5rem" }}
+      >
+        <div className="icon">🧑‍🚀</div>
+        <h3>Agentic AI with Hermes Agent</h3>
+        <p>
+          7 sessions over 2 weeks: build and deploy a real Hermes agent — fundamentals, LLM
+          routing, RAG, MCPs, tool calling, and a production deploy — on real hardware.
+        </p>
+      </Link>
+
+      <h2 className="section-title" style={{ fontSize: "1.6rem" }}>
+        Foundations
+      </h2>
       <p className="description" style={{ margin: "0 auto 3rem" }}>
-        Four weeks, twenty evenings, one curriculum — built and taught live, together.
+        The original self-paced curriculum — four weeks, twenty evenings, one arc through the
+        basics of LLMs, RAG, MCPs, and tool calling.
       </p>
       <div className="features-grid">
-        {WEEKS.map((item) => (
+        {FOUNDATIONS.map((item) => (
           <Link href={item.href} key={item.href} className="feature-card" style={{ display: "block" }}>
             <div className="icon">{item.icon}</div>
             <h3>

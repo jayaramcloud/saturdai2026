@@ -1,3 +1,4 @@
+import Link from "next/link";
 import VideoGrid from "@/components/VideoGrid";
 
 const REGISTRATION_FORM_URL =
@@ -8,34 +9,60 @@ const CONTACT_EMAIL = "jayaram.linux@gmail.com";
 
 const CURRICULUM = [
   {
-    week: "Intro to AI",
-    title: "The Big Picture",
+    href: "/hermes-agent/day-1",
+    day: "Day 1",
+    date: "Fri, Sep 25",
+    title: "Intro to LLMs and Hermes",
     icon: "🌐",
-    description: "Where AI comes from and where it shows up in your life",
+    description: "Talk only, no lab — the big picture on LLMs and why Hermes Agent is our tool.",
   },
   {
-    week: "Week 1",
-    title: "LLMs",
-    icon: "🧠",
-    description: "Understanding and working with language models",
+    href: "/hermes-agent/day-2",
+    day: "Day 2",
+    date: "Mon, Sep 28",
+    title: "Hermes Fundamentals",
+    icon: "🌱",
+    description: "Getting Hermes Agent running against our local LLMs on real hardware.",
   },
   {
-    week: "Week 2",
-    title: "RAG",
+    href: "/hermes-agent/day-3",
+    day: "Day 3",
+    date: "Wed, Sep 30",
+    title: "LLM Routing with Hermes",
+    icon: "🔀",
+    description: "Routing requests across multiple local models based on the task.",
+  },
+  {
+    href: "/hermes-agent/day-4",
+    day: "Day 4",
+    date: "Fri, Oct 2",
+    title: "RAG with Hermes",
     icon: "📚",
-    description: "Grounding AI with actual knowledge",
+    description: "Grounding Hermes Agent with real data instead of letting it guess.",
   },
   {
-    week: "Week 3",
-    title: "MCPs",
+    href: "/hermes-agent/day-5",
+    day: "Day 5",
+    date: "Mon, Oct 5",
+    title: "MCPs for Hermes",
     icon: "🔌",
-    description: "Connecting AI to external systems",
+    description: "Connecting Hermes Agent to external systems and tools over MCP.",
   },
   {
-    week: "Week 4",
-    title: "Tool Calling",
-    icon: "🛠️",
-    description: "Making AI agents do real work",
+    href: "/hermes-agent/day-6",
+    day: "Day 6",
+    date: "Wed, Oct 7",
+    title: "Tool Calling & Agent Loops",
+    icon: "⚙️",
+    description: "How Hermes calls a tool, reads the result, and loops until the task is done.",
+  },
+  {
+    href: "/hermes-agent/day-7",
+    day: "Day 7",
+    date: "Fri, Oct 9",
+    title: "Deploy a Production Agent",
+    icon: "🚢",
+    description: "Capstone: ship a Hermes agent that keeps working for you 24x7.",
   },
 ];
 
@@ -47,23 +74,24 @@ export default function Home() {
         <h1 className="title">
           SaturdAI<span className="gradient-accent">.</span>
         </h1>
-        <p className="subtitle">A Free AI Bootcamp — Learn, Build &amp; Grow Together</p>
+        <p className="subtitle">Hands-on Agentic AI with Hermes Agent</p>
         <p className="description">
-          Let&apos;s begin a journey to learn AI — building and effectively using AI from scratch.
-          Though I&apos;ll lead this, it&apos;s learning together: a community of curious minds
-          building AI skills side by side. No prerequisites. Just curiosity.
+          A free, live, instructor-led 2-week intensive. Build and deploy a real Hermes agent —
+          fundamentals, LLM routing, RAG, MCPs, tool calling, and a production deploy — running
+          against real local LLMs on a DGX Spark supercomputer and an Apple Mac Mini. No
+          prerequisites. Just curiosity. Everyone welcome.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-            Join Saturday&apos;s Kickoff
+          <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Register Now
           </a>
           <a href="#curriculum" className="btn btn-secondary">
-            See What We&apos;re Building
+            See the 7-Day Curriculum
           </a>
         </div>
         <p className="hero-note">
-          Saturday is a short introductory meet-and-greet to get acquainted and set the stage —
-          the real hands-on work happens Monday–Friday evenings.
+          Mon–Wed–Fri, 6–7pm MST, Fri Sep 25 – Fri Oct 9, 2026. Day 1 is a talk-only kickoff —
+          hands-on labs run Day 2 through Day 7.
         </p>
       </section>
 
@@ -77,11 +105,11 @@ export default function Home() {
       <section className="event-banner">
         <div className="event-banner-item">
           <span className="event-banner-label">When</span>
-          <span className="event-banner-value">Mon–Fri · 7:00–8:30 PM MST</span>
+          <span className="event-banner-value">Mon–Wed–Fri · 6:00–7:00 PM MST</span>
         </div>
         <div className="event-banner-item">
-          <span className="event-banner-label">Intro Meetup</span>
-          <span className="event-banner-value">Saturday, July 4 · 8:00 AM MST</span>
+          <span className="event-banner-label">Dates</span>
+          <span className="event-banner-value">Fri, Sep 25 – Fri, Oct 9, 2026</span>
         </div>
         <div className="event-banner-item">
           <span className="event-banner-label">Cost</span>
@@ -91,29 +119,37 @@ export default function Home() {
 
       {/* Curriculum */}
       <section id="curriculum" style={{ marginTop: "5rem" }}>
-        <h2 className="section-title">What We&apos;re Building Together</h2>
+        <h2 className="section-title">The 7-Day Curriculum</h2>
         <div className="features-grid">
           {CURRICULUM.map((item) => (
-            <div className="feature-card" key={item.week}>
+            <Link href={item.href} className="feature-card" key={item.href} style={{ display: "block" }}>
               <div className="icon">{item.icon}</div>
               <h3>
-                {item.week}: {item.title}
+                {item.day}: {item.title}
               </h3>
+              <p style={{ color: "#8888aa", fontSize: "0.85rem", margin: "0 0 0.5rem" }}>{item.date}</p>
               <p>{item.description}</p>
-            </div>
+            </Link>
           ))}
+        </div>
+        <div style={{ textAlign: "center", marginTop: "2rem" }}>
+          <Link href="/hermes-agent" className="btn btn-secondary">
+            Full Course Overview
+          </Link>
         </div>
       </section>
 
-      {/* DGX Spark */}
+      {/* Hardware */}
       <section style={{ marginTop: "5rem" }}>
-        <h2 className="section-title">Learning on a Real Supercomputer</h2>
+        <h2 className="section-title">Learning on Real Hardware</h2>
         <div className="spark-card">
           <p className="spark-intro">
-            Last month, following Sanjay Jayaram&apos;s vision, we purchased a{" "}
-            <strong>DGX Spark Supercomputer</strong>{" "}
-            with a Blackwell GPU and powered it on here in Calgary. I&apos;ll share remote access
-            with everyone joining, and we&apos;ll learn together on this mini supercomputer.
+            Three months ago, following Sanjay Jayaram&apos;s vision, we purchased a{" "}
+            <strong>DGX Spark Supercomputer</strong> with a Blackwell GPU and powered it on here in
+            Calgary. Sanjay also picked up a powerful Apple Mac Mini for local AI research after
+            interning at Apple in Cupertino. We&apos;ll set up and demo our AI research on both
+            machines live during this course, and Sanjay will join some evenings to share what
+            he&apos;s learned.
           </p>
           <div className="spark-specs">
             <div className="spark-spec">
@@ -144,22 +180,21 @@ export default function Home() {
       <section style={{ marginTop: "6rem", padding: "4rem 0" }} id="join">
         <h2 className="section-title">Ready to Start?</h2>
         <div className="start-card">
-          <h3>Saturday: Let&apos;s Meet First</h3>
+          <h3>Hands-On. Real Infrastructure. Real Agents.</h3>
           <p>
-            A short kickoff to introduce ourselves, meet the group, and set the stage — then the
-            real work begins Monday through Friday.
+            By the end, you&apos;ll have deployed a working Hermes agent — your own digital agent,
+            working and learning for you 24x7.
           </p>
           <ul className="benefits">
-            <li>✓ Intro meetup: Saturday, July 4 · 8:00 AM MST</li>
-            <li>✓ Hands-on sessions: Mon–Fri · 7:00–8:30 PM MST</li>
-            <li>✓ 6:00–7:30 PM PST · 9:00–10:30 PM EST · 6:30–8:00 AM IST (next day)</li>
-            <li>✓ Live, hands-on, instructor-led — but learning together</li>
-            <li>✓ Remote access to a DGX Spark supercomputer</li>
-            <li>✓ 20 weekday evenings, completely free, open to everyone</li>
+            <li>✓ Starting Fri, Sep 25, 2026 — Mon–Wed–Fri, 6:00–7:00 PM MST</li>
+            <li>✓ 5:00–6:00 PM PST · 7:00–8:00 PM EST · 7:30–8:30 AM IST (next day)</li>
+            <li>✓ Live, hands-on, instructor-led</li>
+            <li>✓ Remote access to a DGX Spark supercomputer and Mac Mini</li>
+            <li>✓ 7 sessions, completely free, open to everyone</li>
           </ul>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1.5rem" }}>
             <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Join Saturday&apos;s Kickoff
+              Join Live Session
             </a>
             <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
               Register Now
@@ -180,7 +215,8 @@ export default function Home() {
           </a>
         </p>
         <p className="description">
-          On Canada Day 2026, let&apos;s commit to learning — and growing — together. 🍁
+          Starting this Friday — let&apos;s commit to learning, building, and shipping real agents
+          together. 🧠
         </p>
       </section>
     </main>
