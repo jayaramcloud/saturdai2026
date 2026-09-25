@@ -4,7 +4,7 @@ import VideoGrid from "@/components/VideoGrid";
 const REGISTRATION_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc85wV7CgYL6QUN-4xCjplm3ryfM4NOdJoZrVjjThtMO2bKKQ/viewform";
 
-const MEET_URL = "https://meet.google.com/nsd-qztm-psr";
+const MEET_URL = "https://meet.google.com/qao-sbcv-gsr";
 const CONTACT_EMAIL = "jayaram.linux@gmail.com";
 
 const CURRICULUM = [
@@ -82,7 +82,10 @@ export default function Home() {
           prerequisites. Just curiosity. Everyone welcome.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+          <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            Join Live Session (Google Meet)
+          </a>
+          <a href={REGISTRATION_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
             Register Now
           </a>
           <a href="#curriculum" className="btn btn-secondary">
@@ -200,9 +203,6 @@ export default function Home() {
               Register Now
             </a>
           </div>
-          <p className="meet-dial">
-            Or dial (CA) +1 604-774-8372 · PIN 218 444 587
-          </p>
         </div>
       </section>
 
