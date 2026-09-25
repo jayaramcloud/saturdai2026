@@ -1,5 +1,6 @@
 import Link from "next/link";
 import VideoGrid from "@/components/VideoGrid";
+import SessionCountdown from "@/components/SessionCountdown";
 
 const REGISTRATION_FORM_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSc85wV7CgYL6QUN-4xCjplm3ryfM4NOdJoZrVjjThtMO2bKKQ/viewform";
@@ -12,6 +13,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-1",
     day: "Day 1",
     date: "Fri, Sep 25",
+    start: "2026-09-25T18:00:00-06:00",
     title: "Intro to LLMs and Hermes",
     icon: "🌐",
     description: "Talk only, no lab — the big picture on LLMs and why Hermes Agent is our tool.",
@@ -20,6 +22,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-2",
     day: "Day 2",
     date: "Mon, Sep 28",
+    start: "2026-09-28T18:00:00-06:00",
     title: "Hermes Fundamentals",
     icon: "🌱",
     description: "Getting Hermes Agent running against our local LLMs on real hardware.",
@@ -28,6 +31,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-3",
     day: "Day 3",
     date: "Wed, Sep 30",
+    start: "2026-09-30T18:00:00-06:00",
     title: "LLM Routing with Hermes",
     icon: "🔀",
     description: "Routing requests across multiple local models based on the task.",
@@ -36,6 +40,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-4",
     day: "Day 4",
     date: "Fri, Oct 2",
+    start: "2026-10-02T18:00:00-06:00",
     title: "RAG with Hermes",
     icon: "📚",
     description: "Grounding Hermes Agent with real data instead of letting it guess.",
@@ -44,6 +49,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-5",
     day: "Day 5",
     date: "Mon, Oct 5",
+    start: "2026-10-05T18:00:00-06:00",
     title: "MCPs for Hermes",
     icon: "🔌",
     description: "Connecting Hermes Agent to external systems and tools over MCP.",
@@ -52,6 +58,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-6",
     day: "Day 6",
     date: "Wed, Oct 7",
+    start: "2026-10-07T18:00:00-06:00",
     title: "Tool Calling & Agent Loops",
     icon: "⚙️",
     description: "How Hermes calls a tool, reads the result, and loops until the task is done.",
@@ -60,6 +67,7 @@ const CURRICULUM = [
     href: "/hermes-agent/day-7",
     day: "Day 7",
     date: "Fri, Oct 9",
+    start: "2026-10-09T18:00:00-06:00",
     title: "Deploy a Production Agent",
     icon: "🚢",
     description: "Capstone: ship a Hermes agent that keeps working for you 24x7.",
@@ -81,6 +89,10 @@ export default function Home() {
           against real local LLMs on a DGX Spark supercomputer and an Apple Mac Mini. No
           prerequisites. Just curiosity. Everyone welcome.
         </p>
+        <SessionCountdown
+          sessions={CURRICULUM.map(({ day, title, start }) => ({ day, title, start }))}
+          meetUrl={MEET_URL}
+        />
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
           <a href={MEET_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
             Join Live Session (Google Meet)
