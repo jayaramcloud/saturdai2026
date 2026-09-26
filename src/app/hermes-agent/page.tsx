@@ -134,6 +134,31 @@ export default function HermesAgentCourse() {
           .
         </figcaption>
       </figure>
+
+      <h2 className="section-title" style={{ marginTop: "4rem" }}>
+        Inside Hermes Agent
+      </h2>
+      <p className="description" style={{ margin: "0 auto 1.5rem" }}>
+        How it all fits together: one agent loop — receive, think, act, observe — wrapped by entry points,
+        swappable model providers, tools and skills, and memory, with each part tagged by the course day
+        that covers it. Click the image to open it full size.
+      </p>
+      <figure style={{ margin: 0 }}>
+        <a href="/hermes-agent/hermes-agent-anatomy.png" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/hermes-agent/hermes-agent-anatomy.png"
+            alt="Anatomy of Hermes Agent: at the center, the agent loop — 1 Receive, 2 Think, 3 Act, 4 Observe — repeating until the task is done. Entry points on the left (CLI/TUI, messaging gateway for Telegram, Discord, Slack, WhatsApp and Signal, and a cron scheduler), model providers on top (llama.cpp on DGX Spark, Ollama on Mac Mini, vLLM, OpenRouter, Nous Portal, cloud APIs) via one OpenAI-compatible API, capabilities on the right (built-in toolsets, MCP client, skills, subagents, execution backends), memory and knowledge below (MEMORY.md, USER.md, session search, RAG), plus safety controls, the ~/.hermes/ config layout, and a worked Telegram reminder example. Each part is tagged with the course day that covers it."
+            style={{ width: "100%", height: "auto", borderRadius: 8, background: "#faf8f3" }}
+          />
+        </a>
+        <figcaption style={{ color: "#8888aa", fontSize: "0.85rem", marginTop: "0.75rem", textAlign: "center" }}>
+          Want to edit it?{" "}
+          <a href="/hermes-agent/ai-landscape-and-hermes.drawio" download style={{ color: "#a0a0ff" }}>
+            Download the editable draw.io file
+          </a>{" "}
+          (includes the full AI landscape map and a Hermes-vs-neighbors comparison as extra pages).
+        </figcaption>
+      </figure>
     </main>
   );
 }
