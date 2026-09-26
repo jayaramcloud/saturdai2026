@@ -119,9 +119,9 @@ export default function HermesAgentCourse() {
         providers, messaging, backends, and more. Click the image to open it full size.
       </p>
       <figure style={{ margin: 0 }}>
-        <a href="/hermes-agent/hermes-agent-capabilities.png" target="_blank" rel="noopener noreferrer">
+        <a href="/hermes-agent/hermes-agent-capabilities-v2.png" target="_blank" rel="noopener noreferrer">
           <img
-            src="/hermes-agent/hermes-agent-capabilities.png"
+            src="/hermes-agent/hermes-agent-capabilities-v2.png"
             alt="Mind map of Hermes Agent capabilities: the agent at the center with 15 branches — Built-in Tools (40+), Memory & Recall, Skills, Closed Learning Loop, Subagents & Orchestration, Scheduling / Cron, MCP Integration, Model Providers, Messaging Gateway, Terminal Backends, CLI & TUI, Context & Personality, Security & Safety, Deployment & Platforms, and Research & RL — each with a one-line summary and detailed feature boxes."
             style={{ width: "100%", height: "auto", borderRadius: 8, background: "#ffffff" }}
           />
