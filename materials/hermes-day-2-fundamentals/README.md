@@ -1,6 +1,6 @@
 # Day 2: Hermes Fundamentals — slide deck narrative
 
-Ten slides carrying the arc of Day 2 of the Agentic AI with Hermes Agent course
+Fifteen slides carrying the arc of Day 2 of the Agentic AI with Hermes Agent course
 (Mon, Sep 28, 2026): from "we talked about it Day 1" to "it's actually running."
 
 1. **Recap and goal** — bridges Day 1's talk-only intro into today's hands-on goal.
@@ -19,8 +19,21 @@ Ten slides carrying the arc of Day 2 of the Agentic AI with Hermes Agent course
    this course needs an agent tool, not just a chatbot.
 10. **Recap and preview** — closes the loop on Day 2 and previews Day 3 (LLM routing across
     multiple local models), keeping the "you are here" narrative continuous across days.
+11. **Hermes bots (live demo)** — a real screenshot of a Hermes bot answering a same-day
+    stock-news question with web search, used to show what bots are and where the course
+    is heading. The screenshot (`11-hermes-bots-screenshot.png`) is embedded in the SVG as
+    a base64 data URI, because an SVG shown via `<img>` can't load external images.
+12. **Capabilities / skills** — screenshot of the Hermes Capabilities page (skills, tools,
+    connectors, plugins; the 101.3K-skill Discover marketplace; agent-delegation skills like
+    claude-code/codex). Same embedding approach (`12-hermes-capabilities-screenshot.png`).
+13. **Messaging (WhatsApp)** — the Messaging page with WhatsApp connected via the bundled
+    QR-code bridge, the allowed-users whitelist, and the other supported platforms.
+14. **Scheduled jobs** — a cron-scheduled "Competitor news watch" job delivering to WhatsApp,
+    plus the blueprint list; ties bots + skills + messaging into an agent that reaches out.
+15. **Settings** — Settings > Model > Main model (custom provider = the same endpoint set via
+    `hermes config`), fallback/auxiliary/MoA models, reasoning effort, and the other menus.
 
 Visual language matches `materials/day-1-intro-to-llms/`: 1600×900 viewBox, dark purple
 gradient background (`#0f0f1e` → `#1a1a2e`), the same categorical palette (blue `#5b7cfa`,
 teal `#0d9488`, orange `#d97706`, pink `#ec4899`, purple `#8b5cf6`/`#c4b5fd`), and the same
-footer convention (`SaturdAI · Hermes Agent · Day 2: Fundamentals` / `n / 10`).
+footer convention (`SaturdAI · Hermes Agent · Day 2: Fundamentals` / `n / 15`).
