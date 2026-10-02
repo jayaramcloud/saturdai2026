@@ -1,6 +1,6 @@
 # Day 2: Hermes Fundamentals — slide deck narrative
 
-Fifteen slides carrying the arc of Day 2 of the Agentic AI with Hermes Agent course
+Twenty slides carrying the arc of Day 2 of the Agentic AI with Hermes Agent course
 (Mon, Sep 28, 2026): from "we talked about it Day 1" to "it's actually running."
 
 1. **Recap and goal** — bridges Day 1's talk-only intro into today's hands-on goal.
@@ -32,8 +32,17 @@ Fifteen slides carrying the arc of Day 2 of the Agentic AI with Hermes Agent cou
     plus the blueprint list; ties bots + skills + messaging into an agent that reaches out.
 15. **Settings** — Settings > Model > Main model (custom provider = the same endpoint set via
     `hermes config`), fallback/auxiliary/MoA models, reasoning effort, and the other menus.
+16. **Tools** — the 25 built-in tools with usage counts; web search backends (DuckDuckGo
+    active, no key) and how to trigger a web search yourself.
+17. **Connectors** — connectors are MCP servers in a one-click catalog (65 apps) plus
+    "Add your own"; previews Day 5.
+18. **Memory** — persistent memory, user profile, and the budgets that cap what gets loaded.
+19. **Safety** — approval modes (Manual/Smart/Off), timeout, command allowlist, MCP reloads;
+    ties to `--yolo` on Day 6.
+20. **Artifacts** — the paper trail of images/files/links per session; skills are SKILL.md
+    files. Closes the day on "none of this is magic".
 
 Visual language matches `materials/day-1-intro-to-llms/`: 1600×900 viewBox, dark purple
 gradient background (`#0f0f1e` → `#1a1a2e`), the same categorical palette (blue `#5b7cfa`,
 teal `#0d9488`, orange `#d97706`, pink `#ec4899`, purple `#8b5cf6`/`#c4b5fd`), and the same
-footer convention (`SaturdAI · Hermes Agent · Day 2: Fundamentals` / `n / 15`).
+footer convention (`SaturdAI · Hermes Agent · Day 2: Fundamentals` / `n / 20`).
