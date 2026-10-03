@@ -19,6 +19,7 @@ const VIDEOS: Video[] = [
   { id: "i76zzi5OHd8", label: "Day 8", date: "Jul 16, 2026" },
   { id: "8ldJef75ozI", label: "Day 9", date: "Jul 24, 2026" },
   { id: "C6TIIpvqUj8", label: "Day 10", date: "Aug 2, 2026" },
+  { id: "jyevJPcrjMM", label: "Hermes Day 2", date: "Sep 28, 2026" },
 ];
 
 export default function VideoGrid() {

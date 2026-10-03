@@ -152,6 +152,18 @@ export default function HermesAgentDay2() {
 
       <Slideshow slides={SLIDES} wide />
 
+      <p style={{ textAlign: "center", margin: "1.5rem auto 2.5rem", fontSize: "1.1rem" }}>
+        🎥 Watch the recording:{" "}
+        <a
+          href="https://www.youtube.com/live/jyevJPcrjMM"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#a78bfa", textDecoration: "underline" }}
+        >
+          https://www.youtube.com/live/jyevJPcrjMM
+        </a>
+      </p>
+
       <div className="description" style={{ margin: "0 auto 2rem", maxWidth: 700, textAlign: "left" }}>
         <p style={pStyle}>
           <strong>Hermes Agent</strong> is our vehicle for this course because it doesn&apos;t need a hosted
