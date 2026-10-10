@@ -18,6 +18,7 @@ const HERMES_DAYS = [
   { href: "/hermes-agent/day-5", label: "Day 5: MCPs" },
   { href: "/hermes-agent/day-6", label: "Day 6: Tool Calling" },
   { href: "/hermes-agent/day-7", label: "Day 7: Deploy" },
+  { href: "/hermes-agent/day-8", label: "Day 8: Chatbot" },
 ];
 
 const FOUNDATIONS = [

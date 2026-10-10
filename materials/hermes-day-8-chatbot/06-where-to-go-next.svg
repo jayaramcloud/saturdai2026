@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Where to Take Your Chatbot Next</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Every idea reuses something from earlier in the course.</text>
+
+  <g transform="translate(80,200)">
+    <rect width="450" height="250" rx="18" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Stream the answer</text>
+    <text x="225" y="86" font-size="17" fill="#c0c0d0" text-anchor="middle">Show the reply word by word</text>
+    <text x="225" y="120" font-size="17" fill="#c0c0d0" text-anchor="middle">instead of waiting for all of it</text>
+  </g>
+  <g transform="translate(570,200)">
+    <rect width="450" height="250" rx="18" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Add RAG</text>
+    <text x="225" y="86" font-size="17" fill="#c0c0d0" text-anchor="middle">Ground answers in your own</text>
+    <text x="225" y="120" font-size="17" fill="#c0c0d0" text-anchor="middle">documents, like Day 4</text>
+  </g>
+  <g transform="translate(1060,200)">
+    <rect width="450" height="250" rx="18" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Mock-interview mode</text>
+    <text x="225" y="86" font-size="17" fill="#c0c0d0" text-anchor="middle">Let the bot ask the questions</text>
+    <text x="225" y="120" font-size="17" fill="#c0c0d0" text-anchor="middle">and score your answers</text>
+  </g>
+  <g transform="translate(80,490)">
+    <rect width="450" height="250" rx="18" fill="#ec4899" fill-opacity="0.14" stroke="#ec4899" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Add tools (MCP)</text>
+    <text x="225" y="86" font-size="17" fill="#c0c0d0" text-anchor="middle">Let it look things up or take</text>
+    <text x="225" y="120" font-size="17" fill="#c0c0d0" text-anchor="middle">actions, like Days 5 and 6</text>
+  </g>
+  <g transform="translate(570,490)">
+    <rect width="450" height="250" rx="18" fill="#16a34a" fill-opacity="0.14" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Save conversations</text>
+    <text x="225" y="86" font-size="17" fill="#c0c0d0" text-anchor="middle">Optional, with sign-in and a</text>
+    <text x="225" y="120" font-size="17" fill="#c0c0d0" text-anchor="middle">clear privacy notice</text>
+  </g>
+  <g transform="translate(1060,490)">
+    <rect width="450" height="250" rx="18" fill="#8b5cf6" fill-opacity="0.14" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Run a local model</text>
+    <text x="225" y="86" font-size="17" fill="#c0c0d0" text-anchor="middle">Swap the Claude call for your</text>
+    <text x="225" y="120" font-size="17" fill="#c0c0d0" text-anchor="middle">own DGX Spark or Mac Mini</text>
+  </g>
+  <text x="800" y="800" font-size="20" fill="#a0a0c0" text-anchor="middle">The pattern stays the same: a server in the middle that checks, adds context, and holds the secrets.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 8: Build a Chatbot</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">6 / 6</text>
+</svg>

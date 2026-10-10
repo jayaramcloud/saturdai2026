@@ -1,0 +1,66 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">What Happens When You Press Send</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">Five steps, usually a couple of seconds end to end.</text>
+
+  <g transform="translate(70,260)">
+    <rect width="270" height="330" rx="18" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">1  Send</text>
+    <text x="135" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">The page posts</text>
+    <text x="135" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle">{question, history}</text>
+    <text x="135" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">to /api/ask</text>
+  </g>
+  <line x1="342" y1="425" x2="370" y2="425" stroke="#a0a0c0" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(370,260)">
+    <rect width="270" height="330" rx="18" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">2  Check</text>
+    <text x="135" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Valid JSON, a string,</text>
+    <text x="135" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle">not empty, max 600</text>
+    <text x="135" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">characters</text>
+  </g>
+  <line x1="642" y1="425" x2="670" y2="425" stroke="#a0a0c0" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(670,260)">
+    <rect width="270" height="330" rx="18" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">3  Prepare</text>
+    <text x="135" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Add a system prompt</text>
+    <text x="135" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle">and the last 6 messages</text>
+    <text x="135" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">so follow-ups work</text>
+  </g>
+  <line x1="942" y1="425" x2="970" y2="425" stroke="#a0a0c0" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(970,260)">
+    <rect width="270" height="330" rx="18" fill="#8b5cf6" fill-opacity="0.14" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">4  Ask</text>
+    <text x="135" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Call Claude with the</text>
+    <text x="135" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle">secret key, model, and</text>
+    <text x="135" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">a 450-token cap</text>
+  </g>
+  <line x1="1242" y1="425" x2="1270" y2="425" stroke="#a0a0c0" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(1270,260)">
+    <rect width="270" height="330" rx="18" fill="#16a34a" fill-opacity="0.14" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="24" font-weight="700" fill="#ffffff" text-anchor="middle">5  Show</text>
+    <text x="135" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Turn **bold** and lists</text>
+    <text x="135" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle">into safe page</text>
+    <text x="135" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">elements (no innerHTML)</text>
+  </g>
+  <text x="800" y="700" font-size="20" fill="#a0a0c0" text-anchor="middle">If anything fails, the visitor sees a friendly message, never the raw error or the key.</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 8: Build a Chatbot</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">3 / 6</text>
+</svg>

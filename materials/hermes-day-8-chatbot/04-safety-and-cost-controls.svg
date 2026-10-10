@@ -1,0 +1,68 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Six Safety and Cost Controls</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">None of these is exotic. Together they make a public chatbot safe to leave running.</text>
+
+  <g transform="translate(80,190)">
+    <rect width="450" height="280" rx="18" fill="#f5576c" fill-opacity="0.14" stroke="#f5576c" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Secret stays server-side</text>
+    <text x="225" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Stored with</text>
+    <text x="225" y="118" font-size="16" fill="#c0c0d0" text-anchor="middle">wrangler secret put,</text>
+    <text x="225" y="150" font-size="16" fill="#c0c0d0" text-anchor="middle">not in GitHub or the page</text>
+  </g>
+  <g transform="translate(570,190)">
+    <rect width="450" height="280" rx="18" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Limit the input</text>
+    <text x="225" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">600 characters per question,</text>
+    <text x="225" y="118" font-size="16" fill="#c0c0d0" text-anchor="middle">only the last 6 messages</text>
+    <text x="225" y="150" font-size="16" fill="#c0c0d0" text-anchor="middle">of history are sent</text>
+  </g>
+  <g transform="translate(1060,190)">
+    <rect width="450" height="280" rx="18" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Keep it on topic</text>
+    <text x="225" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">A system prompt makes it a</text>
+    <text x="225" y="118" font-size="16" fill="#c0c0d0" text-anchor="middle">career coach and tells it to</text>
+    <text x="225" y="150" font-size="16" fill="#c0c0d0" text-anchor="middle">ignore hidden instructions</text>
+  </g>
+  <g transform="translate(80,500)">
+    <rect width="450" height="280" rx="18" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Display safely</text>
+    <text x="225" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Replies are built from text</text>
+    <text x="225" y="118" font-size="16" fill="#c0c0d0" text-anchor="middle">nodes, so HTML in an answer</text>
+    <text x="225" y="150" font-size="16" fill="#c0c0d0" text-anchor="middle">is shown, never run</text>
+  </g>
+  <g transform="translate(570,500)">
+    <rect width="450" height="280" rx="18" fill="#8b5cf6" fill-opacity="0.14" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Cap the spend</text>
+    <text x="225" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Small model, 450-token answers,</text>
+    <text x="225" y="118" font-size="16" fill="#c0c0d0" text-anchor="middle">and a monthly limit set on</text>
+    <text x="225" y="150" font-size="16" fill="#c0c0d0" text-anchor="middle">the key in the console</text>
+  </g>
+  <g transform="translate(1060,500)">
+    <rect width="450" height="280" rx="18" fill="#16a34a" fill-opacity="0.14" stroke="#16a34a" stroke-width="2.5"/>
+    <text x="225" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Protect privacy</text>
+    <text x="225" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">Conversations live in the</text>
+    <text x="225" y="118" font-size="16" fill="#c0c0d0" text-anchor="middle">browser only; users are told</text>
+    <text x="225" y="150" font-size="16" fill="#c0c0d0" text-anchor="middle">not to share personal data</text>
+  </g>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 8: Build a Chatbot</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">4 / 6</text>
+</svg>

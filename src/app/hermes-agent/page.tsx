@@ -66,6 +66,14 @@ const DAYS = [
     icon: "🚢",
     description: "Capstone: ship a Hermes agent that keeps running and working for you 24x7.",
   },
+  {
+    href: "/hermes-agent/day-8",
+    day: "Day 8",
+    date: "Bonus session",
+    title: "Build a Chatbot",
+    icon: "💬",
+    description: "Bonus: build a safe public AI chatbot with a web page, a small server that guards the secret key, and a model that writes the answers.",
+  },
 ];
 
 export default function HermesAgentCourse() {

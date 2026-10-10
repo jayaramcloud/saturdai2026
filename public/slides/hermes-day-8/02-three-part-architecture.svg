@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0f1e"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#a0a0c0"/>
+    </marker>
+    <marker id="arrowO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="80" y="90" font-size="40" font-weight="800" fill="url(#titleGrad)">Three Parts, One Request Path</text>
+  <text x="80" y="130" font-size="22" fill="#a0a0c0">The page, the Worker, and the model. The key lives only in the middle.</text>
+
+  <g transform="translate(80,250)">
+    <rect width="340" height="300" rx="18" fill="#5b7cfa" fill-opacity="0.14" stroke="#5b7cfa" stroke-width="2.5"/>
+    <text x="170" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Browser</text>
+    <text x="170" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">chat page</text>
+    <text x="170" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle"></text>
+    <text x="170" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">types a question</text>
+    <text x="170" y="188" font-size="16" fill="#c0c0d0" text-anchor="middle">shows the reply</text>
+  </g>
+  <g transform="translate(520,200)">
+    <rect width="560" height="420" rx="18" fill="#d97706" fill-opacity="0.14" stroke="#d97706" stroke-width="2.5"/>
+    <text x="280" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Cloudflare Worker</text>
+    <text x="280" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">POST /api/ask</text>
+    <text x="280" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle"></text>
+    <text x="280" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle">1  validate the question</text>
+    <text x="280" y="188" font-size="16" fill="#c0c0d0" text-anchor="middle">2  rate limit (best effort)</text>
+    <text x="280" y="222" font-size="16" fill="#c0c0d0" text-anchor="middle">3  add system prompt + history</text>
+    <text x="280" y="256" font-size="16" fill="#c0c0d0" text-anchor="middle">4  attach the secret key, call the AI</text>
+  </g>
+  <g transform="translate(1180,250)">
+    <rect width="340" height="300" rx="18" fill="#8b5cf6" fill-opacity="0.14" stroke="#8b5cf6" stroke-width="2.5"/>
+    <text x="170" y="46" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle">Claude API</text>
+    <text x="170" y="86" font-size="16" fill="#c0c0d0" text-anchor="middle">api.anthropic.com</text>
+    <text x="170" y="120" font-size="16" fill="#c0c0d0" text-anchor="middle">/v1/messages</text>
+    <text x="170" y="154" font-size="16" fill="#c0c0d0" text-anchor="middle"></text>
+    <text x="170" y="188" font-size="16" fill="#c0c0d0" text-anchor="middle">writes the answer</text>
+  </g>
+  <line x1="420" y1="360" x2="515" y2="360" stroke="#d97706" stroke-width="4" marker-end="url(#arrowO)"/>
+  <line x1="515" y1="440" x2="425" y2="440" stroke="#a0a0c0" stroke-width="4" marker-end="url(#arrow)"/>
+  <line x1="1080" y1="360" x2="1175" y2="360" stroke="#d97706" stroke-width="4" marker-end="url(#arrowO)"/>
+  <line x1="1175" y1="440" x2="1085" y2="440" stroke="#a0a0c0" stroke-width="4" marker-end="url(#arrow)"/>
+  <g transform="translate(520,680)">
+    <rect width="270" height="130" rx="18" fill="#f5576c" fill-opacity="0.14" stroke="#f5576c" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Secret key</text>
+    <text x="135" y="86" font-size="14" fill="#c0c0d0" text-anchor="middle">stored on Cloudflare,</text>
+    <text x="135" y="110" font-size="14" fill="#c0c0d0" text-anchor="middle">never in the repo</text>
+  </g>
+  <g transform="translate(810,680)">
+    <rect width="270" height="130" rx="18" fill="#0d9488" fill-opacity="0.14" stroke="#0d9488" stroke-width="2.5"/>
+    <text x="135" y="46" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">Static files</text>
+    <text x="135" y="86" font-size="14" fill="#c0c0d0" text-anchor="middle">pages, CSS, JS</text>
+    <text x="135" y="110" font-size="14" fill="#c0c0d0" text-anchor="middle">served separately</text>
+  </g>
+  <text x="470" y="335" font-size="14" font-weight="700" fill="#d97706" text-anchor="middle">question</text>
+  <text x="470" y="470" font-size="14" font-weight="700" fill="#a0a0c0" text-anchor="middle">reply</text>
+
+  <text x="80" y="860" font-size="14" fill="#8888aa">SaturdAI &#183; Hermes Agent Day 8: Build a Chatbot</text>
+  <text x="1520" y="860" font-size="14" fill="#8888aa" text-anchor="end">2 / 6</text>
+</svg>
